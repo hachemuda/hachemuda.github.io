@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            Creando un splash para Ubuntu (Parte 2) | HacheMuda
+      </title>
+  
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Creando un splash para Ubuntu (Parte 2)">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="http://www.hachemuda.com/2006/09/creando-un-splash-para-ubuntu-parte-2">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title no_image">
+					<h1 class="title">
+						<a href="/2006/09/creando-un-splash-para-ubuntu-parte-2">
+							Creando un splash para Ubuntu (Parte 2)
+						</a>
+					</h1>
+						
+				</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 01 de Septiembre de 2006</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<h1> </h1>
+
+<p>En el artículo de ayer hicimos la <a href="http://hachemuda.com/31/08/2006/creando-un-splash-para-ubuntu-parte-1/" title="Enlace directo a la parte 1">primera parte de nuestra splash screen para Ubuntu Edgy Eft</a>, que correspondía al fondo de la imagen. Ahora vamos a ocuparnos del resto, del <strong>logo de Ubuntu</strong>, al que vamos a aplicarle un efecto* glossy* con reflejos para darle volumen (¿efecto gominola?) y una estrella-chapa típica con el texto <em>New</em>.</p>
+
+<p><img src="http://hachemuda.com/tutorialSweetEdgyEft1/sweetEdgyEftMini.jpg" alt="Sweet Edgy Eft" title="Sweet Edgy Eft" /></p>
+
+<p><strong>Vamos allá, paso a paso:</strong></p>
+
+<ol>
+<li><p><strong>Cargamos la imagen</strong> que tenemos guardada (en <strong>formato XCF</strong>) después de <a href="http://hachemuda.com/31/08/2006/creando-un-splash-para-ubuntu-parte-1/" title="Enlace directo al paso 1">crear el fondo de la imagen en el paso 1 del tutorial</a>. Tenemos las capas <em>fondo</em> (con el texto como mapa de relieve), la capa* rejilla* y la capa <em>bandas</em>. Creamos una <strong>nueva capa</strong> que llamamos <em>reflejo_fondo</em>. Vamos a crearle un efecto glossy al fondo. Vamos a <strong>Seleccionar -> Todos</strong> y después a <strong>Seleccionar -> Encoger</strong> y encogemos la selección en 5 pixels. Queremos que la selección sea una media luna, y no un rectángulo. Cuando tenemos una selección hecha, si queremos quitar algo de dicha selección tenemos que seleccionar con la tecla [Ctrl] pulsada. Con la tecla [Shift] sumamos lo que seleccionemos a la selección hecha, y con [Ctrl] se lo quitamos.<br />
+Así que le quitamos un cacho circular, con la <strong>herramienta de selección de elipses</strong>. <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_1.jpg" alt="Sweet Edgy Eft 1" title="Sweet Edgy Eft 1" /></p>
+
+<p><img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_0.jpg" alt="Sweet Edgy Eft 0" title="Sweet Edgy Eft 0" /></p></li>
+<li><p>Ya tenemos la elipse quitada, sólo tenemos que lanzar un <strong>degradado lineal de blanco a transparente</strong>, inclinado hacia la derecha y de arriba a abajo. Después, vamos a** Filtros -> Desenfoque -> Desenfoque Gaussiano (Blur)** y lo aplicamos con un radio de 8 pixels. Ajustamos la transparencia de la capa. Si hace falta podemos borrar partes de la capa con la herramienta goma de borrar y una brocha grande y muy blanda. <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_2.jpg" alt="Sweet Edgy Eft 2" title="Sweet Edgy Eft 2" /></p></li>
+<li><p>Creamos una capa que llamamos <em>logo_ubuntu</em>. <a href="https://wiki.ubuntu.com/Artwork/Official?action=AttachFile&amp;do=get&amp;target=UbuntuLogo.png" title="Logo oficial desde Ubuntu Artwork Wiki">Descargamos el logo en formato PNG</a>, lo abrimos con el <a href="http://www.gimp.org/" title="Página oficial">Gimp</a>, seleccionamos la palabra <strong>Ubuntu</strong> del logo con la herremienta de selecciones rectangulares, copiamos y pegamos en la capa de nuestra imagen. Colocamos la palabra en el sitio correcto y vamos a <strong>Capa -> Anclar la capa</strong>. De nuevo en la imagen descargada, ahora seleccionamos el logo, copiamos y pegamos en nuestra imagen, anclando finalmente la capa. <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_3.jpg" alt="Sweet Edgy Eft 3" title="Sweet Edgy Eft 3" /></p></li>
+<li><p>Ahora aplicamos el efecto glossy a la palabra <strong>Ubuntu</strong>. <strong>Duplicamos la capa</strong> para trabajar en una copia. Con la herramienta de recoger colores de la imagen, pinchamos en una de las zonas rojas del logo, con la <strong>herramienta de seleccionar zonas contiguas</strong> seleccionamos pinchamos en la U y arrastramos el color rojo que hemos recogido. Así, rellenamos el resto de las letras de la palabra <strong>Ubuntu</strong> con los mismos colores que el logo. <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_4.jpg" alt="Sweet Edgy Eft 4" title="Sweet Edgy Eft 4" /></p></li>
+<li><p>Con la <strong>herramienta seleccionar regiones contiguas</strong>, pinchamos en medio de la letra U. Vamos a <strong>Seleccionar -> Encoger</strong> y encogemos la selección en 4px. Creamos una <strong>nueva capa</strong> llamada <em>glossy_U</em>. Con la <strong>herramienta de degradados</strong>, lanzamos uno de blanco a transparente de arriba a abajo sobre la letra. Después de este paso, en los pantallazos mi logo aparece con el degradado de derecha a izquierda, en vez de izquierda a derecha, pero es lo mismo.</p></li>
+<li><p>Teniendo activa la capa <em>glossy_U</em>, desenfocamos con <strong>Filtros -> Desenfoque -> Desenfoque gaussiano (blur)</strong> de 5px y después ajustamos la <strong>transparencia de la capa</strong>. <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_5.jpg" alt="Sweet Edgy Eft 5" title="Sweet Edgy Eft 5" /> <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_6.jpg" alt="Sweet Edgy Eft 6" title="Sweet Edgy Eft 6" /> <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_7.jpg" alt="Sweet Edgy Eft 7" title="Sweet Edgy Eft 7" /></p></li>
+<li><p>Repetimos este paso con todas las letras del logo, de modo que tendremos nuestra capa con el logo y la palabra <strong>Ubuntu</strong> y encima de ella 6 capas con los degradados desenfocados correspondientes a cada letra. Recuerda ajustar la transparencia de cada una de esas seis capas para mejorar el efecto.</p></li>
+<li><p>Ya tenemos el la palabra <strong>Ubuntu</strong> en modo glossy. Le ponemos una sombra blanca, <strong>duplicando la capa</strong> en la que está la palabra que hemos pintado con los colores del logo. Esta capa la renombramos a <em>sombra</em> y la ponemos debajo de la otra. Vamos a <strong>Capa -> Colores -> Niveles</strong> y movemos la pestañita de la derecha (blancos) totalmente a la izquierda. Así conseguimos que toda la palabra esté en blanco. Ahora le aplicamos un <strong>Filtro -> Desenfoque -> Desenfoque gaussiano (blur)</strong> de 12px y ajustamos la transparencia de la capa. Ya tenemos la sombra. <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_10.jpg" alt="Sweet Edgy Eft 10" title="Sweet Edgy Eft 10" /> <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_8.jpg" alt="Sweet Edgy Eft 8" title="Sweet Edgy Eft 8" /></p></li>
+<li><p>Con el mismo procedimiento, ahora en vez de letras tenemos que jugar con el propio logo circular. En cada una de las 3 zonas y de los 3 círculos habrá que repetir el paso número 5, quedando 6 capas más con los degradados desenfocados de los elementos del logo circular. Luego le creamos una sombra blanca como hemos descrito en el paso 8. <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_9.jpg" alt="Sweet Edgy Eft 9" title="Sweet Edgy Eft 9" /></p></li>
+<li><p>Abrimos el programa de diseño vectorial <a href="http://www.inkscape.org/" title="Página oficial">Inkscape</a> (software libre y gratuito). Creamos un documento nuevo y con la <strong>herramienta de crear estrellas y polígonos</strong> dibujamos una estrella. <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_11.jpg" alt="Sweet Edgy Eft 11" title="Sweet Edgy Eft 11" /></p></li>
+<li><p>Arriba hay una barra donde poder modificar el número de esquinas, el radio… y algunos parámetros más de la estrella. Ponemos <strong>número de esquinas</strong> a 22, <strong>longitud del radio</strong> a 0,800 y los otros valores los dejamos a 0. <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_12.jpg" alt="Sweet Edgy Eft 12" title="Sweet Edgy Eft 12" /></p></li>
+<li><p>Haciendo click derecho sobre la estrella y en <strong>relleno y borde</strong>, podemos elegir con la rueda un color sólido como relleno. El naranja es muy común para estas estrellas. Una vez que la tengamos pintada, vamos a <strong>Archivo -> Exportar mapa de bits</strong> y le ponemos un nombre con <strong>extensión PNG</strong>. Antes de exportarla, en esa misma ventana le decimos a qué tamaño la queremos exportar, <strong>cambiamos el ancho</strong> a unos 200px. Le damos a <strong>exportar</strong> y ya podemos cerrar el <a href="http://www.inkscape.org/" title="Página oficial">Inkscape</a>.</p></li>
+<li><p>Con el <a href="http://www.gimp.org/" title="Página oficial">Gimp</a>, abrimos esa imagen que acabamos de exportar. Como la hemos guardado en formato PNG, guarda la estrella sobre una capa transparente. Creamos una <strong>nueva capa</strong> llamada <em>estrella</em> en nuestra imagen splash. Vamos a la imagen de la estrella, <strong>seleccionamos todo, copiamos y pegamos</strong> en la imagen del logo de <strong>Ubuntu</strong>. <strong>Anclamos la capa</strong>. <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_13.jpg" alt="Sweet Edgy Eft 13" title="Sweet Edgy Eft 13" /></p></li>
+<li><p>Colocamos la estrella en la esquina derecha superior. Si hace falta vamos a <strong>Capa -> Escalar la capa</strong> para reducir un poco el tamaño de la estrella. <strong>Duplicamos la capa</strong>, la ponemos debajo de la anterior, vamos a <strong>Capa -> Colores -> Niveles</strong> y llevamos la pestaña de la izquierda (negros) hasta la derecha deltodo. Así tenemos la estrella en negro. Le aplicamos un <strong>filtros -> desenfoque -> desenfoque gaussiano blur</strong> de 10px para conseguir la sombra de la estrella. Con la <strong>herramienta de textos</strong>, con el color y una tipografía adecuadas, escribimos <strong>“New”</strong>. Pinchamos en la <strong>herramienta de rotar la capa o la selección,</strong> hacemos click en nuestra capa de texto y así la rotamos un poquito. <img src="http://hachemuda.com/tutorialSweetEdgyEft2/tutorialSweetEdgyEft2_14.jpg" alt="Sweet Edgy Eft 14" title="Sweet Edgy Eft 14" /></p></li>
+</ol>
+
+<p>¡Ya tenemos nuestro primer splash screen para Ubuntu Edgy Eft!</p>
+
+<p>Si quieres bajarte mi <a href="http://hachemuda.com/tutorialSweetEdgyEft2/sweetEdgyEft.xcf" title="Imagen en XCF con todas las capas">sweetEdgyEft.xcf</a> <strong>con todas las capas</strong> (las capas con los degradados de cada letra y de cada elemento del logo han sido combinadas en una solo con el logo).</p>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=Creando un splash para Ubuntu (Parte 2) - http://www.hachemuda.com/2006/09/creando-un-splash-para-ubuntu-parte-2" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2006/09/creando-un-splash-para-ubuntu-parte-2 - Creando un splash para Ubuntu (Parte 2)" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2006/09/creando-un-splash-para-ubuntu-parte-2&t=Creando un splash para Ubuntu (Parte 2)" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/gimp">gimp</a></li>
+                      <li><a href="/etiqueta/libre">libre</a></li>
+                      <li><a href="/etiqueta/software">software</a></li>
+                      <li><a href="/etiqueta/tutorial">tutorial</a></li>
+                      <li><a href="/etiqueta/ubuntu-y-linux">Ubuntu y Linux</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>

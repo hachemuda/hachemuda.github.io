@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            CloudFlare: mejorar drásticamente la velocidad, seguridad y rendimiento de tu sitio web | HacheMuda
+      </title>
+  
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="CloudFlare: mejorar drásticamente la velocidad, seguridad y rendimiento de tu sitio web">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="http://www.hachemuda.com/2012/02/cloudflare-mejorar-drasticamente-la-velocidad-seguridad-y-rendimiento-de-tu-sitio-web">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title no_image">
+					<h1 class="title">
+						<a href="/2012/02/cloudflare-mejorar-drasticamente-la-velocidad-seguridad-y-rendimiento-de-tu-sitio-web">
+							CloudFlare: mejorar drásticamente la velocidad, seguridad y rendimiento de tu sitio web
+						</a>
+					</h1>
+						
+				</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 21 de Febrero de 2012</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<h1> </h1>
+
+<p><a href="http://www.cloudflare.com">CloudFlare</a> es un servicio creado para <strong>actuar de tres maneras diferentes</strong> sobre tu sitio web:</p>
+
+<ul>
+<li><strong>CDN</strong>: red de contenido distribuído para mejorar la carga de los archivos estáticos de tu web.</li>
+<li><strong>Optimización</strong>: mejora del número de conexiones y combinación de ficheros Javascript y CSS.</li>
+<li><strong>Seguridad</strong>: detección de todos los accesos y gestión de los mismos.</li>
+</ul>
+
+<p>Hablando de forma sencilla y directa, el funcionamiento de un sitio web que tiene integrado CloudFlare es la siguiente:</p>
+
+<blockquote>
+  <p>Cuando venga un usuario a mi web, en vez de llevarlo directamente a mi servidor y enseñársela, mejor hago que pase por el sistema de seguridad de CloudFlare para que analice si es una visita buena y entonces le vaya enviando algunas partes de la web para acelerar el proceso. Como último paso, hacer que finalmente llegue la petición a mi servidor para terminar de enseñarle todos los componentes de mi web.</p>
+</blockquote>
+
+<p><img src="/uploads/2012/02/optimizer-rocket-loader.jpg" alt="Optimizador de CloudFlare" title="Optimizador de Cloudflare" />Con un poco más de detalle técnico, la base de CloudFlare es que el usuario que utiliza el servicio hace un <strong>cambio en los servidores DNS</strong> de su dominio para que apunten a los de Cloudflare. De esta forma, <strong>todo acceso a tu página web pasa primero por su servicio</strong>, donde ellos gestionan cada petición para:</p>
+
+<ul>
+<li>identificar si se trata de un spammer, atacante o si tiene algún comportamiento malicioso,</li>
+<li>una vez pasado el filtro, servirle algunas partes de nuestra página web más rápidamente, porque CloudFlare mantiene una <em>cache</em>, un almacén temporal de recursos estáticos (ficheros HTML, CSS, Javascript, imágenes…)</li>
+<li>y para todo lo que requiere la petición y que Cloudflare no lo tiene guardado, le lleva al servidor real de la página web.</li>
+</ul>
+
+<p>Por tanto, es una manera muy sencilla de <strong>acelerar el sitio web y además protegerlo contra posibles ataques</strong> y blindarlo con las medidas de seguridad desarrolladas por CloudFlare, que son expertos en ese tema.</p>
+
+<h3>Instalación de Cloudflare en tu dominio</h3>
+
+<p>Instalar el servicio es un proceso fácil y muy bien guiado. Primero te registras como usuario y después añades tu dominio en el panel de administración. El sistema se tomará un minuto para detectar la configuración actual de tus servidores DNS y hacer una réplica exacta en su sistema.</p>
+
+<p>A continuación, te informa de los dos servidores DNS que debes especificar en tu dominio para empezar a usar CloudFlare. Los modificas y en cuestión de unas horas ya estás redirigiendo todo tu tráfico a Cloudflare para que se encargue de todo, utilizando la configuración de DNS que tenías originalmente porque se ha copiado exactamente igual en tus ajustes del dominio en Cloudflare.</p>
+
+<p><img src="/uploads/2012/02/cloudflare-ninjas.jpg" alt="Cloudflare protege tu sitio" title="Cloudflare protege tu sitio" /></p>
+
+<h3>Estadísticas</h3>
+
+<p>Además de las tres funciones principales, CloudFlare también ofrece un <strong>completísimo sistema de estadísticas</strong> para cada dominio que está gestionado con el servicio.</p>
+
+<p>Como ejemplo, pongo una captura de pantalla de las estadísticas de HacheMuda de las últimas horas.</p>
+
+<p><img src="/uploads/2012/02/estadisticas_cloudflare.jpg" alt="Ejemplo de gráfico de estadísticas con CloudFlare" title="Ejemplo de gráfico de estadísticas con CloudFlare" />
+Ejemplo de gráfico de estadísticas con Cloudflare</p>
+
+<p>Según este informe, <strong>en las últimas 12 horas</strong> CloudFlare ha conseguido:</p>
+
+<ul>
+<li><strong>Ahorrar 740MB</strong> de ancho de banda del total de 1.4GB.</li>
+<li>Ahorrar casi un <strong>75% de peticiones</strong> a recursos de la web.</li>
+<li>Identificar como <strong>amenzadas a 961 vistas</strong> de la página del total de 8391.</li>
+<li>Además, 32 de esas vistas las han pedido robots de rastreo.</li>
+</ul>
+
+<h3>Versión gratuita y plan de pago</h3>
+
+<p>CloudFlare es un servicio que cuenta con <strong>un plan gratuito</strong>, sin ningún tipo de límite en cuanto a tráfico o tiempo. Las diferencias más importantes entre el plan gratuito y el plan Pro, que cuesta 20$ al mes para tu primer sitio, son que los usuarios de pago disfrutan además de:</p>
+
+<ul>
+<li><strong>Website preloader</strong>: un sistema que precarga recursos de tu página para que los usuarios puedan verla de forma mucho más rápida.</li>
+<li><strong>Detección y optimización</strong> automática de los recursos más pedidos en tu web para mejorar su transferencia a los usuarios.</li>
+<li><strong>Estadísticas más avanzadas</strong> (actualizadas cada 15 minutos en vez de cada 24 horas).</li>
+<li>Soporte para sitios con <strong>certificados SSL</strong>.</li>
+<li>Una colección de sistemas de <strong>seguridad avanzada</strong> para aplicaciones web.</li>
+</ul>
+
+<p>La orientación de CloudFlare con su plan de precios es directamente ir a por los usuarios que gestionan <strong>varios sitios web</strong>, ya sean suyos o de clientes. En ese caso, a partir del primer sitio web con plan Pro, el resto de sitios que configures costarán solamente 5$ mensuales.</p>
+
+<p>Es un precio absolutamente asumible dada las mejoras de velocidad, de seguridad y el alivio que consigues en el servidor ahorrando un montón de peticiones.</p>
+
+<p>Enlaces:</p>
+
+<ul>
+<li><p><a href="http://www.cloudflare.com">Página oficial de CloudFlare</a></p></li>
+<li><p><a href="http://vimeo.com/cloudflare">Canal de CloudFlare en Vimeo</a></p></li>
+</ul>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=CloudFlare: mejorar drásticamente la velocidad, seguridad y rendimiento de tu sitio web - http://www.hachemuda.com/2012/02/cloudflare-mejorar-drasticamente-la-velocidad-seguridad-y-rendimiento-de-tu-sitio-web" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2012/02/cloudflare-mejorar-drasticamente-la-velocidad-seguridad-y-rendimiento-de-tu-sitio-web - CloudFlare: mejorar drásticamente la velocidad, seguridad y rendimiento de tu sitio web" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2012/02/cloudflare-mejorar-drasticamente-la-velocidad-seguridad-y-rendimiento-de-tu-sitio-web&t=CloudFlare: mejorar drásticamente la velocidad, seguridad y rendimiento de tu sitio web" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/cdn">cdn</a></li>
+                      <li><a href="/etiqueta/cloudflare">cloudflare</a></li>
+                      <li><a href="/etiqueta/optimizacion">optimización</a></li>
+                      <li><a href="/etiqueta/seguridad">seguridad</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>

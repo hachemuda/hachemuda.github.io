@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>HacheMuda</title>
+        <link>/</link>
+        <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+                <description>Últimos artículos de HacheMuda</description>
+                <lastBuildDate>Sun, 23 Mar 2014 18:34:59 +0100</lastBuildDate>
+        <pubDate>Sun, 23 Mar 2014 18:34:59 +0100</pubDate>
+        <generator>PieCrust 1.2.0-dev</generator>
+                        
+                                <item>
+            <title>Migrando el blog de Cuéntica de WordPress a Mixture.io en HTML estático y Markdown</title>
+            <link>http://www.hachemuda.com/2014/03/migrando-blog-cuentica-de-wordpress-a-mixture-html-estatico</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>blog</category>
+                        <category>cms</category>
+                        <pubDate>Sun, 23 Mar 2014 00:00:00 +0100</pubDate>
+            <guid>/2014/03/migrando-blog-cuentica-de-wordpress-a-mixture-html-estatico</guid>
+            <description>&lt;p&gt;Desde hace unos días, el &lt;a href=&quot;https://blog.cuentica.com&quot;&gt;blog de Cuéntica&lt;/a&gt; ya no está basado en WordPress sino que es &lt;strong&gt;un blog en HTML estático&lt;/strong&gt;, generado por la herramienta &lt;a href=&quot;http://mixture.io&quot;&gt;Mixture&lt;/a&gt;. Este software se define como una herramienta de prototipado rápido para Mac y Windows, pero es mucho más que eso y tenemos que decir que &lt;strong&gt;el soporte técnico de sus creadores es realmente excepcional&lt;/strong&gt;. Nos han aconsejado, ayudado y han solucionado problemas sobre la marcha (sobre todo con temas de la localización, el idioma y los caracteres especiales usados en español).&lt;/p&gt;
+
+&lt;p&gt;La idea principal era probar una nueva tecnología para la generación de blogs estáticos, con todas las ventajas que eso supone en mantenimiento del propio sitio, la flexibilidad y la velocidad.&lt;/p&gt;
+
+&lt;p&gt;Mixture es una aplicación brutal para desarrolladores de frontend:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Un montón de &lt;em&gt;boilerplates&lt;/em&gt; soportados y disponibles para descargar y crear el proyecto con un solo click.&lt;/li&gt;
+&lt;li&gt;Utiliza plantillas &lt;a href=&quot;http://liquidmarkup.org&quot;&gt;Liquid&lt;/a&gt; para la generación del sitio web, lo que permite desarrollar un sitio web estático con las funcionalidades más importantes de uno dinámico en general.&lt;/li&gt;
+&lt;li&gt;Auto-refresca el navegador ante cualquier cambio de cualquier fichero, y lo hace además súper rápido.&lt;/li&gt;
+&lt;li&gt;Contiene preprocesadores para casi cualquier lenguaje que quieras usar: Sass, Less, CoffeScript&amp;#8230; y tiene la opción del autoprefix para CSS.&lt;/li&gt;
+&lt;li&gt;Optimización de todos los ficheros estáticos y un buen debugger de errores.&lt;/li&gt;
+&lt;li&gt;Permite generar el sitio web en HTML estático y subirlo automáticamente a tu servidor FTP o a GitHub Pages.&lt;/li&gt;
+&lt;li&gt;Tiene una plataforma de hosting para publicar fácilmente el sitio web.&lt;/li&gt;
+&lt;li&gt;Y &lt;a href=&quot;http://docs.mixture.io&quot;&gt;muchas cosas más&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hachemuda.com/uploads/2014/mixture.png&quot; alt=&quot;Mixture - Boilerplates&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Es bastante complicado explicar con todos los detalles la configuración y programación del blog con Mixture, así que vamos a echar un vistazo a los puntos más importantes sabiendo que todo está basado en el boilerplate que viene por defecto para la creación de blogs, que se basa en la funcionalidad de &amp;#8220;&lt;a href=&quot;http://docs.mixture.io/collections&quot;&gt;collections&lt;/a&gt;&amp;#8221; y que permite crear bucles de contenidos en ficheros estáticos, escritos en Markdown.&lt;/p&gt;
+
+&lt;h3&gt;1. Exportación de todos los contenidos de WP a formato Markdown&lt;/h3&gt;
+
+&lt;p&gt;Existen varios plugins de WordPress para exportar todos los artículos y páginas de la base de datos a ficheros en formato Markdown. Nosotros utilizamos &lt;a href=&quot;https://github.com/benbalter/wordpress-to-jekyll-exporter&quot;&gt;WordPress to Jekyll Exporter&lt;/a&gt;, un plugin pensado para generar los contenidos en Markdown que requiere el popular sistema &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; para la generación de sitios web y blogs estáticos. Tuvimos que hacer algunos ajustes para que los metadatos de cada post estuvieran bien especificados, como los necesita &lt;a href=&quot;http://mixture.io&quot;&gt;Mixture.io&lt;/a&gt;, pero fue bastante sencillo.&lt;/p&gt;
+
+&lt;h3&gt;2. Organización de todos los ficheros&lt;/h3&gt;
+
+&lt;p&gt;En el directorio del proyecto, tenemos esta estructura de directorios y ficheros:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;collections&lt;/code&gt;: contiene una carpeta &lt;code&gt;articles&lt;/code&gt; y en su interior todos los artículos en Markdown. El nombre de los ficheros es el &lt;code&gt;slug&lt;/code&gt; de la URL del artículo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;public&lt;/code&gt;: todos los ficheros estáticos (CSS, Javascript, imágenes, fuentes&amp;#8230;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assets&lt;/code&gt;: todas las imágenes usadas en el contenido de los artículos para la ilustración de los posts.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;templates&lt;/code&gt;: el propio &amp;#8220;theme&amp;#8221;, las plantillas para la creación del sitio web. Nos hemos basado en la estructura que viene por defecto en Mixture en el ejemplo de &amp;#8220;blog&amp;#8221;.&lt;/li&gt;
+&lt;li&gt;Como ficheros especiales en las plantillas, tenemos &lt;code&gt;templates/sitemap.liquid&lt;/code&gt; y &lt;code&gt;templates/rss.liquid&lt;/code&gt;, añadidas para la generación de un sitemap XML y del feed RSS para poder suscribirse a los nuevos artículos. También &lt;code&gt;templates/404.liquid&lt;/code&gt; para la gestión de errores 404.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Así se ve la organización en el navegador de archivos:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hachemuda.com/uploads/2014/estructura-ficheros-mixture.png&quot; alt=&quot;Organización de ficheros y directorios&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;3. El contenido de un artículo Markdown&lt;/h3&gt;
+
+&lt;p&gt;Todos los artículos están escritos en Markdown, el nombre del fichero es el slug de su URL y todos ellos tienen:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Una cabecera con los metadatos del artículo: título, fecha, etc.&lt;/li&gt;
+&lt;li&gt;El contenido del post, en Markdown.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;El Markdown de cada post tiene este aspecto:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+title: &#039;El título del post&#039;
+published: true
+thumbnail: /assets/images/2014/03/url-imagen-post-thumbnail.jpg
+date: 2014-03-23 08:00:00
+categories:
+    - categoría 1
+    - categoría 2
+tags:
+    - etiqueta 1
+    - etiqueta 2    
+---
+Aquí va el contenido del post.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;4. Creación de rutas para las plantillas en la configuración del proyecto&lt;/h3&gt;
+
+&lt;p&gt;Mixture permite crear &lt;code&gt;routes&lt;/code&gt; en el fichero de configuración del proyecto &lt;code&gt;mixture.json&lt;/code&gt;, que son reglas de URL&amp;#8217;s visitadas y redirecciones o plantillas que deben usarse para cada una de ellas. En nuestro caso queríamos tener las siguientes vistas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Etiqueta&lt;/strong&gt;: una plantilla que muestra todos los artículos con esa etiqueta.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Categoría&lt;/strong&gt;: una plantilla que muestra todos los artículos con esa etiqueta.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RSS&lt;/strong&gt;: una plantilla que genera el feed RSS con los últimos 10 artículos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sitemap&lt;/strong&gt;: una plantilla que genera el itemap en XML con todas las URL&amp;#8217;s de los artículos publicados.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Artículo&lt;/strong&gt;: una plantilla que muestra el contenido de un artículo concreto.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nuestras rutas han quedado así:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&quot;routes&quot;: [
+    {
+        &quot;redirect&quot;: null, &quot;route&quot;: &quot;tag/:tag&quot;, &quot;template&quot;: &quot;taxonomy&quot; 
+    },
+    {
+        &quot;redirect&quot;: null, &quot;route&quot;: &quot;category/:category&quot;, &quot;template&quot;: &quot;taxonomy&quot;
+    },
+    { 
+        &quot;route&quot;: &quot;rss&quot;, &quot;template&quot;: &quot;rss&quot;, &quot;redirect&quot;: null 
+    },
+    { 
+        &quot;route&quot;: &quot;sitemap&quot;, &quot;template&quot;: &quot;sitemap&quot;, &quot;redirect&quot;: null 
+    },
+    { 
+        &quot;route&quot;: &quot;:url&quot;, &quot;template&quot;: &quot;article&quot;, &quot;redirect&quot;: null 
+    } 
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;4. Las colecciones de artículos&lt;/h3&gt;
+
+&lt;p&gt;Por defecto, Mixture genera las URL&amp;#8217;s de cada artículo añadiendo el nombre del directorio donde están guardados, dentro de &lt;code&gt;collections&lt;/code&gt;. Nosotros no queríamos eso así que hemos seguido sus recomendaciones y cada vez que se genera la URL de un post en una plantilla, le suprimimos ese primer &amp;#8220;/article/&amp;#8221; usando la genial sintaxis de Liquid.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&quot;{{ article.slug | replace_first:&#039;/article&#039; }}&quot;&amp;gt;
+    {{ article.title }}
+&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ejemplo de uso de la etiqueta &lt;code&gt;collection&lt;/code&gt; en &lt;strong&gt;la plantilla de la portada del blog&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% layout &quot;index&quot; %}
+{% block content %} 
+    {% collection &quot;article&quot; by 10 order desc %}
+        {% if collection.current_page &amp;gt; collection.pages and collection.size &amp;gt; 0 %}
+            {% include &quot;articles/paged-too-far&quot; %}
+        {% elseif collection.size == 0 %}
+            {% include &quot;articles/no-articles&quot; %}
+        {% else %}
+            {% assign currentpage = collection.current_page %}
+            {% include &quot;articles/article&quot; with collection.items %}
+        {% endif %}
+    {% endcollection %}
+{% endblock %}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Esta plantilla es un bucle que captura &lt;strong&gt;los últimos 10 artículos publicados&lt;/strong&gt; y para cada uno de ellos llama a la plantilla &lt;code&gt;includes/articles/article.liquid&lt;/code&gt;, que contiene todo el HTML que se renderiza: título con link, fecha, categorías y etiquetas, extracto del contenido y el thumbnail.&lt;/p&gt;
+
+&lt;p&gt;En caso de que la paginación se haya ido demasiado lejos muestra la plantilla &lt;code&gt;paged-too-far.liquid&lt;/code&gt; y si el bucle no devuelve ningún elemento, entonces se mostrará la plantilla &lt;code&gt;no-articles.liquid&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Exactamente lo mismo puede hacerse en la plantilla &lt;code&gt;tag.liquid&lt;/code&gt;, que es la que está referenciada en la &lt;code&gt;route&lt;/code&gt; para ser ejecutada cuando se accede a una URL que debe contener un listado de posts con una etiqueta concreta.&lt;/p&gt;
+
+&lt;p&gt;Se puede hacer uso de las variables &lt;code&gt;{{ mixture.route }}&lt;/code&gt; para la detección del slug de la URL. Por ejemplo, si se accede a la URL:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;http://dominio.com/tag/lo-que-sea&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;en la plantilla Liquid puede usarse &lt;code&gt;{{ mixture.route.tag }}&lt;/code&gt; y devolverá &lt;code&gt;lo-que-sea&lt;/code&gt;. Así pueden detectarse las etiquetas a buscar en un bucle con &lt;code&gt;collections&lt;/code&gt;, por ejemplo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{% collection &quot;article&quot; by 10 query &#039;tags={{ mixture.route.tag }}&#039; order desc %}
+    {% for items in collection.items %}
+        &amp;lt;!-- Mostrar cada artículo --&amp;gt;
+    {% endfor %}
+{% endcollection %}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Y lo mismo en la plantilla de categorías, pero usando &lt;code&gt;{{ mixture.route.category }}&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3&gt;5. Redirección vía .htaccess de las URL&amp;#8217;s viejas a las nuevas&lt;/h3&gt;
+
+&lt;p&gt;Hemos intentado no hacer ningún cambio en las URL&amp;#8217;s utilizadas en el blog, pero ha sido inevitable que cada URL de cada artículo tenga al final la extensión &lt;code&gt;.html&lt;/code&gt;. Como en el antiguo con WordPress las teníamos sin la extensión al final, hemos creado una redirección a través del fichero &lt;code&gt;.htaccess&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;IfModule mod_rewrite.c&amp;gt;
+    RewriteEngine On
+    RedirectMatch ^/([\w-]+)/?$ https://blog.cuentica.com/$1.html 
+&amp;lt;/IfModule&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;6. Publicación de nuevos artículos&lt;/h3&gt;
+
+&lt;p&gt;Mixture tiene la opción de &lt;strong&gt;convertir el sitio a HTML estático y automáticamente subir los últimos cambios a tu propio servidor FTP&lt;/strong&gt;, por lo que te da todas las facilidades. Escribes el post en tu entorno local, compruebas que todo está bien y ejecutas la generación y la subida.&lt;/p&gt;
+
+&lt;p&gt;Esperamos que te haya gustado la idea, nosotros estamos súper contentos con &lt;a href=&quot;https://blog.cuentica.com&quot;&gt;el resultado&lt;/a&gt; y teníamos ganas de probar esta nueva tendencia a la generación de blogs estáticos. Escribe un comentario si tienes cualquier duda o si puedo ayudarte en alguna cosa, :)&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Django, the Dog: nuevo proyecto personal</title>
+            <link>http://www.hachemuda.com/2013/08/django-the-dog-nuevo-proyecto-personal</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>proyecto</category>
+                        <category>blog</category>
+                        <category>cms</category>
+                        <pubDate>Mon, 19 Aug 2013 00:00:00 +0200</pubDate>
+            <guid>/2013/08/django-the-dog-nuevo-proyecto-personal</guid>
+            <description>&lt;p&gt;Pues nada, que ya he puesto en producción mi nuevo proyecto personal y ya es público: &lt;a href=&quot;http://djangothedog.com&quot;&gt;Django, the Dog&lt;/a&gt;. Llevo unos cuantos meses con un nuevo amiguito en casa, cuyo nombre probablemente habrás adivinado, :)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hachemuda.com/uploads/2013/2013-08-17-django.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nunca había tenido perro y en estos primeros meses está empezando a apasionarme el tema de la &lt;strong&gt;psicología de los perros, su aprendizaje y su educación&lt;/strong&gt;. Por ello, como estoy intentando formarme todo lo que puedo sobre estos temas, quiero mantener un sitio online donde &lt;strong&gt;publicar cosas que me parezcan interesantes y ponerlas a disposición de todo el mundo&lt;/strong&gt;: artículos de opinión, cómo me equivoco y corrijo, cómo avanzo… y también recursos que me han gustado, como videos, otros artículos, seminarios, libros…&lt;/p&gt;
+
+&lt;p&gt;He publicado una entrada dedicada a explicar &lt;a href=&quot;http://djangothedog.com/el-porque-y-el-proposito-de-esta-web&quot;&gt;el propósito de la nueva web&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;¡¡Espero que te guste la idea!! :)&lt;/p&gt;
+
+&lt;p&gt;Por cierto, que para crear la nueva página he usado un nuevo CMS mitad estático y mitad dinámico. Se llama &lt;a href=&quot;http://statamic.com&quot;&gt;Statamic&lt;/a&gt; y hablé ligeramente de él en la entrada sobre &lt;a href=&quot;http://hachemuda.com/2013/03/seleccion-de-5-6-gestores-de-contenidos-sin-base-de-datos&quot;&gt;gestores de contenidos sin base de datos&lt;/a&gt;. Estoy bastante contento porque han implementado un sistema de cache que parece que funciona muy bien y la verdad es que está curradísimo.&lt;/p&gt;
+
+&lt;p&gt;Enlace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.djangothedog.com&quot;&gt;Django, the Dog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Cuéntica: el mejor servicio online de facturación y gestión para autónomos y PYMES</title>
+            <link>http://www.hachemuda.com/2013/04/cuentica-mejor-servicio-online-facturacion-gestion-autonomos-pymes</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>cuéntica</category>
+                        <category>autónomos</category>
+                        <category>freelance</category>
+                        <category>gestión</category>
+                        <category>empresa</category>
+                        <pubDate>Thu, 18 Apr 2013 00:00:00 +0200</pubDate>
+            <guid>/2013/04/cuentica-mejor-servicio-online-facturacion-gestion-autonomos-pymes</guid>
+            <description>&lt;p&gt;Este post puede parecer un poquito &lt;em&gt;spammer&lt;/em&gt; porque yo soy parte del equipo que desarrolla &lt;a href=&quot;https://www.cuentica.com&quot;&gt;Cuéntica&lt;/a&gt;, y por supuesto que lo publico para difundir el producto, pero lo hago de forma completamente personal y con un absoluto convencimiento y sinceridad. &lt;/p&gt;
+
+&lt;p&gt;Desde mi punto de vista personal, Cuéntica es actualmente &lt;strong&gt;la mejor herramienta de gestión online para autónomos, profesionales y pequeñas empresas&lt;/strong&gt;. Yo opero profesionalmente mediante una SLU (Sociedad Limitada Unipersonal), y por tanto tengo que llevar la contabilidad de una sociedad. Y no me gusta la contabilidad, no me gusta perder tiempo con papeleos ni con burocracia, y no me gusta nada la sensación de no estar seguro de algún trámite o de cualquier situación sobre temas de gestión.&lt;/p&gt;
+
+&lt;p&gt;Siendo usuario de Cuéntica, puedo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Crear &lt;strong&gt;borradores de facturas para tener estimaciones&lt;/strong&gt; de ingresos. Si los clientes necesitan tener presupuestos, los exporto a PDF y se los mando por email desde la propia web.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Emitir las facturas&lt;/strong&gt; de los trabajos realizados, sin preocuparme de los cálculos o la numeración, porque los calcula automáticamente.&lt;/li&gt;
+&lt;li&gt;Introducir todos &lt;strong&gt;los gastos del negocio&lt;/strong&gt;. No sólo las facturas recibidas de proveedores, sino también &lt;em&gt;tickets&lt;/em&gt; y cualquier otro gasto. Intento hacerlo todas las semanas, para no tener que pegarme una panzada al final de cada trimestre.&lt;/li&gt;
+&lt;li&gt;Confirmar los &lt;strong&gt;gastos periódicos&lt;/strong&gt;, que ya aparecen solitos de forma automática (teléfono móvil, hosting, dominios…)&lt;/li&gt;
+&lt;li&gt;Al cumplirse cada trimestre, reviso todas las cuentas con la asesoría de Cuéntica para confirmar que todo está bien y directamente solicito la &lt;strong&gt;presentación de los modelos de impuestos trimestrales&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Utilizar una aplicación súper enfocada, dedicada a algo tan específico y que tiene un equipo trabajando permanentemente en mejorarla, hace que la experiencia de trabajo con Cuéntica, como usuario, sea cada vez mejor. Lógicamente tenemos muchas cosas que mejorar, nunca estamos satisfechos y &lt;strong&gt;el servicio está en una evolución constante&lt;/strong&gt;, adaptándonos a las necesidades de nuestros usuarios y creando un sistema cada vez mejor y más completo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hachemuda.com/uploads/2013/2013-04-18-cuentica-escritorio.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Y algo que también es muy importante, me encanta que con un simple email o una llamada telefónica al equipo de asesoría &lt;strong&gt;me resuelvan cualquier duda&lt;/strong&gt; que tenga sobre un ingreso, un gasto raro o cualquier otra cosa. &lt;strong&gt;La seguridad de hacer las cosas bien.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Yo tengo la oportunidad de verlo desde dentro, pero creo que cada vez es más evidente que hay un equipazo que trabaja desde hace ya dos años en Cuéntica, intentando simplificar al máximo la gestión para el autónomo o la empresa que lo desee. Haciendo que (incluso) le cojas gusto a la gestión y valores realmente todo lo que puede aportarte tanto personalmente como a tu negocio.&lt;/p&gt;
+
+&lt;p&gt;Si eres autónomo o tienes una pequeña empresa, te animo encarecidamente a que pruebes Cuéntica. Puedes &lt;strong&gt;empezar con la versión gratuíta&lt;/strong&gt;, que te incluye todas las necesidades básicas y así podrás probar la aplicación y su funcionamiento. Y en cuanto estés convencido, que por supuesto lo estarás, &lt;strong&gt;pasarte a &lt;em&gt;premium&lt;/em&gt;&lt;/strong&gt; para disponer de todo el potencial de la aplicación y del equipo de asesoría.&lt;/p&gt;
+
+&lt;p&gt;PD: Sí, estoy un pelín enamorado de esto que estamos haciendo, :)&lt;/p&gt;
+
+&lt;p&gt;Enlace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.cuentica.com&quot;&gt;Cuéntica&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Migrando Hachemuda de WP a Piecrust (II): migración de contenidos y flujo de publicación</title>
+            <link>http://www.hachemuda.com/2013/04/migrando-hachemuda-de-wp-a-piecrust-ii-migracion-de-contenidos-y-flujo-de-publicacion</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>hachemuda</category>
+                        <category>cms</category>
+                        <category>tutorial</category>
+                        <category>piecrust</category>
+                        <category>markdown</category>
+                        <category>wordpress</category>
+                        <category>site44</category>
+                        <category>dropbox</category>
+                        <category>sincronización</category>
+                        <pubDate>Tue, 02 Apr 2013 00:00:00 +0200</pubDate>
+            <guid>/2013/04/migrando-hachemuda-de-wp-a-piecrust-ii-migracion-de-contenidos-y-flujo-de-publicacion</guid>
+            <description>&lt;p&gt;Hace unos días publicaba la primerta parte de este artículo, explicando un poco &lt;a href=&quot;http://www.hachemuda.com/2013/03/migrando-hachemuda-de-wp-a-piecrust-i-instalacion-del-framework-y-primeros-pasos/&quot;&gt;qué es PieCrust y las razones por las que he escogido este &lt;em&gt;framework&lt;/em&gt; para gestionar HacheMuda&lt;/a&gt;, convirtiendo todo el sitio basado en WordPress en una página puramente estática.&lt;/p&gt;
+
+&lt;p&gt;Llevaba bastante tiempo escribiendo los artículos de Hachemuda en Markdown, pero no de una forma muy &amp;#8220;correcta&amp;#8221;. Los escribía y después los copiaba en HTML en el editor de WordPress para publicarlos. &lt;/p&gt;
+
+&lt;h2&gt;Pasando los contenidos de WordPress a ficheros en Markdown&lt;/h2&gt;
+
+&lt;p&gt;Lo primero que quise hacer al plantear seriamente la migración de WordPress a un CMS estático fue comprobar que podía &lt;strong&gt;extraer bien todos los contenidos&lt;/strong&gt; de Hachemuda y &lt;strong&gt;convertirlos a ficheros Markdown&lt;/strong&gt; sintácticamente correctos. Si conseguía eso, ya podía usar cualquier CMS. Independientemente de que uses PieCrust, Jekyll, Statamic o &lt;a href=&quot;http://www.hachemuda.com/2013/03/seleccion-de-5-6-gestores-de-contenidos-sin-base-de-datos&quot;&gt;el que sea&lt;/a&gt;, los contenidos siempre puedes tenerlos en Markdown y personalmente me parece una buena idea disponer de ellos en ficheros de texto para manejarlos más fácilmente y no depender de ningún software para poder consultarlos, copiarlos o lo que sea.&lt;/p&gt;
+
+&lt;p&gt;PieCrust tiene implementado &lt;a href=&quot;http://bolt80.com/piecrust/doc/import/&quot;&gt;un importador automático&lt;/a&gt; que se supone que hace precisamente eso, pero no he podido probarlo porque cuando empecé con el &lt;em&gt;framework&lt;/em&gt; ya tenía todos los contenidos migrados.&lt;/p&gt;
+
+&lt;p&gt;Lo que yo usé fue el plugin &lt;a href=&quot;https://github.com/benbalter/wordpress-to-jekyll-exporter&quot;&gt;WordPress to Jekyll Exporter&lt;/a&gt;, un plugin para WordPress que genera un directorio con &lt;strong&gt;todos los contenidos de la base de datos convertidos a ficheros de texto Markdown&lt;/strong&gt;, incluyendo también los archivos adjuntos, ficheros de configuración, etc. Como te habrás percatado por el nombre, está pensado para usar finalmente Jekyll como CMS, pero en realidad te da igual el CMS que vayas a usar, lo que quieres es convertir los contenidos a Markdown.&lt;/p&gt;
+
+&lt;p&gt;Tuve que modificar el &lt;em&gt;script&lt;/em&gt; para que no exportara las categorías (sólo quería mantener los &lt;em&gt;tags&lt;/em&gt;) y después tuve que hacer algún &lt;em&gt;search &amp;amp; replace&lt;/em&gt; de caracteres que no se exportaban bien y hacían que el Markdown fuera sintácticamente incorrecto para Piecrust, pero nada que no se pudiera solucionar fácilmente con las herramientas avanzadas de &lt;em&gt;búsqueda y reemplazo&lt;/em&gt; de cualquier editor decente, como &lt;a href=&quot;http://panic.com/coda/&quot;&gt;Coda&lt;/a&gt; o &lt;a href=&quot;http://www.sublimetext.com&quot;&gt;SublimeText&lt;/a&gt;. También tuve que reemplazar algunas &lt;strong&gt;cadenas de texto propias de WP&lt;/strong&gt; que estaban incluídas en el contenido de los artículos, como por ejemplo &lt;em&gt;shortcodes&lt;/em&gt; para algunos plugins.&lt;/p&gt;
+
+&lt;p&gt;Lo bueno de usar ese plugin es que te genera la cabecera del fichero Markdown no sólo con el título, categorías y etiquetas, sino también con &lt;strong&gt;todos los metadatos que tengas en tu base de datos&lt;/strong&gt;. Por ejemplo: la URL de la imagen destacada, el estado y tipo de cada post, la descripción y el título SEO si usas WordPress SEO o cualquier otro campo personalizado.&lt;/p&gt;
+
+&lt;div class=&quot;caption&quot;&gt;
+&lt;img src=&quot;http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-ii-cabecera-markdown.jpg&quot; alt=&quot;Ejemplo de cabecera Markdown para los artículos de HacheMuda.&quot; /&gt; Ejemplo de cabecera Markdown para los artículos de Hachemuda.
+&lt;/div&gt;
+
+&lt;p&gt;Otra herramienta muy recomendada es &lt;a href=&quot;https://github.com/thomasf/exitwp&quot;&gt;ExitWP&lt;/a&gt;, un &lt;em&gt;script&lt;/em&gt; escrito en Python también para migrar un sitio web basado en WordPress a Jekyll, generando todos los ficheros Markdown. O también puedes revisar &lt;a href=&quot;https://github.com/dreikanter/wp2md&quot;&gt;WordPress to Markdown Exporter&lt;/a&gt;, de nuevo un script Python con el mismo objetivo y que acabo de descubrir haciendo una búsqueda sobre este tema.&lt;/p&gt;
+
+&lt;h2&gt;Flujo de publicación&lt;/h2&gt;
+
+&lt;p&gt;Al tener el sitio web estático y no disponer de un panel de administración web para publicar nuevos contenidos, hay que &lt;strong&gt;pensar bien el método a seguir para actualizar la web&lt;/strong&gt;. Cuando se publica un nuevo artículo, hay que tener en cuenta que no sólo hay que subir ese artículo, sino también una actualización de los directorios de etiquetas, categorías, la portada, la paginación, el archivo del blog, etc. Muchas cosas quedan modificadas al publicar un nuevo post.&lt;/p&gt;
+
+&lt;h3&gt;Idea #1: hosting normal y FTP&lt;/h3&gt;
+
+&lt;p&gt;La primera opción y la más sencilla es la más evidente: publicas el nuevo artículo en local, generas el sitio web estático con los nuevos cambios y &lt;strong&gt;lo subes todo manualmente al servidor mediante un cliente de FTP&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Muchos clientes FTP tienen funciones avanzadas que pueden ayudarte. Por ejemplo, yo uso &lt;a href=&quot;http://panic.com/transmit/&quot;&gt;Transmit&lt;/a&gt;, que tiene una &lt;strong&gt;función de sincronización de carpetas&lt;/strong&gt;. De este modo, Transmit analiza los directorios y ficheros que han sido modificados y los actualiza en el servidor, dejando los demás intactos.&lt;/p&gt;
+
+&lt;div class=&quot;caption&quot;&gt;
+&lt;img src=&quot;http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-ii-transmit.jpg&quot; alt=&quot;Pantalla de la función de sincronización por FTP de Transmit.&quot; /&gt; Pantalla de la función de sincronización por FTP de Transmit.
+&lt;/div&gt;
+
+&lt;p&gt;Sin duda es lo más sencillo, pero también bastante engorroso el tener que estar subiendo/sincronizando manualmente los archivos cada vez.&lt;/p&gt;
+
+&lt;h3&gt;Idea #2: hosting normal, GIT y FTP Deploy&lt;/h3&gt;
+
+&lt;p&gt;Una segunda opción que me gusta mucho es usar un &lt;strong&gt;sistema de control de versiones&lt;/strong&gt;, como GIT, mantener un repositorio con todas ellas y poder hacer &lt;em&gt;deploy&lt;/em&gt; fácilmente de la última versión de los archivos. Así no sólo es más sencillo el &lt;em&gt;deploy&lt;/em&gt; del sitio al hacer cambios, sino que guardas &lt;strong&gt;una copia de seguridad continua y con versiones&lt;/strong&gt; de todas las actualizaciones y cambios que publicas.&lt;/p&gt;
+
+&lt;p&gt;Para el &lt;em&gt;deploy&lt;/em&gt; automático de un repositorio de &lt;code&gt;GIT&lt;/code&gt; a un servidor &lt;code&gt;FTP&lt;/code&gt; existen varios servicios. Yo los que he probado son &lt;a href=&quot;http://beanstalkapp.com&quot;&gt;BeanstalkApp&lt;/a&gt; y &lt;a href=&quot;http://www.deployhq.com&quot;&gt;DeployHQ&lt;/a&gt;. Ambos funcionan realmente bien, pero añaden un coste mensual que quería evitar si era posible.&lt;/p&gt;
+
+&lt;p&gt;El primero, BeanstalkApp, integra ya un repositorio cloud con &lt;code&gt;GIT&lt;/code&gt; y permite hacer &lt;strong&gt;deploys automáticos a otros servidores&lt;/strong&gt; FTP, SFTP, Amazon S3, etc. Es una pasada y la opción que más me gusta si no te importa pagar los 15$ mensuales que cuesta el plan básico. Es ideal si tienes más de un sitio, pero para sólo uno sale un poco caro.&lt;/p&gt;
+
+&lt;p&gt;El segundo, DeployHQ, no tiene un repositorio GIT sino que &lt;strong&gt;sólo realiza el propio deploy a otro servidor&lt;/strong&gt;. Por tanto, necesitas contratar por otro lado un repo privado, por ejemplo en GitHub, para que DeployHQ lo &amp;#8220;lea&amp;#8221; y haga un deploy cuando se envíe un nuevo &lt;em&gt;commit&lt;/em&gt;. Al final saldría por el mismo precio que BeanstalkApp, aproximadamente.&lt;/p&gt;
+
+&lt;h3&gt;Idea #3: Dropbox y Site44&lt;/h3&gt;
+
+&lt;p&gt;Otra opción es usar &lt;strong&gt;un sistema de sincronización más simple&lt;/strong&gt; entre tu entorno local y el servidor público, como &lt;a href=&quot;http://www.dropbox.com&quot;&gt;Dropbox&lt;/a&gt;. Yo uso Dropbox a diario en mi trabajo, de hecho tengo prácticamente todo mi ordenador constantemente sincronizado con este servicio en la nube. Pero para alojar páginas públicas tiene muchas limitaciones y no es muy recomendable si es un proyecto medio serio. No es el objetivo de Dropbox.&lt;/p&gt;
+
+&lt;p&gt;Existen algunos servicios, como &lt;a href=&quot;https://www.site44.com&quot;&gt;Site44&lt;/a&gt; o &lt;a href=&quot;http://www.kissr.com&quot;&gt;Kissr&lt;/a&gt;, que ofrecen un plan de hosting básico en el que todos los archivos están &lt;strong&gt;permanentemente sincronizados con directorios de tu cuenta de Dropbox&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Esta es la idea con la que me he quedado de momento, y con la que estoy realmente contento hasta ahora. Con Dropbox como eje central de la sincronización y Site44 como hosting, que utiliza Amazon S3 internamente como servidor.&lt;/p&gt;
+
+&lt;p&gt;Este es &lt;strong&gt;el proceso que sigo para publicar un nuevo artículo&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Edito el fichero del post y las imágenes a las carpetas correspondientes de mi instalación local de PieCrust. Compruebo que todo está bien desde el navegador mediante la función &lt;em&gt;servidor&lt;/em&gt; de PieCrust. &lt;/li&gt;
+&lt;li&gt;Una vez confirmado que todo está como yo quiero, llega el momento de la publicación online. &lt;strong&gt;Genero el sitio web estático&lt;/strong&gt; con PieCrust, especificando que el directorio donde debe poner los ficheros es mi carpeta de Dropbox sincronizada con mi hosting en Site44. El comando tiene esta pinta:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre class=&quot;php&quot; style=&quot;font-family:monospace;&quot;&gt;chef bake &lt;span style=&quot;color: #339933;&quot;&gt;-&lt;/span&gt;o &lt;span style=&quot;color: #339933;&quot;&gt;/&lt;/span&gt;Users&lt;span style=&quot;color: #339933;&quot;&gt;/&lt;/span&gt;guillermo&lt;span style=&quot;color: #339933;&quot;&gt;/&lt;/span&gt;Dropbox&lt;span style=&quot;color: #339933;&quot;&gt;/&lt;/span&gt;Aplicaciones&lt;span style=&quot;color: #339933;&quot;&gt;/&lt;/span&gt;site44&lt;span style=&quot;color: #339933;&quot;&gt;/&lt;/span&gt;www&lt;span style=&quot;color: #339933;&quot;&gt;.&lt;/span&gt;hachemuda&lt;span style=&quot;color: #339933;&quot;&gt;.&lt;/span&gt;com&lt;span style=&quot;color: #339933;&quot;&gt;/&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;En cuestión de unos segundos o minutos (lo que tarde la sincronización de Dropbox con tu ancho de banda), ya está el nuevo post y el nuevo sitio online.&lt;/p&gt;
+
+&lt;h2&gt;Puesta a punto y configuración de Site44&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.site44.com/&quot;&gt;Site44&lt;/a&gt; es súper sencillo: haces &lt;strong&gt;login con tu cuenta de Dropbox&lt;/strong&gt; y creas tu primer sitio web especificando si quieres que sea tu propio dominio o un subdominio de &lt;code&gt;site44.com&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para usar tu propio dominio, tienes que modificar la &lt;strong&gt;configuración de los DNS&lt;/strong&gt;. Lo malo es que Site44 no permite apuntar directamente el dominio raíz, solamente subdominios (&lt;code&gt;www&lt;/code&gt; es un subdominio), de modo que tuve que redireccionar el raíz a &lt;code&gt;www&lt;/code&gt;. El dominio y la tabla de registros DNS los gestiono directamente con &lt;a href=&quot;http://www.cloudflare.com&quot;&gt;CloudFlare&lt;/a&gt; y actualmente tengo esta configuración:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Un registro &lt;code&gt;CNAME&lt;/code&gt; apuntando de &lt;code&gt;www&lt;/code&gt; a &lt;code&gt;domains.site44.com&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Un registro &lt;code&gt;CNAME&lt;/code&gt; apuntando de &lt;code&gt;@&lt;/code&gt; a &lt;code&gt;www.hachemuda.com&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Un &lt;em&gt;PageRule&lt;/em&gt; de tipo redirección: de &lt;code&gt;hachemuda.com&lt;/code&gt; a &lt;code&gt;http://www.hachemuda.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Otro &lt;em&gt;PageRule&lt;/em&gt; de tipo redirección: de &lt;code&gt;hachemuda.com/*&lt;/code&gt; a &lt;code&gt;http://www.hachemuda.com/$1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;caption&quot;&gt;
+&lt;img src=&quot;http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-ii-cloudflare.jpg&quot; alt=&quot;Ejemplo de configuración de PageRules en Cloudflare.&quot; /&gt; Ejemplo de configuración de PageRules en Cloudflare.
+&lt;/div&gt;
+
+&lt;p&gt;Una vez creas tu cuenta en Site44, cambias los DNS y añades tu dominio, automáticamente se te crea un directorio en tu carpeta de Dropbox llamado &lt;code&gt;Aplicaciones/site44/www.midominio.com&lt;/code&gt;. Ese es &lt;strong&gt;el directorio sincronizado por el hosting&lt;/strong&gt; y el único al que Site44 tiene acceso. Por defecto pone un fichero HTML básico que puedes probar a modificar y sincronizar para comprobar el buen funcionamiento, :)&lt;/p&gt;
+
+&lt;h3&gt;Plantilla personalizada para errores 404&lt;/h3&gt;
+
+&lt;p&gt;Una opción avanzada que permite Site44 y que no he conseguido saber si la permiten otros servicios de este tipo es la personalización de una página de error 404. &lt;a href=&quot;https://www.site44.com/advanced&quot;&gt;Para publicarla&lt;/a&gt;, simplemente tienes que colocar un fichero &lt;code&gt;404.html&lt;/code&gt; en el directorio raíz de tu web. Ese fichero HTML será el que se muestre cuando haya un error.&lt;/p&gt;
+
+&lt;h3&gt;Precios&lt;/h3&gt;
+
+&lt;p&gt;Los precios de Site44 puedes consultarlos en &lt;a href=&quot;https://www.site44.com&quot;&gt;la web&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Plan Gratuíto&lt;/strong&gt;: límite de 5 sitios web y 100MB de transferencia al mes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plan Personal&lt;/strong&gt;: 4.95$ mensuales por 10 sitios web y 10GB de transferencia.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plan Profesional&lt;/strong&gt;: 9.95$ mensuales por 50 sitios web y 50GB de transferencia.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Así que ya sabes, puedes darte de alta en el plan gratuíto para probar el sistema y después pasarte a uno superior.&lt;/p&gt;
+
+&lt;h2&gt;Conclusión&lt;/h2&gt;
+
+&lt;p&gt;Me encanta cómo tengo configurado ahora mismo el entorno de trabajo en Hachemuda. Puedo &lt;strong&gt;escribir artículos con cualquier editor Markdown&lt;/strong&gt;, sin depender de nada más. PieCrust me permite &lt;strong&gt;previsualizar mi web en local&lt;/strong&gt; cuando quiero hacer cualquier cambio. Para publicar simplemente tengo que &lt;strong&gt;generar el sitio con un comando y Dropbox se encarga de la sincronización&lt;/strong&gt; entre mi entorno local y el entorno de producción, poniendo automáticamente online la última versión de la web.&lt;/p&gt;
+
+&lt;p&gt;¡Genial! ¿No crees? :)&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Migrando Hachemuda de WP a PieCrust (I): instalación del framework y primeros pasos</title>
+            <link>http://www.hachemuda.com/2013/03/migrando-hachemuda-de-wp-a-piecrust-i-instalacion-del-framework-y-primeros-pasos</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>piecrust</category>
+                        <category>tutorial</category>
+                        <category>código</category>
+                        <category>cms</category>
+                        <category>hachemuda</category>
+                        <category>wordpress</category>
+                        <pubDate>Mon, 25 Mar 2013 00:00:00 +0100</pubDate>
+            <guid>/2013/03/migrando-hachemuda-de-wp-a-piecrust-i-instalacion-del-framework-y-primeros-pasos</guid>
+            <description>&lt;p&gt;Estaba pensando en cómo escribir un post explicando &lt;strong&gt;cómo ha sido mi experiencia migrando Hachemuda de WordPress al nuevo PieCrust&lt;/strong&gt;, un &lt;em&gt;framework&lt;/em&gt; para la creación de sitios web estáticos. No sabía si hacer un chorizaco de post o partirlo en varios diferentes… y he decidido hacerlo en tres partes:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Parte I&lt;/strong&gt;: instalación del framework y primeros pasos con PieCrust.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Parte II&lt;/strong&gt;: migración de contenidos de WP a PieCrust y flujo de publicación de contenidos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Parte III&lt;/strong&gt;: desarrollo de tu propio theme con PieCrust.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;PieCrust, el &lt;em&gt;framework&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;PieCrust es un framework para el desarrollo de sitios web estáticos, creado por &lt;a href=&quot;https://twitter.com/ludovicchabant&quot;&gt;Ludovic Chabant&lt;/a&gt;, que sigue &lt;strong&gt;trabajando activamente en él y actualizando las versiones&lt;/strong&gt; &lt;a href=&quot;https://github.com/ludovicchabant/PieCrust&quot;&gt;en GitHub&lt;/a&gt; para que cualquiera pueda usarlo.&lt;/p&gt;
+
+&lt;p&gt;Como &lt;em&gt;framework&lt;/em&gt;, soporta varias tecnologías que permiten crear páginas web pensándolas de una forma dinámica, para la posterior generación de los ficheros estáticos. Nativamente permite utilizar &lt;a href=&quot;http://lesscss.org&quot;&gt;Less&lt;/a&gt; para las hojas de estilos, &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; o &lt;a href=&quot;http://en.wikipedia.org/wiki/Textile_(markup_language)&quot;&gt;Textile&lt;/a&gt; para los contenidos, &lt;a href=&quot;http://twig.sensiolabs.org&quot;&gt;Twig&lt;/a&gt; para el lenguaje de plantillas, &lt;a href=&quot;http://qbnz.com/highlighter/&quot;&gt;Geshi&lt;/a&gt; para el resaltado de sintaxis, &lt;a href=&quot;http://haml.info&quot;&gt;Haml&lt;/a&gt;, &lt;a href=&quot;http://sass-lang.com&quot;&gt;Sass&lt;/a&gt;&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;Vamos, una &lt;strong&gt;selección de tecnologías, librerías y recursos&lt;/strong&gt; que el autor ha considerado interesantes y útiles. Y se van incorporando nuevas conforme más usuarios van usando PieCrust y aportando sus ideas y sugerencias.&lt;/p&gt;
+
+&lt;h2&gt;Instalación de PieCrust&lt;/h2&gt;
+
+&lt;p&gt;PieCrust es un software que &lt;strong&gt;no tiene dependencias&lt;/strong&gt; con ningún otro &lt;em&gt;framework&lt;/em&gt;, simplemenente necesita que en tu servidor tengas instalado &lt;code&gt;PHP 5.3&lt;/code&gt; o una versión posterior.&lt;/p&gt;
+
+&lt;p&gt;Suponiendo una &lt;strong&gt;instalación en un entorno local&lt;/strong&gt;, los pasos a seguir son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Descargar la versión &lt;a href=&quot;https://github.com/ludovicchabant/PieCrust&quot;&gt;Master&lt;/a&gt; (inestable, más nueva) o &lt;a href=&quot;https://github.com/ludovicchabant/piecrust/tree/git-stable&quot;&gt;Stable&lt;/a&gt; (más probada) de GitHub. Puedes hacerlo usando &lt;code&gt;GIT&lt;/code&gt; o descargando el ZIP y descomprimiendo los archivos.&lt;/li&gt;
+&lt;li&gt;Dentro de PieCrust, la carpeta &lt;code&gt;website&lt;/code&gt; contiene todos los archivos del sitio web: plantillas, recursos, contenidos, etc. De hecho, encontrarás un &lt;em&gt;theme&lt;/em&gt; y algunos contenidos de muestra. Accedemos a ella mediante la línea de comandos y ejecutamos el comando &lt;code&gt;chef&lt;/code&gt; para iniciar el servidor de PieCrust:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre class=&quot;php&quot; style=&quot;font-family:monospace;&quot;&gt;cd piecrust&lt;span style=&quot;color: #339933;&quot;&gt;/&lt;/span&gt;website
+&lt;span style=&quot;color: #339933;&quot;&gt;../&lt;/span&gt;bin&lt;span style=&quot;color: #339933;&quot;&gt;/&lt;/span&gt;chef serve&lt;/pre&gt;
+
+&lt;p&gt;Automáticamente se abrirá una pestaña en el navegador web con la dirección &lt;code&gt;http://localhost:8080&lt;/code&gt;, mostrando el sitio web que viene por defecto:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-i-thumbnail.jpg&quot; alt=&quot;Captura del sitio web por defecto con PieCrust&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una de las cosas geniales de PieCrust es que, con el servidor funcionando de fondo, puedes hacer cualquier cambio en el proyecto (contenidos, maquetación, programación, configuración, etc) y &lt;strong&gt;los cambios se aplican automáticamente&lt;/strong&gt;. Sólo tienes que refrescar la página en el navegador.&lt;/p&gt;
+
+&lt;p&gt;Pues nada, que ya lo tienes funcionando, así que puedes probar a modificar o añadir contenidos. Las páginas y posts los encontrarás escritos con sintaxis Markdown en las carpetas &lt;code&gt;website/_content/pages&lt;/code&gt; y en &lt;code&gt;website/_content/posts&lt;/code&gt;, respectivamente.&lt;/p&gt;
+
+&lt;h2&gt;Generar el sitio web estático&lt;/h2&gt;
+
+&lt;p&gt;El comando &lt;code&gt;chef&lt;/code&gt; de PieCrust no sólo permite que el &lt;em&gt;framework&lt;/em&gt; actúe como un servidor ligero, sino también &lt;strong&gt;realizar la generación del sitio web estático&lt;/strong&gt;. Esto lo hace mediante la orden &lt;code&gt;bake&lt;/code&gt;. Estando en el directorio &lt;code&gt;website&lt;/code&gt; en la línea de comandos, puedes probarlo ejecutando:&lt;/p&gt;
+
+&lt;pre class=&quot;php&quot; style=&quot;font-family:monospace;&quot;&gt;&lt;span style=&quot;color: #339933;&quot;&gt;../&lt;/span&gt;bin&lt;span style=&quot;color: #339933;&quot;&gt;/&lt;/span&gt;chef bake&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-i-bake.jpg&quot; alt=&quot;Captura del terminal ejecutando el comando &amp;quot;bake&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez terminado el proceso, puedes encontrar &lt;strong&gt;tu nuevo sitio web estático&lt;/strong&gt; en el directorio &lt;code&gt;website/_counter&lt;/code&gt;. Maravilloso, :)&lt;/p&gt;
+
+&lt;h2&gt;Modo &amp;#8220;servidor&amp;#8221; VS Modo &amp;#8220;generador&amp;#8221;&lt;/h2&gt;
+
+&lt;p&gt;Digamos que PieCrust tiene estos dos modos de trabajo. Puedes optar por usarlo en &lt;strong&gt;modo servidor&lt;/strong&gt; en tu entorno local y después generar el sitio web completo con los últimos cambios para ponerlo en el hosting que sea. Otra opción es tener PHP instalado en ese hosting y que PieCrust esté funcionando también allí.&lt;/p&gt;
+
+&lt;p&gt;Lo he estado comentando con &lt;a href=&quot;http://guillermocarvajal.net&quot;&gt;Guillermo Carvajal&lt;/a&gt; en el hilo de comentarios &lt;a href=&quot;http://hachemuda.com/2013/03/seleccion-de-5-6-gestores-de-contenidos-sin-base-de-datos/&quot;&gt;de este post&lt;/a&gt;, pero bajo mi punto de vista, las ventajas de tener PieCrust instalado y funcionando como servidor en el entorno de producción serían:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;La &lt;strong&gt;actualización de contenidos&lt;/strong&gt; es mucho más rápida y sencilla: simplemente subes el fichero Markdown al directorio correcto y PieCrust ya lo detecta y regenera automáticamente el sitio.&lt;/li&gt;
+&lt;li&gt;La actualización de otros cambios del sitio también los pilla automáticamente (imágenes, layout, CSS, Javascript, etc).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sin embargo, yo para Hachemuda &lt;strong&gt;prefiero tener el servidor de PieCrust sólo en local&lt;/strong&gt;, hacer los cambios en mi ordenador y después generar el nuevo site y subirlo al servidor como un sitio únicamente estático. Las ventajas son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Es más rápido, sólo son ficheros estáticos.&lt;/li&gt;
+&lt;li&gt;No requiere tener un hosting con PHP, me vale con el más básico (y barato).&lt;/li&gt;
+&lt;li&gt;No tengo que preocuparme de si está funcionando bien o no. El HTML siempre funciona y mucho tráfico hay que tener para que se caiga un servidor por servir ficheros estáticos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Configuración general&lt;/h2&gt;
+
+&lt;p&gt;La configuración general para tu proyecto está disponible en el fichero &lt;code&gt;website/config.yml&lt;/code&gt;, un fichero escrito en &lt;code&gt;YAML&lt;/code&gt; con todas las opciones que quieras personalizar. Por ejemplo, en el caso de Hachemuda:&lt;/p&gt;
+
+&lt;pre class=&quot;html5&quot; style=&quot;font-family:monospace;&quot;&gt;site:
+    title: HacheMuda
+    url: http://wwww.hachemuda.com
+    description: Blog personal de Guillermo Latorre
+    author: Guillermo Latorre
+    pretty_urls: true
+    post_url: %year%/%month%/%slug%
+    tag_url: etiqueta/%tag%
+    category_url: categoria/%category%
+    enable_gzip: true
+    posts_per_page: 7
+    timezone: Europe/Madrid
+    auto_formats:
+        md: markdown
+smartypants:
+    enable: true
+baker:
+    skip_patterns:
+        - /^index.php/&lt;/pre&gt;
+
+&lt;p&gt;Algunas de las opciones más importantes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pretty_urls&lt;/code&gt;: para activar los permalinks.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;post_url&lt;/code&gt;, &lt;code&gt;tag_url&lt;/code&gt; y &lt;code&gt;category_url&lt;/code&gt;: para personalizar los permalinks de cada tipo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;auto_formats&lt;/code&gt;: para añadir otros formatos de los ficheros de contenidos. Por defecto soporta contenidos escritos en ficheros &lt;code&gt;.html&lt;/code&gt;, pero en mi caso también he añadido la extensión &lt;code&gt;.md&lt;/code&gt; asociada con contenidos en Markdown.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;skip_patterns&lt;/code&gt; (dentro de &lt;code&gt;baker&lt;/code&gt;): para que no tenga en cuenta algunos archivos/directorios en la generación del sitio estático.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En el fichero de configuración también puedes definir tus propias variables y datos generales para después usarlas en las plantillas. Esto está bastante bien explicado en &lt;a href=&quot;http://bolt80.com/piecrust/doc/site-config/&quot;&gt;la documentación oficial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;El theme y las plantillas&lt;/h2&gt;
+
+&lt;p&gt;El directorio &lt;code&gt;website&lt;/code&gt;, que contine el propio sitio web público, por defecto tiene esta estructura:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-i-website.jpg&quot; alt=&quot;Estructura de directorios y ficheros del sitio web público&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;De forma nativa, PieCrust soporta el lenguaje de plantillas &lt;a href=&quot;http://twig.sensiolabs.org&quot;&gt;Twig&lt;/a&gt; y &lt;a href=&quot;http://mustache.github.com&quot;&gt;Mustache&lt;/a&gt;, aunque &lt;a href=&quot;http://bolt80.com/piecrust/doc/template-engines/&quot;&gt;pueden configurarse&lt;/a&gt; otros como Dwoo, Haml. Viene con Twig activado por defecto, que es un lenguaje bastante flexible y permite realizar una programación básica en las propias plantillas, como trabajar con variables, bucles, condicionales…&lt;/p&gt;
+
+&lt;p&gt;Hablaré más profundamente, y con ejemplos, en la parte III de este artículo.&lt;/p&gt;
+
+&lt;h2&gt;Debugging con PieCrust&lt;/h2&gt;
+
+&lt;p&gt;En otros generadores de sitios web estáticos que he probado, resulta bastante complicada la detección de muchos problemas derivados del formato de los propios contenidos o de programación de las plantillas del theme.&lt;/p&gt;
+
+&lt;p&gt;PieCrust es bastante bueno en esto. Cuando detecta problemas muestra páginas de error con suficiente información para poder localizarlos fácilmente. Y, además de poder ejecutar el servidor para que muestre un completo log en la línea de comandos, en la URL del sitio web puedes añadir el parámetro &lt;code&gt;?!debug&lt;/code&gt; para ver en el navegador una &lt;strong&gt;ventanita de &lt;em&gt;debugging&lt;/em&gt;&lt;/strong&gt; con toda la información que tiene el CMS en ese momento. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-i-debug.jpg&quot; alt=&quot;Herramienta de Debugging con PieCrust&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;De esta forma, puedes ver fácilmente los valores de la configuración general, las variables disponibles en esa página, todo el contenido detectado, toda la información de esa página, etc.&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Tapir: cómo integrar un buscador por palabra clave en un sitio web estático</title>
+            <link>http://www.hachemuda.com/2013/03/tapir-como-integrar-un-buscador-por-palabra-clave-en-un-sitio-web-estatico</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>código</category>
+                        <category>jquery</category>
+                        <category>piecrust</category>
+                        <category>ajax</category>
+                        <category>tutorial</category>
+                        <pubDate>Wed, 20 Mar 2013 00:00:00 +0100</pubDate>
+            <guid>/2013/03/tapir-como-integrar-un-buscador-por-palabra-clave-en-un-sitio-web-estatico</guid>
+            <description>&lt;p&gt;Cuando construyes un sitio web estático, como es &lt;a href=&quot;http://hachemuda.com/2013/03/nuevo-diseno-y-nuevo-cms-para-hachemuda/&quot;&gt;mi caso con Hachemuda&lt;/a&gt;, una de las funcionalidades que parece más complicada de implementar es un buscador por palabra clave. ¿Cómo hacer un buscador en un sitio web que no tiene una base de datos?&lt;/p&gt;
+
+&lt;h2&gt;Tapir to the rescue!&lt;/h2&gt;
+
+&lt;p&gt;Tapir es un servicio simple, sencillo y súper bien pensado: un servicio web que &lt;strong&gt;guarda automáticamente los contenidos de tu web para que tú puedas realizar búsquedas en ellos a través de su API&lt;/strong&gt;. Y una vez hecho, irá revisando tu &lt;em&gt;feed&lt;/em&gt; cada 15 minutos para ir &lt;strong&gt;guardándose automáticamente los nuevos contenidos&lt;/strong&gt; que publiques y poder incluirlos como resultados en las búsquedas.&lt;/p&gt;
+
+&lt;p&gt;En realidad funciona para cualquier sitio web que tenga un feed, pero lo encuentro de especial utilidad en el caso de páginas estáticas, sin base de datos.&lt;/p&gt;
+
+&lt;p&gt;En Hachemuda ya está en funcionamiento, puedes probar a buscar contenido usando el formulario de la cabecera de la web, :)&lt;/p&gt;
+
+&lt;p&gt;Para &lt;strong&gt;integrarlo en tu sitio web&lt;/strong&gt;, lo único que necesitas tener es un feed XML y unos conocimientos básicos de Javascript o jQuery. Los pasos son:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Acceder a &lt;a href=&quot;http://tapirgo.com&quot;&gt;tapirgo.com&lt;/a&gt; y rellenar el campo con la dirección de tu &lt;em&gt;feed&lt;/em&gt; RSS. &lt;/li&gt;
+&lt;li&gt;Apuntar tu &lt;strong&gt;token de acceso&lt;/strong&gt;, será el código que necesitarás para poder ejecutar búsquedas en el sistema. &lt;/li&gt;
+&lt;li&gt;Darle unos minutos para &lt;strong&gt;que lea e indexe todos los contenidos&lt;/strong&gt; disponibles en ese momento en tu feed. &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Después, ya podrás comprobar que todos los contenidos han sido indexados y que la búsqueda funciona correctamente accediendo a esta URL desde el navegador web:&lt;/p&gt;
+
+&lt;pre class=&quot;php&quot; style=&quot;font-family:monospace;&quot;&gt;http&lt;span style=&quot;color: #339933;&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: #666666; font-style: italic;&quot;&gt;//www.tapirgo.com/api/1/search.json?token=XXXXX&amp;amp;query=YYYYY&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lógicamente, en esa URL debes modificar &lt;code&gt;XXXXX&lt;/code&gt; por tu token de acceso y &lt;code&gt;YYYYY&lt;/code&gt; por las palabras claves a buscar en tu base de contenidos.&lt;/p&gt;
+
+&lt;p&gt;Tapir devuelve los resultados de las búsquedas en el popular &lt;a href=&quot;http://es.wikipedia.org/wiki/JSON&quot;&gt;formato JSON&lt;/a&gt;, por lo que tendrás que programar esa parte para &lt;em&gt;descomponerlos&lt;/em&gt; y mostrarlos en tu sitio web de la forma deseada. Si usas jQuery es bastante sencillo utilizando la función &lt;code&gt;getJSON&lt;/code&gt;, aunque también puedes usar &lt;a href=&quot;https://github.com/TapirGo/jQuery-Plugin&quot;&gt;el plugin de jQuery&lt;/a&gt; que ya han creado para Tapir, :)&lt;/p&gt;
+
+&lt;p&gt;En mi caso, como ejemplo, tengo el siguiente marcado HTML para mostrar el formulario y los resultados de las búsquedas:&lt;/p&gt;
+
+&lt;pre class=&quot;html5&quot; style=&quot;font-family:monospace;&quot;&gt;&lt;span style=&quot;color: #808080; font-style: italic;&quot;&gt;&amp;lt;!-- Search input --&amp;gt;&lt;/span&gt;
+&lt;span style=&quot;color: #009900;&quot;&gt;&amp;lt;&lt;a href=&quot;http://december.com/html/4/element/form.html&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;form&lt;/span&gt;&lt;/a&gt; &lt;span style=&quot;color: #000066;&quot;&gt;method&lt;/span&gt;&lt;span style=&quot;color: #66cc66;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&amp;quot;get&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #000066;&quot;&gt;id&lt;/span&gt;&lt;span style=&quot;color: #66cc66;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&amp;quot;searchform&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #000066;&quot;&gt;action&lt;/span&gt;&lt;span style=&quot;color: #66cc66;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&amp;lt;&lt;a href=&quot;http://december.com/html/4/element/input.html&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;input&lt;/span&gt;&lt;/a&gt; &lt;span style=&quot;color: #000066;&quot;&gt;type&lt;/span&gt;&lt;span style=&quot;color: #66cc66;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #000066;&quot;&gt;name&lt;/span&gt;&lt;span style=&quot;color: #66cc66;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&amp;quot;s&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #000066;&quot;&gt;value&lt;/span&gt;&lt;span style=&quot;color: #66cc66;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #000066;&quot;&gt;placeholder&lt;/span&gt;&lt;span style=&quot;color: #66cc66;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&amp;quot;Introduce los términos de búsqueda&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #000066;&quot;&gt;id&lt;/span&gt;&lt;span style=&quot;color: #66cc66;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&amp;quot;s&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #000066;&quot;&gt;class&lt;/span&gt;&lt;span style=&quot;color: #66cc66;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&amp;quot;search_input&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #66cc66;&quot;&gt;/&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&quot;color: #009900;&quot;&gt;&amp;lt;&lt;span style=&quot;color: #66cc66;&quot;&gt;/&lt;/span&gt;&lt;a href=&quot;http://december.com/html/4/element/form.html&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;form&lt;/span&gt;&lt;/a&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&quot;color: #808080; font-style: italic;&quot;&gt;&amp;lt;!-- Search results box --&amp;gt;&lt;/span&gt;
+ &lt;span style=&quot;color: #009900;&quot;&gt;&amp;lt;&lt;a href=&quot;http://december.com/html/4/element/div.html&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;div&lt;/span&gt;&lt;/a&gt; &lt;span style=&quot;color: #000066;&quot;&gt;class&lt;/span&gt;&lt;span style=&quot;color: #66cc66;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&amp;quot;search_results_container&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&quot;color: #009900;&quot;&gt;&amp;lt;&lt;a href=&quot;http://december.com/html/4/element/h2.html&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;h2&lt;/span&gt;&lt;/a&gt;&amp;gt;&lt;/span&gt;Resultados de la búsqueda:&lt;span style=&quot;color: #009900;&quot;&gt;&amp;lt;&lt;span style=&quot;color: #66cc66;&quot;&gt;/&lt;/span&gt;&lt;a href=&quot;http://december.com/html/4/element/h2.html&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;h2&lt;/span&gt;&lt;/a&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&quot;color: #009900;&quot;&gt;&amp;lt;&lt;a href=&quot;http://december.com/html/4/element/ul.html&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;ul&lt;/span&gt;&lt;/a&gt; &lt;span style=&quot;color: #000066;&quot;&gt;id&lt;/span&gt;&lt;span style=&quot;color: #66cc66;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&amp;quot;search_results&amp;quot;&lt;/span&gt;&amp;gt;&amp;lt;&lt;span style=&quot;color: #66cc66;&quot;&gt;/&lt;/span&gt;&lt;a href=&quot;http://december.com/html/4/element/ul.html&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;ul&lt;/span&gt;&lt;/a&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&quot;color: #009900;&quot;&gt;&amp;lt;&lt;span style=&quot;color: #66cc66;&quot;&gt;/&lt;/span&gt;&lt;a href=&quot;http://december.com/html/4/element/div.html&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;div&lt;/span&gt;&lt;/a&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;Con ese HTML, mediante jQuery se detecta cuando el usuario ha introducido y enviado el formulario de búsqueda de la parte superior. Entonces, el proceso que se sigue es:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Vaciar el contenido de la caja de resultados, por si hubiera búsquedas anteriores.&lt;/li&gt;
+&lt;li&gt;Detectar cuál es la cadena de búsqueda introducida por el usuario.&lt;/li&gt;
+&lt;li&gt;Ejecuta una petición a la API de Tapir con el token y la cadena de búsqueda. Al recibir la respuesta, se ejecuta la función de &lt;em&gt;callback&lt;/em&gt;: para cada item devuelto en formato JSON, genera un elemento de lista HTML y lo encadena al final de los anteriores. Este elemento tiene el título del artículo y el link directo al mismo.&lt;/li&gt;
+&lt;li&gt;Cuando termina de generar la lista HTML con todos los resultados, muestra la caja de resultados con un efectillo de apertura hacia abajo.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre class=&quot;javascript&quot; style=&quot;font-family:monospace;&quot;&gt;$&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;#searchform&#039;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;.&lt;span style=&quot;color: #660066;&quot;&gt;submit&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #000066; font-weight: bold;&quot;&gt;function&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt; &lt;span style=&quot;color: #009900;&quot;&gt;&amp;#123;&lt;/span&gt;
+    $&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;#search_results&#039;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;.&lt;span style=&quot;color: #660066;&quot;&gt;empty&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;
+    &lt;span style=&quot;color: #000066; font-weight: bold;&quot;&gt;var&lt;/span&gt; phrase &lt;span style=&quot;color: #339933;&quot;&gt;=&lt;/span&gt; $&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;input#s&#039;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;.&lt;span style=&quot;color: #660066;&quot;&gt;val&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;
+    &lt;span style=&quot;color: #000066; font-weight: bold;&quot;&gt;var&lt;/span&gt; token &lt;span style=&quot;color: #339933;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;XXXXXXXXXXXXXXXXXXX&#039;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;
+&amp;nbsp;
+    $.&lt;span style=&quot;color: #660066;&quot;&gt;getJSON&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;http://tapirgo.com/api/1/search.json?token=&#039;&lt;/span&gt; &lt;span style=&quot;color: #339933;&quot;&gt;+&lt;/span&gt; token &lt;span style=&quot;color: #339933;&quot;&gt;+&lt;/span&gt; &lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;&amp;amp;query=&#039;&lt;/span&gt; &lt;span style=&quot;color: #339933;&quot;&gt;+&lt;/span&gt; phrase &lt;span style=&quot;color: #339933;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;&amp;amp;callback=?&#039;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;color: #000066; font-weight: bold;&quot;&gt;function&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;data&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#123;&lt;/span&gt;
+        $.&lt;span style=&quot;color: #660066;&quot;&gt;each&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;data&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;color: #000066; font-weight: bold;&quot;&gt;function&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;key&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt; val&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt; &lt;span style=&quot;color: #009900;&quot;&gt;&amp;#123;&lt;/span&gt;
+            $&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;#search_results&#039;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;.&lt;span style=&quot;color: #660066;&quot;&gt;append&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;&#039;&lt;/span&gt; &lt;span style=&quot;color: #339933;&quot;&gt;+&lt;/span&gt; val.&lt;span style=&quot;color: #660066;&quot;&gt;link&lt;/span&gt; &lt;span style=&quot;color: #339933;&quot;&gt;+&lt;/span&gt; &lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;&amp;quot;&amp;gt;&#039;&lt;/span&gt; &lt;span style=&quot;color: #339933;&quot;&gt;+&lt;/span&gt; val.&lt;span style=&quot;color: #660066;&quot;&gt;title&lt;/span&gt; &lt;span style=&quot;color: #339933;&quot;&gt;+&lt;/span&gt; &lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&#039;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;
+        &lt;span style=&quot;color: #009900;&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;
+        $&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #3366CC;&quot;&gt;&#039;#search_results_pane&#039;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;.&lt;span style=&quot;color: #660066;&quot;&gt;slideDown&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;
+    &lt;span style=&quot;color: #009900;&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;
+    &lt;span style=&quot;color: #000066; font-weight: bold;&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color: #003366; font-weight: bold;&quot;&gt;false&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;
+&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Ojo:&lt;/h3&gt;
+
+&lt;p&gt;Normalmente los sistemas de feeds automáticos generan el canal con los últimos X artículos. En ese caso, Tapir sólo indexará inicialmente esos X artículos y, de forma automática cada 15 minutos, los que vayas publicando después. Pero no los anteriores. &lt;/p&gt;
+
+&lt;p&gt;Yo lo que hice fue modificar la plantilla del feed para que se generara mostrando los últimos 1100 artículos y lo dejé activo durante unos minutos, hasta que Tapir ya indexó todos ellos, y después volví a modificar la plantilla para que sólo mostrara los 10 últimos.&lt;/p&gt;
+
+&lt;p&gt;Si controlas un poquito más de programación o &lt;em&gt;hackeo&lt;/em&gt; general, Tapir también &lt;a href=&quot;http://tapirgo.com/#push_api&quot;&gt;permite ejecutar peticiones PUSH&lt;/a&gt; manualmente para incluir contenidos antiguos.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tapirgo.com&quot;&gt;Tapir&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Selección de 5 + 6 gestores de contenidos (CMS) sin base de datos</title>
+            <link>http://www.hachemuda.com/2013/03/seleccion-de-5-6-gestores-de-contenidos-sin-base-de-datos</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>cms</category>
+                        <category>gestión de contenidos</category>
+                        <category>rendimiento</category>
+                        <category>velocidad</category>
+                        <category>selección</category>
+                        <category>recopilatorio</category>
+                        <pubDate>Mon, 18 Mar 2013 00:00:00 +0100</pubDate>
+            <guid>/2013/03/seleccion-de-5-6-gestores-de-contenidos-sin-base-de-datos</guid>
+            <description>&lt;p&gt;En realidad he dudado mucho sobre qué título poner a este artículo. Al final lo he dejado simple, pero en realidad lo que viene a continuación es más un &lt;strong&gt;diario de mi viaje en la búsqueda de un nuevo sistema de publicación&lt;/strong&gt; para Hachemuda.&lt;/p&gt;
+
+&lt;p&gt;Como me he pegado unas cuantas horas, creo que es interesante plasmarlo todo en un post a modo de &lt;strong&gt;recopilatorio de los sistemas que he conocido y probado&lt;/strong&gt;. &lt;/p&gt;
+
+&lt;h4&gt;Quiero: gestión de contenidos con Markdown y sin base de datos&lt;/h4&gt;
+
+&lt;p&gt;Eso es lo que busco: un sistema que me permita escribir artículos en Markdown, poner los ficheros en los directorios correspondientes y regenerar el sitio web completo. Y que sea completamente estático: &lt;strong&gt;sólo HTML, CSS y Javascript&lt;/strong&gt;. Que tenga un lenguaje de plantillas para poder implementar bien la funcionalidad del blog, con soporte para etiquetas, &lt;em&gt;feed RSS&lt;/em&gt; y generación automática del &lt;em&gt;sitemap&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Jekyll &amp;amp; Octopress&lt;/h2&gt;
+
+&lt;p&gt;Jekyll es un sistema de análisis de ficheros escrito en Ruby, que permite generar sitios web estáticos de forma muy sencilla. Está ganando un mogollón de adeptos en los últimos meses, se está &lt;strong&gt;creando una comunidad enorme&lt;/strong&gt; en torno a este sistema y eso fue lo que me picó para probarlo.&lt;/p&gt;
+
+&lt;p&gt;En pleno pique, también descubrí que Minid.net estaba siendo cambiado a Jekyll. Y ya está, de hecho allí puedes consultar un detallado artículo sobre &lt;a href=&quot;http://minid.net/2013/03/12/como-instalar-jekyll-en-osx/&quot;&gt;cómo instalar Jekyll en OSX&lt;/a&gt; y otro explicando los &lt;a href=&quot;http://minid.net/2013/02/27/una-nueva-forma-de-bloguear/&quot;&gt;conceptos básicos de Jekyll&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2013/2013-03-18-jekyll.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como en realidad no soy un programador &lt;em&gt;puro&lt;/em&gt;, por llamarlo de alguna manera, y el tema este de Ruby, con sus gemas, los entornos, las dependencias, los rakes y demás se me queda un poco grande… pues tuve bastantes problemas para hacerlo funcionar correctamente en mi ordenador. Por eso opté por &lt;strong&gt;Octopress&lt;/strong&gt;, que viene a ser una segunda derivada de Jekyll pero ya preconfigurado y empaquetado para hacerte la vida mucho más fácil si no eres un &lt;em&gt;hacker de pelo en pecho&lt;/em&gt;. Mola porque está bastante enfocado en ser un &lt;em&gt;framework&lt;/em&gt; para la creación de blogs estáticos, integrado ya con muchos servicios populares.&lt;/p&gt;
+
+&lt;p&gt;Pero tampoco me encajó. No sé por qué, pero el sistema me fallaba cada dos por tres por causas que desconozco y, lo peor de todo, no conseguí hacer funcionar bien el sistema de &lt;em&gt;watch&lt;/em&gt;: hacer que se regenere el sitio web automáticamente al realizar cambios en las plantillas. &lt;strong&gt;Esto era esencial&lt;/strong&gt; para mí, porque iba a pegarme una currada de modificación de plantillas, estilos, etc. Así que desistí.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; y &lt;a href=&quot;http://octopress.org&quot;&gt;Octopress&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Statamic&lt;/h2&gt;
+
+&lt;p&gt;Statamic fue el segundo sistema que probé en serio. Y me pareció absolutamente espectacular: no necesitas ser &lt;em&gt;Conan el bárbaro&lt;/em&gt; para hacerlo funcionar, simplemente te descargas el software, lo descomprimes y ale, ya lo tienes chutando.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2013/2013-03-18-statamic.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Es &lt;strong&gt;una auténtica maravilla&lt;/strong&gt;. Incluso implementa un panel de administración web, básico pero funcional. Pero tiene unos problemas enormes de rendimiento. En realidad, Statamic no genera el sitio web estático, sino que usa un pequeño motor para renderizar las plantillas cada vez. Por eso el nombre, mitad Static mitad Dynamic.&lt;/p&gt;
+
+&lt;p&gt;Es un &lt;strong&gt;software de pago&lt;/strong&gt; pero la licencia es bastante barata (29$ para su uso en un sitio personal), tiene una muy buena documentación y la comunidad está creciendo bastante. Está muy actualizado, de hecho en breves van a sacar la versión 1.5 que promete un mejorado sistema de &lt;em&gt;caches&lt;/em&gt; para la ansiada mejora del rendimiento.&lt;/p&gt;
+
+&lt;p&gt;En cualquier caso, ese &lt;strong&gt;fallo en el rendimiento&lt;/strong&gt; es una castaña para mí porque Hachemuda tiene algo más de 1000 entradas publicadas y le cuesta unos 30 segundos renderizar la portada. Así que fuera.&lt;/p&gt;
+
+&lt;p&gt;Enlace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://statamic.com&quot;&gt;Statamic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Stacey&lt;/h2&gt;
+
+&lt;p&gt;Como me había quedado con las ganas de Jekyll/Octopress, estuve buscando sistemas similares. Encontré Stacey App, del que hablan muy muy bien en muchos artículos por ahí. Pero ya desde que vi su web me echó para atrás. Y cuando entré a la sección de noticias y vi que &lt;strong&gt;lleva sin actualizarse desde abril de 2011&lt;/strong&gt; la decisión se tomó sola.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, parece un sistema robusto y que ha tenido su momento, así que considero que debe estar en esta lista.&lt;/p&gt;
+
+&lt;p&gt;Enlace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://staceyapp.com&quot;&gt;Stacey&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Dropplets&lt;/h2&gt;
+
+&lt;p&gt;Con todo el desánimo de no encontrar fácilmente una buena solución, de repente vi un tweet de &lt;a href=&quot;https://twitter.com/jschuller&quot;&gt;Jason Schuller&lt;/a&gt; hablando de un proyecto en el que estaba trabajando para la generación de sitios web estáticos, integrado con Markdown y que ya tenía una versión bastante estable. Sonrisa de alucine, porque este tío es un puto crack y seguro que mola un huevo.&lt;/p&gt;
+
+&lt;p&gt;Así que lo probé, se llama Dropplets. Mi gozo en un pozo, es un sistema &lt;strong&gt;demasiado básico para mí&lt;/strong&gt;. O nos pasamos tres pueblos o no llegamos. Es muy guapo y súper rápido para tener una web básica y publicar contenidos. Cumple lo que promete: &lt;em&gt;un sistema minimalista de blogging mediante markdown que simplemente funciona&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pero no es la solución que buscaba.&lt;/p&gt;
+
+&lt;p&gt;Enlace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/circa75/dropplets&quot;&gt;Dropplets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;PieCrust&lt;/h2&gt;
+
+&lt;p&gt;PieCrust es LA SOLUCIÓN. En mi caso, claro, :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bolt80.com/piecrust/&quot;&gt;PieCrust&lt;/a&gt; es un paquete de servidor básico + analizador de ficheros + generación de sitios estáticos. Lo ha creado un tipo llamado &lt;a href=&quot;https://twitter.com/ludovicchabant&quot;&gt;Ludovic Chabant&lt;/a&gt; y el código está disponible &lt;a href=&quot;https://github.com/ludovicchabant/PieCrust&quot;&gt;en GitHub&lt;/a&gt;, además de los planes de mejoras y desarrollo que tiene en &lt;a href=&quot;https://trello.com/board/piecrust/4e797b35c05d6df3e8a7ea3e&quot;&gt;un Trello público&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2013/2013-03-18-piecrust.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hablaré con más detalle en un post próximo&lt;/strong&gt; sobre mi entorno de trabajo con PieCrust, pero básicamente se trata de un paquete que sólo requiere PHP 5.3 para funcionar. Todo lo demás ya lo implementa él:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Mediante el comando &lt;code&gt;chef serve&lt;/code&gt; ejecutas el servidor y ya puedes ver el sitio de pruebas en el navegador.&lt;/li&gt;
+&lt;li&gt;Haces todos los cambios que quieras en las plantillas, en los contenidos, etc. Automáticamente se ven en el navegador y de forma muy muy rápida. Crear contenidos es tan simple como colocar los ficheros Markdown en las capetas que correspondan y con el nombre/cabeceras adecuadas.&lt;/li&gt;
+&lt;li&gt;Mediante el comando &lt;code&gt;chef bake&lt;/code&gt; generas el sitio web estático completo, para subirlo a tu servidor.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Tiene algunas cosas que le faltan, por ejemplo la comunidad no es muy grande y el hecho de que sólo lo esté desarrollando una persona se nota, aunque últimamente está actualizándolo mucho. La &lt;strong&gt;documentación&lt;/strong&gt; es bastante desastre, aunque Ludovic ha prometido actualizarla en estos próximos días después de muchas consultas a través de GitHub y Twitter.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://bolt80.com/piecrust&quot;&gt;PieCrust&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ludovicchabant/PieCrust&quot;&gt;GitHub: PieCrust&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Otros sistemas que parece que molan pero no he probado&lt;/h2&gt;
+
+&lt;p&gt;Antes de encontrar PieCrust, lo cierto es que estuve rastreando un poco más internet y encontré un montón de proyectos que podía probar. Como no tengo todo el tiempo del mundo, al final me quedé con uno y no probé el resto. Pero tienen una pinta estupenda, así que los pongo aquí:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://getkirby.com&quot;&gt;Kirby&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://get-simple.info&quot;&gt;GetSimple&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://pulsecms.com&quot;&gt;PulseCMS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://pico.dev7studios.com&quot;&gt;Pico&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://middlemanapp.com&quot;&gt;MiddleMan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jaspervdj.be/hakyll/&quot;&gt;Hakyll&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Bola extra: Calepin&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://calepin.co&quot;&gt;Calepin&lt;/a&gt; no es exactamente un CMS que encaje 100% en esta lista, porque no es &lt;em&gt;self-hosted&lt;/em&gt; ni permite descargar el software a tu equipo, pero me ha gustado muchísimo su idea:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Te registras&lt;/strong&gt; en la web especificando tus datos de usuario de &lt;a href=&quot;http://www.dropbox.com&quot;&gt;Dropbox&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Configuras tu blog&lt;/strong&gt;: título, nombre de usuario en Disqus para los comentarios, tu usuario de Twitter…&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Publicas el site&lt;/strong&gt; y modificas los CNAME&amp;#8217;s de tu dominio para que apunten al servicio.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Desde ese momento, todos los artículos que publiques en la carpeta de Dropbox que has especificado se actualizarán como posts de tu blog en Calepin, simplemente accediendo y pulsando sobre el botón &amp;#8220;Publish&amp;#8221;.&lt;/p&gt;
+
+&lt;p&gt;Mola bastante, ¿no? :)&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Nuevo diseño y nuevo CMS para Hachemuda</title>
+            <link>http://www.hachemuda.com/2013/03/nuevo-diseno-y-nuevo-cms-para-hachemuda</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>cms</category>
+                        <category>gestión de contenidos</category>
+                        <category>rendimiento</category>
+                        <category>hachemuda</category>
+                        <category>piecrust</category>
+                        <pubDate>Sun, 17 Mar 2013 00:00:00 +0100</pubDate>
+            <guid>/2013/03/nuevo-diseno-y-nuevo-cms-para-hachemuda</guid>
+            <description>&lt;p&gt;Cada cierto tiempo tengo la necesidad de hacer cambios en Hachemuda. Supongo que es mi conejillo de indias, donde hago pruebas de diseño, estadísticas, etc. En esta ocasión, también tenía la necesidad de &lt;strong&gt;enredar con otras tecnologías que están surgiendo&lt;/strong&gt; (y re-surgiendo) en cuanto a la gestión de contenidos online. &lt;/p&gt;
+
+&lt;h3&gt;PieCrust: el nuevo gestor de contenidos de Hachemuda&lt;/h3&gt;
+
+&lt;p&gt;Quiero hablar en otro post más tranquilamente del proceso de cambio de un gestor de contenidos como WordPress a uno de ficheros estáticos como &lt;a href=&quot;http://bolt80.com/piecrust&quot;&gt;PieCrust&lt;/a&gt;, por qué elegí PieCrust, qué otras alternativas he barajado/probado y cuál va a ser mi flujo de actualizaciones tanto de contenido como de diseño e implementación. De momento, sólo diré que &lt;strong&gt;PieCrust es mi elección y que estoy contentísimo&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;He decidido cambiar a un CMS sin bases de datos no sólo por probar una nueva tecnología, sino también para dejarme de preocupaciones. &lt;a href=&quot;http://www.pagely.com&quot;&gt;Page.ly&lt;/a&gt; era mi proveedor de hosting para Hachemuda, un hosting excluso y optimizado para sitios basados en WP. Y aunque acabo de irme de allí, lo recomiendo encarecidamente porque en todo el tiempo que he estado con ellos he tenido muy poquitos problemas. &lt;/p&gt;
+
+&lt;p&gt;Y he decidido cambiarme a &lt;strong&gt;un CMS basado en ficheros de texto&lt;/strong&gt; porque quiero tener un mayor control de la presentación de mis contenidos y usar &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; como base para todas las publicaciones. Y así ya de paso tengo un sencillísimo backup continuo (y sin pensar) de todos los artículos.&lt;/p&gt;
+
+&lt;p&gt;Las razones principales para cambiarme de WordPress a PieCrust:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El &lt;strong&gt;rendimiento&lt;/strong&gt; es bueno (gracias a Page.ly), pero no es cojonudo. Quiero que sea cojonudo, que parpadees y ya puedas leer la página.&lt;/li&gt;
+&lt;li&gt;Cuando de repente tengo un poco más de tráfico de lo habitual la BD empieza a tostarse y la web es lentísima.&lt;/li&gt;
+&lt;li&gt;Los &lt;strong&gt;backups&lt;/strong&gt;. Los backups. Es un quebradero de cabeza tener que hacer copias continuamente, pensar en sistemas automatizados, etc. Y más cuando tu base de datos es un WP con cerca de 1.100 entradas publicadas y 13.400 comentarios.&lt;/li&gt;
+&lt;li&gt;La &lt;strong&gt;publicación&lt;/strong&gt;. Ahora quiero tener un control mucho mayor sobre los contenidos y las plantillas de presentación de los mismos. Con WP y su editor es muy complicado, pero utilizando Markdown y un sistema de plantillas como el de PieCrust… es justo lo que buscaba.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Nuevo diseño&lt;/h3&gt;
+
+&lt;p&gt;Aprovechando el cambio de tecnología, he realizado un rediseño que no está 100% terminado pero se acerca mucho a lo que quería. Además, también he cambiado bastantes cosas básicas de la web. Por ejemplo ya no hay publicidad, ni de AdSense ni de nada. Estorba mucho más de lo que aporta.&lt;/p&gt;
+
+&lt;p&gt;Otra decisión ha sido elminiar las categorías. De hecho pensaba suprimir también las etiquetas, pero me resisto todavía a pensar que no pueden resultar interesantes en muchos casos. Eso sí, solamente las verás en los artículos. Nada de nubes de tags ni movidas.&lt;/p&gt;
+
+&lt;p&gt;En fin, que espero que te guste el nuevo Hachemuda, :)&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>PlanetUbuntu ya tiene nuevo dueño</title>
+            <link>http://www.hachemuda.com/2013/02/planetubuntu-ya-tiene-nuevo-dueno</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>software libre</category>
+                        <category>ubuntu</category>
+                        <pubDate>Tue, 26 Feb 2013 00:00:00 +0100</pubDate>
+            <guid>/2013/02/planetubuntu-ya-tiene-nuevo-dueno</guid>
+            <description>&lt;p&gt;Antes de nada quiero agradecer a todo el mundo los comentarios y mails recibidos. Es un verdadero placer, :)&lt;/p&gt;
+
+&lt;p&gt;Me he quedado bastante sorprendido porque en estos cuatro días he recibido unos 50 correos de personas interesadas en continuar con el mantenimiento de PlanetUbuntu.es. ¡Muchísimas gracias a todos!&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;size-large wp-image-2803 alignnone&quot; alt=&quot;PlanetUbuntu.es&quot; src=&quot;/uploads/2013/02/captura-700x474.jpg&quot; width=&quot;700&quot; height=&quot;474&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Creo que lo mejor es escoger a alguien que tenga motivación por la comunidad de software libre y de Ubuntu, pero que también disponga de los recursos y los conocimientos técnicos necesarios para &lt;strong&gt;garantizar el buen funcionamiento del planet&lt;/strong&gt;. Ya está decidido quién se va a encargar de ello a partir de ahora y tengo que decir que, con las cuatro cosas que hemos ido comentando por mail, creo que PlanetUbuntu&amp;#8230; &lt;strong&gt;¡¡va a mejorar muchísimo!!&lt;/strong&gt; :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/desarrolla2&quot;&gt;Daniel González&lt;/a&gt; es el nuevo administrador/gestor/encargado de PlanetUbuntu. Es un desarrollador web, manager, y amante de software libre, muy interesado en todo lo nuevo que está llegando a la web con HTML5 y las aplicaciones móviles.&lt;/p&gt;
+
+&lt;p&gt;Daniel tiene experiencia migrando sitios con WordPress a otros sistemas, manejando bases de datos e incluso ha desarrollado sus propias librerías de consumo de feeds RSS y generación de &lt;em&gt;planets&lt;/em&gt;. Por ello, creo que es la persona perfecta para PlanetUbuntu.&lt;/p&gt;
+
+&lt;p&gt;En los próximos días se irá trabajando en la migración de la web al nuevo sistema y próximamente anunciaremos el cambio, la disponibilidad y las novedades del nuevo PlanetUbuntu.es.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://desarrolla2.com&quot;&gt;Página de Daniel González&lt;/a&gt; y &lt;a href=&quot;https://github.com/desarrolla2&quot;&gt;sus proyectos en GitHub&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Regalo PlanetUbuntu.es: se busca un nuevo dueño</title>
+            <link>http://www.hachemuda.com/2013/02/regalo-planetubuntu-es-se-busca-un-nuevo-dueno</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>comunidad</category>
+                        <category>planetubuntu.es</category>
+                        <category>software</category>
+                        <pubDate>Thu, 21 Feb 2013 00:00:00 +0100</pubDate>
+            <guid>/2013/02/regalo-planetubuntu-es-se-busca-un-nuevo-dueno</guid>
+            <description>&lt;p&gt;Después de varios años manteniendo y mejorando esta web, y después de varios días pensándolo, quiero anunciar que voy a dejar de mantener &lt;a href=&quot;http://www.planetubuntu.es&quot;&gt;PlanetUbuntu.es&lt;/a&gt;. &lt;strong&gt;Quiero encontrar a alguien que esté dispuesto a continuar&lt;/strong&gt; con el mantenimiento de la web, tanto del hosting como de su funcionamiento y actualizaciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Algunos datos&lt;/strong&gt; de &lt;a href=&quot;http://www.planetubuntu.es&quot;&gt;PlanetUbuntu.es&lt;/a&gt; actualmente:
+&lt;ul&gt;
+    &lt;li&gt;Publicados &lt;strong&gt;12.347 posts.&lt;/strong&gt;&lt;/li&gt;
+    &lt;li&gt;Usuarios suscritos al feed del planet: &lt;strong&gt;2.338 usuarios.&lt;/strong&gt;&lt;/li&gt;
+    &lt;li&gt;Software que usa: &lt;a href=&quot;http://www.wordpress.org&quot;&gt;WordPress&lt;/a&gt; con el plugin &lt;a href=&quot;http://feedwordpress.radgeek.com&quot;&gt;FeedPress&lt;/a&gt; para la autopublicación de artículos de los sitios contribuyentes.&lt;/li&gt;
+    &lt;li&gt;Media de visitas únicas: &lt;strong&gt;2000 diarias&lt;/strong&gt;.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Hosting actual&lt;/strong&gt;: &lt;a href=&quot;https://page.ly&quot;&gt;Page.ly&lt;/a&gt; (plan &amp;#8220;personal&amp;#8221;) y &lt;a href=&quot;http://www.cloudflare.com&quot;&gt;CloudFlare&lt;/a&gt; plan premium.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Coste actual de mantenimiento&lt;/strong&gt;: unos 30€ mensuales.&lt;/li&gt;
+    &lt;li&gt;Tamaño de un &lt;em&gt;dump&lt;/em&gt; (.sql) de la base de datos: 70MB.&lt;/li&gt;
+    &lt;li&gt;Dinero recaudado desde el &lt;strong&gt;botón de donaciones&lt;/strong&gt;: 50€ (en total, no mensual)&lt;/li&gt;
+&lt;/ul&gt;
+Con la última actualización de WordPress y FeedPress, de repente me encontré con que ha desaparecido la lista de sitios sindicados al planet, por eso lleva unas semanas sin actualizar los contenidos. Habría que investigar cuál es el fallo o volver a crear manualmente la lista de sitios sindicados.&lt;/p&gt;
+
+&lt;p&gt;Sinceramente, no tengo tiempo ni motivación ahora mismo para continuar manteniendo la web.&lt;/p&gt;
+
+&lt;p&gt;Lógicamente me da muchísima pena, y por ello publico este artículo, para buscar un nuevo dueño para la web que tenga la motivación, el tiempo y el dinero necesario para poder hacerlo. Y que respete las normas iniciales del &lt;em&gt;planet&lt;/em&gt;: es una web sin ánimo de lucro, con el fin de difundir la información que se va publicando en los mejores blogs sobre Ubuntu.&lt;/p&gt;
+
+&lt;p&gt;Si estás interesado, &lt;a href=&quot;http://hachemuda.com/contacto/&quot;&gt;escríbeme un e-mail&lt;/a&gt; o &lt;a href=&quot;http://twitter.com/superwillyfoc&quot;&gt;contáctame por Twitter&lt;/a&gt; y comentamos cómo hacemos el traslado. Pondré todas las facilidades para realizar el cambio. Si no te interesa pero conoces a alguien, por favor reenvíale este artículo.&lt;/p&gt;
+
+                        </description>
+        </item>
+            </channel>
+</rss>

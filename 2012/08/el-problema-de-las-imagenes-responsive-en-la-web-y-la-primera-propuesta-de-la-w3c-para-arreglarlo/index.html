@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            El problema de las imágenes responsive en la web y la primera propuesta del W3C para arreglarlo | HacheMuda
+      </title>
+  
+      <meta name="description" content="W3C ha publicado la primera propuesta para solucionar el problema de las imágenes responsive o adaptables a cada dispoitivo y pantalla de los usuarios." />
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="El problema de las imágenes responsive en la web y la primera propuesta del W3C para arreglarlo">
+  <meta property="og:description" content="W3C ha publicado la primera propuesta para solucionar el problema de las imágenes responsive o adaptables a cada dispoitivo y pantalla de los usuarios.">
+  <meta property="og:url" content="http://www.hachemuda.com/2012/08/el-problema-de-las-imagenes-responsive-en-la-web-y-la-primera-propuesta-de-la-w3c-para-arreglarlo">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+      <meta property="og:image" content="http://www.hachemuda.com/uploads/2012/08/responsive_web_design.png">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title ">
+					<h1 class="title">
+						<a href="/2012/08/el-problema-de-las-imagenes-responsive-en-la-web-y-la-primera-propuesta-de-la-w3c-para-arreglarlo">
+							El problema de las imágenes responsive en la web y la primera propuesta del W3C para arreglarlo
+						</a>
+					</h1>
+											<h2 class="subtitle">
+							W3C ha publicado la primera propuesta para solucionar el problema de las imágenes responsive o adaptables a cada dispoitivo y pantalla de los usuarios.
+						</h2>
+						
+				</div>
+									<div class="featured_img">
+						<img src="http://www.hachemuda.com/uploads/2012/08/responsive_web_design.png" alt="El problema de las imágenes responsive en la web y la primera propuesta del W3C para arreglarlo" />
+					</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 31 de Agosto de 2012</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<p>Estamos viviendo una explosión de pantallas y dispositivos para acceder a internet, y también de nuevas tecnologías que permiten adaptar la web a todos ellos, con el objetivo de <strong>garantizar el acceso y  satisfacer la experiencia de los usuarios desde cualquier aparato</strong>: ordenadores, móviles, tabletas, medio-móviles-medio-tabletas, etc.</p>
+
+<p>Dentro de esta explosión, está muy de moda el <strong>diseño y desarrollo web <em>responsive</em></strong>: elaborar los sitios web de manera que sean adaptables a cualquier dispositivo, no sólo de forma visual sino también funcionalmente.</p>
+
+<p><img src="/uploads/2012/08/responsive_web_design.png" alt="Diseño web responsive" title="Diseño web responsive" width="646" height="391" class="aligncenter size-full wp-image-2745" /></p>
+
+<p>Uno de los puntos más problemáticos al desarrollar un sitio <em>responsive</em> es la gestión de las imágenes:</p>
+
+<ul>
+<li>mediante CSS, puedo decir que las imágenes <strong>no tengan un tamaño fijo sino que tengan un 100% del espacio en el que están contenidas</strong> y con un máximo de anchura para que no se pixele en pantallas grandes. Así, se adaptan al espacio disponible, pero en realidad estoy cargando siempre la misma imagen (con todo su peso) y adaptándola visualmente mediante hojas de estilos. No mola. En realidad, el mayor problema de esta solución es que <strong>se carga la misma imagen en todos los dispositivos</strong>.</li>
+<li>existen otras opciones, plugins y librerías creadas para intentar solucionar este problema. Por ejemplo,  el proyecto <a href="http://adaptive-images.com/">Adaptive Images</a> es un <em>script</em> combinado con unas líneas en el fichero <code>.htaccess</code> que redimensiona realmente las imágenes, las <em>cachea</em> en el servidor y las muestra de acuerdo al tamaño de la pantalla del usuario. Mola, pero tampoco mucho: hay que tocar el sistema de ficheros del servidor, utilizar las cookies del navegador, las imágenes dejan de ser un contenido puramente estático…</li>
+</ul>
+
+<p>Hace unos días estaba comentando este asunto con <a href="http://www.twitter.com/gimenete">@gimenete</a>, hablábamos de que ahora mismo <strong>no existe una solución &#8220;perfecta&#8221; o al menos totalmente &#8220;correcta&#8221;</strong> para gestionar las imágenes adaptables. La cantidad de proyectos e ideas que están surgiendo para intentar arreglar esto evidencia <strong>la importancia del problema</strong>. Algunas opciones:</p>
+
+<ul>
+<li><a href="https://github.com/adamdbradley/foresight.js">Foresight.js</a>: librería Javascript para detectar la resolución y densidad de pixels de la pantalla del usuario, además de la capacidad de su conexión a internet, para decidir si servirle las imágenes normales o en alta resolución.</li>
+<li><a href="https://github.com/tubalmartin/riloadr">Riloadr</a>: librería Javascript sin dependencias de otros frameworks para servir imágenes optimizadas y en diferentes resoluciones para mejorar el tiempo de carga y adaptarse a cada dispositivo.</li>
+<li><a href="https://github.com/stowball/jQuery-rwdImages">jQuery RWD Images</a>: plugin de jQuery para configurar alternativas a una imagen en diferentes tamaños y calidades, para mostrar la apropiada en tiempo real dependiendo de la pantalla del usuario.</li>
+</ul>
+
+<p>Ayer mismo leía en <a href="http://www.webmonkey.com/2012/08/w3c-proposes-responsive-image-solution/">webmonkey</a> la noticia de que W3C ha publicado <a href="http://dvcs.w3.org/hg/html-proposals/raw-file/tip/responsive-images/responsive-images.html">el primer borrador</a> de la extensión HTML para gestionar imágenes adaptables. Como es un primer borrador, debe tomarse como <strong>una propuesta inicial que debe ser comentada y discutida</strong> para analizar su viabilidad, ventajas e inconvenientes. La propuesta final deberá satisfacer tanto a los desarrolladores como a las bases de compatibilidad, rendimiento, usabilidad y accesibilidad del W3C.</p>
+
+<p>No obstante, personalmente creo que estamos en el buen camino. Esta primera propuesta adopta la idea del nuevo atributo <code>srcset</code> para las imágenes y se define un nuevo elemento <code>&lt;picture&gt;</code>, muy similar al ya implementado <code>&lt;video&gt;</code> de HTML5. Esta idea es <strong>muy popular entre los desarrolladores web</strong>, mantendría el elemento <code>&lt;img&gt;</code> exactamente como es ahora y tener un nuevo elemento ofrecería muchas ventajas. El resumen (traducido libremente) del contenido del borrador es algo como:</p>
+
+<blockquote>
+  <p>Esta propuesta añade nuevos elementos y atributos a HTML5 para habilitar diferentes fuentes para las imágenes basadas en las características del navegador y de la pantalla. La propuesta aborda múltiples casos de uso, como las imágenes usadas en diseños web adaptables y las diferentes imágenes que se requieren para pantallas con alta densidad de pixels.</p>
+</blockquote>
+
+<p>Un <strong>ejemplo de código usando la propuesta</strong> sería:</p>
+
+<pre class="html5" style="font-family:monospace;"><span style="color: #009900;">&lt;picture <span style="color: #000066;">alt</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;&quot;</span>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/source.html"><span style="color: #000000; font-weight: bold;">source</span></a> <span style="color: #000066;">media</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;(min-width: 45em)&quot;</span> srcset<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;large-1.jpg 1x, large-2.jpg 2x&quot;</span>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/source.html"><span style="color: #000000; font-weight: bold;">source</span></a> <span style="color: #000066;">media</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;(min-width: 18em)&quot;</span> srcset<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;med-1.jpg 1x, med-2.jpg 2x&quot;</span>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/source.html"><span style="color: #000000; font-weight: bold;">source</span></a> srcset<span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;small-1.jpg 1x, small-2.jpg 2x&quot;</span>&gt;</span> 
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/img.html"><span style="color: #000000; font-weight: bold;">img</span></a> <span style="color: #000066;">src</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;small-1.jpg&quot;</span>&gt;</span> 
+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span>picture&gt;</span></pre>
+
+<p>Como hijo del elemento <code>&lt;picture&gt;</code> podemos ver varios elementos <code>&lt;source&gt;</code> en los que se define tanto una <em>media query</em> (para especificar tamaños de pantalla) como una lista de <strong>dos imágenes alternativas</strong> mediante el atributo <code>srcset</code>: una como imagen por defecto para esa <em>media query</em> y la otra como imagen para mostrar si la pantalla tiene una alta densidad de pixels.</p>
+
+<p>La línea 2 del ejemplo de código especifica las imágenes mostrar para pantallas grandes, concretamente las que tengan una anchura mínima de <code>45em</code>. La tercera línea las especifica para pantallas medianas, entre <code>18em</code> y <code>45em</code>. La cuarta establece las imágenes a mostrar en resoluciones inferiores y la quinta línea es un elemento <code>&lt;img&gt;</code> convencional para garantizar la compatibilidad con navegadores antiguos.</p>
+
+<p><strong>¿Qué te parece la propuesta?</strong></p>
+
+<p>Enlaces y referencias de interés:</p>
+
+<ul>
+<li><a href="http://dvcs.w3.org/hg/html-proposals/raw-file/tip/responsive-images/responsive-images.html">W3C - HTML Responsive Images Extension</a></li>
+<li><a href="http://www.whatwg.org/">WHATWG: Web Hypertext Application Technology Working Group</a></li>
+<li><a href="http://www.w3.org/community/respimg/">W3C: responsive images community group</a></li>
+<li><a href="http://css-tricks.com/on-responsive-images/">CSS-Tricks: on responsive images</a></li>
+</ul>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=El problema de las imágenes responsive en la web y la primera propuesta del W3C para arreglarlo - http://www.hachemuda.com/2012/08/el-problema-de-las-imagenes-responsive-en-la-web-y-la-primera-propuesta-de-la-w3c-para-arreglarlo" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2012/08/el-problema-de-las-imagenes-responsive-en-la-web-y-la-primera-propuesta-de-la-w3c-para-arreglarlo - El problema de las imágenes responsive en la web y la primera propuesta del W3C para arreglarlo" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2012/08/el-problema-de-las-imagenes-responsive-en-la-web-y-la-primera-propuesta-de-la-w3c-para-arreglarlo&t=El problema de las imágenes responsive en la web y la primera propuesta del W3C para arreglarlo" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/compatibilidad">compatibilidad</a></li>
+                      <li><a href="/etiqueta/css">css</a></li>
+                      <li><a href="/etiqueta/html5">html5</a></li>
+                      <li><a href="/etiqueta/imagen">imagen</a></li>
+                      <li><a href="/etiqueta/javascript">javascript</a></li>
+                      <li><a href="/etiqueta/responsive">responsive</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>

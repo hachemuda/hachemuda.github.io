@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            Migrando el blog de Cuéntica de WordPress a Mixture.io en HTML estático y Markdown | HacheMuda
+      </title>
+  
+      <meta name="description" content="Los puntos más importantes del proceso de migración del blog de Cuéntica, que estaba basado en WordPress, para convertirlo en un blog en HTML estático utilizando la herramienta Mixture.io." />
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Migrando el blog de Cuéntica de WordPress a Mixture.io en HTML estático y Markdown">
+  <meta property="og:description" content="Los puntos más importantes del proceso de migración del blog de Cuéntica, que estaba basado en WordPress, para convertirlo en un blog en HTML estático utilizando la herramienta Mixture.io.">
+  <meta property="og:url" content="http://www.hachemuda.com/2014/03/migrando-blog-cuentica-de-wordpress-a-mixture-html-estatico">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+      <meta property="og:image" content="http://www.hachemuda.com/uploads/2014/mixture-liquid-code.png">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="blog/post,post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title ">
+					<h1 class="title">
+						<a href="/2014/03/migrando-blog-cuentica-de-wordpress-a-mixture-html-estatico">
+							Migrando el blog de Cuéntica de WordPress a Mixture.io en HTML estático y Markdown
+						</a>
+					</h1>
+											<h2 class="subtitle">
+							Los puntos más importantes del proceso de migración del blog de Cuéntica, que estaba basado en WordPress, para convertirlo en un blog en HTML estático utilizando la herramienta Mixture.io.
+						</h2>
+						
+				</div>
+									<div class="featured_img">
+						<img src="http://www.hachemuda.com/uploads/2014/mixture-liquid-code.png" alt="Migrando el blog de Cuéntica de WordPress a Mixture.io en HTML estático y Markdown" />
+					</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 23 de Marzo de 2014</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<p>Desde hace unos días, el <a href="https://blog.cuentica.com">blog de Cuéntica</a> ya no está basado en WordPress sino que es <strong>un blog en HTML estático</strong>, generado por la herramienta <a href="http://mixture.io">Mixture</a>. Este software se define como una herramienta de prototipado rápido para Mac y Windows, pero es mucho más que eso y tenemos que decir que <strong>el soporte técnico de sus creadores es realmente excepcional</strong>. Nos han aconsejado, ayudado y han solucionado problemas sobre la marcha (sobre todo con temas de la localización, el idioma y los caracteres especiales usados en español).</p>
+
+<p>La idea principal era probar una nueva tecnología para la generación de blogs estáticos, con todas las ventajas que eso supone en mantenimiento del propio sitio, la flexibilidad y la velocidad.</p>
+
+<p>Mixture es una aplicación brutal para desarrolladores de frontend:</p>
+
+<ul>
+<li>Un montón de <em>boilerplates</em> soportados y disponibles para descargar y crear el proyecto con un solo click.</li>
+<li>Utiliza plantillas <a href="http://liquidmarkup.org">Liquid</a> para la generación del sitio web, lo que permite desarrollar un sitio web estático con las funcionalidades más importantes de uno dinámico en general.</li>
+<li>Auto-refresca el navegador ante cualquier cambio de cualquier fichero, y lo hace además súper rápido.</li>
+<li>Contiene preprocesadores para casi cualquier lenguaje que quieras usar: Sass, Less, CoffeScript&#8230; y tiene la opción del autoprefix para CSS.</li>
+<li>Optimización de todos los ficheros estáticos y un buen debugger de errores.</li>
+<li>Permite generar el sitio web en HTML estático y subirlo automáticamente a tu servidor FTP o a GitHub Pages.</li>
+<li>Tiene una plataforma de hosting para publicar fácilmente el sitio web.</li>
+<li>Y <a href="http://docs.mixture.io">muchas cosas más</a>.</li>
+</ul>
+
+<p><img src="http://www.hachemuda.com/uploads/2014/mixture.png" alt="Mixture - Boilerplates" /></p>
+
+<p>Es bastante complicado explicar con todos los detalles la configuración y programación del blog con Mixture, así que vamos a echar un vistazo a los puntos más importantes sabiendo que todo está basado en el boilerplate que viene por defecto para la creación de blogs, que se basa en la funcionalidad de &#8220;<a href="http://docs.mixture.io/collections">collections</a>&#8221; y que permite crear bucles de contenidos en ficheros estáticos, escritos en Markdown.</p>
+
+<h3>1. Exportación de todos los contenidos de WP a formato Markdown</h3>
+
+<p>Existen varios plugins de WordPress para exportar todos los artículos y páginas de la base de datos a ficheros en formato Markdown. Nosotros utilizamos <a href="https://github.com/benbalter/wordpress-to-jekyll-exporter">WordPress to Jekyll Exporter</a>, un plugin pensado para generar los contenidos en Markdown que requiere el popular sistema <a href="http://jekyllrb.com">Jekyll</a> para la generación de sitios web y blogs estáticos. Tuvimos que hacer algunos ajustes para que los metadatos de cada post estuvieran bien especificados, como los necesita <a href="http://mixture.io">Mixture.io</a>, pero fue bastante sencillo.</p>
+
+<h3>2. Organización de todos los ficheros</h3>
+
+<p>En el directorio del proyecto, tenemos esta estructura de directorios y ficheros:</p>
+
+<ul>
+<li><code>collections</code>: contiene una carpeta <code>articles</code> y en su interior todos los artículos en Markdown. El nombre de los ficheros es el <code>slug</code> de la URL del artículo.</li>
+<li><code>public</code>: todos los ficheros estáticos (CSS, Javascript, imágenes, fuentes&#8230;)</li>
+<li><code>assets</code>: todas las imágenes usadas en el contenido de los artículos para la ilustración de los posts.</li>
+<li><code>templates</code>: el propio &#8220;theme&#8221;, las plantillas para la creación del sitio web. Nos hemos basado en la estructura que viene por defecto en Mixture en el ejemplo de &#8220;blog&#8221;.</li>
+<li>Como ficheros especiales en las plantillas, tenemos <code>templates/sitemap.liquid</code> y <code>templates/rss.liquid</code>, añadidas para la generación de un sitemap XML y del feed RSS para poder suscribirse a los nuevos artículos. También <code>templates/404.liquid</code> para la gestión de errores 404.</li>
+</ul>
+
+<p>Así se ve la organización en el navegador de archivos:</p>
+
+<p><img src="http://www.hachemuda.com/uploads/2014/estructura-ficheros-mixture.png" alt="Organización de ficheros y directorios" /></p>
+
+<h3>3. El contenido de un artículo Markdown</h3>
+
+<p>Todos los artículos están escritos en Markdown, el nombre del fichero es el slug de su URL y todos ellos tienen:</p>
+
+<ul>
+<li>Una cabecera con los metadatos del artículo: título, fecha, etc.</li>
+<li>El contenido del post, en Markdown.</li>
+</ul>
+
+<p>El Markdown de cada post tiene este aspecto:</p>
+
+<pre><code>---
+title: 'El título del post'
+published: true
+thumbnail: /assets/images/2014/03/url-imagen-post-thumbnail.jpg
+date: 2014-03-23 08:00:00
+categories:
+    - categoría 1
+    - categoría 2
+tags:
+    - etiqueta 1
+    - etiqueta 2    
+---
+Aquí va el contenido del post.
+</code></pre>
+
+<h3>4. Creación de rutas para las plantillas en la configuración del proyecto</h3>
+
+<p>Mixture permite crear <code>routes</code> en el fichero de configuración del proyecto <code>mixture.json</code>, que son reglas de URL&#8217;s visitadas y redirecciones o plantillas que deben usarse para cada una de ellas. En nuestro caso queríamos tener las siguientes vistas:</p>
+
+<ul>
+<li><strong>Etiqueta</strong>: una plantilla que muestra todos los artículos con esa etiqueta.</li>
+<li><strong>Categoría</strong>: una plantilla que muestra todos los artículos con esa etiqueta.</li>
+<li><strong>RSS</strong>: una plantilla que genera el feed RSS con los últimos 10 artículos.</li>
+<li><strong>Sitemap</strong>: una plantilla que genera el itemap en XML con todas las URL&#8217;s de los artículos publicados.</li>
+<li><strong>Artículo</strong>: una plantilla que muestra el contenido de un artículo concreto.</li>
+</ul>
+
+<p>Nuestras rutas han quedado así:</p>
+
+<pre><code>"routes": [
+    {
+        "redirect": null, "route": "tag/:tag", "template": "taxonomy" 
+    },
+    {
+        "redirect": null, "route": "category/:category", "template": "taxonomy"
+    },
+    { 
+        "route": "rss", "template": "rss", "redirect": null 
+    },
+    { 
+        "route": "sitemap", "template": "sitemap", "redirect": null 
+    },
+    { 
+        "route": ":url", "template": "article", "redirect": null 
+    } 
+]
+</code></pre>
+
+<h3>4. Las colecciones de artículos</h3>
+
+<p>Por defecto, Mixture genera las URL&#8217;s de cada artículo añadiendo el nombre del directorio donde están guardados, dentro de <code>collections</code>. Nosotros no queríamos eso así que hemos seguido sus recomendaciones y cada vez que se genera la URL de un post en una plantilla, le suprimimos ese primer &#8220;/article/&#8221; usando la genial sintaxis de Liquid.</p>
+
+<pre><code>&lt;a href="{{ article.slug | replace_first:'/article' }}"&gt;
+    {{ article.title }}
+&lt;/a&gt;
+</code></pre>
+
+<p>Ejemplo de uso de la etiqueta <code>collection</code> en <strong>la plantilla de la portada del blog</strong>:</p>
+
+<pre><code>{% layout "index" %}
+{% block content %} 
+    {% collection "article" by 10 order desc %}
+        {% if collection.current_page &gt; collection.pages and collection.size &gt; 0 %}
+            {% include "articles/paged-too-far" %}
+        {% elseif collection.size == 0 %}
+            {% include "articles/no-articles" %}
+        {% else %}
+            {% assign currentpage = collection.current_page %}
+            {% include "articles/article" with collection.items %}
+        {% endif %}
+    {% endcollection %}
+{% endblock %}
+</code></pre>
+
+<p>Esta plantilla es un bucle que captura <strong>los últimos 10 artículos publicados</strong> y para cada uno de ellos llama a la plantilla <code>includes/articles/article.liquid</code>, que contiene todo el HTML que se renderiza: título con link, fecha, categorías y etiquetas, extracto del contenido y el thumbnail.</p>
+
+<p>En caso de que la paginación se haya ido demasiado lejos muestra la plantilla <code>paged-too-far.liquid</code> y si el bucle no devuelve ningún elemento, entonces se mostrará la plantilla <code>no-articles.liquid</code>.</p>
+
+<p>Exactamente lo mismo puede hacerse en la plantilla <code>tag.liquid</code>, que es la que está referenciada en la <code>route</code> para ser ejecutada cuando se accede a una URL que debe contener un listado de posts con una etiqueta concreta.</p>
+
+<p>Se puede hacer uso de las variables <code>{{ mixture.route }}</code> para la detección del slug de la URL. Por ejemplo, si se accede a la URL:</p>
+
+<ul>
+<li>http://dominio.com/tag/lo-que-sea</li>
+</ul>
+
+<p>en la plantilla Liquid puede usarse <code>{{ mixture.route.tag }}</code> y devolverá <code>lo-que-sea</code>. Así pueden detectarse las etiquetas a buscar en un bucle con <code>collections</code>, por ejemplo:</p>
+
+<pre><code>{% collection "article" by 10 query 'tags={{ mixture.route.tag }}' order desc %}
+    {% for items in collection.items %}
+        &lt;!-- Mostrar cada artículo --&gt;
+    {% endfor %}
+{% endcollection %}
+</code></pre>
+
+<p>Y lo mismo en la plantilla de categorías, pero usando <code>{{ mixture.route.category }}</code>.</p>
+
+<h3>5. Redirección vía .htaccess de las URL&#8217;s viejas a las nuevas</h3>
+
+<p>Hemos intentado no hacer ningún cambio en las URL&#8217;s utilizadas en el blog, pero ha sido inevitable que cada URL de cada artículo tenga al final la extensión <code>.html</code>. Como en el antiguo con WordPress las teníamos sin la extensión al final, hemos creado una redirección a través del fichero <code>.htaccess</code>:</p>
+
+<pre><code>&lt;IfModule mod_rewrite.c&gt;
+    RewriteEngine On
+    RedirectMatch ^/([\w-]+)/?$ https://blog.cuentica.com/$1.html 
+&lt;/IfModule&gt;
+</code></pre>
+
+<h3>6. Publicación de nuevos artículos</h3>
+
+<p>Mixture tiene la opción de <strong>convertir el sitio a HTML estático y automáticamente subir los últimos cambios a tu propio servidor FTP</strong>, por lo que te da todas las facilidades. Escribes el post en tu entorno local, compruebas que todo está bien y ejecutas la generación y la subida.</p>
+
+<p>Esperamos que te haya gustado la idea, nosotros estamos súper contentos con <a href="https://blog.cuentica.com">el resultado</a> y teníamos ganas de probar esta nueva tendencia a la generación de blogs estáticos. Escribe un comentario si tienes cualquier duda o si puedo ayudarte en alguna cosa, :)</p>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=Migrando el blog de Cuéntica de WordPress a Mixture.io en HTML estático y Markdown - http://www.hachemuda.com/2014/03/migrando-blog-cuentica-de-wordpress-a-mixture-html-estatico" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2014/03/migrando-blog-cuentica-de-wordpress-a-mixture-html-estatico - Migrando el blog de Cuéntica de WordPress a Mixture.io en HTML estático y Markdown" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2014/03/migrando-blog-cuentica-de-wordpress-a-mixture-html-estatico&t=Migrando el blog de Cuéntica de WordPress a Mixture.io en HTML estático y Markdown" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/blog">blog</a></li>
+                      <li><a href="/etiqueta/cms">cms</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>

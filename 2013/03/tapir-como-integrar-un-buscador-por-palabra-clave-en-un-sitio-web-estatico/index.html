@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            Tapir: cómo integrar un buscador por palabra clave en un sitio web estático | HacheMuda
+      </title>
+  
+      <meta name="description" content="Tapir es un servicio web que es capaz de leer y almacenar el contenido de un feed RSS. Y tú puedes usarlo para realizar búsquedas por palabra clave en sitios web estáticos." />
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Tapir: cómo integrar un buscador por palabra clave en un sitio web estático">
+  <meta property="og:description" content="Tapir es un servicio web que es capaz de leer y almacenar el contenido de un feed RSS. Y tú puedes usarlo para realizar búsquedas por palabra clave en sitios web estáticos.">
+  <meta property="og:url" content="http://www.hachemuda.com/2013/03/tapir-como-integrar-un-buscador-por-palabra-clave-en-un-sitio-web-estatico">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+      <meta property="og:image" content="http://www.hachemuda.com/uploads/2013/2013-03-19-tapir.jpg">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="blog/post,post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title ">
+					<h1 class="title">
+						<a href="/2013/03/tapir-como-integrar-un-buscador-por-palabra-clave-en-un-sitio-web-estatico">
+							Tapir: cómo integrar un buscador por palabra clave en un sitio web estático
+						</a>
+					</h1>
+											<h2 class="subtitle">
+							Tapir es un servicio web que es capaz de leer y almacenar el contenido de un feed RSS. Y tú puedes usarlo para realizar búsquedas por palabra clave en sitios web estáticos.
+						</h2>
+						
+				</div>
+									<div class="featured_img">
+						<img src="http://www.hachemuda.com/uploads/2013/2013-03-19-tapir.jpg" alt="Tapir: cómo integrar un buscador por palabra clave en un sitio web estático" />
+					</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 20 de Marzo de 2013</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<p>Cuando construyes un sitio web estático, como es <a href="http://hachemuda.com/2013/03/nuevo-diseno-y-nuevo-cms-para-hachemuda/">mi caso con Hachemuda</a>, una de las funcionalidades que parece más complicada de implementar es un buscador por palabra clave. ¿Cómo hacer un buscador en un sitio web que no tiene una base de datos?</p>
+
+<h2>Tapir to the rescue!</h2>
+
+<p>Tapir es un servicio simple, sencillo y súper bien pensado: un servicio web que <strong>guarda automáticamente los contenidos de tu web para que tú puedas realizar búsquedas en ellos a través de su API</strong>. Y una vez hecho, irá revisando tu <em>feed</em> cada 15 minutos para ir <strong>guardándose automáticamente los nuevos contenidos</strong> que publiques y poder incluirlos como resultados en las búsquedas.</p>
+
+<p>En realidad funciona para cualquier sitio web que tenga un feed, pero lo encuentro de especial utilidad en el caso de páginas estáticas, sin base de datos.</p>
+
+<p>En Hachemuda ya está en funcionamiento, puedes probar a buscar contenido usando el formulario de la cabecera de la web, :)</p>
+
+<p>Para <strong>integrarlo en tu sitio web</strong>, lo único que necesitas tener es un feed XML y unos conocimientos básicos de Javascript o jQuery. Los pasos son:</p>
+
+<ol>
+<li>Acceder a <a href="http://tapirgo.com">tapirgo.com</a> y rellenar el campo con la dirección de tu <em>feed</em> RSS. </li>
+<li>Apuntar tu <strong>token de acceso</strong>, será el código que necesitarás para poder ejecutar búsquedas en el sistema. </li>
+<li>Darle unos minutos para <strong>que lea e indexe todos los contenidos</strong> disponibles en ese momento en tu feed. </li>
+</ol>
+
+<p>Después, ya podrás comprobar que todos los contenidos han sido indexados y que la búsqueda funciona correctamente accediendo a esta URL desde el navegador web:</p>
+
+<pre class="php" style="font-family:monospace;">http<span style="color: #339933;">:</span><span style="color: #666666; font-style: italic;">//www.tapirgo.com/api/1/search.json?token=XXXXX&amp;query=YYYYY</span></pre>
+
+<p>Lógicamente, en esa URL debes modificar <code>XXXXX</code> por tu token de acceso y <code>YYYYY</code> por las palabras claves a buscar en tu base de contenidos.</p>
+
+<p>Tapir devuelve los resultados de las búsquedas en el popular <a href="http://es.wikipedia.org/wiki/JSON">formato JSON</a>, por lo que tendrás que programar esa parte para <em>descomponerlos</em> y mostrarlos en tu sitio web de la forma deseada. Si usas jQuery es bastante sencillo utilizando la función <code>getJSON</code>, aunque también puedes usar <a href="https://github.com/TapirGo/jQuery-Plugin">el plugin de jQuery</a> que ya han creado para Tapir, :)</p>
+
+<p>En mi caso, como ejemplo, tengo el siguiente marcado HTML para mostrar el formulario y los resultados de las búsquedas:</p>
+
+<pre class="html5" style="font-family:monospace;"><span style="color: #808080; font-style: italic;">&lt;!-- Search input --&gt;</span>
+<span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/form.html"><span style="color: #000000; font-weight: bold;">form</span></a> <span style="color: #000066;">method</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;get&quot;</span> <span style="color: #000066;">id</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;searchform&quot;</span> <span style="color: #000066;">action</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;/&quot;</span>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/input.html"><span style="color: #000000; font-weight: bold;">input</span></a> <span style="color: #000066;">type</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;text&quot;</span> <span style="color: #000066;">name</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;s&quot;</span> <span style="color: #000066;">value</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;&quot;</span> <span style="color: #000066;">placeholder</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;Introduce los términos de búsqueda&quot;</span> <span style="color: #000066;">id</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;s&quot;</span> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;search_input&quot;</span> <span style="color: #66cc66;">/</span>&gt;</span>
+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/form.html"><span style="color: #000000; font-weight: bold;">form</span></a>&gt;</span>
+<span style="color: #808080; font-style: italic;">&lt;!-- Search results box --&gt;</span>
+ <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/div.html"><span style="color: #000000; font-weight: bold;">div</span></a> <span style="color: #000066;">class</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;search_results_container&quot;</span>&gt;</span>
+  <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/h2.html"><span style="color: #000000; font-weight: bold;">h2</span></a>&gt;</span>Resultados de la búsqueda:<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/h2.html"><span style="color: #000000; font-weight: bold;">h2</span></a>&gt;</span>
+  <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/ul.html"><span style="color: #000000; font-weight: bold;">ul</span></a> <span style="color: #000066;">id</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;search_results&quot;</span>&gt;&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/ul.html"><span style="color: #000000; font-weight: bold;">ul</span></a>&gt;</span>
+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/div.html"><span style="color: #000000; font-weight: bold;">div</span></a>&gt;</span></pre>
+
+<p>Con ese HTML, mediante jQuery se detecta cuando el usuario ha introducido y enviado el formulario de búsqueda de la parte superior. Entonces, el proceso que se sigue es:</p>
+
+<ol>
+<li>Vaciar el contenido de la caja de resultados, por si hubiera búsquedas anteriores.</li>
+<li>Detectar cuál es la cadena de búsqueda introducida por el usuario.</li>
+<li>Ejecuta una petición a la API de Tapir con el token y la cadena de búsqueda. Al recibir la respuesta, se ejecuta la función de <em>callback</em>: para cada item devuelto en formato JSON, genera un elemento de lista HTML y lo encadena al final de los anteriores. Este elemento tiene el título del artículo y el link directo al mismo.</li>
+<li>Cuando termina de generar la lista HTML con todos los resultados, muestra la caja de resultados con un efectillo de apertura hacia abajo.</li>
+</ol>
+
+<pre class="javascript" style="font-family:monospace;">$<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#searchform'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">submit</span><span style="color: #009900;">&#40;</span><span style="color: #000066; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    $<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#search_results'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">empty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #000066; font-weight: bold;">var</span> phrase <span style="color: #339933;">=</span> $<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'input#s'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">val</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #000066; font-weight: bold;">var</span> token <span style="color: #339933;">=</span> <span style="color: #3366CC;">'XXXXXXXXXXXXXXXXXXX'</span><span style="color: #339933;">;</span>
+&nbsp;
+    $.<span style="color: #660066;">getJSON</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'http://tapirgo.com/api/1/search.json?token='</span> <span style="color: #339933;">+</span> token <span style="color: #339933;">+</span> <span style="color: #3366CC;">'&amp;query='</span> <span style="color: #339933;">+</span> phrase <span style="color: #339933;">+</span><span style="color: #3366CC;">'&amp;callback=?'</span><span style="color: #339933;">,</span> <span style="color: #000066; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>data<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+        $.<span style="color: #660066;">each</span><span style="color: #009900;">&#40;</span>data<span style="color: #339933;">,</span> <span style="color: #000066; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>key<span style="color: #339933;">,</span> val<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            $<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#search_results'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">append</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'&lt;li&gt;&lt;a href=&quot;'</span> <span style="color: #339933;">+</span> val.<span style="color: #660066;">link</span> <span style="color: #339933;">+</span> <span style="color: #3366CC;">'&quot;&gt;'</span> <span style="color: #339933;">+</span> val.<span style="color: #660066;">title</span> <span style="color: #339933;">+</span> <span style="color: #3366CC;">'&lt;/a&gt;&lt;/li&gt;'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        $<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#search_results_pane'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">slideDown</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #000066; font-weight: bold;">return</span> <span style="color: #003366; font-weight: bold;">false</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+<h3>Ojo:</h3>
+
+<p>Normalmente los sistemas de feeds automáticos generan el canal con los últimos X artículos. En ese caso, Tapir sólo indexará inicialmente esos X artículos y, de forma automática cada 15 minutos, los que vayas publicando después. Pero no los anteriores. </p>
+
+<p>Yo lo que hice fue modificar la plantilla del feed para que se generara mostrando los últimos 1100 artículos y lo dejé activo durante unos minutos, hasta que Tapir ya indexó todos ellos, y después volví a modificar la plantilla para que sólo mostrara los 10 últimos.</p>
+
+<p>Si controlas un poquito más de programación o <em>hackeo</em> general, Tapir también <a href="http://tapirgo.com/#push_api">permite ejecutar peticiones PUSH</a> manualmente para incluir contenidos antiguos.</p>
+
+<p>Enlaces:</p>
+
+<ul>
+<li><a href="http://www.tapirgo.com">Tapir</a></li>
+</ul>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=Tapir: cómo integrar un buscador por palabra clave en un sitio web estático - http://www.hachemuda.com/2013/03/tapir-como-integrar-un-buscador-por-palabra-clave-en-un-sitio-web-estatico" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2013/03/tapir-como-integrar-un-buscador-por-palabra-clave-en-un-sitio-web-estatico - Tapir: cómo integrar un buscador por palabra clave en un sitio web estático" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2013/03/tapir-como-integrar-un-buscador-por-palabra-clave-en-un-sitio-web-estatico&t=Tapir: cómo integrar un buscador por palabra clave en un sitio web estático" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/codigo">código</a></li>
+                      <li><a href="/etiqueta/jquery">jquery</a></li>
+                      <li><a href="/etiqueta/piecrust">piecrust</a></li>
+                      <li><a href="/etiqueta/ajax">ajax</a></li>
+                      <li><a href="/etiqueta/tutorial">tutorial</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>

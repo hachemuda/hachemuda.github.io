@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>HacheMuda</title>
+        <link>/</link>
+        <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+                <description>Últimos artículos de HacheMuda</description>
+                <lastBuildDate>Sun, 23 Mar 2014 18:35:05 +0100</lastBuildDate>
+        <pubDate>Sun, 23 Mar 2014 18:35:05 +0100</pubDate>
+        <generator>PieCrust 1.2.0-dev</generator>
+                        
+                                <item>
+            <title>Cómo añadir directorios al apartado &amp;#039;Places&amp;#039; del USP</title>
+            <link>http://www.hachemuda.com/2006/08/como-anadir-directorios-al-apartado-places-del-usp</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>Ubuntu y Linux</category>
+                        <pubDate>Tue, 29 Aug 2006 00:00:00 +0200</pubDate>
+            <guid>/2006/08/como-anadir-directorios-al-apartado-places-del-usp</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Si has instalado el &lt;strong&gt;Ubuntu System Panel&lt;/strong&gt;, te habrás dado cuenta de que no aparece la opción de introducir nuevos directorios en el apartado de &lt;strong&gt;Places&lt;/strong&gt;. &lt;a href=&quot;http://www.guillempastor.com/&quot; title=&quot;Blog de Guillem M. Pastor&quot;&gt;Guillem M. Pastor&lt;/a&gt; en los comentarios del post de &lt;a href=&quot;http://hachemuda.com/19/08/2006/instalando-el-ubuntu-system-panel-usp/#comment-75&quot; title=&quot;Enlace al artículo en HacheMuda&quot;&gt;cómo instalar el Ubuntu System Panel (USP)&lt;/a&gt; lo preguntaba, así que me puse a mirar un poquito y ya sé cómo hacerlo (los símbolos &lt;em&gt;#:&gt;&lt;/em&gt; equivalen al prompt de la línea de comandos del terminal):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Entra el directorio de configuración del USP:&lt;br /&gt;
+&lt;code&gt;#:&amp;gt;cd $home/.usp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Si hacemos un &lt;em&gt;ls&lt;/em&gt; vemos que tenemos un fichero &lt;em&gt;places.list&lt;/em&gt; y un directorio llamado &lt;em&gt;places&lt;/em&gt;. Editamos el fichero &lt;em&gt;places.list&lt;/em&gt;:&lt;code&gt;#:&amp;gt;gedit places.list&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Añadimos una entrada en el menú de **places **para el directorio &lt;em&gt;musica&lt;/em&gt; (que es un directorio que yo tengo en mi &lt;em&gt;home&lt;/em&gt;). Simplemente añadimos al final del fichero (o entre los que queramos que aparezca) esta línea, donde &lt;em&gt;usuario&lt;/em&gt; es tu nombre de usuario:&lt;code&gt;/home/usuario/.usp/places/file:---home-usuario-musica.desktop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Ahora editamos el fichero necesario para que al pulsar en la nueva entrada se abra nautilus en el directorio &lt;em&gt;musica&lt;/em&gt; (sustituye &lt;em&gt;usuario&lt;/em&gt; por tu nombre de usuario):&lt;code&gt;#:&amp;gt;gedit ./places/file:---home-usuario-musica.desktop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;En ese fichero introducimos estas líneas (sustituye &lt;em&gt;usuario&lt;/em&gt; por tu nombre de usuario):` [Desktop Entry]
+Encoding=UTF-8&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1&gt;Nombre que quieres que aparezca en el USP&lt;/h1&gt;
+
+&lt;p&gt;Name=Musica&lt;/p&gt;
+
+&lt;h1&gt;Comentario que quieres que aparezca en el USP&lt;/h1&gt;
+
+&lt;p&gt;Comment=Coleccion de musica&lt;/p&gt;
+
+&lt;h1&gt;Ejecutar Nautilus con la ruta del directorio que queremos&lt;/h1&gt;
+
+&lt;p&gt;Exec=nautilus /home/usuario/musica
+Icon=gnome-fs-directory
+GenericName=
+Terminal=false
+`
+6.  Ya sólo tenemos que guardar el fichero, quitar el USP del panel y volverlo a añadir.&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Los 10 mandamientos del ahorro de combustible</title>
+            <link>http://www.hachemuda.com/2006/08/los-10-mandamientos-del-ahorro-de-combustible</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>coche</category>
+                        <category>compras</category>
+                        <category>tema</category>
+                        <pubDate>Tue, 29 Aug 2006 00:00:00 +0200</pubDate>
+            <guid>/2006/08/los-10-mandamientos-del-ahorro-de-combustible</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Tengo un amigo que anda un poco preocupado con el tema del combustible, del precio de la gasolina y del montón de dinero que se va todos los meses por el tubo de escape. Se ha estado informando de cuáles son las mejores maneras para ahorrar gasolina con el coche, y ha investigado sobre cosas que no todo el mundo conoce. Y no sólo eso, sino que también ha elaborado &lt;strong&gt;Los 10 mandamientos del ahorro de combustible&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/uploads/imagenes/surtidor.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Compre gasolina durante la mañana y de madrugada&lt;/strong&gt;, cuando las temperaturas son más bajas, la gasolina es más densa. Las bombas de gasolina miden y cargan según el volumen, no según la densidad. &lt;strong&gt;Por la mañana&lt;/strong&gt;, el volumen que usted compre será más denso: estará adquiriendo más gasolina sólida que vapores por el mismo dinero.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Recorra antes de comprar&lt;/strong&gt;. Los precios pueden variar incluso entre gasolineras que venden la misma marca. No es muy difícil encontrar una estación de servicio que venda su marca favorita un poco más barata. También puede ahorrar dinero pasándose a otra marca de combustible.&lt;br /&gt;
+Evita las estaciones cercanas a las autopistas porque sus precios suelen ser más elevados.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use las&lt;/strong&gt; &lt;strong&gt;tarjetas de crédito de las gasolineras&lt;/strong&gt;, algunas le ofrecen &lt;strong&gt;descuentos&lt;/strong&gt;. Visa Citibank Cepsa da 5% de descuento en gasolina (se incrementa hasta 6% para compras). Acompañada de la tarjeta &lt;em&gt;Porque tú vuelves&lt;/em&gt; para acumular puntos, ¡¡parece la mejor opción!!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cargue gasolina en las estaciones más concurridas&lt;/strong&gt;. Las gasolineras con mucha afluencia de clientes rellenan sus tanques a menudo. Las estaciones con menos tráfico no lo hacen con tanta frecuencia, y por eso sus tanques pueden contener cierta cantidad de combustible viejo contaminado. La gasolina más vieja es pobre en combustible y rendimiento.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gire 180º la boquilla de la bomba al acabar de cargar&lt;/strong&gt;. Esto puede añadir hasta 120ml a su tanque. Si colocas el coche con la tapa del depósito en el lado contrario al del tanque obligas a pasar la manguera por encima del maletero. Al hacerlo, se levanta la manguera y cae toda la gasolina que has pagado; evitando que se quede en la manguera.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deje de usar gasolina de altos octanos&lt;/strong&gt;. La gasolina de altos octanos es más cara que la normal. Si el motor de su coche no hace ruidos anormales, use gasolina normal sin plomo. Ahorrará varios céntimos por carga.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No cargue el tanque hasta rebosar&lt;/strong&gt;. La bomba de gasolina necesita tiempo para extraer la cantidad completa que usted ha solicitado. No lo hace cuando usted carga hasta el borde. Entonces, usted está desperdiciando dinero y combustible. Espere hasta que el tanque del coche se vacíe &lt;strong&gt;al menos hasta la mitad&lt;/strong&gt; para volver a llenarlo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evite los incrementos de consumo de combustible&lt;/strong&gt;: 
+
+&lt;ul&gt;
+&lt;li&gt;El uso del** portaequipajes** de techo, aún estando éste vacío, puede incrementar el consumo normal del vehículo de 2 a 35%&lt;/li&gt;
+&lt;li&gt;El uso del &lt;strong&gt;aire acondicionado&lt;/strong&gt; aumenta entre un 10-20% el consumo de combustible.&lt;/li&gt;
+&lt;li&gt;Tener las &lt;strong&gt;ventanillas abiertas&lt;/strong&gt; aumenta la resistencia con el aire del vehículo, aumentando con ello el consumo, ya que le cuesta más trabajo al auto avanzar. Suponen a 120 km/hora un incremento del 7%. Con el techo abierto de arriba el consumo puede incrementarse en un 10%.&lt;/li&gt;
+&lt;li&gt;La &lt;strong&gt;presión de los neumáticos&lt;/strong&gt; por debajo de lo normal aumenta el consumo por el mayor rozamiento del vehículo con el suelo, además de desgastar más los mismos. (por cada 0,3 libras menos de presión se aumenta en un 3% el consumo)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Luneta térmica&lt;/strong&gt; incrementa un 5% el gasto de combustible.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;En trayectos muy cortos el consumo se dispara&lt;/strong&gt;. En estos casos es recomendable utilizar el transporte público.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Estilo de conducción&lt;/strong&gt;. Puede hacer que &lt;strong&gt;ahorremos hasta un 40%&lt;/strong&gt; en combustible: 
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Arrancar&lt;/strong&gt; el motor sin acelerar y comenzar la marcha lo antes posible.&lt;/li&gt;
+&lt;li&gt;Utilizar &lt;strong&gt;marchas prolongadas&lt;/strong&gt; (en motores a gasolina el cambio de velocidad debe hacerse cuando estamos &lt;strong&gt;entre 2,000 y 2,500 revoluciones&lt;/strong&gt; y en motores diesel &lt;strong&gt;entre 1,500 y 2,000&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;Cuando estamos acelerando, se debe &lt;strong&gt;cambiar a la marcha más larga&lt;/strong&gt; lo antes posible y al reducir de la manera más lenta posible. (Un motor en marcha corta y revolucionado consume mucho más).&lt;/li&gt;
+&lt;li&gt;Evitar &lt;strong&gt;velocidades elevadas con aceleraciones y deceleraciones bruscas&lt;/strong&gt; (no tocando el freno); anticipándose a las situaciones, así mantendrás la velocidad constante. Cada kilómetro por hora que sobrepases de los 100 Km/h, aumenta el doble en tanto por ciento que si fueras a 100km/h. Por ejemplo si vas a 140 km/h estarás gastando un 80 % más de gasolina que si fueras a 100 km/h.&lt;/li&gt;
+&lt;li&gt;En &lt;strong&gt;paradas de más de 1 minuto&lt;/strong&gt; conviene apagar el motor.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Muchas gracias, Jorge.&lt;/strong&gt;&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Songbird 0.2, navega y colecciona música</title>
+            <link>http://www.hachemuda.com/2006/08/songbird-02-navega-y-colecciona-musica</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>escritorio</category>
+                        <pubDate>Tue, 29 Aug 2006 00:00:00 +0200</pubDate>
+            <guid>/2006/08/songbird-02-navega-y-colecciona-musica</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;En el artículo de ayer nombré cuatro &lt;a href=&quot;http://hachemuda.com/28/08/2006/comparacion-de-reproductoresorganizadores-de-musica-en-gnome/&quot; title=&quot;HacheMuda: enlace directo al artículo&quot;&gt;reproductores/organizadores de música para Gnome&lt;/a&gt;, y se me olvidó hablar de &lt;a href=&quot;http://www.songbirdnest.com/&quot; title=&quot;Página oficial&quot;&gt;Songbird&lt;/a&gt;. Es un organizador de música que salió hace muy poquito, yo tengo instalada la &lt;strong&gt;versión 0.2&lt;/strong&gt;. No está integrado en el escritorio &lt;a href=&quot;http://www.es.gnome.org/&quot; title=&quot;Gnome Hispano&quot;&gt;Gnome&lt;/a&gt;, pero funciona muy bien y no se parece a ningún otro.&lt;/p&gt;
+
+&lt;p&gt;Está basado en &lt;a href=&quot;http://www.mozilla-europe.org/es/products/firefox/&quot; title=&quot;Página oficial&quot;&gt;Mozilla Firefox&lt;/a&gt; (sí, sí, el navegador web) e implementa un aspecto al más puro estilo de &lt;a href=&quot;http://www.apple.com/es/itunes/&quot; title=&quot;Página oficial de ITunes&quot;&gt;iTunes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Se trata de un organizador de música suscritor de podcasts navegador ayudante para compras. En la interfaz del programa, arriba quedan los controles de reproducción. A la izquierda tiene una columna con tus listas de reproducción y con multitud de enlaces directos a tus favoritos, tiendas de música, podcasts… A mí personalmente me gusta mucho toda la disposición de la interfaz, pero no me gustan nada los colores. Creo que sería necesario poner varios temas (skins) para poder descargar. No obstante, desde la página oficial informan que están en ello, y que si te quieres aventurar tienes el skin actual para poder cambiar lo que quieras en el directorio &lt;em&gt;chrome/skin&lt;/em&gt; del programa.&lt;br /&gt;
+En principio también habrá extensiones, pero aún no hay ninguna disponible.&lt;/p&gt;
+
+&lt;p&gt;[![SongBird 1][7]][7] [![SongBird 2][8]][8]&lt;a href=&quot;http://bitelia.com/2006/06/27/songbird-02-ahora-tambien-para-mac-os-x-y-linux/&quot; title=&quot;Enlace al artículo en Bitelia&quot;&gt;&lt;img src=&quot;http://bitelia.com/2006/06/27/songbird-02-ahora-tambien-para-mac-os-x-y-linux/&quot; alt=&quot;SongBird 3&quot; title=&quot;Enlace al artículo en Bitelia&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[]: http://hachemuda.com/uploads/imagenes/songbird1.jpg &amp;#8220;Ver imagen más grande&amp;#8221;
+ []: http://hachemuda.com/uploads/imagenes/songbird2.jpg &amp;#8220;Ver imagen más grande&amp;#8221;
+ []: http://hachemuda.com/uploads/imagenes/songbird3.jpg &amp;#8220;Ver imagen más grande&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;Algunas cosas de &lt;a href=&quot;http://www.songbirdnest.com/&quot; title=&quot;Página oficial&quot;&gt;Songbird&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Multiplataforma, funciona en &lt;strong&gt;GNU/Linux&lt;/strong&gt; y en &lt;strong&gt;Mac&lt;/strong&gt; (y en el &lt;strong&gt;Windows&lt;/strong&gt; ese también)&lt;/li&gt;
+&lt;li&gt;No debe estar implementado lo del minimizar al área de notificación en &lt;strong&gt;GNU/Linux&lt;/strong&gt;, porque al hacerle click el programa peta, XD.&lt;/li&gt;
+&lt;li&gt;Permite importar el directorio de música del usuario y crea toda la colección de música.&lt;/li&gt;
+&lt;li&gt;Permite grabar en CD (aunque no en la versión para &lt;strong&gt;GNU/Linux&lt;/strong&gt;, por ahora) una lista de reproducción.&lt;/li&gt;
+&lt;li&gt;Permite navegar por Internet dentro del propio programa con todas las habilidades de &lt;a href=&quot;http://www.mozilla-europe.org/es/products/firefox/&quot; title=&quot;Página oficial&quot;&gt;Firefox&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Soporte para podcasts y radio.&lt;/li&gt;
+&lt;li&gt;Interfaz muy rápida e intuitiva.&lt;/li&gt;
+&lt;li&gt;Soporte para temas (skins) en camino. El tema actual no mola nada, a no ser que te encante la oscuridad, XD.&lt;/li&gt;
+&lt;li&gt;Gestión de la colección con el mismo estilo de &lt;a href=&quot;http://www.apple.com/es/itunes/&quot; title=&quot;Página oficial de ITunes&quot;&gt;iTunes&lt;/a&gt;. Es muy rápido e intuitivo buscar y crear tus listas.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mi opinión es que es un organizador de música original y muy diferente de todos los demás, funciona muy rápido y es muy eficiente, pero yo prefiero separar un poco la música de la navegación en Internet. Es evidente que está recién salido del horno (&lt;em&gt;versión 0.2&lt;/em&gt;) y que hay unas cuantas cosas que mejorar, pero tiene una buenísima pinta.&lt;/p&gt;
+
+&lt;p&gt;Para instalarlo en &lt;strong&gt;GNU/Linux&lt;/strong&gt;, simplemente descarga el programa, descomprímelo y ejecuta el archivo ejecutable con nombre &lt;strong&gt;Songbird&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Algunos enlaces interesantes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.songbirdnest.com/&quot; title=&quot;Página oficial&quot;&gt;Página oficial de Songbird&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bitelia.com/2006/06/27/songbird-02-ahora-tambien-para-mac-os-x-y-linux/&quot; title=&quot;Enlace al artículo en Bitelia&quot;&gt;Bitelia: Songbird 0.2, ahora también para Mac OSX y Linux &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.genbeta.com/search.php?query=songbird&quot; title=&quot;Búsqueda de &quot;&gt;Genbeta: Songbird&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Las primeras acciones al iniciar sesión</title>
+            <link>http://www.hachemuda.com/2006/08/meme-las-primeras-acciones-al-iniciar-sesion</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>escritorio</category>
+                        <category>gimp</category>
+                        <category>Ubuntu y Linux</category>
+                        <pubDate>Mon, 28 Aug 2006 00:00:00 +0200</pubDate>
+            <guid>/2006/08/meme-las-primeras-acciones-al-iniciar-sesion</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Hace tiempo ya que siempre que enciendo el ordenador e inicio una sesión, el protocolo que sigo para empezar la jornada es siempre el mismo. Tengo &lt;a href=&quot;http://www.es.gnome.org/&quot; title=&quot;Proyecto Gnome &quot;&gt;un escritorio sensacional&lt;/a&gt; funcionando en &lt;a href=&quot;http://www.ubuntu-es.org/&quot; title=&quot;Ubuntu-Es&quot;&gt;un sistema operativo&lt;/a&gt; que me encanta, y entre los dos soy capaz de mantener un orden en el que me encuentro realmente cómodo.&lt;/p&gt;
+
+&lt;p&gt;[]: http://hachemuda.com/uploads/imagenes/pantallazoAgosto2006.jpg &amp;#8220;Ver imagen en grande&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gnome.org/projects/evolution/&quot; title=&quot;Gnome Project: Evolution&quot;&gt;&lt;img src=&quot;http://www.gnome.org/projects/evolution/&quot; alt=&quot;&quot; title=&quot;Gnome Project: Evolution&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;De esta manera, he ido adoptando inconscientemente una serie de pasos como &lt;strong&gt;las primeras cosas que siempre hago&lt;/strong&gt; al iniciar una sesión en mi sistema:&lt;/p&gt;
+
+&lt;p&gt;[]: http://hachemuda.com/uploads/imagenes/pantallazoAgosto2006.jpg &amp;#8220;Ver imagen en grande&amp;#8221;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Una vez logueado y cargado el escritorio, entro en el menú y abro el &lt;a href=&quot;http://www.gnome.org/projects/evolution/&quot; title=&quot;Gnome Project: Evolution&quot;&gt;Evolution&lt;/a&gt; y el &lt;a href=&quot;http://www.amule.org/&quot; title=&quot;Página oficial de aMule&quot;&gt;aMule&lt;/a&gt;. Mando el &lt;strong&gt;Evolution&lt;/strong&gt; al &lt;strong&gt;espacio de trabajo 2&lt;/strong&gt; y el &lt;strong&gt;aMule&lt;/strong&gt; al &lt;strong&gt;espacio de trabajo 3&lt;/strong&gt;, y voy a cada uno de ellos para darle a &lt;em&gt;Enviar/Recibir&lt;/em&gt; el correo y conectarme a un &lt;em&gt;servidor P2P&lt;/em&gt;, respectivamente.&lt;/li&gt;
+&lt;li&gt;Mientras descarga el correo, vuelvo al &lt;strong&gt;espacio de trabajo 1&lt;/strong&gt; y abro el &lt;a href=&quot;http://www.mozilla-europe.org/es/products/firefox/&quot; title=&quot;Mozilla Firefox en español&quot;&gt;Mozilla Firefox&lt;/a&gt;, el &lt;em&gt;lector de suscripciones RSS *&lt;a href=&quot;http://liferea.sourceforge.net/es/&quot; title=&quot;LInux FEed REAder&quot;&gt;Liferea&lt;/a&gt; y el *gestor de mi colección de música&lt;/em&gt; &lt;a href=&quot;http://listengnome.free.fr/&quot; title=&quot;Just listen&quot;&gt;Listen&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Creo una lista de reproducción en el &lt;strong&gt;Listen&lt;/strong&gt; según lo que me apetezca ese día, entro en el panel de control de &lt;a href=&quot;http://hachemuda.com&quot; title=&quot;Enlace a HacheMuda.Com&quot;&gt;HacheMuda&lt;/a&gt; con el &lt;strong&gt;Firefox&lt;/strong&gt; y le doy a &lt;em&gt;actualizar todas las fuentes&lt;/em&gt; en el &lt;strong&gt;Liferea&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Si me apetece estar conectado, abro el &lt;a href=&quot;http://gaim.sourceforge.net/&quot; title=&quot;Página oficial de Gaim&quot;&gt;Gaim&lt;/a&gt; y lo dejo en el &lt;em&gt;área de notificación&lt;/em&gt;. Leo el correo, compruebo que la mula marcha bien, compruebo el &lt;em&gt;Dashboard&lt;/em&gt; del &lt;a href=&quot;http://wordpress.org/&quot; title=&quot;Página oficial de WordPress&quot;&gt;WordPress&lt;/a&gt; con el que funciona &lt;a href=&quot;http://hachemuda.com&quot; title=&quot;Enlace a HacheMuda.Com&quot;&gt;HacheMuda&lt;/a&gt;, ojeo las estadísticas del blog en &lt;a href=&quot;http://www.google.com/analytics/&quot; title=&quot;Acceso a Google Analytics&quot;&gt;Google Analytics&lt;/a&gt; y repaso las últimas actualizaciones de los blogs a los que estoy suscrito.&lt;/li&gt;
+&lt;li&gt;Abro el &lt;a href=&quot;http://www.gimp.org.es/modules/news/&quot; title=&quot;Portal Gimp-Es&quot;&gt;Gimp&lt;/a&gt;. Para por si acaso, XD.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Me acabo de dar cuenta de que el nivel de manías es bastante alto en mis inicios de sesión… ¡Ouch!&lt;/p&gt;
+
+&lt;p&gt;¿Cuáles son tus primeras acciones al iniciar una nueva sesión en tu ordenador?&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Comparación de reproductores y organizadores de música en Gnome</title>
+            <link>http://www.hachemuda.com/2006/08/comparacion-de-reproductoresorganizadores-de-musica-en-gnome</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>escritorio</category>
+                        <category>gnome</category>
+                        <category>gnu/linux</category>
+                        <category>opinión</category>
+                        <pubDate>Mon, 28 Aug 2006 00:00:00 +0200</pubDate>
+            <guid>/2006/08/comparacion-de-reproductoresorganizadores-de-musica-en-gnome</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/uploads/imagenes/altavoz.jpg&quot; alt=&quot;Altavoz&quot; title=&quot;Altavoz&quot; /&gt;Con la compartición de ficheros P2P y las mejoras tecnológicas (sí, aquí entra el iPod) los &lt;strong&gt;reproductores de audio&lt;/strong&gt; han tenido que evolucionar mucho. Ahora el usuario no quiere un programa que pueda reporoducir 10 canciones seguidas, lo que quiere es un auténtico &lt;strong&gt;organizador&lt;/strong&gt; que partiendo de los XXX gigas de ficheros de audio (pongo tres cifras por poner algo) cree una colección de música sencilla de usar, bien organizada y de fácil acceso.&lt;/p&gt;
+
+&lt;p&gt;Hay &lt;strong&gt;organizadores de música&lt;/strong&gt; para todos los gustos. Existe una opinión que dice que &lt;a href=&quot;http://amarok.kde.org/&quot; title=&quot;Página oficial&quot;&gt;Amarok&lt;/a&gt; es el mejor reproductor para &lt;strong&gt;GNU/Linux&lt;/strong&gt;. Y efectivamente es un buenísimo organizador y reproductor, bonito, rápido y con muchísimas pijadas. Yo no digo que no sea muy bueno, pero digo que como usuario no me interesa tanto como otras alternativas. Un aspecto muy importante para mí es la integración con el escritorio, y como &lt;a href=&quot;http://amarok.kde.org/&quot; title=&quot;Página oficial&quot;&gt;Amarok&lt;/a&gt; es de &lt;a href=&quot;http://www.kdehispano.org/&quot; title=&quot;KDE Hispano&quot;&gt;KDE&lt;/a&gt; y yo utilizo &lt;a href=&quot;http://www.es.gnome.org/&quot; title=&quot;Gnome Hispano&quot;&gt;Gnome&lt;/a&gt;… necesito una alternativa.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amuchamu.com&quot; title=&quot;El Blog de //Amuchamu&quot;&gt;Amuchamu&lt;/a&gt; &lt;a href=&quot;http://www.amuchamu.com/2006/08/25/banshee-0110-cvs-me-encanta/&quot; title=&quot;Enlace al artículo en El Blog de Amuchamu&quot;&gt;ya escribió&lt;/a&gt; hace unos días acerca de &lt;a href=&quot;http://banshee-project.org/Main_Page&quot; title=&quot;Página oficial de Banshee&quot;&gt;Banshee&lt;/a&gt; y de cómo instalar la última versión del CVS. Yo uso &lt;a href=&quot;http://listengnome.free.fr/&quot; title=&quot;Página oficial de Listen&quot;&gt;Listen&lt;/a&gt; desde hace bastante, pero llevaba ya unos días queriendo probar otros y ver qué es lo que hay por ahí, y hoy me he decidido.&lt;br /&gt;
+Esto no es ningún estudio intenso y riguroso, es un resumen con los principales características de los principales reproductores y organizadores de música que hay para &lt;strong&gt;GNU/Linux&lt;/strong&gt; y en particular para &lt;a href=&quot;http://www.es.gnome.org/&quot; title=&quot;Gnome Hispano&quot;&gt;Gnome&lt;/a&gt;, después de haber probado cada uno durante un rato.&lt;/p&gt;
+
+&lt;p&gt;Este es &lt;a href=&quot;http://banshee-project.org/Main_Page&quot; title=&quot;Página oficial de Banshee&quot;&gt;Banshee&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://banshee-project.org/Screenshots&quot; title=&quot;Screenshots en la página oficial&quot;&gt;&lt;img src=&quot;http://banshee-project.org/Screenshots&quot; alt=&quot;&quot; title=&quot;Screenshots en la página oficial&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Algunas cosas de &lt;a href=&quot;http://banshee-project.org/Main_Page&quot; title=&quot;Página oficial de Banshee&quot;&gt;Banshee&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;[]: http://hachemuda.com/uploads/imagenes/bansheeGrande.jpg &amp;#8220;Pulsa para verla en grande&amp;#8221;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Muestra un icono en el área de notificación, permitiendo desde ahí adelantar o retroceder una canción. No obstante, la ventana no desaparece de la lista de ventanas en el panel.&lt;/li&gt;
+&lt;li&gt;Permite ripear CD’s en formatos Ogg, Flac y en Wav.&lt;/li&gt;
+&lt;li&gt;Soporta directamente los iPods.&lt;/li&gt;
+&lt;li&gt;Permite grabar CD’s y DVD’s, eligiendo disco de audio, de MP3 o de datos.&lt;/li&gt;
+&lt;li&gt;Explora automáticamente todo el sistema (o los directorios que quiera el usuario) en busca de música y la va añadiendo a la base de datos.&lt;/li&gt;
+&lt;li&gt;Integración con Gnome y muy buen aspecto gráfico. A esto se une una excelente disposición de las ventanas, con espacio suficiente para todo.&lt;/li&gt;
+&lt;li&gt;Permite crear/guardar/eliminar listas de reproducción y cambiar de una a otra muy fácilmente.&lt;/li&gt;
+&lt;li&gt;Soporte para audioScrobbler y radio.&lt;/li&gt;
+&lt;li&gt;Permite instalar nuevos complementos con nuevas funcionalidades. De hecho, el soporte para podcasts y las recomendaciones de Last.fm están disponibles como complementos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Echa un vistazo a las &lt;a href=&quot;http://banshee-project.org/Screenshots&quot; title=&quot;Screenshots en la página oficial&quot;&gt;capturas de pantalla oficiales de Banshee&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Este es &lt;a href=&quot;http://bmpx.beep-media-player.org/site/BMPx_Homepage&quot; title=&quot;Página oficial de BMPx&quot;&gt;BMPx&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://bmpx.beep-media-player.org/site/Screenshots&quot; title=&quot;Screenshots en la página oficial&quot;&gt;&lt;img src=&quot;http://bmpx.beep-media-player.org/site/Screenshots&quot; alt=&quot;&quot; title=&quot;Screenshots en la página oficial&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Algunas cosas de &lt;a href=&quot;http://bmpx.beep-media-player.org/site/BMPx_Homepage&quot; title=&quot;Página oficial de BMPx&quot;&gt;BMPx&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;[]: http://hachemuda.com/uploads/imagenes/bmpxGrande.jpg &amp;#8220;Pulsa para verla en grande&amp;#8221;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Está elaborado a partir de XMMS y Beep-Media-Player.&lt;/li&gt;
+&lt;li&gt;Es un reproductor al más puro estilo de sus antecesores, aunque gráficamente sea mucho más bonito. El añadido más importante es el organizador de tu colección de música. Permite explorar el sistema en busca de archivos de audio y crea la base de datos con toda la información.&lt;/li&gt;
+&lt;li&gt;Permite abrir una nueva ventana donde aparece la colección y buscar por palabra clave. Una vez realizada la búsqueda permite encolar todas las canciones en la lista de reproducción.&lt;/li&gt;
+&lt;li&gt;No está traducido al español, todavía.&lt;/li&gt;
+&lt;li&gt;Permite la instalación de nuevos complementos.&lt;/li&gt;
+&lt;li&gt;Soporta recomendaciones de Last.fm&lt;/li&gt;
+&lt;li&gt;Permite ripear CD’s&lt;/li&gt;
+&lt;li&gt;No está integrado en ningún escritorio, pero tiene soporte para descargar y activar nuevos temas (skins).&lt;/li&gt;
+&lt;li&gt;Tiene soporte para MusicBrainz descargas P2P Soulseek&lt;/li&gt;
+&lt;li&gt;Página web muy trabajada y con mucho soporte, con ayuda para instalar rápidamente en cualquier distribución GNU/Linux.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Echa un vistazo a las &lt;a href=&quot;http://bmpx.beep-media-player.org/site/Screenshots&quot; title=&quot;Screenshots en la página oficial&quot;&gt;capturas de pantalla oficiales de BMPx&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Con la instalación de &lt;a href=&quot;http://www.gnome.org&quot; title=&quot;Gnome Project&quot;&gt;Gnome&lt;/a&gt; vienen una serie de programas por defecto. Como reproductor de música encontramos &lt;a href=&quot;http://www.gnome.org/projects/rhythmbox/index.html&quot; title=&quot;Página Oficial&quot;&gt;Rhythmbox&lt;/a&gt;, el cual lleva mucho tiempo funcionando y en la última actualización hubo muchos cambios, pero todavía no ha llegado su versión 1.0.&lt;/p&gt;
+
+&lt;p&gt;Este es &lt;a href=&quot;http://www.gnome.org/projects/rhythmbox/index.html&quot; title=&quot;Página Oficial&quot;&gt;Rhythmbox&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.gnome.org/projects/rhythmbox/screenshots.html&quot; title=&quot;Screenshots en la página oficial&quot;&gt;&lt;img src=&quot;http://www.gnome.org/projects/rhythmbox/screenshots.html&quot; alt=&quot;&quot; title=&quot;Screenshots en la página oficial&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Algunas cosas de &lt;a href=&quot;http://www.gnome.org/projects/rhythmbox/index.html&quot; title=&quot;Página Oficial&quot;&gt;Rhythmbox&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;[]: http://hachemuda.com/uploads/imagenes/rhythmboxGrande.jpg &amp;#8220;Pulsa para verla en grande&amp;#8221;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Permite importar tu directorio de música y te crea la colección.&lt;/li&gt;
+&lt;li&gt;Informa de estadísticas de las últimas añadidas/reproducidas recientemente y de las canciones más escuchadas.&lt;/li&gt;
+&lt;li&gt;Soporte podcasts, audioscrobbler y las recomendaciones de last.fm.&lt;/li&gt;
+&lt;li&gt;Soporte para ripear CD’s.&lt;/li&gt;
+&lt;li&gt;Soporte para grabar CD’s de audio con la lista de reproducción.&lt;/li&gt;
+&lt;li&gt;Integración total con Gnome e interfaz muy sencilla.&lt;/li&gt;
+&lt;li&gt;Soporte para el iPod.&lt;/li&gt;
+&lt;li&gt;Soporte para emisoras de radio.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Echa un vistazo a las &lt;a href=&quot;http://www.gnome.org/projects/rhythmbox/screenshots.html&quot; title=&quot;Screenshots en la página oficial&quot;&gt;capturas de pantalla oficiales de Rhytmbox&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Y en mi opinión, &lt;a href=&quot;http://listengnome.free.fr/&quot; title=&quot;Página oficial de Listen&quot;&gt;Listen&lt;/a&gt;, es** El Elegido**. Está influenciado directamente por &lt;strong&gt;Banshee&lt;/strong&gt;, &lt;strong&gt;Rhythmbox&lt;/strong&gt; y &lt;strong&gt;Amarok&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Así es &lt;a href=&quot;http://listengnome.free.fr/&quot; title=&quot;Página oficial de Listen&quot;&gt;Listen&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://listengnome.free.fr/index.php?nom_page=screenshot&quot; title=&quot;Enlace a los screencasts y screenshots del programa&quot;&gt;&lt;img src=&quot;http://listengnome.free.fr/index.php?nom_page=screenshot&quot; alt=&quot;&quot; title=&quot;Enlace a los screencasts y screenshots del programa&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Algunas cosas de &lt;a href=&quot;http://listengnome.free.fr/&quot; title=&quot;Página oficial de Listen&quot;&gt;Listen&lt;/a&gt; son:&lt;/p&gt;
+
+&lt;p&gt;[]: http://hachemuda.com/uploads/imagenes/listenGrande.jpg &amp;#8220;Pulsa para verla en grande&amp;#8221;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Muestra un icono en el área de notificación, permitiendo desde ahí adelantar o retroceder una canción. La ventana principal del programa puede cerrarse.a&lt;/li&gt;
+&lt;li&gt;Soporta directamente los iPods.&lt;/li&gt;
+&lt;li&gt;Permite grabar CD’s de audio con la lista de reproducción usando Serpentine.&lt;/li&gt;
+&lt;li&gt;Explora automáticamente todo el sistema (o los directorios que quiera el usuario) en busca de música y la va añadiendo a la base de datos.&lt;/li&gt;
+&lt;li&gt;Integración con Gnome y muy buen aspecto gráfico. Demasiada poca anchura en los apartados de géneros, autores y discos al realizar búsquedas en la colección.&lt;/li&gt;
+&lt;li&gt;Permite crear/guardar/eliminar listas de reproducción.&lt;/li&gt;
+&lt;li&gt;Muestra estadísticas de tus discos preferidos, las canciones más escuchadas, las últimas reproducciones…&lt;/li&gt;
+&lt;li&gt;Permite elegir el tipo de notificación de la canción en reproducción: ninguna, la notificación del sistema o un OSD que permite persnalizar en colores y posición.&lt;/li&gt;
+&lt;li&gt;Soporte para podcasts, audioScrobbler y radio.&lt;/li&gt;
+&lt;li&gt;Permite visualizar las recomendaciones de Last.fm&lt;/li&gt;
+&lt;li&gt;Conexión directa con la Wikipedia (en muchos idiomas, incluido el español) con información acerca del autor, del álbum o de la canción.&lt;/li&gt;
+&lt;li&gt;Muestra la letra de la canción que se está reproduciendo.&lt;/li&gt;
+&lt;li&gt;Busca automáticamente la carátula del disco, y si no la encuentra permite que el usuario refine la búsqueda.&lt;/li&gt;
+&lt;li&gt;Los desarrolladores prometen soporte para ripear CD’s y para compartir tu colección vía DAAP.&lt;/li&gt;
+&lt;li&gt;Página web con &lt;a href=&quot;http://listengnome.free.fr/index.php?nom_page=screenshot&quot; title=&quot;Enlace a los screencasts y screenshots del programa&quot;&gt;screencasts&lt;/a&gt;, demostraciones del funcionamiento del programa (animaciones en formato GIF)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Echa un vistazo a las &lt;a href=&quot;http://listengnome.free.fr/&quot; title=&quot;Screenshots en la página oficial&quot;&gt;capturas de pantalla oficiales de Listen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;No será por falta de posibilidades, ¿no? XD.&lt;/p&gt;
+
+&lt;p&gt;Algunos enlaces interesantes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.genbeta.com/archivos/2006/03/21-listen-el-futuro-mejor-reprod.php&quot; title=&quot;Enlace al artículo en Genbeta&quot;&gt;Genbeta: Listen, el futuro mejor reproductor para Gnome&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://barrapunto.com/article.pl?sid=06/03/20/0252233&quot; title=&quot;Enlace al artículo en Barrapunto&quot;&gt;Barrapunto: Listen… ¿el Amarok de Gnome?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.amuchamu.com/2006/08/25/banshee-0110-cvs-me-encanta/&quot; title=&quot;Enlace al artículo en El Blog de Amuchamu&quot;&gt;El Blog de Amuchamu: Banshee, me encanta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.genbeta.com/archivos/2006/02/08-banshee-0105-dejando-que-el.php&quot; title=&quot;Enlace al artículo en Genbeta&quot;&gt;Genbeta: Banshee, dejando que el Mono escuche lo que quiera&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.genbeta.com/archivos/2005/09/15-amarok-definitivamente-el-mej.php&quot; title=&quot;Enlace al artículo en Genbeta&quot;&gt;Genbeta: Amarok, definitivamente el mejor reproductor para Linux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Los enlaces de la semana</title>
+            <link>http://www.hachemuda.com/2006/08/los-enlaces-de-la-semana-5</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>humor</category>
+                        <pubDate>Sat, 26 Aug 2006 00:00:00 +0200</pubDate>
+            <guid>/2006/08/los-enlaces-de-la-semana-5</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/imagenes-enlaces/teAcuerdasDe.jpg&quot; alt=&quot;¿Te acuerdas de...?&quot; title=&quot;¿Te Acuerdas De...?&quot; /&gt;Literalmente sacado de la propia página, &lt;a href=&quot;http://te.acuerdas.de/&quot; title=&quot;Enlace directo al blog&quot;&gt;¿Te acuerdas de…?&lt;/a&gt; “es un blog dedicado a todas aquellas cosas del pasado que de una u otra manera han contribuido a lo que somos ahora.[&amp;#8230;] En fin, este es el Blog de los recuerdos.”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/imagenes-enlaces/topicazos.jpg&quot; alt=&quot;Topicazos&quot; title=&quot;Topicazos&quot; /&gt;Si te pasas por &lt;a href=&quot;http://www.topicazos.com&quot; title=&quot;Enlace al blog&quot;&gt;Topicazos&lt;/a&gt; quizá te dé un síncope al ver que hay un montón de gente que al igual que tú cree que las croquetas de su abuela son las mejores y que la tortilla de su padre es inimitable. Un blog sobre un tema que todos hacemos posible, actualizado a menudo y divertido.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/imagenes-enlaces/espermaDigital.jpg&quot; alt=&quot;Esperma Digital&quot; /&gt; &lt;a href=&quot;http://www.espermadigital.com.ar/&quot; title=&quot;Enlace al blog&quot;&gt;Esperma digital&lt;/a&gt; es un blog de “humor estúpido para gente inteligente”. Es bastante bueno, aunque tiene muy pocos posts y parece que dejaron de escribir en febrero (¿volverán?). Ahí vi la imagen de &lt;a href=&quot;http://fury.com/images/weblog/google_circa_1960.jpg&quot; title=&quot;Google en los 60&quot;&gt;cómo era Google en 1960&lt;/a&gt; y donde descubrí un sitio muy original: &lt;a href=&quot;http://www.tusecreto.com.ar/&quot; title=&quot;Contando secretos desde julio de 2005&quot;&gt;TuSecreto&lt;/a&gt;. En ella puedes contar anónimamente tus secretos y leer todos los demás.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Actualizado:&lt;/strong&gt; Juan Manuel nos da otro enlace en los comentarios del artículo a la página &lt;a href=&quot;http://www.tusecreto.es/&quot; title=&quot;Tu Secreto España&quot;&gt;TuSecreto España&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/imagenes-enlaces/cpi.jpg&quot; alt=&quot;CPI&quot; /&gt;Bitácora dedicada a la física, las matemáticas, el Espacio, el escepticismo, la música, la lectura, las leyendas urbanas, las paradojas y rompecabezas lógicos, la informática… a todo lo que sea &lt;a href=&quot;http://curiosoperoinutil.com/&quot; title=&quot;Enlace al blog&quot;&gt;CPI (Curioso Pero Inútil)&lt;/a&gt;. Poco más que decir, XD.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/imagenes-enlaces/noMeAcuerdo.jpg&quot; alt=&quot;No me acuerdo&quot; title=&quot;No me acuerdo&quot; /&gt;&lt;a href=&quot;http://nomeacuerdo.blogia.com/&quot; title=&quot;No te muerdas las uñas&quot;&gt;NoMeAcuerdo&lt;/a&gt; es un blog “sobre la desmemoria y otras pérdidas”, un sitio en el que pasar un rato divertido y entretenido. Algunos posts son espectaculares, por ejemplo te recomiendo que te leas el de &lt;a href=&quot;http://nomeacuerdo.blogia.com/2006/061201-ein-1-.php&quot; title=&quot;Enlace al artículo&quot;&gt;la investigación para deducir que Jordi Hurtado está muerto&lt;/a&gt; desde hace mucho tiempo.&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Instalando el Gnome Main Menu de SUSE</title>
+            <link>http://www.hachemuda.com/2006/08/79</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>Ubuntu y Linux</category>
+                        <pubDate>Fri, 25 Aug 2006 00:00:00 +0200</pubDate>
+            <guid>/2006/08/79</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Actualizado (7-03-2007):&lt;/strong&gt; a partir de la versión Edgy de Ubuntu no hace falta añadir ningún repositorio, sólo hace falta tener activados los &lt;em&gt;universe&lt;/em&gt; y &lt;em&gt;multiverse&lt;/em&gt;. El paquete se llama &lt;em&gt;gnome-main-menu&lt;/em&gt;, sólo tienes que instalarlo mediante &lt;em&gt;apt-get&lt;/em&gt;. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Después de &lt;a href=&quot;http://hachemuda.com/19/08/2006/instalando-el-ubuntu-system-panel-usp/&quot; title=&quot;HacheMuda: Instalando el USP&quot;&gt;instalar el Ubuntu System Panel&lt;/a&gt; completamos la gama de menús para &lt;a href=&quot;http://www.gnome.org&quot; title=&quot;Gnome Project&quot;&gt;Gnome&lt;/a&gt; con el que trae la nueva versión de &lt;a href=&quot;http://www.novell.com/linux/&quot; title=&quot;SUSE&quot;&gt;SUSE Linux&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si ya tenemos el &lt;strong&gt;USP&lt;/strong&gt; no tenemos que tocar nada de los repositorios, pero si no lo instalamos, tenemos que hacer lo que ya se comentó: editar el fichero con los repositorios, añadir uno nuevo y actualizar las claves GPG:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$:/&amp;gt;sudo gedit /etc/apt/sources.list&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Añadimos la línea:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;deb http://xgl.compiz.info/ dapper main&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Guardamos los cambios y ejecutamos:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$:/&amp;gt;wget http://xgl.compiz.info/quinn.key.asc -O - | sudo apt-key add - &amp;amp;&amp;amp; sudo apt-get update&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&lt;/code&gt;El paquete &lt;strong&gt;gnome-main-menu&lt;/strong&gt; es el que nos interesa, así que lo instalamos:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$:/&amp;gt;sudo apt-get install gnome-main-menu gcontrol&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Cuando termine de instalar los paquetes, hacemos click derecho en el panel en el que queramos añadir el nuevo menú y vamos a &lt;strong&gt;Añadir al Panel…&lt;/strong&gt; En la sección &lt;em&gt;Miscelánea&lt;/em&gt; seleccionamos &lt;strong&gt;Menú principal&lt;/strong&gt; y lo añadimos.&lt;/p&gt;
+
+&lt;p&gt;Y ahí lo tenemos:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/uploads/imagenes/gnome-main-menu.jpg&quot; alt=&quot;Gnome Main Menu&quot; title=&quot;Gnome Main Menu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El menú es muy chulo, aunque una cosa que no me gusta es que no te permita directamente cambiar los comentarios de cada lanzador, que aparecen directamente ahí.&lt;/p&gt;
+
+&lt;p&gt;El buscador que aparece es el propio &lt;a href=&quot;http://beagle-project.org/Main_Page&quot; title=&quot;The Beagle Project&quot;&gt;Beagle&lt;/a&gt; integrado en el menú, lo cual lo hace muy muy interesante. Lo de este buscador no tiene nombre, es una maravilla trabajar con él.&lt;/p&gt;
+
+&lt;p&gt;Introduces una palabra y va buscando &lt;em&gt;en vivo&lt;/em&gt; todos los ficheros de tu disco duroque contienen esa palabra, pero lo hace a una velocidad flipante y con una presentación inmejorable. Aquí te dejo un pantallazo de la ventana de búsqueda y una demostración en GIF:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/uploads/imagenes/beagle.jpg&quot; alt=&quot;Beagle&quot; title=&quot;Beagle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pulsa aquí para ver una &lt;a href=&quot;http://hachemuda.com/uploads/imagenes/beagle.gif&quot; title=&quot;Demostración Beagle en GIF&quot;&gt;demostración de Beagle en formato GIF&lt;/a&gt; (0,7 MB)&lt;/p&gt;
+
+&lt;p&gt;Enlace: &lt;a href=&quot;http://www.bootlog.cl/blog/tips/instalando-el-menu-de-suse-en-ubuntu/&quot; title=&quot;BootLog | Loading life&quot;&gt;bootlog&lt;/a&gt;&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Manual de acoso y derribo</title>
+            <link>http://www.hachemuda.com/2006/08/manual-de-acoso-y-derribo</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>frase</category>
+                        <pubDate>Thu, 24 Aug 2006 00:00:00 +0200</pubDate>
+            <guid>/2006/08/manual-de-acoso-y-derribo</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Llevo ya un rato en &lt;a href=&quot;http://www.yonkis.com&quot; title=&quot;Yonkis&quot;&gt;Yonkis.Com&lt;/a&gt; riéndome solo mientras leo el &lt;a href=&quot;http://www.yonkis.com/manual.htm&quot; title=&quot;Localización del objetivo y ataque.&quot;&gt;Manual de acoso y Derribo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Es un manual en el que se explican las mejores estrategias, como &lt;strong&gt;El vuelo de la gallina&lt;/strong&gt; o * &lt;strong&gt;&lt;em&gt;El Imperio contraataca&lt;/em&gt;&lt;/strong&gt;.* E incluso conocerás los mejores algoritmos para cada situación, como el &lt;strong&gt;Algoritmo de McGregor-Henseilweiss&lt;/strong&gt;: &lt;em&gt;“Sinceramente, desde que te he visto me has cautivado”&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Impresionante escrito dividido en &lt;strong&gt;cuatro partes&lt;/strong&gt;, donde la tercera destaca sobre todas las demás por ser el puro procedimiento, dividido en el &lt;strong&gt;lanzamiento de siete misiles&lt;/strong&gt; diferentes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Misil 1: Point Of Entry  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Misil 2: First Blood  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Misil 3: Where Eagles Dare  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Misil 4: Critical Condition  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Misil 5: El Fino Estilista (fase crucial)  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Misil 6: Shoot to kill  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Misil 7: La toma de Berlín&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Aprenderás a manejarte en &lt;strong&gt;diálogos como este&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[&amp;#8230;]&lt;/p&gt;
+  
+  &lt;p&gt;· ¿Qué ibas a decir? – preguntará la inocente y potencial víctima.&lt;br /&gt;
+  · No, nada … me ha venido una cosa a la cabeza …&lt;br /&gt;
+  · ¿Qué era?&lt;br /&gt;
+  · Te iba a decir una cosa pero es igual … -&lt;/p&gt;
+  
+  &lt;p&gt;MASTER CAUTION!!! En este momento una tía, a no ser que sea tonta de capirote, ya sabe cual es la situación. Si no re-pregunta, a sudar un rato más, si re-pregunta:&lt;/p&gt;
+  
+  &lt;p&gt;· Venga, dímelo – dice la pobre.&lt;br /&gt;
+  · Es que soy muy tímido … de verdad que da igual, XXX (– Es muy importante acabar las frases diciendo su nombre. No cada vez pero una de cada dos o tres. Da un trato más personalizado, que al fin y al cabo es lo que buscamos … Si la cosa va a mayores podremos llamarla cielo, cariño, etc, y olvidarnos definitivamente de su nombre.–)&lt;/p&gt;
+  
+  &lt;p&gt;[&amp;#8230;]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Tendré que pedirle a &lt;a href=&quot;http://hachemuda.com/category/momento-psico/&quot; title=&quot;HacheMuda: Categoría &#039;Momento Psico&#039;&quot;&gt;Elena&lt;/a&gt; que escriba una opinión sobre este manual y sobre el estado mental de los hombres cuando se encierran en un bar con la música alta, XD.&lt;/p&gt;
+
+&lt;p&gt;Enlace: &lt;a href=&quot;http://www.yonkis.com/manual.htm&quot; title=&quot;Manual de Acoso y Derribo. Localización del objetivo y ataque.&quot;&gt;Manual de Acoso y Derribo. Localización del objetivo y ataque.&lt;/a&gt;&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Construye tu propia pila con un sacapuntas y un poco de vinagre</title>
+            <link>http://www.hachemuda.com/2006/08/construye-tu-propia-pila-con-un-sacapuntas-y-un-poco-de-vinagre</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>video</category>
+                        <pubDate>Wed, 23 Aug 2006 00:00:00 +0200</pubDate>
+            <guid>/2006/08/construye-tu-propia-pila-con-un-sacapuntas-y-un-poco-de-vinagre</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/imagenes-bertus/bombilla.jpg&quot; alt=&quot;Bombilla&quot; title=&quot;Bombilla&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;¿Te has planteado que puedes hacer funcionar un despertador, un reloj de pared, una tarjeta de felicitación de esas que vienen con musiquilla con un simple sacapuntas y vinagre?&lt;/p&gt;
+
+&lt;p&gt;La verdad es que muy útil no viene siendo, pero sí que resulta curioso sentirse durante un ratito un poco &lt;strong&gt;McGyver&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Básicamente con un sacapuntas metálico, un vaso con vinagre, y dos hilos de cobre puedes hacer funcionar cualquier aparatillo que tengas por casa y que funcione con una pila de las de 1,5 Voltios.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;¿Cómo haces el montaje?&lt;/strong&gt; Debes unir el sacapuntas al hilo de cobre (con o sin pinza) y este hilo a la pestañita del polo negativo del aparato eléctrico. Luego, coges otro hilo de cobre y lo unes al polo positivo de nuestro dispositivo. Ahora sólo hará falta sumergir el sacapuntas y el hilo de cobre, y la electroquímica hará el resto.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lo que sucede&lt;/strong&gt; es lo siguiente: resulta que al poner el sacapuntas metálico, que es de magnesio (ahí está el truco), en el vinagre, se empieza a oxidar y los protones (que son las especies que dan la acidez al vinagre) se empiezan a &lt;strong&gt;reducir&lt;/strong&gt; formando Hidrógeno gas, de ahí ese humillo blanco que vemos en el video. Esto produce una &lt;strong&gt;reacción redox&lt;/strong&gt;, que da esa &lt;strong&gt;energía eléctrica&lt;/strong&gt; suficiente para producir el funcionamiento de nuestro aparato.&lt;/p&gt;
+
+&lt;p&gt;Os dejo junto a esta breve explicación &lt;strong&gt;el video&lt;/strong&gt; en el que se observa la &lt;strong&gt;reacción&lt;/strong&gt; y donde medimos el &lt;strong&gt;voltaje&lt;/strong&gt; que produce, que como se observa es cercano al de una pila de 1,5 voltios.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://video.google.com/videoplay?docid=4850277179425254045&quot; title=&quot;Enlace al video en Google Video&quot;&gt;&lt;img src=&quot;http://video.google.com/videoplay?docid=4850277179425254045&quot; alt=&quot;&quot; title=&quot;Enlace al video en Google Video&quot; /&gt;&lt;/a&gt;&lt;br /&gt;
+Pulsa en la imagen para ver el video&lt;/p&gt;
+
+&lt;p&gt;Algunos enlaces interesantes:&lt;/p&gt;
+
+&lt;p&gt;[]: http://www.youtube.com/watch?v=1v4DmIOfl0M &amp;#8220;Enlace al video en YouTube&amp;#8221;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://video.google.com/videoplay?docid=4850277179425254045&quot; title=&quot;Enlace al video en Google Video&quot;&gt;Video: Construye una pila con vinagre&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://video.google.com/videoplay?docid=-6226504780579469841&quot; title=&quot;Enlace al video en Google Video&quot;&gt;Video: Construye una pila con limón&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.hilaroad.com/videos&quot; title=&quot;Videos de los proyectos del Hila Science Camp&quot;&gt;Hila Science Videos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Escrito por Bertus&lt;/em&gt;&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Lenovo: Thinkpad con soporte total para GNU/Linux</title>
+            <link>http://www.hachemuda.com/2006/08/lenovo-thinkpad-con-soporte-total-para-gnulinux</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>video</category>
+                        <pubDate>Wed, 23 Aug 2006 00:00:00 +0200</pubDate>
+            <guid>/2006/08/lenovo-thinkpad-con-soporte-total-para-gnulinux</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/uploads/imagenes/thinkpad.jpg&quot; alt=&quot;Thinkpad&quot; title=&quot;Thinkpad&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.lenovo.com/es/es/&quot; title=&quot;Web oficial Lenovo España&quot;&gt;Lenovo&lt;/a&gt; e &lt;a href=&quot;http://www.intel.com/&quot; title=&quot;Web oficial Intel Corporation&quot;&gt;Intel&lt;/a&gt; han estado trabajando mucho en los nuevos modelos de sus &lt;a href=&quot;http://www.pc.ibm.com/es/thinkpad/?es&amp;amp;cc=es&quot; title=&quot;Lenovo: gamas de Thinkpad&quot;&gt;Thinkpads&lt;/a&gt;, los mejores portátiles del mercado (¿se nota que tengo uno?).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.novell.com&quot; title=&quot;Web oficial Novell&quot;&gt;Novell&lt;/a&gt;, la empresa que hay detrás de &lt;a href=&quot;http://www.novell.com/linux&quot; title=&quot;Novell: SUSE Linux&quot;&gt;SUSE Linux&lt;/a&gt;, también ha estado participando activamente en esas investigaciones, y el resultado son los nuevos &lt;a href=&quot;http://www.pc.ibm.com/europe/thinkpad/why/en/tseries.html?es&amp;amp;cc=es&quot; title=&quot;Thinkpad serie T&quot;&gt;Thinkpads T60&lt;/a&gt; con soporte total para &lt;strong&gt;GNU/Linux&lt;/strong&gt;, tanto en el &lt;strong&gt;Centro de Ayuda&lt;/strong&gt;, como con el &lt;strong&gt;ThinkVantage&lt;/strong&gt; y los &lt;strong&gt;drivers&lt;/strong&gt; para que todo funcione a las mil maravillas.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hachemuda.com/uploads/imagenes/piensaLenovo.jpg&quot; alt=&quot;Piensa Linux. Piensa Lenovo.&quot; title=&quot;Piensa Linux. Piensa Lenovo.&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Copio y pego textualmente de la &lt;a href=&quot;http://www.lenovo.com/es/es/&quot; title=&quot;Web oficial de Lenovo España&quot;&gt;página web de Lenovo&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Enhanced technology on the new &lt;a href=&quot;http://www.pc.ibm.com/europe/thinkpad/why/en/tseries.html&quot;&gt;ThinkPad T60p&lt;/a&gt; mobile workstation can give you :&lt;/p&gt;
+  
+  &lt;ul&gt;
+  &lt;li&gt;Fast performance with new Intel® chipsets and dual-core processors.&lt;/li&gt;
+  &lt;li&gt;Less worry about bumps and drops thanks to designed durability such as the ThinkPad Roll Cage, a magnesium alloy frame that absorbs shock by surrounding the critical interior parts.&lt;/li&gt;
+  &lt;li&gt;A “ThinkPad Experience” under Linux* (select models)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.pc.ibm.com/europe/think/en/thinkvantage.html&quot;&gt;ThinkVantage Technologies&lt;/a&gt; support: Access Connections, Configuration Utility, Power Manager&lt;/li&gt;
+  &lt;li&gt;Warm and cold docking support for USB and video&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Help Center support&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Only &lt;a href=&quot;http://www.novell.com/linux/preview.html&quot;&gt;Novell Suse Linux Enterprise Desktop 10&lt;/a&gt; is supported .&lt;/p&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Una buenísima noticia, sin duda.&lt;/p&gt;
+
+&lt;p&gt;El mundo camina hacia la libertad. Despacio, pero sin pausa.&lt;/p&gt;
+
+&lt;p&gt;Lo he leído en &lt;a href=&quot;http://www.diarioti.com/gate/n.php?id=12049&quot; title=&quot;DiarioTi: Lenovo y Novell presentan Thinkpad con tecnología Intel&quot;&gt;DiarioTi&lt;/a&gt;.&lt;/p&gt;
+
+                        </description>
+        </item>
+            </channel>
+</rss>

@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            Instalar CompComm (Beryl + Compiz) en Ubuntu Linux | HacheMuda
+      </title>
+  
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Instalar CompComm (Beryl + Compiz) en Ubuntu Linux">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="http://www.hachemuda.com/2007/06/instalar-compcomm-beryl-compiz-en-ubuntu-linux">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title no_image">
+					<h1 class="title">
+						<a href="/2007/06/instalar-compcomm-beryl-compiz-en-ubuntu-linux">
+							Instalar CompComm (Beryl + Compiz) en Ubuntu Linux
+						</a>
+					</h1>
+						
+				</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 20 de Junio de 2007</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<h1> </h1>
+
+<p>El artículo original en el que está basado este post está <a href="http://www.opencompositing.org/viewtopic.php?f=22&amp;t=412">en el foro de OpenCompositing</a>, pero lleva un tiempo caído y no se puede acceder a él. <a href="http://hachemuda.com/2007/06/18/presentando-compcomm-fusion-berylcompiz-y-sus-nuevos-plugins/" title="HacheMuda: Presentando CompComm">En el post de ayer</a> pudiste ver un video de <strong>CompComm</strong> <strong>y sus efectos</strong> en acción, así que ahora toca instalarlo y probarlo tú mismo.</p>
+
+<p>Esto es un <strong>tutorial de instalación de CompComm</strong> (<em>Composite Community</em>), que es el proyecto formado por la unión de <a href="http://www.beryl-project.org/" title="Página oficial">Beryl</a> y <a href="http://compiz.org/" title="Página oficial">Compiz</a>. El proceso es muy sencillo gracias a un <strong>script de instalación</strong> que salió del mismo foro y ahora cuelgo yo aquí para que se pueda descargar sin problemas. El proceso de instalación funciona tanto para <a href="http://www.gnome.org/" title="Página oficial">Gnome</a> como para <a href="http://www.kde.org/" title="Página oficial">KDE</a>, aunque yo sólo lo he probado en <a href="http://www.gnome.org/" title="Página oficial">Gnome</a>.</p>
+
+<p><img src="/uploads/2007/06/terminal.jpg" alt="Terminal añadiendo efectos de CompComm" /></p>
+
+<p><strong>Vamos al tema:</strong></p>
+
+<ol>
+<li>Descarga el script <a href="http://hachemuda.com/ficheros/makeccc" title="Descarga el script desde HacheMuda.Com">makeccc</a> <em>(click derecho -> guardar enlace como…) *y guárdalo en tu disco duro con el nombre *makeccc</em>.</li>
+<li>No sé si es necesario o no, pero yo mejor desinstalaría Beryl antes de nada:<br />
+<code>sudo apt-get remove --purge beryl beryl-plugins beryl-manager</code></li>
+<li>Abre un terminal y accede al directorio donde has descargado el script. Dale permisos de ejecución:<br />
+<code>chmod  x makeccc</code></li>
+<li>Instalar los paquetes necesarios:<br />
+<code>./makeccc packages</code></li>
+<li>Descargar/actualizar Compiz/CompComm:<br />
+`./makeccc clone&#8220;`</li>
+<li>Instalarlo:<br />
+<code>./makeccc install</code></li>
+<li>Si quisieras desinstalarlo puedes hacerlo ejecutando:<br />
+<code>./makeccc uninstall</code></li>
+<li>Configurar CompComm. Tienes dos opciones (yo uso la primera). Una, ejecutando el comando:<br />
+<code>ccsm</code> (o desde <em>Sistema -> Preferencias -> CompizConfig Settings Manager</em>)<br />
+La segunda, ejecutando el comando:<br />
+<code>ccs-settings</code> (o desde <em>Sistema -> Preferencias -> CCS Settings Manager</em>)</li>
+</ol>
+
+<p>En el panel del <strong>CompizConfig Settings Manager</strong> puedes configurar absolutamente todos los parámetros que quieras. Están bastante bien ordenados y accesibles, seguro que te pasas un ratito cambiando y curioseando cosas, <img src="http://www.hachemuda.com/img/icon_smile.gif" alt=":)" /> </p>
+
+<p><img src="/uploads/2007/06/compiz-settings-manager.jpg" alt="Compiz Settings Manager" /></p>
+
+<p>Ya puedes ver tu nuevo <strong>escritorio con CompComm funcionando</strong>. Abre un terminal y ejecuta:</p>
+
+<p><code>compiz-manager</code></p>
+
+<p><strong>¡Y a disfrutar!</strong> Si quieres que se active CompComm siempre que inicies sesión, no tienes más que añadir el comando <code>compiz-manager</code> como <strong>programa al inicio</strong> (en Gnome desde <em>Sistema -> Preferencias -> Sesiones</em>).</p>
+
+<p><strong>Mucho cuidado:</strong> no actives el plugin de GLib (en la sección <em>Utility</em>) porque debe estar dando muchos problemas con el gestor de preferencias.</p>
+
+<p>Relacionado:</p>
+
+<ul>
+<li><a href="http://hachemuda.com/2007/06/18/presentando-compcomm-fusion-berylcompiz-y-sus-nuevos-plugins/" title="Enlace al post en HacheMuda">HacheMuda: Presentando CompComm y sus nuevos plugins </a><a href="http://hachemuda.com/2007/06/18/presentando-compcomm-fusion-berylcompiz-y-sus-nuevos-plugins/" title="Enlace al post en HacheMuda">(con video)</a>.<a href="http://hachemuda.com/2007/06/18/presentando-compcomm-fusion-berylcompiz-y-sus-nuevos-plugins/" title="Enlace al post en HacheMuda"> </a></li>
+</ul>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=Instalar CompComm (Beryl + Compiz) en Ubuntu Linux - http://www.hachemuda.com/2007/06/instalar-compcomm-beryl-compiz-en-ubuntu-linux" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2007/06/instalar-compcomm-beryl-compiz-en-ubuntu-linux - Instalar CompComm (Beryl + Compiz) en Ubuntu Linux" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2007/06/instalar-compcomm-beryl-compiz-en-ubuntu-linux&t=Instalar CompComm (Beryl + Compiz) en Ubuntu Linux" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/escritorio">escritorio</a></li>
+                      <li><a href="/etiqueta/tutorial">tutorial</a></li>
+                      <li><a href="/etiqueta/ubuntu-y-linux">Ubuntu y Linux</a></li>
+                      <li><a href="/etiqueta/video">video</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>

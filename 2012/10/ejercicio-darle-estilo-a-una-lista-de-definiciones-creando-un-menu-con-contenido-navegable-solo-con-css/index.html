@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            Ejercicio: darle estilo a una lista de definiciones HTML creando un menú con contenido navegable sólo con CSS | HacheMuda
+      </title>
+  
+      <meta name="description" content="Un ejercicio en forma de reto creativo con el objetivo de demostrar las posibilidades de las hojas de estilos." />
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Ejercicio: darle estilo a una lista de definiciones HTML creando un menú con contenido navegable sólo con CSS">
+  <meta property="og:description" content="Un ejercicio en forma de reto creativo con el objetivo de demostrar las posibilidades de las hojas de estilos.">
+  <meta property="og:url" content="http://www.hachemuda.com/2012/10/ejercicio-darle-estilo-a-una-lista-de-definiciones-creando-un-menu-con-contenido-navegable-solo-con-css">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+      <meta property="og:image" content="http://www.hachemuda.com/uploads/2012/10/ejercicio-css-menu-hover.jpg">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title ">
+					<h1 class="title">
+						<a href="/2012/10/ejercicio-darle-estilo-a-una-lista-de-definiciones-creando-un-menu-con-contenido-navegable-solo-con-css">
+							Ejercicio: darle estilo a una lista de definiciones HTML creando un menú con contenido navegable sólo con CSS
+						</a>
+					</h1>
+											<h2 class="subtitle">
+							Un ejercicio en forma de reto creativo con el objetivo de demostrar las posibilidades de las hojas de estilos.
+						</h2>
+						
+				</div>
+									<div class="featured_img">
+						<img src="http://www.hachemuda.com/uploads/2012/10/ejercicio-css-menu-hover.jpg" alt="Ejercicio: darle estilo a una lista de definiciones HTML creando un menú con contenido navegable sólo con CSS" />
+					</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 01 de Octubre de 2012</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<p>En el blog <a href="http://webdesign.tutsplus.com/">Webdesign</a> de <a href="http://tutsplus.com">Tuts </a> publicaron hace unos días <strong>una especie de desafío CSS</strong>, una prueba dentro de sus <a href="http://webdesign.tutsplus.com/tag/community-project/">community projects</a>.</p>
+
+<p>La idea es que el autor del post propone un fichero HTML, con un contenido que no puede modificarse en ningún caso, y los lectores <strong>crean sus propios ficheros CSS para darle estilo a ese contenido</strong>. Es una excusa perfecta para que los amantes de las hojas de estilos <strong>practiquen con técnicas o ideas nuevas</strong>.</p>
+
+<p>En esta ocasión, se propone darle estilo a una <strong>lista de definiciones</strong>, una estructura HTML difícil de ver por ahí:</p>
+
+<pre class="html5" style="font-family:monospace;"><span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/dl.html"><span style="color: #000000; font-weight: bold;">dl</span></a>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/dt.html"><span style="color: #000000; font-weight: bold;">dt</span></a>&gt;</span>Psdtuts+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/dt.html"><span style="color: #000000; font-weight: bold;">dt</span></a>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/dd.html"><span style="color: #000000; font-weight: bold;">dd</span></a>&gt;</span>Adobe Photoshop Tutorials from Beginner to Advanced.<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/dd.html"><span style="color: #000000; font-weight: bold;">dd</span></a>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/dt.html"><span style="color: #000000; font-weight: bold;">dt</span></a>&gt;</span>Nettuts+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/dt.html"><span style="color: #000000; font-weight: bold;">dt</span></a>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/dd.html"><span style="color: #000000; font-weight: bold;">dd</span></a>&gt;</span>Web development Tutorials, from Beginner to Advanced.<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/dd.html"><span style="color: #000000; font-weight: bold;">dd</span></a>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/dt.html"><span style="color: #000000; font-weight: bold;">dt</span></a>&gt;</span>Webdesigntuts+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/dt.html"><span style="color: #000000; font-weight: bold;">dt</span></a>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/dd.html"><span style="color: #000000; font-weight: bold;">dd</span></a>&gt;</span>In-depth tutorials and articles on web design.<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/dd.html"><span style="color: #000000; font-weight: bold;">dd</span></a>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/dt.html"><span style="color: #000000; font-weight: bold;">dt</span></a>&gt;</span>Wptuts+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/dt.html"><span style="color: #000000; font-weight: bold;">dt</span></a>&gt;</span>
+    <span style="color: #009900;">&lt;<a href="http://december.com/html/4/element/dd.html"><span style="color: #000000; font-weight: bold;">dd</span></a>&gt;</span>A WordPress Website dedicated to WordPress training, tutorials, and WordPress videos.<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/dd.html"><span style="color: #000000; font-weight: bold;">dd</span></a>&gt;</span>
+<span style="color: #009900;">&lt;<span style="color: #66cc66;">/</span><a href="http://december.com/html/4/element/dl.html"><span style="color: #000000; font-weight: bold;">dl</span></a>&gt;</span></pre>
+
+<p>El elemento <code>engloba la propia lista completa. Dentro de él, los elementos</code> y &#8220; representan cada uno de los <strong>términos</strong> y de sus correspondientes <strong>descripciones</strong>.</p>
+
+<p>Yo ya he enviado mi propuesta. Quería probar a jugar con los <strong><em>combinator operators</em></strong>, que permiten tener más flexibilidad para la selección de elementos HTML sobre los que aplicar los estilos. En esta ocasión, yo he usado algunos operadores y selectores para mi ejercicio:</p>
+
+<ul>
+<li><strong><code></code></strong>: para seleccionar los elementos “hermanos” de uno dado y poder estilizarlos por separado.</li>
+<li><strong><code>nth-child</code></strong>: para seleccionar elementos concretos de la estructura HTML.</li>
+</ul>
+
+<p>Además, no he usado ninguna imagen. Los iconos están generados mediante el tipo de letra <a href="http://hachemuda.com/2012/09/font-awesome-more-2-0-coleccion-de-iconos-para-la-web-en-forma-de-tipo-de-letra/">Font Awesome More</a>, utilizando la propiedad <code>content</code> de CSS. Y los efectos visuales son todos mediante CSS3: transiciones, gradientes de color y sombras.</p>
+
+<p>Con todo esto, he intentado <strong>recrear un menú de navegación que funciona mediante el evento “hover”</strong>: cuando el cursor del ratón pasa por encima de un item del menú, debajo se muestra su descripción.</p>
+
+<p><img src="/uploads/2012/10/ejercicio-css-menu-hover-700x382.jpg" alt="Menú navegable mediante CSS" title="Menú navegable mediante CSS" />
+Así es como se ve el resultado del ejercicio.</p>
+
+<p>Las <strong>ideas principales de la implementación</strong> son:</p>
+
+<ol>
+<li>Los elementos &#8220; son posicionados de forma absoluta en la parte superior.</li>
+<li>Los elementos <code>ocupan todo el ancho y alto de la página. Inicialmente, todos tienen opacidad</code> salvo el primero, que tiene opacidad <code>1</code>. Mediante la propiedad <code>z-index</code> pueden ordenarse las capas para que se vea siempre el menú con los elementos &#8220; por encima.</li>
+<li>Al detectar el evento “hover” en cada uno de los <code>, se cambia la opacidad de todos los</code> a <code>y se pone a `1` la opacidad del siguiente elemento</code> que aparezca en el HTML justo después del &#8220; sobre el que está el ratón. Esto lo hago así:</li>
+</ol>
+
+<pre class="css" style="font-family:monospace;">dd<span style="color: #00AA00;">&#123;</span>  
+    <span style="color: #000000; font-weight: bold;">display</span><span style="color: #00AA00;">:</span> <span style="color: #993333;">block</span><span style="color: #00AA00;">;</span>  
+    <span style="color: #000000; font-weight: bold;">position</span><span style="color: #00AA00;">:</span> <span style="color: #993333;">absolute</span><span style="color: #00AA00;">;</span>  
+    <span style="color: #000000; font-weight: bold;">width</span><span style="color: #00AA00;">:</span> <span style="color: #933;">100%</span><span style="color: #00AA00;">;</span>  
+    <span style="color: #000000; font-weight: bold;">height</span><span style="color: #00AA00;">:</span> <span style="color: #933;">100%</span><span style="color: #00AA00;">;</span>  
+    opacity<span style="color: #00AA00;">:</span> <span style="color: #cc66cc;">0</span><span style="color: #00AA00;">;</span>  
+<span style="color: #00AA00;">&#125;</span>  
+dd<span style="color: #3333ff;">:nth-</span>child<span style="color: #00AA00;">&#40;</span><span style="color: #cc66cc;">2</span><span style="color: #00AA00;">&#41;</span><span style="color: #00AA00;">&#123;</span>  
+    opacity<span style="color: #00AA00;">:</span> <span style="color: #cc66cc;">1</span><span style="color: #00AA00;">;</span>  
+<span style="color: #00AA00;">&#125;</span>  
+dt<span style="color: #3333ff;">:nth-</span>child<span style="color: #00AA00;">&#40;</span><span style="color: #cc66cc;">3</span><span style="color: #00AA00;">&#41;</span><span style="color: #3333ff;">:hover </span>dd<span style="color: #00AA00;">&#123;</span>  
+    opacity<span style="color: #00AA00;">:</span> <span style="color: #cc66cc;">1</span><span style="color: #00AA00;">;</span>  
+<span style="color: #00AA00;">&#125;</span>  
+dt<span style="color: #3333ff;">:nth-</span>child<span style="color: #00AA00;">&#40;</span><span style="color: #cc66cc;">5</span><span style="color: #00AA00;">&#41;</span><span style="color: #3333ff;">:hover </span>dd<span style="color: #00AA00;">&#123;</span>  
+    opacity<span style="color: #00AA00;">:</span> <span style="color: #cc66cc;">1</span><span style="color: #00AA00;">;</span>  
+<span style="color: #00AA00;">&#125;</span>  
+dt<span style="color: #3333ff;">:nth-</span>child<span style="color: #00AA00;">&#40;</span><span style="color: #cc66cc;">7</span><span style="color: #00AA00;">&#41;</span><span style="color: #3333ff;">:hover </span>dd<span style="color: #00AA00;">&#123;</span>  
+    opacity<span style="color: #00AA00;">:</span> <span style="color: #cc66cc;">1</span><span style="color: #00AA00;">;</span>  
+<span style="color: #00AA00;">&#125;</span></pre>
+
+<p>Pues nada, que estuve un ratín enredando con esto y quería publicarlo por si a alguien le interesa, porque todavía estás a tiempo de enviar tu propuesta al ejercicio, <img src="http://localhost/pruebas/wp-includes/images/smilies/icon_smile.gif" alt=":)" /> </p>
+
+<p>Puedes ver <strong>el resultado y todo el código del ejercicio</strong> aquí:</p>
+
+<ul>
+<li><a href="http://hachemuda.com/demo/HoverNavigation/bare-bones.html">Creando un menú navegable a través de una lista de definiciones mediante CSS</a></li>
+</ul>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=Ejercicio: darle estilo a una lista de definiciones HTML creando un menú con contenido navegable sólo con CSS - http://www.hachemuda.com/2012/10/ejercicio-darle-estilo-a-una-lista-de-definiciones-creando-un-menu-con-contenido-navegable-solo-con-css" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2012/10/ejercicio-darle-estilo-a-una-lista-de-definiciones-creando-un-menu-con-contenido-navegable-solo-con-css - Ejercicio: darle estilo a una lista de definiciones HTML creando un menú con contenido navegable sólo con CSS" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2012/10/ejercicio-darle-estilo-a-una-lista-de-definiciones-creando-un-menu-con-contenido-navegable-solo-con-css&t=Ejercicio: darle estilo a una lista de definiciones HTML creando un menú con contenido navegable sólo con CSS" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/codigo">código</a></li>
+                      <li><a href="/etiqueta/css">css</a></li>
+                      <li><a href="/etiqueta/css3">css3</a></li>
+                      <li><a href="/etiqueta/demo">demo</a></li>
+                      <li><a href="/etiqueta/html">html</a></li>
+                      <li><a href="/etiqueta/tipo-de-letra">tipo de letra</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>HacheMuda</title>
+        <link>/</link>
+        <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+                <description>Últimos artículos de HacheMuda</description>
+                <lastBuildDate>Sun, 23 Mar 2014 18:35:00 +0100</lastBuildDate>
+        <pubDate>Sun, 23 Mar 2014 18:35:00 +0100</pubDate>
+        <generator>PieCrust 1.2.0-dev</generator>
+                        
+                                <item>
+            <title>Herramienta online para probar diseños web responsive</title>
+            <link>http://www.hachemuda.com/2012/03/herramienta-online-para-probar-disenos-web-responsive</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>github</category>
+                        <category>online</category>
+                        <category>prueba</category>
+                        <category>responsive</category>
+                        <pubDate>Mon, 05 Mar 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/03/herramienta-online-para-probar-disenos-web-responsive</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;El diseñador &lt;a href=&quot;http://mattkersley.com/&quot;&gt;Matt Kersley&lt;/a&gt; ha publicado una herramienta online para &lt;strong&gt;probar en directo cómo se ve un sitio web a diferentes resoluciones&lt;/strong&gt; de pantalla. Una aplicación genial para hacer un &lt;em&gt;testing&lt;/em&gt; rápido de diseños web &lt;em&gt;responsive&lt;/em&gt; o adaptables.&lt;/p&gt;
+
+&lt;p&gt;Me ha gustado mucho porque es &lt;strong&gt;directa y simple&lt;/strong&gt;: introduces la URL que quieres investigar y a continuación te muestra un carrusel horizontal con la visualización de la página en diferentes resoluciones. Puedes elegir si quieres que muestre los tamaños de dispositivos populares o simplemente el tamaño del ancho: 240, 320, 480, 768 y 1024 pixels.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/03/responsive-design-testing.jpg&quot; alt=&quot;Responsive Design Testing&quot; title=&quot;Responsive Design Testing&quot; /&gt;
+Captura de pantalla de la herramienta.&lt;/p&gt;
+
+&lt;p&gt;El código de la herramienta está &lt;a href=&quot;https://github.com/mattkersley/Responsive-Design-Testing&quot;&gt;disponible en GitHub&lt;/a&gt;, donde puedes hacer un &lt;em&gt;fork&lt;/em&gt; para modificarla o enviarle sugerencias para mejorarla. De hecho, el proyecto es solamente un fichero HTML y un Javascript, por lo que puedes &lt;strong&gt;descargarlo y tenerlo en local&lt;/strong&gt; para hacer pruebas, &lt;img src=&quot;http://localhost/pruebas/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; /&gt; &lt;/p&gt;
+
+&lt;p&gt;Enlace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://mattkersley.com/responsive/&quot;&gt;Responsive Design Testing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Descomprimir ficheros CSS y Javascript que han sido &amp;quot;minified&amp;quot;</title>
+            <link>http://www.hachemuda.com/2012/03/descomprimir-ficheros-css-y-javascript-que-han-sido-minified</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>código</category>
+                        <category>compresión</category>
+                        <category>css</category>
+                        <category>javascript</category>
+                        <category>optimización</category>
+                        <pubDate>Sun, 04 Mar 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/03/descomprimir-ficheros-css-y-javascript-que-han-sido-minified</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;En un proyecto reciente, he tenido que editar algunos ficheros CSS y Javascript que el autor original del proyecto guardó solamente en su versión &lt;em&gt;minified&lt;/em&gt;, con su contenido comprimido. Esto se suele hacer para &lt;strong&gt;ahorrar &lt;em&gt;bytes&lt;/em&gt; y aligerar los ficheros&lt;/strong&gt;, una práctica muy recomendable (igual de recomendable que guardar siempre los archivos originales, ejem).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/03/fichero-minified.jpg&quot; alt=&quot;Fichero Javascript comprimido&quot; title=&quot;Fichero Javascript comprimido&quot; /&gt;
+Fichero Javascript comprimido.&lt;/p&gt;
+
+&lt;p&gt;Por más que lo he pensado, no se me ocurre ninguna traducción de &lt;em&gt;minify&lt;/em&gt; que no sea &lt;em&gt;comprimir&lt;/em&gt;. Es un término que se ha convertido en estándar para hablar de esa acción, de transformar el contenido de un fichero fuente para &lt;strong&gt;conseguir reducirlo al máximo posible&lt;/strong&gt;. Por ejemplo quitándole los comentarios, los saltos de línea, los espacios, las líneas redundantes, etc.&lt;/p&gt;
+
+&lt;p&gt;Bueno, el caso es que existen cientos de aplicaciones y herramientas online para hacer esa compresión de ficheros Javascript y CSS. Pero… ¿y si quiero &lt;strong&gt;descomprimir ficheros que ya están “minified”&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;p&gt;Avivo tiene una herramienta gratuita llamada &lt;a href=&quot;http://minify.avivo.si&quot;&gt;Beautify&lt;/a&gt; para realizar la &lt;strong&gt;descompresión de ficheros Javascript y CSS&lt;/strong&gt;, para tranformar una versión &lt;em&gt;minified&lt;/em&gt; a una nueva legible para los ojos humanos. Solamente tienes que elegir el tipo de archivo y algunas preferencias adicionales: mantener las líneas vacías, tabulación con espacios o con tabulador, dejar los selectores en una línea o en varias…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/03/js-beautify.jpg&quot; alt=&quot;JS Beautifier&quot; title=&quot;JS Beautifier&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para ficheros Javascript, también he descubierto &lt;strong&gt;JS Beautifier&lt;/strong&gt;. Es genial, porque solamente tienes que copiar y pegar todo el tocho de código y &lt;strong&gt;con un botón te enseña la versión convertida y legible&lt;/strong&gt;. Y tiene alguna opción más que el de Avivo.&lt;/p&gt;
+
+&lt;p&gt;¿Conoces y recomiendas alguna otra herramienta?&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://minify.avivo.si&quot;&gt;Avivo Beautify&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsbeautifier.org/&quot;&gt;JS Beautifier&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Flow añade etiquetas compartidas mejorando mucho la colaboración en equipo</title>
+            <link>http://www.hachemuda.com/2012/03/flow-anade-etiquetas-compartidas-mejorando-mucho-la-colaboracion-en-equipo</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>gestión</category>
+                        <category>gtd</category>
+                        <category>ios</category>
+                        <category>mac</category>
+                        <category>productividad</category>
+                        <category>tareas</category>
+                        <pubDate>Thu, 01 Mar 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/03/flow-anade-etiquetas-compartidas-mejorando-mucho-la-colaboracion-en-equipo</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Hace unos días veíamos &lt;a href=&quot;http://hachemuda.com/2012/02/los-10-mejores-gestores-de-tareas-para-mac-y-ios-con-sincronizacion/&quot;&gt;10 gestores de tareas para Mac y iOS con sincronización&lt;/a&gt; (gracias a los usuarios ya hay tres opciones más) y uno de ellos era &lt;strong&gt;Flow&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/03/flow-crear-tarea.jpg&quot; alt=&quot;Flow: crear nueva tarea&quot; title=&quot;Flow: crear nueva tarea&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Comentábamos que tiene &lt;strong&gt;una aplicación web&lt;/strong&gt; con un diseño súper trabajado, con una &lt;strong&gt;aplicación para Mac&lt;/strong&gt; que permite añadir tareas fácilmente desde la barra superior y una &lt;strong&gt;&lt;em&gt;app&lt;/em&gt; para iOS&lt;/strong&gt; muy bien construída. El único pero que le poníamos era el precio y que no tiene páginas de contenido libre donde poder tomar notas y apuntes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Flow es una aplicación GTD cojonuda para trabajar en equipo&lt;/strong&gt;, para mejorar la productividad de varias personas que colaboran para conseguir completar su trabajo organizado por proyectos, tareas y listas de tareas.&lt;/p&gt;
+
+&lt;h3&gt;Etiquetas compartidas&lt;/h3&gt;
+
+&lt;p&gt;Un punto en el que fallaba Flow desde el punto de vista colaborativo era en &lt;strong&gt;la gestión de etiquetas&lt;/strong&gt;, que se traban como tags individuales y personales de ese usuario, pero en el blog oficial &lt;a href=&quot;http://www.getflow.com/blog/2012/02/flow-update-shared-tags/&quot;&gt;ya han anunciado&lt;/a&gt; que esta nueva funcionalidad estará activa &lt;strong&gt;a partir del día 14 de marzo&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cuando contacté con el equipo hace unos cuantos meses preguntando sobre este tema, me dijeron que es algo que querían pensar bien antes de incorporarlo, porque realmente puede ser un poco caótico para los usuarios.&lt;/p&gt;
+
+&lt;p&gt;Lo que han decidido es que dentro de dos semanas &lt;strong&gt;todas las etiquetas serán compartidas&lt;/strong&gt;. Es decir, cuando creas una tarea y le asignas una etiqueta (por ejemplo “marketing”), el resto del equipo también verá la tarea con esa etiqueta. Y podrán ver todas las tareas, de todo el equipo, que tienen la etiqueta “marketing”. Y cambiarle el nombre a la etiqueta y que se actualice para todos los usuarios.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/03/flow.jpg&quot; alt=&quot;Flow&quot; title=&quot;Flow&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Además, también se han integrado con los permisos de los usuarios. Si en tu equipo tienes personas que no son usuarios de tu proyecto en Flow, sino que son solamente colaboradores externos, &lt;strong&gt;solamente verán las etiquetas que estén asignadas a sus tareas&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;No había duda de que la implementación de esta nueva funcionalidad por parte de FLow iba a estar muy bien pensada y planteada. Puede parecer una tontería, pero con esta nueva capacidad &lt;strong&gt;van a conseguir mejorar muchísimo la colaboración&lt;/strong&gt; en equipo.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.getflow.com/blog/2012/02/flow-update-shared-tags/&quot;&gt;The Flow Blog: shared tags&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://hachemuda.com/2012/02/los-10-mejores-gestores-de-tareas-para-mac-y-ios-con-sincronizacion/&quot;&gt;HacheMuda: 10 gestores de tareas para Mac y iOS con sincronización&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>ifttt: hacer una copia de seguridad continua del contenido de tu WordPress en Evernote</title>
+            <link>http://www.hachemuda.com/2012/03/ifttt-hacer-una-copia-de-seguridad-continua-del-contenido-de-tu-wordpress-en-evernote</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>evernote</category>
+                        <category>ifttt</category>
+                        <category>seguridad</category>
+                        <pubDate>Thu, 01 Mar 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/03/ifttt-hacer-una-copia-de-seguridad-continua-del-contenido-de-tu-wordpress-en-evernote</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Si no conoces &lt;a href=&quot;http://ifttt.com&quot;&gt;ifttt&lt;/a&gt;, no sé a qué estás esperando para probarlo. Es un sistema integrado con un montón de servicios online, que permite definir recetas y tareas para realizar cosas cuando ciertas acciones ocurran. &lt;em&gt;If this then that. Si esto entonces aquello.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Una tarea que puede resultar muy útil es hacer &lt;strong&gt;una copia de seguridad de todos los artículos que se publiquen en tu blog y guardar cada post como una nota de Evernote&lt;/strong&gt;. Es decir, crear una tarea para que cuando se publique un nuevo post en tu blog WordPress, entonces automáticamente se cree una nueva nota en tu cuenta de Evernote.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/03/evernote-wordpress-backup.jpg&quot; alt=&quot;Backup de los artículos de Hachemuda en Evernote.&quot; title=&quot;Backup de los artículos de Hachemuda en Evernote.&quot; /&gt;
+Backup de los artículos de Hachemuda en Evernote.&lt;/p&gt;
+
+&lt;p&gt;Además, gracias a los &lt;em&gt;addins&lt;/em&gt;, podemos personalizar y dar formato a la nueva nota:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Para el &lt;strong&gt;título de la nota&lt;/strong&gt;, que coja el título del post.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cuerpo de la nota&lt;/strong&gt;: la imagen destacada seguida del contenido, la URL del artículo original, la lista de categorías y tags y su fecha de publicación.&lt;/li&gt;
+&lt;li&gt;El &lt;strong&gt;cuaderno&lt;/strong&gt; de Evernote en el que guardar la nota.&lt;/li&gt;
+&lt;li&gt;Las &lt;strong&gt;etiquetas de la nota&lt;/strong&gt;, que pueden ponerse algunas fijas, como “blog”, o también añadir el &lt;em&gt;addin&lt;/em&gt; &amp;#8220; para que añada automáticamente los tags y categorías del post original en WordPress.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/03/iftt-wordpress-evernote.jpg&quot; alt=&quot;Configuración de la tarea de ifttt para enviar los artículos de WordPress a Evernote.&quot; title=&quot;Configuración de la tarea de ifttt para enviar los artículos de WordPress a Evernote.&quot; /&gt;
+Configuración de la tarea de ifttt para enviar los artículos de WordPress a Evernote.&lt;/p&gt;
+
+&lt;p&gt;Absolutamente brillante. Una copia continua y completa de todos los artículos de tu WordPress con solamente un par de clicks.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ifttt.com&quot;&gt;ifttt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.evernote.com&quot;&gt;Evernote&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>ImageAlpha: conversor y optimizador de imágenes PNG manteniendo el canal de transparencia</title>
+            <link>http://www.hachemuda.com/2012/02/imagealpha-conversor-y-optimizador-de-imagenes-png-manteniendo-el-canal-de-transparencia</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>imagen</category>
+                        <category>mac</category>
+                        <category>optimización</category>
+                        <pubDate>Wed, 29 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/imagealpha-conversor-y-optimizador-de-imagenes-png-manteniendo-el-canal-de-transparencia</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pngmini.com/&quot;&gt;ImageAlpha&lt;/a&gt; es una aplicación para Mac que permite convertir imágenes en formato PNG de 24 bits a imágenes con una paleta de 8 bits manteniendo el canal &lt;em&gt;alpha&lt;/em&gt;. Dicho en palabras más simples, con esta herramienta puedes &lt;strong&gt;optimizar considerablemente el peso de tus imágenes PNG manteniendo la transparencia&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/imagealpha.jpg&quot; alt=&quot;Image Alpha - conversor de imágenes PNG&quot; title=&quot;Image Alpha - conversor de imágenes PNG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El funcionamiento del programa es sencillo y efectivo:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Arrastras una imagen PNG a la ventana de la aplicación.&lt;/li&gt;
+&lt;li&gt;Eliges un fondo de la galería o te quedas con &lt;strong&gt;el fondo transparente&lt;/strong&gt;, que imagino que es lo más habitual.&lt;/li&gt;
+&lt;li&gt;Arrastra la barrita del &lt;strong&gt;número de colores&lt;/strong&gt; a izquierda o derecha para aumentar o disminuir la cantidad de colores para la imagen convertida. &lt;/li&gt;
+&lt;li&gt;Escoge &lt;strong&gt;el modo de la conversión&lt;/strong&gt;, el algoritmo matemático con el que se hacen los cálculos para la conversión. Por defecto viene activado &lt;em&gt;Median Cut&lt;/em&gt;, que conseguirá habitualmente el mejor resultado, pero puedes probar también con &lt;em&gt;Posterizer&lt;/em&gt; y &lt;em&gt;NeuQuant&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Ya puedes guardar la nueva imagen PNG convertida yendo a &lt;code&gt;Archivo -&amp;gt; Guardar como&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;En el panel inferior de la ventana, el programa informa en vivo del &lt;strong&gt;tamaño final de la nueva imagen&lt;/strong&gt; con la configuración que está activa en ese momento y el &lt;strong&gt;porcentaje de ganancia&lt;/strong&gt; en el peso del archivo.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, en el caso de la conversión del logotipo de HacheMuda, se puede ver &lt;strong&gt;una reducción del 94% del peso&lt;/strong&gt; de la imagen. Con el uso del logo en la web, no se aprecia para nada la pérdida de calidad, por lo que es &lt;strong&gt;una mejora bestial&lt;/strong&gt; respecto al original.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/image-alpha-result.jpg&quot; alt=&quot;Image Alpha - resultado de la conversión&quot; title=&quot;Image Alpha - resultado de la conversión&quot; /&gt;
+Resultado de la conversión de imagen en PNG con ImageAlpha.&lt;/p&gt;
+
+&lt;p&gt;También verás que puedes marcar una opción llamada &lt;em&gt;IE6-friendly alpha&lt;/em&gt;. Si la activas, el conversor transforma todos los pixels que tengan un color casi opaco al mismo color pero opaco del todo, para &lt;strong&gt;mejorar la visualización de los degradados en Internet Explorer 6&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sin duda es una herramienta súper útil, distribuída como software libre y además gratuita.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://pngmini.com/&quot;&gt;Página oficial de ImageAlpha&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>The League of Moveable Type: colección de tipos de letra libres y de alta calidad para sitios web</title>
+            <link>http://www.hachemuda.com/2012/02/the-league-of-moveable-type-coleccion-de-tipos-de-letra-libres-y-de-alta-calidad-para-sitios-web</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>libre</category>
+                        <category>revolución</category>
+                        <category>tipo de letra</category>
+                        <pubDate>Mon, 27 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/the-league-of-moveable-type-coleccion-de-tipos-de-letra-libres-y-de-alta-calidad-para-sitios-web</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://theleagueofmoveabletype.com/&quot;&gt;The League of Moveable Type&lt;/a&gt; es un movimiento que nace como una llamada a la acción, una &lt;strong&gt;revolución dentro del mundo de los tipos de letra&lt;/strong&gt;. La idea surgió por un hilo de &lt;a href=&quot;http://typophile.com/&quot;&gt;Typophile&lt;/a&gt; en el que se hablaba de crear un proyecto de &lt;strong&gt;tipos de letra con licencia libre orientado al diseño web&lt;/strong&gt;. La reacción no fue muy buena, así que el equipo de &lt;a href=&quot;http://www.weareagoodcompany.com/&quot;&gt;A Good Company&lt;/a&gt; cogió las riendas y decidió desarrollarlo seriamente.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/the-league-of-moveable-type.jpg&quot; alt=&quot;The League of Moveable Type&quot; title=&quot;The League of Moveable Type&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El resultado es una colección de tipos de letra &lt;em&gt;open-source&lt;/em&gt; &lt;strong&gt;escogidas manualmente&lt;/strong&gt;, de alta calidad, con el objetivo de sentar las bases de un nuevo estándar dentro del diseño web. Se ponen el listón muy alto pero realmente es un movimiento necesario para demostrar que las capacidades de los dispositivos y navegadores actuales permiten un juego de una calidad infinitamente mayor a la que estamos acostumbrados por el uso de las fuentes “seguras” en internet.&lt;/p&gt;
+
+&lt;h3&gt;El catálogo de “The League of Moveable Type”&lt;/h3&gt;
+
+&lt;p&gt;En el catálogo actual del movimiento &lt;strong&gt;están ya incluídas 15 tipos de letra&lt;/strong&gt;, escogidas cuidadosamente para cubrir todo tipo de necesidades. Las hay de estilos muy variados y esta es sólo la primera selección.&lt;/p&gt;
+
+&lt;p&gt;De cada tipo de letra puedes ver:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Un &lt;strong&gt;galería de capturas de pantall&lt;/strong&gt;a mostrando ejemplos de su uso, para verla en un contexto real.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Descargar&lt;/strong&gt; todos los archivos del tipo de letra.&lt;/li&gt;
+&lt;li&gt;Acceder al &lt;strong&gt;repositorio de la fuente en GitHub&lt;/strong&gt;. Todas ellas tienen uno.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Al descargar un tipo de letra del catálogo, obtienes no sólo la fuente en los formatos &lt;code&gt;TTF&lt;/code&gt; y &lt;code&gt;OTF&lt;/code&gt;, sino también un directorio con el tipo de letra ya &lt;strong&gt;convertido y optimizado&lt;/strong&gt; para su utilización en cualquier web utilizando &lt;code&gt;@font-face&lt;/code&gt;. En este caso, dispones de ella en los formatos &lt;code&gt;EOT&lt;/code&gt;, &lt;code&gt;SVG&lt;/code&gt;, &lt;code&gt;TTF&lt;/code&gt; y &lt;code&gt;WOFF&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/raleway.jpg&quot; alt=&quot;Raleway&quot; title=&quot;Raleway&quot; /&gt;
+Ejemplo de ficha del tipo de letra &amp;#8220;Raleway&amp;#8221;.&lt;/p&gt;
+
+&lt;p&gt;Además, si eres usuario de TypeKit debes saber que &lt;em&gt;The League of Moveable Type&lt;/em&gt; &lt;a href=&quot;https://typekit.com/fonts?collection=foundry-the-league-of-movable-type&quot;&gt;tiene allí toda la colección&lt;/a&gt; para que puedas usarlas cómodamente desde el servicio.&lt;/p&gt;
+
+&lt;p&gt;Desde su web llaman a todo diseñador con conocimientos en tipografía a &lt;a href=&quot;http://theleagueofmoveabletype.com/join&quot;&gt;unirse al proyecto&lt;/a&gt; para colaborar activamente. También puedes leer &lt;a href=&quot;http://blog.theleagueofmoveabletype.com/&quot;&gt;su blog&lt;/a&gt; o &lt;a href=&quot;http://theleagueofmoveabletype.com/manifesto&quot;&gt;el manifiesto&lt;/a&gt;, donde se explica toda la motivación y la intención del movimiento.&lt;/p&gt;
+
+&lt;p&gt;He descubierto el proyecto a través del twitter de &lt;a href=&quot;https://twitter.com/pablojimeno&quot;&gt;Pablo Jimeno&lt;/a&gt;.&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Infografía: las estadísticas de Facebook y Twitter hasta la actualidad</title>
+            <link>http://www.hachemuda.com/2012/02/infografia-las-estadisticas-de-facebook-y-twitter-hasta-la-actualidad</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>facebook</category>
+                        <category>infografía</category>
+                        <category>twitter</category>
+                        <pubDate>Sat, 25 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/infografia-las-estadisticas-de-facebook-y-twitter-hasta-la-actualidad</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Leyendo &lt;a href=&quot;http://www.arturogoga.com/2012/02/24/infografia-sobre-los-numeros-alcanzados-por-twitter-y-facebook-en-el-2012/&quot;&gt;ArturoGoga.com&lt;/a&gt; he descubierto estos dos infográficos, creados por &lt;a href=&quot;http://infographiclabs.com/&quot;&gt;Infographics Labs&lt;/a&gt;, que recopilan &lt;strong&gt;la historia y estadísticas de Twitter y Facebook&lt;/strong&gt; desde el día de su nacimiento hasta el actual año 2012.&lt;/p&gt;
+
+&lt;h3&gt;Twitter&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.twitter.com/ladygaga&quot;&gt;&lt;img src=&quot;http://www.twitter.com/ladygaga&quot; alt=&quot;Infografía: estadísticas de Twitter en 2012&quot; /&gt;&lt;/a&gt;
+Click en la imagen para verla más grande.&lt;/p&gt;
+
+&lt;p&gt;Algunos datos interesantes recogidos en la imagen:&lt;/p&gt;
+
+&lt;p&gt;[]: /uploads/2012/02/twitter.jpg&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El nombre original del proyecto era &lt;em&gt;Twttr&lt;/em&gt;, inspirado por Flickr.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;465 millones de cuentas&lt;/strong&gt; de usuario creadas hasta hoy, 100 millones de usuarios considerados “activos”. &lt;/li&gt;
+&lt;li&gt;Se crean &lt;strong&gt;11 nuevas cuentas cada segund&lt;/strong&gt;o, 1 millón cada día aproximadamente.&lt;/li&gt;
+&lt;li&gt;Se publican &lt;strong&gt;33.000 millones de tweets cada día&lt;/strong&gt; (33 billones anglosajones).&lt;/li&gt;
+&lt;li&gt;Los tres países con más usuarios del mundo son Estados Unidos, Brasil y Japón.&lt;/li&gt;
+&lt;li&gt;Las actualizaciones de los famosos sólo se llevan un 21% de retweets, un 92% de ellos son retweets de “contenido interesante”.&lt;/li&gt;
+&lt;li&gt;La película de anime japonés “Castle in the sky” es el momento que tiene el récord de tweets por segundo. Le siguen los últimos minutos de la última edición de la SuperBowl.&lt;/li&gt;
+&lt;li&gt;El usuario más popular es &lt;a href=&quot;http://www.twitter.com/ladygaga&quot;&gt;Lady Gaga&lt;/a&gt;, con casi 20 millones de &lt;em&gt;followers&lt;/em&gt;. Le siguen &lt;a href=&quot;http://www.twitter.com/justinbieber&quot;&gt;Justin Bieber&lt;/a&gt;, &lt;a href=&quot;http://www.twitter.com/katyperry&quot;&gt;Katy Perry&lt;/a&gt;, &lt;a href=&quot;http://www.twitter.com/shakira&quot;&gt;Shakira&lt;/a&gt; y &lt;a href=&quot;http://www.twitter.com/rihanna&quot;&gt;Rihanna&lt;/a&gt;. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Facebook&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://company.zynga.com/&quot;&gt;&lt;img src=&quot;http://company.zynga.com/&quot; alt=&quot;Infografía: estadísticas de Facebook en 2012&quot; /&gt;&lt;/a&gt;
+Click en la imagen para verla más grande.&lt;/p&gt;
+
+&lt;p&gt;Algunos datos interesantes recogidos en la imagen:&lt;/p&gt;
+
+&lt;p&gt;[]: /uploads/2012/02/facebook.jpg&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;845 millones de usuarios activos&lt;/strong&gt; actualmente con 100.000 millones de conexiones creadas entre ellos.&lt;/li&gt;
+&lt;li&gt;Se suben &lt;strong&gt;250 millones de fotos cada día&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Los tres juegos más populares hasta el momento dentro de la red social son “Gardens of time”, “The Sims social” y “Cityville”.&lt;/li&gt;
+&lt;li&gt;425 millones de usuarios acceden mediante su teléfono móvil, el 57% de los usuarios son chicas y de media un usuario invierte 20 minutos en Facebook por visita.&lt;/li&gt;
+&lt;li&gt;Algo más de un 50% de las ganancias de Facebook provienen de la publicidad. Un 12% proviene de los juegos de &lt;a href=&quot;http://company.zynga.com/&quot;&gt;Zynga&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Infographics Labs: &lt;a href=&quot;http://infographiclabs.com/news/twitter-2012/&quot;&gt;Twitter 2012&lt;/a&gt; y &lt;a href=&quot;http://infographiclabs.com/news/facebook-2012/&quot;&gt;Facebook 2012&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>PageRules: control avanzado tipo .htaccess pero en sencillo, bonito e integrado con CloudFlare</title>
+            <link>http://www.hachemuda.com/2012/02/pagerules-control-avanzado-tipo-htaccess-pero-en-sencillo-bonito-e-integrado-con-cloudflare</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>.htaccess</category>
+                        <category>cloudflare</category>
+                        <category>optimización</category>
+                        <category>seguridad</category>
+                        <category>url</category>
+                        <pubDate>Fri, 24 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/pagerules-control-avanzado-tipo-htaccess-pero-en-sencillo-bonito-e-integrado-con-cloudflare</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Hace tan sólo un par de días que &lt;a href=&quot;http://hachemuda.com/2012/02/cloudflare-mejorar-drasticamente-la-velocidad-seguridad-y-rendimiento-de-tu-sitio-web/&quot;&gt;escribí sobre CloudFlare&lt;/a&gt;, un servicio para mejorar la velocidad, seguridad y rendimiento de cualquier sitio web sin apenas necesitar configuración ni conocimientos avanzados de administración de sistemas.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/cloudflare.jpg&quot; alt=&quot;Logotipo de CloudFlare&quot; title=&quot;Logotipo de CloudFlare&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El sistema funciona basándose en la &lt;strong&gt;configuración de los DNS&lt;/strong&gt;, haciendo que todas las visitas a tu web pasen por su servicio para hacer el cacheado, filtrado y detección de peticiones maliciosas. Para las fases de desarrollo o de modificaciones del sitio web, una de las opciones de CloudFlare es la &lt;strong&gt;activación/desactivación instanánea&lt;/strong&gt; del servicio, lo que consigue que durante el tiempo que quieras puedas servir tu página directamente, como si no existiera el filtro.&lt;/p&gt;
+
+&lt;p&gt;Pero en muchos casos &lt;strong&gt;esta opción se queda corta&lt;/strong&gt;. Por ejemplo, con los sitios web que funcionan con un gestor de contenidos, puede que no tenga mucho sentido pasar por algunos filtros y comprobaciones del servicio cuando se accede al panel de administración para editar los contenidos de la web.&lt;/p&gt;
+
+&lt;h3&gt;PageRules&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;PageRules&lt;/strong&gt; es una nueva funcionalidad para los usuarios del servicio que &lt;strong&gt;permite editar reglas para tener un control muy preciso sobre las páginas&lt;/strong&gt; del sitio web, y así decidir cómo actúan las diferentes opciones y aplicaciones de CloudFlare en cada una de ellas.&lt;/p&gt;
+
+&lt;p&gt;Es como un editor de ficheros &lt;code&gt;.htaccess&lt;/code&gt;, pero con una colección de opciones y una interfaz de usuario que hace que sea &lt;strong&gt;súper sencillo de utilizar&lt;/strong&gt;. Incluso algo más que eso.&lt;/p&gt;
+
+&lt;p&gt;Si accedes a la sección de PageRules de tu dominio de CloudFlare, verás que puedes crear una nueva regla &lt;strong&gt;definiendo un patrón&lt;/strong&gt; (una expresión regular). Esta es la parte más complicada, que se ha simplificado mucho y dispone de ejemplos claros para que no tengas ninguna duda.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, si quieres crear una redirección en tu dominio para que al acceder a &lt;code&gt;miweb.com/administracion&lt;/code&gt; el navegador te lleve a &lt;code&gt;miweb.com/wp-admin&lt;/code&gt;, ahora con PageRules es súper fácil:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Creas una &lt;strong&gt;nueva regla&lt;/strong&gt; con el patrón &lt;code&gt;*miweb.com/administracion&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;En el desplegable de opciones de CloudFlare, activa “&lt;strong&gt;Forwarding&lt;/strong&gt;“. Automáticamente te desaparecerán el resto de opciones.&lt;/li&gt;
+&lt;li&gt;Escribe &lt;strong&gt;la URL de la redirección&lt;/strong&gt;, la dirección destino: &lt;code&gt;http://miweb.com/wp-admin&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Pulsa sobre “&lt;strong&gt;Add rule&lt;/strong&gt;” y voilà, ya puedes probar la redirección porque ya está funcionando.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/pagerules-forwarding.jpg&quot; alt=&quot;PageRules: crear regla para redirección&quot; title=&quot;PageRules: crear regla para redirección&quot; /&gt;
+PageRules: crear una regla para redireccionar a una URL.&lt;/p&gt;
+
+&lt;p&gt;Ahora algo un poco más complicado: hacer que CloudFlare no utilice las aplicaciones de cacheo, &lt;em&gt;auto minify&lt;/em&gt; de ficheros estáticos ni mejoras de rendimiento. Que no toque nada en cuanto a optimización, pero que mantenga las medidas de seguridad. En este caso, sería tan simple como:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Crear una &lt;strong&gt;nueva regla&lt;/strong&gt; con el patrón &lt;code&gt;*miweb.com/wp-admin*&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;En el desplagable de las opciones, establece a “Off” la pestañita “&lt;strong&gt;Apps&lt;/strong&gt;” y “&lt;strong&gt;Performance&lt;/strong&gt;“.&lt;/li&gt;
+&lt;li&gt;También puedes cambiar la pestaña “&lt;strong&gt;Custom caching&lt;/strong&gt;” a “Bypass cache” para evitar el sistema de cache.&lt;/li&gt;
+&lt;li&gt;Pulsa sobre “&lt;strong&gt;Add rule&lt;/strong&gt;” y… ¡hecho! Ya lo tienes funcionando al instante.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/pagerules-admin.jpg&quot; alt=&quot;PageRules: crear regla para desactivar apps en panel de administración&quot; title=&quot;PageRules: crear regla para desactivar apps en panel de administración&quot; /&gt;
+PageRules: crear regla para desactivar apps en el panel de administración.&lt;/p&gt;
+
+&lt;p&gt;Es una auténtica maravilla. Si quieres más información sobre PageRules, te recomiendo que sigas el blog de CloudFlare, donde llevan unos días publicando artículos &lt;strong&gt;explicando casos y poniendo ejemplos&lt;/strong&gt; de cómo sacarle el máximo partido:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.cloudflare.com/introducing-pagerules-fine-grained-feature-co&quot;&gt;Introducing PageRules: fine grained control over CloudFlare’s features&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.cloudflare.com/introducing-pagerules-url-forwarding&quot;&gt;Introducing PageRules: URL forwarding&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.cloudflare.com/introducing-pagerules-advanced-caching&quot;&gt;Introducing PageRules: Advanced caching (including configurable HTML caching)&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Los 10 mejores gestores de tareas para Mac y iOS con sincronización</title>
+            <link>http://www.hachemuda.com/2012/02/los-10-mejores-gestores-de-tareas-para-mac-y-ios-con-sincronizacion</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>gestión</category>
+                        <category>gtd</category>
+                        <category>ios</category>
+                        <category>ipad</category>
+                        <category>iphone</category>
+                        <category>mac</category>
+                        <category>organización</category>
+                        <category>productividad</category>
+                        <category>recopilatorio</category>
+                        <category>tareas</category>
+                        <pubDate>Thu, 23 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/los-10-mejores-gestores-de-tareas-para-mac-y-ios-con-sincronizacion</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;El mundo del &lt;em&gt;Get Things Done&lt;/em&gt; está de moda. En los últimos meses no paramos de ver nuevas aplicaciones de gestión de tareas, ya sean orientadas a un uso individual o en equipo. De repente, nos encontramos con que &lt;strong&gt;la sincronización es muy importante&lt;/strong&gt; en este tipo de software, porque nos permite trabajar desde cualquier dispositivo y en cualquier momento, sin miedo a perder nada ni a tener las cosas desorganizadas.&lt;/p&gt;
+
+&lt;p&gt;Tanta es la actividad que creo que es interesante hacer &lt;strong&gt;una selección personal&lt;/strong&gt; de las que yo creo que son ahora mismo &lt;strong&gt;las mejores 10 aplicaciones y servicios web de gestión de tareas&lt;/strong&gt; que pueden usarse tanto en el ordenador como en dispositivos móviles de forma sincronizada entre ellos.&lt;/p&gt;
+
+&lt;p&gt;La selección está enfocada para usuarios de Mac/iOS pero muchas de ellas están también disponibles para otros sistemas y dispositivos, o directamente tienen versiones web para poder trabajar desde cualquier navegador moderno.&lt;/p&gt;
+
+&lt;p&gt;Vamos allá.&lt;/p&gt;
+
+&lt;h3&gt;1. Orchestra&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Orchestra&lt;/strong&gt; es una aplicación web de gestión de tareas que levanta pasiones. Tiene algo especial, es diferente. Va directa al grano. Y tiene aplicación para iPhone.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/orchestra-700x383.jpg&quot; alt=&quot;Orchestra&quot; title=&quot;Orchestra&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Su interfaz de usuario está pensada para ser &lt;strong&gt;lo más sencilla posible&lt;/strong&gt;: pocas opciones, muchos espacios, tamaños grandes… y una limitación de 100 caracteres para definir las tareas.&lt;/p&gt;
+
+&lt;p&gt;No tiene una aplicación nativa para Mac, en el ordenador funciona desde el navegador web.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Plataforma&lt;/strong&gt;: web y iPhone.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gestión de usuarios&lt;/strong&gt; y colaboradores: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Permite subir ficheros&lt;/strong&gt; adjuntos: sí. Muy simple pero funcional.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listas de tareas&lt;/strong&gt; o proyectos: sí. Muy simple pero funcional.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tareas periódicas&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marcar fechas de realización&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prioridades&lt;/strong&gt; para las tareas: no. Pero puedes marcar tareas como &lt;em&gt;favoritas&lt;/em&gt; para prestarles más atención.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendario&lt;/strong&gt; de hitos y metas: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Páginas de contenido libre&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integración con correo electrónico&lt;/strong&gt;: sí. Avisos, conversaciones con usuarios y crear nuevas tareas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Envío de informes diarios por e-mail&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Precio&lt;/strong&gt;: gratuita.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Bola extra&lt;/em&gt;: la aplicación para iOS tiene un sistema de reconocimiento de voz para crear tareas más rápidamente, aunque de momento sólo entiende el inglés. La versión iPhone de Orchestra fue incluída en el recopilatorio Apple Rewind 2011.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Página oficial: &lt;a href=&quot;http://www.orchestra.com/&quot;&gt;Orchestra&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://itunes.apple.com/es/app/orchestra-to-do/id459356540?mt=8&quot;&gt;Orchestra en iTunes App Store&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.idibay.com/servicios-y-aplicaciones-online/2011/orchestra-un-gestor-de-tareas-sencillo-colaborativo-e-intuitivo/&quot;&gt;Mundo Idibay: Orchestra, un gestor de tareas sencillo, colaborativo e intuitivo&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;2. Asana&lt;/h3&gt;
+
+&lt;p&gt;Asana es uno de mis últimos descubrimientos, una aplicación de GTD &lt;strong&gt;enfocada en la rapidez y la productividad&lt;/strong&gt;. Si te gusta hacer las cosas rápido y eres amante de los atajos de teclado, Asana te va a encantar. No es especialmente bonita visualmente, pero puedes hacer prácticamente todo con &lt;strong&gt;combinaciones de teclas&lt;/strong&gt; y en un tiempo récord.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/asana.jpg&quot; alt=&quot;Asana&quot; title=&quot;Asana&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;No tiene aplicación nativa para Mac, funciona a través del navegador web. En iOS hay una app nativa, aunque realmente ahora mismo es solamente una &lt;em&gt;ventana&lt;/em&gt; a la aplicación web. Por tanto, no tiene una sincronización como tal, sino que trabajas siempre sobre la misma aplicación, en cualquier dispositivo.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Plataforma&lt;/strong&gt;: web y iOS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gestión de usuarios&lt;/strong&gt; y colaboradores: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Permite subir ficheros&lt;/strong&gt; adjuntos: sí. Muy simple pero funcional.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listas de tareas&lt;/strong&gt; o proyectos: sí. Además añade entornos de trabajo para agrupar diferentes proyectos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tareas periódicas&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marcar fechas de realización&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prioridades&lt;/strong&gt; para las tareas: sí. No se pueden personalizar. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendario&lt;/strong&gt; de hitos y metas: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Páginas de contenido libre&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integración con correo electrónico&lt;/strong&gt;: sí. Conversaciones en las tareas y crear nuevas a través del e-mail.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Envío de informes diarios por e-mail&lt;/strong&gt;: sí, puede activarse el envío de un e-mail diario con el sumario de tareas pendientes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Precio&lt;/strong&gt;: gratuita.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Bola extra&lt;/em&gt;: la colaboración entre usuarios dentro de la aplicación es en tiempo real. Puedes ver en directo lo que están haciendo otros usuarios.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Página oficial: &lt;a href=&quot;http://www.asana.com&quot;&gt;Asana&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://itunes.apple.com/es/app/asana-mobile/id489969512?mt=8&quot;&gt;Asana en iTunes App Store&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;3. Wunderkit&lt;/h3&gt;
+
+&lt;p&gt;De los creadores de Wunderlist, el archiconocido gestor de tareas multiplataforma, hace unas semanas llegó su nuevo proyecto: Wunderkit. Se trata de una aplicación web que añade a Wunderlist funcionalidades de gestión de proyectos.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/wunderkit-700x418.jpg&quot; alt=&quot;Wunderkit&quot; title=&quot;Wunderkit&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Con &lt;strong&gt;un diseño gráfico exquisito&lt;/strong&gt;, Wunderkit es un completo &lt;strong&gt;gestor de tareas, notas y usuarios&lt;/strong&gt; pensado para centralizar en un solo sitio toda la actividad de un proyecto. Parece raro, pero todavía no tiene gestión de archivos adjuntos.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Plataforma&lt;/strong&gt;: web, Mac y iOS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gestión de usuarios&lt;/strong&gt; y colaboradores: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Permite subir ficheros&lt;/strong&gt; adjuntos: no. Dicen que se implementará próximamente.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listas de tareas&lt;/strong&gt; o proyectos: sí. Organización por proyectos y listas de tareas dentro de cada uno.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tareas periódicas&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marcar fechas de realización&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prioridades&lt;/strong&gt; para las tareas: sí. No se pueden personalizar. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendario&lt;/strong&gt; de hitos y metas: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Páginas de contenido libre&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integración con correo electrónico&lt;/strong&gt;: sí. Notificaciones, conversaciones en las tareas y crear nuevas a través del e-mail.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Envío de informes diarios por e-mail&lt;/strong&gt;: no.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Precio&lt;/strong&gt;: plan gratuito (completamente funcional) y plan Pro por 4.99$ al mes.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Bola extra&lt;/em&gt;: las notificaciones pueden configurarse para que se realicen por e-mail o push. También pueden crearse espacios de trabajo públicos para que cualquier usuario externo pueda colaborar.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Página oficial: &lt;a href=&quot;https://www.wunderkit.com/&quot;&gt;Wunderkit&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Apple App Stores: Wunderlist para &lt;a href=&quot;http://itunes.apple.com/es/app/wunderlist/id410628904?mt=12&quot;&gt;Mac&lt;/a&gt; y para &lt;a href=&quot;http://itunes.apple.com/es/app/wunderlist/id406644151?mt=8&quot;&gt;iOS&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;4. Flow&lt;/h3&gt;
+
+&lt;p&gt;Flow es una aplicación web de gestión de tareas y trabajo en equipo con un diseño espectacular. La aplicación nativa para iPhone está súper bien hecha y los usuarios ya preguntan cuándo llegará la versión para iPad.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/flow.jpg&quot; alt=&quot;Flow App&quot; title=&quot;Flow App&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Permite colaborar a todos los miembros de un equipo creando proyectos y listas de cosas pendientes, organizando las tareas mediante etiquetas, notificaciones entre ellos, conversaciones, ficheros adjuntos… Una herramienta muy bien construída y muy cómoda de usar.&lt;/p&gt;
+
+&lt;p&gt;El único “pero” que se le puede poner es que es un poquito cara comparándola con otras alternativas. Pero si la pruebas, te lo plantearás seriamente.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Plataforma&lt;/strong&gt;: web, Mac y iOS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gestión de usuarios&lt;/strong&gt; y colaboradores: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Permite subir ficheros&lt;/strong&gt; adjuntos: sí. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listas de tareas&lt;/strong&gt; o proyectos: sí. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tareas periódicas&lt;/strong&gt;: sí. Puedes marcar las importantes con banderitas y también con las etiquetas es fácil crear prioridades personalizadas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marcar fechas de realización&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prioridades&lt;/strong&gt; para las tareas: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendario&lt;/strong&gt; de hitos y metas: sí. Incluso con un feed para agregarlo a tu gestor de calendarios habitual (iCal, Google Calendar, etc).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Páginas de contenido libre&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integración con correo electrónico&lt;/strong&gt;: sí. Conversaciones en las tareas y crear nuevas a través del e-mail.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Envío de informes diarios por e-mail&lt;/strong&gt;: sí, muy configurable (puede elegirse si diario o semanal, la hora del envío y los días que se desea recibirlo).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Precio&lt;/strong&gt;: 9.99$ mensuales, con dos semanas de prueba gratuita y descuentos si contratas varios usuarios. La versión iPhone es gratuita.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Bola extra&lt;/em&gt;: Flow también tiene una aplicación gratuita para Mac que se integra en la barra principal del sistema para poder crear tareas, adjuntar ficheros y recibir notificaciones. Además, permite descargar un respaldo de todas tus tareas en varios formatos y un fichero XML con toda la información guardada en tu cuenta, que puede servir de backup o para migrar/integrar con otros sistemas.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Página oficial: &lt;a href=&quot;http://www.getflow.com/&quot;&gt;Flow&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://itunes.apple.com/es/app/flow-for-iphone/id398084562?mt=8&quot;&gt;Flow for iPhone en iTunes App Store&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;5. Omnifocus&lt;/h3&gt;
+
+&lt;p&gt;Omnifocus es la aplicación de gestión de tareas creada por &lt;a href=&quot;http://www.omnigroup.com/&quot;&gt;The Omni Group&lt;/a&gt;, famosos por otras aplicaciones como la espectacular herramienta de prototipado Omnigraffle. No tiene una versión web pero tiene aplicaciones nativas para todos los dispositivos de Apple, que se sincronizan a la perfección entre ellas.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/omnifocus.jpg&quot; alt=&quot;Omnifocus&quot; title=&quot;Omnifocus&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Es un gestor orientado a un sector profesional, pensado no sólo para organizar tus tareas pendientes sino para trabajar con una metodología seria la planificación y el flujo de trabajo. Permite &lt;strong&gt;capturar de forma eficaz cualquier acción a realizar&lt;/strong&gt;, ideas, archivos, textos, etc. y organizarlos en un sitio común.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Plataforma&lt;/strong&gt;: Mac y iOS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gestión de usuarios&lt;/strong&gt; y colaboradores: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Permite subir ficheros&lt;/strong&gt; adjuntos: sí. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listas de tareas&lt;/strong&gt; o proyectos: sí. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tareas periódicas&lt;/strong&gt;: sí. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marcar fechas de realización&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prioridades&lt;/strong&gt; para las tareas: sí. Muy personalizable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendario&lt;/strong&gt; no, pero se integra con iCal.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Páginas de contenido libre&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integración con correo electrónico&lt;/strong&gt;: no, pero se integra con Mail App para crear tareas y capturar acciones.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Envío de informes diarios por e-mail&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Precios&lt;/strong&gt;: Mac: 62,99€, iPhone: 15,99€, iPad: 31,99€.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Bola extra&lt;/em&gt;: la versión iPhone está integrada con Siri, el asistente de voz, para poder guardar ideas o tareas fácilmente. La versión para Mac está integrada con Growl para las notificaciones y realiza copias de seguridad periódicamente.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Página oficial: &lt;a href=&quot;http://www.omnigroup.com/products/omnifocus/&quot;&gt;Omnifocus&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Apple App Stores: Omnifocus para &lt;a href=&quot;http://itunes.apple.com/es/app/omnifocus/id402835630?mt=12&quot;&gt;Mac&lt;/a&gt;, &lt;a href=&quot;http://itunes.apple.com/es/app/omnifocus-for-iphone/id284885288?mt=8&quot;&gt;iPhone&lt;/a&gt; y &lt;a href=&quot;http://itunes.apple.com/es/app/omnifocus-for-ipad/id383804552?mt=8&quot;&gt;iPad&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;6. Do&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Do (and it’s done)&lt;/em&gt; es el sugerente nombre de la &lt;strong&gt;aplicación de productividad social&lt;/strong&gt; desarrollada por Salesforce. La idea es sencilla: poder crear y compartir tareas, notas y proyectos con tus compañeros de equipo sin importar el dispositivo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/do-700x404.jpg&quot; alt=&quot;Do.com&quot; title=&quot;Do.com&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Do.com es una aplicación web con una interfaz de usuario muy trabajada, con especial hincapié en la sencillez y un componente social y de colaboración de equipo, que también dispone de app para iOS.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Plataforma&lt;/strong&gt;: web y iOS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gestión de usuarios&lt;/strong&gt; y colaboradores: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Permite subir ficheros&lt;/strong&gt; adjuntos: sí. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listas de tareas&lt;/strong&gt; o proyectos: sí. Organización por proyectos y secciones, que son como grupos de tareas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tareas periódicas&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marcar fechas de realización&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prioridades&lt;/strong&gt; para las tareas: sí. No se pueden personalizar. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendario&lt;/strong&gt; de hitos y metas: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Páginas de contenido libre&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integración con correo electrónico&lt;/strong&gt;: sí. Notificaciones, conversaciones en las tareas y crear nuevas a través del e-mail.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Envío de informes diarios por e-mail&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Precio&lt;/strong&gt;: gratuita.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Bola extra&lt;/em&gt;: está en pleno desarrollo e integrada con Google Apps. Por ejemplo, para adjuntar documentos de Google Docs.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Página oficial: &lt;a href=&quot;https://do.com&quot;&gt;Do&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://itunes.apple.com/es/artist/do.com/id474945744&quot;&gt;Do.com en iTunes App Store&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;7. Teambox&lt;/h3&gt;
+
+&lt;p&gt;Teambox es en realidad &lt;strong&gt;una aplicación online de gestión de proyectos&lt;/strong&gt;, pero una de las funcionalidades más importantes de la &lt;em&gt;suite&lt;/em&gt; es el gestor de tareas. Además, dispone de &lt;em&gt;app&lt;/em&gt; para iPhone y iPad sincronizadas con la web.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/teambox4.jpg&quot; alt=&quot;Teambox 4&quot; title=&quot;Teambox 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La versión actual de Teambox no me gusta mucho, me parece un poco pobre gráficamente y muchas acciones son incómodas de realizar, algunas de ellas relacionadas con la gestión de tareas pendientes. Sin embargo, hace tan sólo unos días se anunciaba que ya está &lt;a href=&quot;https://beta.teambox.com&quot;&gt;disponible la versión Beta de Teambox 4&lt;/a&gt;, una actualización de la aplicación principal con &lt;strong&gt;un rediseño completo&lt;/strong&gt; de la apariencia y &lt;strong&gt;unas mejoras bestiales en cuanto a experiencia de usuario&lt;/strong&gt;. Aunque por ahora, al estar en fase de pruebas, todavía tiene algunos fallos.&lt;/p&gt;
+
+&lt;p&gt;De repente Teambox se ha transformado en &lt;strong&gt;una herramienta cómoda, sencilla y visualmente muy atractiva&lt;/strong&gt;, sin perder ninguna funcionalidad de su versión anterior.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Plataforma&lt;/strong&gt;: web y iOS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gestión de usuarios&lt;/strong&gt; y colaboradores: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Permite subir ficheros&lt;/strong&gt; adjuntos: sí. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listas de tareas&lt;/strong&gt; o proyectos: sí. Organización por proyectos y listas de tareas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tareas periódicas&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marcar fechas de realización&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prioridades&lt;/strong&gt; para las tareas: sí. No se pueden personalizar. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendario&lt;/strong&gt; de hitos y metas: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Páginas de contenido libre&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integración con correo electrónico&lt;/strong&gt;: sí. Notificaciones, conversaciones en las tareas y crear nuevas a través del e-mail.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Envío de informes diarios por e-mail&lt;/strong&gt;: sí. Permite elegir la hora del reporte diario.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Precio&lt;/strong&gt;: gratuita.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Bola extra&lt;/em&gt;: como está más enfocada en la gestión de proyectos, tiene algunas funcionalidades adicionales de organización del trabajo y el equipo. Además, se ha implementado un servicio para utilizar Teambox también como un sistema de soporte a usuarios y atención al cliente. Lo veremos más tranquilamente en otro artículo.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Página oficial: &lt;a href=&quot;http://www.teambox.com&quot;&gt;Teambox&lt;/a&gt; y Teambox 4 Beta.&lt;/li&gt;
+&lt;li&gt;Apple App Store: Teambox para &lt;a href=&quot;http://itunes.apple.com/es/app/teambox/id469311296?mt=8&quot;&gt;iPhone&lt;/a&gt; y para &lt;a href=&quot;http://itunes.apple.com/es/app/teambox-hd/id465462658?ls=1&amp;amp;mt=8&quot;&gt;iPad&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;8. Producteev&lt;/h3&gt;
+
+&lt;p&gt;Producteev está pegando muy fuerte y se define simplemente como &lt;em&gt;una herramienta de gestión de tareas&lt;/em&gt;. Está disponible como aplicación nativa para Mac, Windows, iPhone, Android… todas ellas de forma gratuita.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/producteev.jpg&quot; alt=&quot;Producteev&quot; title=&quot;Producteev&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;No la he usado mucho, solamente me he creado cuenta para hacer algunas pruebas. Me llama la atención que han desarrollado un sistema para procesar el lenguaje que permite que la aplicación permita realizar muchas acciones desde tu correo electrónico o mensajería instantánea.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Plataforma&lt;/strong&gt;: web, Mac y iOS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gestión de usuarios&lt;/strong&gt; y colaboradores: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Permite subir ficheros&lt;/strong&gt; adjuntos: sí. Muy simple pero funcional.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listas de tareas&lt;/strong&gt; o proyectos: sí. Organización por espacios de trabajo y proyectos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tareas periódicas&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marcar fechas de realización&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prioridades&lt;/strong&gt; para las tareas: sí. No se pueden personalizar. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendario&lt;/strong&gt; de hitos y metas: sí. Vista de cualquier proyecto en formato lista de tareas o en vista de calendario.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Páginas de contenido libre&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integración con correo electrónico&lt;/strong&gt;: sí. Notificaciones, conversaciones en las tareas y crear nuevas a través del e-mail.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Envío de informes diarios por e-mail&lt;/strong&gt;: sí, muy configurable (puede elegirse si diario o semanal, la hora del envío y los días que se desea recibirlo).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Precio&lt;/strong&gt;: la versión online es gratuita hasta 2 usuarios por espacio de trabajo. Por 20$ mensuales eliminas esta restricción y tienes 15 días de prueba.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Bola extra&lt;/em&gt;: cada tarea tiene su propia URL para poder compartirla con compañeros de trabajo y permite añadir usuarios “observadores”, que solamente reciban notificaciones cuando haya actualizaciones en la misma.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Página oficial: &lt;a href=&quot;http://www.producteev.com/&quot;&gt;Producteev&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Apple App Stores: Producteev para &lt;a href=&quot;http://itunes.apple.com/es/app/producteev/id450283360?mt=12&quot;&gt;Mac&lt;/a&gt; y para &lt;a href=&quot;http://itunes.apple.com/es/app/producteev-cross-platform/id306289289?mt=8&quot;&gt;iOS&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;9. Firetask&lt;/h3&gt;
+
+&lt;p&gt;Firetask no dispone de aplicación web, pero tiene aplicaciones nativas para Mac, iPhone y iPad. No he probado ninguna de ellas, así que no puedo hacer una valoración personal, aunque tienen muy buena pinta y parece un buen ayudante en la productividad personal y de equipo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/firetask.jpg&quot; alt=&quot;Firetask&quot; title=&quot;Firetask&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Plataforma&lt;/strong&gt;: Mac y iOS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gestión de usuarios&lt;/strong&gt; y colaboradores: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Permite subir ficheros&lt;/strong&gt; adjuntos: sí. Muy simple pero funcional.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listas de tareas&lt;/strong&gt; o proyectos: sí. Organización por espacios de trabajo y proyectos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tareas periódicas&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Marcar fechas de realización&lt;/strong&gt;: sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prioridades&lt;/strong&gt; para las tareas: sí. No se pueden personalizar. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calendario&lt;/strong&gt; de hitos y metas: sí. Vista de cualquier proyecto en formato lista de tareas o en vista de calendario.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Páginas de contenido libre&lt;/strong&gt;: no.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integración con correo electrónico&lt;/strong&gt;: sí. Notificaciones, conversaciones en las tareas y crear nuevas a través del e-mail.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Envío de informes diarios por e-mail&lt;/strong&gt;: sí, muy configurable (puede elegirse si diario o semanal, la hora del envío y los días que se desea recibirlo).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Precio&lt;/strong&gt;: Mac: 31,99€, iPhone: 4,99€, iPad: 7,99€.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Página oficial: &lt;a href=&quot;http://firetask.com/&quot;&gt;Firetask&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Apple App Stores: Firestask para &lt;a href=&quot;http://itunes.apple.com/es/app/firetask/id408035776?mt=12&quot;&gt;Mac&lt;/a&gt;, &lt;a href=&quot;http://itunes.apple.com/us/app/firetask-project-oriented/id300357996?mt=8&quot;&gt;iPhone&lt;/a&gt; y &lt;a href=&quot;http://itunes.apple.com/us/app/firetask-for-ipad/id409360819?mt=8&quot;&gt;iPad&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;10. Things&lt;/h3&gt;
+
+&lt;p&gt;Esta me la dejo para el final porque tengo un sentimiento bastante extraño, por no decir decepcionado. Things es una de las primeras aplicaciones de gestión de tareas que surgieron para entornos Mac y que también disponían de aplicación para iOS. Pero no se sincronizaban.&lt;/p&gt;
+
+&lt;p&gt;Hace ya casi un año, &lt;a href=&quot;http://culturedcode.com&quot;&gt;Cultured Code&lt;/a&gt; (la empresa desarrolladora de Things) publicó un post explicando que querían implementar la sincronización pero que las opciones para hacerlo eran incompletas o no les gustaban, que iban a implementar su propia manera de hacerlo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/things-cloud.jpg&quot; alt=&quot;Things Cloud Beta&quot; title=&quot;Things Cloud Beta&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Unos meses después salió la beta privada de Things Cloud. Y ahora, un año más tarde, sale la beta pública. Se han pegado todo un año para incorporar una nueva funcionalidad y todavía está en beta. Tengo que decir que funciona muy bien, pero me sorprende muchísimo que una aplicación tan enormemente popular y tan cara económicamente se tome semejante cantidad de tiempo para desarrollar una función como esta.&lt;/p&gt;
+
+&lt;p&gt;Mientras Things Cloud ha estado en los laureles, ha surgido un vendaval de nuevas aplicaciones y servicios web que hacen esencialmente lo mismo. Muchas de ellas las tienes justo encima, en este mismo artículo.&lt;/p&gt;
+
+&lt;p&gt;¿Llegará demasiado tarde?&lt;/p&gt;
+
+&lt;p&gt;Enlace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Página oficial: &lt;a href=&quot;http://culturedcode.com/things/&quot;&gt;Things App&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://culturedcode.com/beta/thingscloud/download/&quot;&gt;Things Cloud Beta&lt;/a&gt; (Mac y iPhone)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;¿Conoces alguna otra opción que te guste y que funcione en Mac y iOS con sincronización?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;La imagen del cohete es de [petrsimcik][42].&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[42]: http://petrsimcik.deviantart.com/art/GTD-Rocket-Wallpaper-248181443?q=boost:popular gtd&amp;amp;qo=2&lt;/p&gt;
+
+&lt;h3&gt;Actualización: más aplicaciones propuestas en los comentarios&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/Todo-for-Mac-100.jpg&quot; alt=&quot;Todo&quot; title=&quot;Todo&quot; /&gt;&lt;a href=&quot;http://twitter.com/Bitomule&quot;&gt;David&lt;/a&gt; propone en los comentarios &lt;a href=&quot;http://www.appigo.com/apps&quot;&gt;Todo&lt;/a&gt; otro gestor de tareas &lt;strong&gt;sencillo y que va directo al grano&lt;/strong&gt;, con aplicaciones nativas para Mac, iPhone, iPad y una versión web para trabajar desde el navegador. Todas ellas sincronizadas gracias a Appigo Sync. No la he probado pero tiene una pinta estupenda.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Manuel&lt;/strong&gt; también nos propone usar &lt;a href=&quot;http://www.toodledo.com/&quot;&gt;Toodledo&lt;/a&gt;. Yo no la he probado, pero dispone de aplicación web y iOS. Su aspecto parece un poco menos cuidado que otras opciones comentadas anteriormente, pero funcionalmente es un sistema muy completo.&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Añadir tamaños de imágenes personalizados al cargador de WordPress</title>
+            <link>http://www.hachemuda.com/2012/02/anadir-tamanos-de-imagenes-personalizados-al-cargador-de-wordpress</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>código</category>
+                        <category>functions.php</category>
+                        <category>tema</category>
+                        <pubDate>Wed, 22 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/anadir-tamanos-de-imagenes-personalizados-al-cargador-de-wordpress</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Por defecto, el cargador de imágenes de WordPress genera automáticamente &lt;strong&gt;tres versiones de cada imagen&lt;/strong&gt; en varios tamaños adicionales:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Thumbnail&lt;/strong&gt;: 150×150 pixels.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Medium&lt;/strong&gt;: 300×300 pixels.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Large&lt;/strong&gt;: 1024×1024 pixels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Los tamaños de cada una pueden cambiarse desde el panel de administración, en el apartado &lt;em&gt;Ajustes -&gt; Multimedia&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;No obstante, podemos &lt;strong&gt;añadir tamaños de imágenes personalizados&lt;/strong&gt; que sean gestionados por WordPress de la misma forma que los tamaños por defecto. Para ello se usa la función &lt;strong&gt;&lt;code&gt;add_image_size()&lt;/code&gt;&lt;/strong&gt;, que permite definir un nuevo tamaño al gestor de imágenes nativo del gestor de contenidos.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/WordPress_anadir_tamanos_imagenes1.jpg1.jpg&quot; alt=&quot;WordPress: añadir tamaños de imágenes personalizados&quot; title=&quot;WordPress: añadir tamaños de imágenes personalizados&quot; /&gt;
+Captura del cargador de imágenes después de leer este post, &lt;img src=&quot;http://www.hachemuda.com/img/icon_smile.gif&quot; alt=&quot;:)&quot; /&gt; &lt;/p&gt;
+
+&lt;p&gt;Se pueden añadir todos los tamaños que quieras, sólo hay que pasarle como parámetro el nombre identificativo, la anchura, la altura y si se quiere recortar la imagen o no al redimensionar la misma.&lt;/p&gt;
+
+&lt;p&gt;Para añadir un par de tamaños adicionales, escribir en el fichero &lt;code&gt;functions.php&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre class=&quot;php&quot; style=&quot;font-family:monospace;&quot;&gt;&lt;span style=&quot;color: #666666; font-style: italic;&quot;&gt;/* Definir nuevos tamaños de imágenes */&lt;/span&gt;  
+&lt;span style=&quot;color: #b1b100;&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt; &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;function&lt;/span&gt;\_exists&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt; ‘add\_image_size’ &lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt; &lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt; &lt;span style=&quot;color: #009900;&quot;&gt;&amp;#123;&lt;/span&gt;  
+    add\_image\_size&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;‘ejemplo_grande’&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;color: #cc66cc;&quot;&gt;1000&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;color: #cc66cc;&quot;&gt;600&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;color: #009900; font-weight: bold;&quot;&gt;true&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;  
+    add\_image\_size&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;‘cuadrada_peque’&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;color: #cc66cc;&quot;&gt;300&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;color: #cc66cc;&quot;&gt;300&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;color: #009900; font-weight: bold;&quot;&gt;true&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;  
+&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;De esta forma, cuando un usuario suba una nueva imagen desde el editor, automáticamente se generarán las versiones “ejemplo&amp;#95;grande” a 1000×600 pixels con recorte automático si lo necesita y “cuadrada&amp;#95;peque” a 300×300 pixels y también con recorte.&lt;/p&gt;
+
+&lt;h3&gt;Mostrar los nuevos tamaños en el editor del post&lt;/h3&gt;
+
+&lt;p&gt;Si además queremos que estos nuevos tamaños &lt;strong&gt;se vean en el cargador de imágenes del editor&lt;/strong&gt;, para poder elegirlas al insertar una nueva imagen, tendremos que añadir unas líneas de código más al fichero &lt;code&gt;functions.php&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre class=&quot;php&quot; style=&quot;font-family:monospace;&quot;&gt;&amp;nbsp;
+add\_filter&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;‘image\_size\_names\_choose’&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt; ‘hmuda\_image\_sizes’&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;  
+&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;function&lt;/span&gt; hmuda\_image\_sizes&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #000088;&quot;&gt;$sizes&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt; &lt;span style=&quot;color: #009900;&quot;&gt;&amp;#123;&lt;/span&gt;  
+    &lt;span style=&quot;color: #000088;&quot;&gt;$addsizes&lt;/span&gt; &lt;span style=&quot;color: #339933;&quot;&gt;=&lt;/span&gt; &lt;a href=&quot;http://www.php.net/array&quot;&gt;&lt;span style=&quot;color: #990000;&quot;&gt;array&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;  
+        &lt;span style=&quot;color: #0000ff;&quot;&gt;&amp;quot;ejemplo\_grande&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #339933;&quot;&gt;=&amp;gt;&lt;/span&gt; \__&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt; &lt;span style=&quot;color: #0000ff;&quot;&gt;&amp;quot;Versión grande para usarla en la portada&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt;  
+        &lt;span style=&quot;color: #0000ff;&quot;&gt;&amp;quot;cuadrada\_peque&amp;quot;&lt;/span&gt; &lt;span style=&quot;color: #339933;&quot;&gt;=&amp;gt;&lt;/span&gt; \__&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #0000ff;&quot;&gt;&amp;quot;Cuadrada y pequeña para los listados.&amp;quot;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;  
+    &lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;  
+    &lt;span style=&quot;color: #000088;&quot;&gt;$newsizes&lt;/span&gt; &lt;span style=&quot;color: #339933;&quot;&gt;=&lt;/span&gt; &lt;a href=&quot;http://www.php.net/array_merge&quot;&gt;&lt;span style=&quot;color: #990000;&quot;&gt;array_merge&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #000088;&quot;&gt;$sizes&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;color: #000088;&quot;&gt;$addsizes&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;  
+    &lt;span style=&quot;color: #b1b100;&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color: #000088;&quot;&gt;$newsizes&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt;  
+&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Usar los nuevos tamaños en las plantillas del tema&lt;/h3&gt;
+
+&lt;p&gt;Una vez hecho esto, ya podremos &lt;strong&gt;usar los nuevos tamaños en nuestro tema&lt;/strong&gt; visual con las mismas funciones nativas de WordPress. Por ejemplo, para mostrar la imagen &lt;em&gt;cuadrada_peque&lt;/em&gt; de un post dentro del bucle, sería:&lt;/p&gt;
+
+&lt;pre class=&quot;php&quot; style=&quot;font-family:monospace;&quot;&gt;&lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;&amp;lt;?php&lt;/span&gt; the_post_thumbnail&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#40;&lt;/span&gt;&lt;span style=&quot;color: #0000ff;&quot;&gt;&#039;cuadrada_peque&#039;&lt;/span&gt;&lt;span style=&quot;color: #009900;&quot;&gt;&amp;#41;&lt;/span&gt;&lt;span style=&quot;color: #339933;&quot;&gt;;&lt;/span&gt; &lt;span style=&quot;color: #000000; font-weight: bold;&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Regenerar los nuevos tamaños de las imágenes ya subidas&lt;/h3&gt;
+
+&lt;p&gt;Como comentaba en un post de &lt;a href=&quot;http://www.idibay.com/wordpress/plugins/2012/regenerar-imagenes-despues-de-cambiar-su-tamano-en-los-ajustes-de-wordpress/&quot;&gt;Mundo Idibay&lt;/a&gt;, si activas nuevos tamaños en tu WordPress pero ya tenías anteriores imágenes subidas, estas antiguas no serán automáticamente regeneradas de acuerdo a los nuevos tamaños.&lt;/p&gt;
+
+&lt;p&gt;Pero no hay problema, puedes usar un plugin como el &lt;a href=&quot;http://wordpress.org/extend/plugins/regenerate-thumbnails/&quot;&gt;Regenerate Thumbnails&lt;/a&gt;, que detecta los tamaños activos y &lt;strong&gt;regenera automáticamente todas las imágenes&lt;/strong&gt; subidas a WordPress.&lt;/p&gt;
+
+                        </description>
+        </item>
+            </channel>
+</rss>

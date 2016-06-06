@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>HacheMuda</title>
+        <link>/</link>
+        <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+                <description>Últimos artículos de HacheMuda</description>
+                <lastBuildDate>Sun, 23 Mar 2014 18:35:00 +0100</lastBuildDate>
+        <pubDate>Sun, 23 Mar 2014 18:35:00 +0100</pubDate>
+        <generator>PieCrust 1.2.0-dev</generator>
+                        
+                                <item>
+            <title>CloudFlare: mejorar drásticamente la velocidad, seguridad y rendimiento de tu sitio web</title>
+            <link>http://www.hachemuda.com/2012/02/cloudflare-mejorar-drasticamente-la-velocidad-seguridad-y-rendimiento-de-tu-sitio-web</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>cdn</category>
+                        <category>cloudflare</category>
+                        <category>optimización</category>
+                        <category>seguridad</category>
+                        <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/cloudflare-mejorar-drasticamente-la-velocidad-seguridad-y-rendimiento-de-tu-sitio-web</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cloudflare.com&quot;&gt;CloudFlare&lt;/a&gt; es un servicio creado para &lt;strong&gt;actuar de tres maneras diferentes&lt;/strong&gt; sobre tu sitio web:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CDN&lt;/strong&gt;: red de contenido distribuído para mejorar la carga de los archivos estáticos de tu web.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optimización&lt;/strong&gt;: mejora del número de conexiones y combinación de ficheros Javascript y CSS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Seguridad&lt;/strong&gt;: detección de todos los accesos y gestión de los mismos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hablando de forma sencilla y directa, el funcionamiento de un sitio web que tiene integrado CloudFlare es la siguiente:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Cuando venga un usuario a mi web, en vez de llevarlo directamente a mi servidor y enseñársela, mejor hago que pase por el sistema de seguridad de CloudFlare para que analice si es una visita buena y entonces le vaya enviando algunas partes de la web para acelerar el proceso. Como último paso, hacer que finalmente llegue la petición a mi servidor para terminar de enseñarle todos los componentes de mi web.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/optimizer-rocket-loader.jpg&quot; alt=&quot;Optimizador de CloudFlare&quot; title=&quot;Optimizador de Cloudflare&quot; /&gt;Con un poco más de detalle técnico, la base de CloudFlare es que el usuario que utiliza el servicio hace un &lt;strong&gt;cambio en los servidores DNS&lt;/strong&gt; de su dominio para que apunten a los de Cloudflare. De esta forma, &lt;strong&gt;todo acceso a tu página web pasa primero por su servicio&lt;/strong&gt;, donde ellos gestionan cada petición para:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;identificar si se trata de un spammer, atacante o si tiene algún comportamiento malicioso,&lt;/li&gt;
+&lt;li&gt;una vez pasado el filtro, servirle algunas partes de nuestra página web más rápidamente, porque CloudFlare mantiene una &lt;em&gt;cache&lt;/em&gt;, un almacén temporal de recursos estáticos (ficheros HTML, CSS, Javascript, imágenes…)&lt;/li&gt;
+&lt;li&gt;y para todo lo que requiere la petición y que Cloudflare no lo tiene guardado, le lleva al servidor real de la página web.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Por tanto, es una manera muy sencilla de &lt;strong&gt;acelerar el sitio web y además protegerlo contra posibles ataques&lt;/strong&gt; y blindarlo con las medidas de seguridad desarrolladas por CloudFlare, que son expertos en ese tema.&lt;/p&gt;
+
+&lt;h3&gt;Instalación de Cloudflare en tu dominio&lt;/h3&gt;
+
+&lt;p&gt;Instalar el servicio es un proceso fácil y muy bien guiado. Primero te registras como usuario y después añades tu dominio en el panel de administración. El sistema se tomará un minuto para detectar la configuración actual de tus servidores DNS y hacer una réplica exacta en su sistema.&lt;/p&gt;
+
+&lt;p&gt;A continuación, te informa de los dos servidores DNS que debes especificar en tu dominio para empezar a usar CloudFlare. Los modificas y en cuestión de unas horas ya estás redirigiendo todo tu tráfico a Cloudflare para que se encargue de todo, utilizando la configuración de DNS que tenías originalmente porque se ha copiado exactamente igual en tus ajustes del dominio en Cloudflare.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/cloudflare-ninjas.jpg&quot; alt=&quot;Cloudflare protege tu sitio&quot; title=&quot;Cloudflare protege tu sitio&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Estadísticas&lt;/h3&gt;
+
+&lt;p&gt;Además de las tres funciones principales, CloudFlare también ofrece un &lt;strong&gt;completísimo sistema de estadísticas&lt;/strong&gt; para cada dominio que está gestionado con el servicio.&lt;/p&gt;
+
+&lt;p&gt;Como ejemplo, pongo una captura de pantalla de las estadísticas de HacheMuda de las últimas horas.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/estadisticas_cloudflare.jpg&quot; alt=&quot;Ejemplo de gráfico de estadísticas con CloudFlare&quot; title=&quot;Ejemplo de gráfico de estadísticas con CloudFlare&quot; /&gt;
+Ejemplo de gráfico de estadísticas con Cloudflare&lt;/p&gt;
+
+&lt;p&gt;Según este informe, &lt;strong&gt;en las últimas 12 horas&lt;/strong&gt; CloudFlare ha conseguido:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ahorrar 740MB&lt;/strong&gt; de ancho de banda del total de 1.4GB.&lt;/li&gt;
+&lt;li&gt;Ahorrar casi un &lt;strong&gt;75% de peticiones&lt;/strong&gt; a recursos de la web.&lt;/li&gt;
+&lt;li&gt;Identificar como &lt;strong&gt;amenzadas a 961 vistas&lt;/strong&gt; de la página del total de 8391.&lt;/li&gt;
+&lt;li&gt;Además, 32 de esas vistas las han pedido robots de rastreo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Versión gratuita y plan de pago&lt;/h3&gt;
+
+&lt;p&gt;CloudFlare es un servicio que cuenta con &lt;strong&gt;un plan gratuito&lt;/strong&gt;, sin ningún tipo de límite en cuanto a tráfico o tiempo. Las diferencias más importantes entre el plan gratuito y el plan Pro, que cuesta 20$ al mes para tu primer sitio, son que los usuarios de pago disfrutan además de:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Website preloader&lt;/strong&gt;: un sistema que precarga recursos de tu página para que los usuarios puedan verla de forma mucho más rápida.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Detección y optimización&lt;/strong&gt; automática de los recursos más pedidos en tu web para mejorar su transferencia a los usuarios.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Estadísticas más avanzadas&lt;/strong&gt; (actualizadas cada 15 minutos en vez de cada 24 horas).&lt;/li&gt;
+&lt;li&gt;Soporte para sitios con &lt;strong&gt;certificados SSL&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Una colección de sistemas de &lt;strong&gt;seguridad avanzada&lt;/strong&gt; para aplicaciones web.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La orientación de CloudFlare con su plan de precios es directamente ir a por los usuarios que gestionan &lt;strong&gt;varios sitios web&lt;/strong&gt;, ya sean suyos o de clientes. En ese caso, a partir del primer sitio web con plan Pro, el resto de sitios que configures costarán solamente 5$ mensuales.&lt;/p&gt;
+
+&lt;p&gt;Es un precio absolutamente asumible dada las mejoras de velocidad, de seguridad y el alivio que consigues en el servidor ahorrando un montón de peticiones.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.cloudflare.com&quot;&gt;Página oficial de CloudFlare&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://vimeo.com/cloudflare&quot;&gt;Canal de CloudFlare en Vimeo&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Ya disponible VLC 2.0: nueva versión del mejor reproductor de video</title>
+            <link>http://www.hachemuda.com/2012/02/ya-disponible-vlc-2-0-nueva-version-del-mejor-reproductor-de-video</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>video</category>
+                        <category>vlc</category>
+                        <pubDate>Sun, 19 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/ya-disponible-vlc-2-0-nueva-version-del-mejor-reproductor-de-video</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.videolan.org/&quot;&gt;VLC 2.0&lt;/a&gt; por fin ha visto la luz, una &lt;strong&gt;enorme actualización&lt;/strong&gt; del que posiblemente es &lt;strong&gt;el mejor reproductor de video&lt;/strong&gt; de la actualidad.&lt;/p&gt;
+
+&lt;p&gt;Mejoras en la decodificación de video, en el renderizado de subtítulos, mejoras de filtros tanto de audio como de video, soporte para BluRay, más de 7000 pequeños arreglos y errores solucionados por 160 voluntarios… y un montonazo más de cosas que no tengo ni idea de qué son pero molan, &lt;img src=&quot;http://localhost/pruebas/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; /&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/vlc-2.0-thumbnail.jpg&quot; alt=&quot;VLC 2.0 en Mac&quot; title=&quot;VLC 2.0 en Mac&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Además, &lt;strong&gt;los usuarios de Mac&lt;/strong&gt; pueden disfrutar del &lt;strong&gt;nuevo diseño de VLC 2.0&lt;/strong&gt;, una nueva interfaz de usuario más agradable que la anterior y que además está mucho mejor integrada con Mac OSX Lion.&lt;/p&gt;
+
+&lt;p&gt;Si no lo has probado nunca, te recomiendo que lo descargues. Y si ya eres usuario de VLC, dale caña a la 2.0 porque es un cambio muy grande.&lt;/p&gt;
+
+&lt;p&gt;Enlace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.videolan.org/&quot;&gt;Página oficial de VLC&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>El reto de Basecamp Next: diseñar un completo y veloz gestor de proyectos en una sola página de trabajo</title>
+            <link>http://www.hachemuda.com/2012/02/el-reto-de-basecamp-next-disenar-un-completo-y-veloz-gestor-de-proyectos-en-una-sola-pagina-de-trabajo</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>basecamp</category>
+                        <category>gestión</category>
+                        <category>online</category>
+                        <category>proyecto</category>
+                        <category>software</category>
+                        <category>versión</category>
+                        <category>video</category>
+                        <pubDate>Sat, 18 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/el-reto-de-basecamp-next-disenar-un-completo-y-veloz-gestor-de-proyectos-en-una-sola-pagina-de-trabajo</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Basecamp es una &lt;strong&gt;herramienta online de gestión de proyectos&lt;/strong&gt; creada por 37 Signals. Lejos de ser una opción más dentro del enorme mercado de aplicaciones online de este tipo, &lt;strong&gt;Basecamp es la referencia&lt;/strong&gt; absoluta dentro de su sector.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;37 Signals&lt;/strong&gt; es una empresa pequeña en cuanto a número de trabajadores pero enorme en el mundo de internet, con &lt;strong&gt;una influencia bestial&lt;/strong&gt; en las tendencias, los nuevos conceptos, las nuevas formas de entender las herramientas web.&lt;/p&gt;
+
+&lt;p&gt;Basecamp es una de las cuatro aplicaciones que la empresa comercializa, que vio la luz en el año 2004. Desde aquella versión, la herramienta no ha sufrido grandes rediseños durante todos estos años. Ha incorporado algunas mejoras, pero sigue fiel a su idea y planteamiento inicial: un software online de gestión de proyectos creado para que lo usen las personas. Tiene que ser simple, fácil de usar y con una buena experiencia de usuario.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;La simplicidad es algo muy complicado de conseguir&lt;/strong&gt;. Hacer que una aplicación pueda utilizarla de forma gratificante y efectiva cualquier usuario es una tarea compleja que siempre ha caracterizado a 37 Signals.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/basecamp_next_logo.jpg&quot; alt=&quot;Logotipo de Basecamp Next&quot; title=&quot;Logotipo de Basecamp Next&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;El nuevo Basecamp Next&lt;/h3&gt;
+
+&lt;p&gt;Hace unos meses, 37 Signals anunció que estaban trabajando en un &lt;strong&gt;rediseño completo de Basecamp&lt;/strong&gt;, su buque insignia, pensando en que podrían tenerlo listo a principios de 2012. Ya estamos ahí y miles de personas en el mundo están expectantes de ver &lt;strong&gt;qué nueva experiencia está cocinando&lt;/strong&gt; este equipo.&lt;/p&gt;
+
+&lt;p&gt;Para abrir boca, ayer apareció en la cuenta de &lt;a href=&quot;https://vimeo.com/signals&quot;&gt;37 Signals en Vimeo&lt;/a&gt; un video de siete minutos en el que el fundador de la empresa, Jason Fried, nos muestra &lt;strong&gt;el aspecto y las funcionalidades esenciales&lt;/strong&gt; de la nueva interfaz de usuario de Basecamp Next:&lt;/p&gt;
+
+&lt;p&gt;En palabras del propio Jason Fried en el video:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Creo que mucho software todavía tiene demasiada interfaz, demasiada navegación, demasiados botones pequeños en los que no necesitas hacer click. Así que hemos pensado mucho sobre esto y hemos tenido una buena idea.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;En unas pocas semanas podremos ver esta nueva versión de Basecamp e interactuar con ella. Lo que se muestra en el video es &lt;strong&gt;un cambio radical respecto al diseño de la versión anterior&lt;/strong&gt; y de la mayoría de las aplicaciones similares que hay en el mercado. Parece que el reto se ha centrado en conseguir un gestor de proyectos que funcione en una sola pantalla.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/basecamp_next.jpg&quot; alt=&quot;Captura de pantalla de la nueva interfaz de usuario en Basecamp.&quot; title=&quot;Captura de pantalla de la nueva interfaz de usuario en Basecamp.&quot; /&gt;
+Captura de pantalla de la nueva interfaz de usuario en Basecamp.&lt;/p&gt;
+
+&lt;p&gt;La interfaz de usuario está pensada para &lt;strong&gt;que pueda trabajarse en una sola página&lt;/strong&gt; con todas las opciones y acciones de un proyecto. Utilizando la barra de desplazamiento del navegador y las “ventanas superpuestas”, que quedan por encima del contenido, Basecamp Next apuesta por &lt;strong&gt;evitar la navegación y las recargas completas de páginas&lt;/strong&gt; para conseguir un flujo de trabajo rápido, fluído y efectivo.&lt;/p&gt;
+
+&lt;p&gt;Como usuario de herramientas de este tipo, me parece muy acertado el objetivo principal del rediseño: rapidez, espacios grandes y enfoque.&lt;/p&gt;
+
+&lt;p&gt;En cuanto nos permitan probarlo, veremos cómo lo ha resuelto 37 Signals.&lt;/p&gt;
+
+&lt;p&gt;¿Tú qué opinas?&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://37signals.com/&quot;&gt;Página oficial de 37 Signals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://basecamphq.com/&quot;&gt;Página oficial de Basecamp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://37signals.com/basecampnext/&quot;&gt;Página para pedir invitación para probar la versión beta de Basecamp Next&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vimeo.com/36917486&quot;&gt;Video en Vimeo: preview of the new Basecamp UI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Video: un vistazo y primeras impresiones con Mac OS X 10.8 Mountain Lion</title>
+            <link>http://www.hachemuda.com/2012/02/video-un-vistazo-y-primeras-impresiones-con-mac-os-x-10-8-mountain-lion</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>escritorio</category>
+                        <category>ipad</category>
+                        <category>iphone</category>
+                        <category>ipod</category>
+                        <category>novedades</category>
+                        <category>screencast</category>
+                        <category>versión</category>
+                        <category>video</category>
+                        <pubDate>Fri, 17 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/video-un-vistazo-y-primeras-impresiones-con-mac-os-x-10-8-mountain-lion</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Ayer Apple sorprendió a todo el mundo mostrando la primera &lt;em&gt;Preview&lt;/em&gt; de la &lt;strong&gt;nueva versión de su sistema operativo Mac OS X Mountain Lion&lt;/strong&gt;, que será publicado oficialmente este mismo verano.&lt;/p&gt;
+
+&lt;p&gt;Las características principales de esta nueva versión son &lt;strong&gt;una integración muchísimo mayor de iOS con Mac&lt;/strong&gt;, llevando al escritorio un montón de ideas y experiencias del iPad.&lt;/p&gt;
+
+&lt;p&gt;En este video echamos un vistazo rápido a las nuevas aplicaciones y las mejoras incluídas hasta ahora en la nueva versión:&lt;/p&gt;
+
+&lt;p&gt;Las novedades más importantes ahora mismo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Centro de notificaciones&lt;/strong&gt;. Al más puro estilo iOS pero extraordinariamente bien integrado en el sistema de escritorio. Un sitio donde ver las notificaciones de todas las aplicaciones, configurable y con alertas visuales.&lt;/li&gt;
+&lt;li&gt;Mejor integración de &lt;strong&gt;iCloud&lt;/strong&gt; en el sistema. Ahora también permite sincronizar en la nube archivos y documentos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mensajes&lt;/strong&gt;: nueva aplicación que sustituye al iChat y funciona exactamente igual que los iMessages del iPhone, iPad e iPod Touch.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Notas&lt;/strong&gt; y &lt;strong&gt;Recordatorios&lt;/strong&gt;: dos aplicaciones nativas que vendrán de serie, directamente tomadas del iPad, para tomar notas rápidas con texto y archivos adjuntos y mantener una lista de tareas pendientes de realizar.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Compartición de archivos mediante servicios externos&lt;/strong&gt;. En las preferencias del sistema, el usuario puede añadir sus cuentas de Twitter, Flickr, Vimeo, etc. Todas las aplicaciones pueden ahora incluir opciones de compartición de archivos mediante los servicios que estén añadidos ahí, de una forma rápida, cómoda y súper chula.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Game Center&lt;/strong&gt; está ahora también disponible para tus juegos en Mac.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gatekeeper&lt;/strong&gt;: un guardián de seguridad para tu ordenador. Una opción interesante es que ahora Apple permite que el usuario escoja si quiere que Mac le deje instalar cualquier tipo de aplicación, solamente apps desde el Mac App Store o también de desarrolladores identificados como desarrolladores de Apple.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Y digo “ahora mismo” porque esto tiene toda la pinta de que en los próximos meses se vayan a incorporar un montonazo de cosas, pequeños detalles y apps portados de iOS al escritorio Mac. ¿Hablamos de Siri?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/mountain-lion.jpg&quot; alt=&quot;Mac OS X 10.8 Mountain Lion&quot; title=&quot;Mac OS X 10.8 Mountain Lion&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sobra decir que la versión actual es una &lt;em&gt;Preview&lt;/em&gt; y por tanto su objetivo es que los desarrolladores de aplicaciones puedan ir probándola y modificando su código para integrarlo con las nuevas opciones del sistema. No es nada recomendable instalarla en tu ordenador principal.&lt;/p&gt;
+
+&lt;p&gt;Enlace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.apple.com/macosx/mountain-lion&quot;&gt;Apple: OS X Mountain Lion Sneak Peak&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;El video está disponible en &lt;a href=&quot;http://www.youtube.com/watch?v=uPLZ3E-twgI&quot;&gt;Youtube&lt;/a&gt; y en &lt;a href=&quot;https://vimeo.com/36954495&quot;&gt;Vimeo&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>WP Function Me: colección de snippets para tu fichero functions.php de WordPress</title>
+            <link>http://www.hachemuda.com/2012/02/wp-function-me-coleccion-de-snippets-para-tu-fichero-functions-php-de-wordpress</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>functions.php</category>
+                        <category>snippet</category>
+                        <pubDate>Fri, 17 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/wp-function-me-coleccion-de-snippets-para-tu-fichero-functions-php-de-wordpress</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;A través de &lt;a href=&quot;http://twitter.com/smashingmag/status/170509117918691329&quot;&gt;un tweet de @smashingmag&lt;/a&gt; he descubierto &lt;a href=&quot;http://www.wpfunction.me/&quot;&gt;WP Function Me&lt;/a&gt;, un sitio web que recopila &lt;strong&gt;&lt;em&gt;snippets&lt;/em&gt; de WordPress para el potentísimo fichero &lt;code&gt;functions.php&lt;/code&gt;&lt;/strong&gt; de tu tema visual.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/wp-function-me2.jpg&quot; alt=&quot;Captura de pantalla de WP Function Me&quot; title=&quot;Captura de pantalla de WP Function Me.&quot; /&gt;
+Captura de pantalla de WP Function Me&lt;/p&gt;
+
+&lt;p&gt;Creada por el diseñador &lt;a href=&quot;http://www.merlinmason.co.uk/&quot;&gt;Merlin Mason&lt;/a&gt;, la colección está organizada por categorías para encontrar más fácilmente lo que buscas. En vez de ser un directorio donde poder consultar los bloques de código, lo que propone es que vayas seleccionado los que te interesan y después pulses sobre el botón “Obtener mi código” para &lt;strong&gt;descargar ver todas las funciones seleccionadas, copiarlas y pegarlas&lt;/strong&gt; en tu tema de WordPress.&lt;/p&gt;
+
+&lt;p&gt;No hay muchos por ahora, pero los que hay son muy interesantes y el código generado es limpio y bien comentado. Por ejemplo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Añadir tamaños adicionales de imágenes al cargador de imágenes de WordPress.&lt;/li&gt;
+&lt;li&gt;Eliminar las etiquetas de párrafos para las imágenes.&lt;/li&gt;
+&lt;li&gt;Usar jQuery del repositorio de Google (y si no está disponible usar la versión local).&lt;/li&gt;
+&lt;li&gt;Personalizar el estilo del editor visual (TinyMCE).&lt;/li&gt;
+&lt;li&gt;Registrar nuevos menús.&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wpfunction.me/&quot;&gt;WP Function Me&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Clear: el primer gestor de tareas que aprovecha el iPhone de verdad</title>
+            <link>http://www.hachemuda.com/2012/02/clear-el-primer-gestor-de-tareas-que-aprovecha-el-iphone-de-verdad</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>gestión</category>
+                        <category>gtd</category>
+                        <category>iphone</category>
+                        <category>tareas</category>
+                        <category>video</category>
+                        <pubDate>Wed, 15 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/clear-el-primer-gestor-de-tareas-que-aprovecha-el-iphone-de-verdad</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;La empresa Realmac Software, creadores de aplicaciones para Mac OSX muy populares como son &lt;a href=&quot;http://www.realmacsoftware.com/littlesnapper/&quot;&gt;Little Snapper&lt;/a&gt; o &lt;a href=&quot;http://www.realmacsoftware.com/rapidweaver/overview/&quot;&gt;Rapid Weaver&lt;/a&gt;, han publicado una &lt;strong&gt;aplicación de gestión de tareas&lt;/strong&gt; en el App Store que han llamado Clear.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Clear&lt;/strong&gt; es una aplicación para &lt;strong&gt;el arte del GTD&lt;/strong&gt; (&lt;em&gt;Get Things Done&lt;/em&gt;) disponible para iPhone. En cuanto la he visto &lt;a href=&quot;&amp;quot;http://www.genbeta.com/herramientas/por-que-clear-podria-cambiar-tu-forma-de-ver-los-gestores-de-tareas&amp;quot;&quot;&gt;en Genbeta&lt;/a&gt; me ha llamado mucho la atención . Después la he probado y me ha dejado flipado. Toma pareado.&lt;/p&gt;
+
+&lt;p&gt;La cosa es que la tienda de aplicaciones de Apple está &lt;strong&gt;llenísima de aplicaciones de gestión de tareas&lt;/strong&gt;. Unas mejores, otras peores… pero hasta ahora no conocía ninguna que &lt;strong&gt;le sacara tanto partido al iPhone&lt;/strong&gt; y a la pantalla &lt;em&gt;multitouch&lt;/em&gt;. De hecho, creo que no había visto ninguna aplicación GTD diseñada desde el primer pixel pensando en cómo exprimir los &lt;em&gt;multigestos&lt;/em&gt; y las capacidades del teléfono de Apple sin dejar de ser fácil e intuitiva.&lt;/p&gt;
+
+&lt;p&gt;Simplicidad al máximo, distracciones mínimas, tiempo de aprendizaje ridículo y una experiencia de usuario espectacular con las opciones esenciales: tareas concisas por hacer, ordenación de las mismas y agrupación en listas.&lt;/p&gt;
+
+&lt;p&gt;Sólo hay que ver el video:&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&amp;quot;http://itunes.apple.com/us/app/clear/id493136154?ls=1&amp;amp;mt=8&amp;quot;&quot;&gt;Clear en el App Store&lt;/a&gt; (0,75€ como precio de lanzamiento)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&amp;quot;http://www.realmacsoftware.com/clear/&amp;quot;&quot;&gt;Realmac Software: Clear for iPhone&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>LESS: activar la recarga automática del CSS al hacer cambios</title>
+            <link>http://www.hachemuda.com/2012/02/less-activar-la-recarga-automatica-del-css-al-hacer-cambios</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>código</category>
+                        <category>css</category>
+                        <category>less</category>
+                        <category>navegador</category>
+                        <pubDate>Tue, 14 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/less-activar-la-recarga-automatica-del-css-al-hacer-cambios</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;Leyendo &lt;a href=&quot;http://www.viget.com/inspire/some-lesser-known-features-of-less/&quot;&gt;Viget Inspire&lt;/a&gt; he descubierto un &lt;strong&gt;truquito muy guapo para los usuarios de LESS&lt;/strong&gt;. Hace unos meses publicaba en Idibay un artículo sobre &lt;a href=&quot;http://www.idibay.com/recursos/2011/livereload-actualiza-automaticamente-la-pagina-en-tu-navegador-mientras-trabajas-en-ella/&quot;&gt;LiveReload&lt;/a&gt;, una aplicación y extensión para los navegadores que hace que la web se recargue automáticamente cada vez que haces cambios en su código fuente.&lt;/p&gt;
+
+&lt;p&gt;La idea es buenísima, puesto que te ahorra una buena cantidad de clicks y combinaciones de teclas porque &lt;strong&gt;no tienes que refrescar manualmente la web&lt;/strong&gt; para ver los cambios. Pero hay que tener cuidado porque pierdes el control y puede resultar un poco pesado que el navegador cobre vida para refrescarse solo, &lt;img src=&quot;http://localhost/pruebas/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; /&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/less.jpg&quot; alt=&quot;Logotipo de Less&quot; title=&quot;Logotipo de Less&quot; /&gt;La sorpresa ha sido que el lenguaje y &lt;em&gt;framework&lt;/em&gt; LESS también permite hacer esto de forma nativa. LESS viene de serie con una &lt;strong&gt;funcionalidad de observación&lt;/strong&gt; de los documentos y es capaz de recargar la hoja de estilos de la página web &lt;strong&gt;sin recargar toda la página completa&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para hacerlo funcionar, solamente tienes que añadir el siguiente código a tu página web y hacer la prueba:&lt;/p&gt;
+
+&lt;p&gt;[javascript]&lt;br /&gt;
+less.env = &amp;#8220;development&amp;#8221;;&lt;br /&gt;
+less.watch();&lt;br /&gt;
+[/javascript]&lt;/p&gt;
+
+&lt;p&gt;Las únicas limitaciones son que sólo funciona en un entorno local y que no termina de funcionar bien con Google Chrome, pero sí con el resto de navegadores.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.viget.com/inspire/some-lesser-known-features-of-less/&quot;&gt;Viget Inspire: some lesser known features of LESS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.idibay.com/recursos/2011/livereload-actualiza-automaticamente-la-pagina-en-tu-navegador-mientras-trabajas-en-ella/&quot;&gt;Idibay: LiveReload, actualiza automáticamente la página mientras trabajas en ella&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Truco de 1Password: crear favoritos en el navegador con inicio de sesión automático</title>
+            <link>http://www.hachemuda.com/2012/02/truco-de-1password-crear-favoritos-en-el-navegador-con-inicio-de-sesion-automatico</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>navegador</category>
+                        <category>seguridad</category>
+                        <category>truco</category>
+                        <pubDate>Tue, 14 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/truco-de-1password-crear-favoritos-en-el-navegador-con-inicio-de-sesion-automatico</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;1Password&lt;/strong&gt; es una aplicación para &lt;strong&gt;gestionar tu colección de contraseñas y datos de acceso&lt;/strong&gt; a servicios online, software de escritorio, notas con seguridad y cualquier cosa que se te ocurra. Está disponible para Mac, Windows, iPhone, iPad y Androd. Tiene extensiones para todos los navegadores, para poder &lt;strong&gt;rellenar automáticamente formularios&lt;/strong&gt; y pantallas de inicio de sesión de forma sencilla con los datos almacenados en la aplicación.&lt;/p&gt;
+
+&lt;p&gt;Para mí es un software absolutamente esencial del día a día.&lt;/p&gt;
+
+&lt;p&gt;A través de &lt;a href=&quot;http://twitter.com/viticci/status/169133096531263490&quot;&gt;un tweet de @viticci&lt;/a&gt; he descubierto un truco que me parece espectacular: &lt;strong&gt;crear favoritos en la barra del navegador gestionados por 1Password&lt;/strong&gt;, de modo que al hacer click sobre ellos no sólo cargarás la página web guardada sino que también iniciarás sesión automáticamente en ella.&lt;/p&gt;
+
+&lt;p&gt;Para hacerlo, solamente tienes que &lt;strong&gt;arrastrar cualquier item de la lista&lt;/strong&gt; de 1Password y soltarlo en la barra de favoritos de tu navegador preferido y… ya está, &lt;img src=&quot;http://localhost/pruebas/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; /&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/1Password-bookmarks1.jpg&quot; alt=&quot;Crear favoritos con 1Password&quot; title=&quot;Crear favoritos con 1Password&quot; /&gt;
+Captura de pantalla arrastrando items para crear favoritos con 1Password.&lt;/p&gt;
+
+&lt;p&gt;Puede parecer una tontería, pero es realmente cómodo tener el listado de tus páginas más habituales en la barrita de favoritos y con un simple &lt;em&gt;click&lt;/em&gt; cargar y &lt;strong&gt;hacer login automático sin perder la seguridad&lt;/strong&gt; en el proceso, porque todo está gestionado por 1Password.&lt;/p&gt;
+
+&lt;p&gt;Evidentemente, aunque tengas los enlaces en la barra de favoritos, 1Password obedecerá a sus &lt;strong&gt;criterios de seguridad&lt;/strong&gt; y te pedirá la contraseña de la aplicación para desbloquear los marcadores en caso de que lo crea conveniente.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://agilebits.com/onepassword&quot;&gt;Página oficial de 1Password&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://nerdgap.com/the-super-sweet-1password-trick-youre-almost-certainly-not-using/&quot;&gt;Nerd Gap: the super sweet 1Password trick you are almost certainly not using&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>Los 4 mejores editores de animaciones en HTML5 y CSS3</title>
+            <link>http://www.hachemuda.com/2012/02/los-4-mejores-editores-de-animaciones-en-html5-y-css3</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>compatibilidad</category>
+                        <category>creatividad</category>
+                        <category>css3</category>
+                        <category>html5</category>
+                        <category>mac</category>
+                        <category>navegador</category>
+                        <category>software</category>
+                        <category>video</category>
+                        <pubDate>Mon, 13 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/los-4-mejores-editores-de-animaciones-en-html5-y-css3</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/HTML5_Logo_256.jpg&quot; alt=&quot;Logotipo de HTML5&quot; title=&quot;Logotipo de HTML5&quot; /&gt;Con la llegada de &lt;strong&gt;HTML5 y CSS3&lt;/strong&gt; se abre un &lt;strong&gt;nuevo mundo de posibilidades para las animaciones gráficas&lt;/strong&gt; en la web. Después de pasar por el reinado durante años del recurso del GIF animado, y ahora que Flash empieza a dejarse un poco de lado (por los mismos inconvenientes que ha tenido siempre y por la fuerza comercial de Apple), llega el momento de mirar al frente y aprovechar las oportunidades que nos brindan HTML5 y CSS3.&lt;/p&gt;
+
+&lt;p&gt;Los nuevos estándares permiten una &lt;strong&gt;flexibilidad y potencia muy grandes&lt;/strong&gt; para la creación de animaciones, además de hacerlas &lt;strong&gt;independientes del dispositivo&lt;/strong&gt; en el que se está visualizando: ordenadores, móviles, iPads, tabletas…&lt;/p&gt;
+
+&lt;p&gt;Para solucionar la necesidad de saber programar y tener conocimientos altos de CSS y HTML, están surgiendo muchas aplicaciones para la &lt;strong&gt;edición de animaciones en HTML5 y CSS3&lt;/strong&gt;. Tienen la misma pinta de siempre, la misma que los clásicos editores de películas o de animaciones, pero adaptados a las últimas tecnologías.&lt;/p&gt;
+
+&lt;h5&gt;El problema de la compatibilidad de los navegadores&lt;/h5&gt;
+
+&lt;p&gt;Todavía no puede decirse que todos los navegadores modernos soporten las animaciones generadas por estos editores. La mayoría de ellos utilizan técnicas, como los &lt;em&gt;keyframes&lt;/em&gt; para establecer puntos y fotogramas clave dentro del clip, que actualmente sólo están &lt;strong&gt;bien soportadas por los navegadores más modernos&lt;/strong&gt;, como &lt;a href=&quot;http://www.google.com/chrome&quot;&gt;Google Chrome&lt;/a&gt;, &lt;a href=&quot;http://www.opera.com&quot;&gt;Opera&lt;/a&gt; o &lt;a href=&quot;http://www.apple.com/es/safari/&quot;&gt;Safari&lt;/a&gt;. &lt;a href=&quot;http://www.firefox.com&quot;&gt;Firefox&lt;/a&gt; está avanzando mucho y pronto será plenamente compatible. Internet Explorer es otro cantar, como siempre, va por detrás del resto.&lt;/p&gt;
+
+&lt;p&gt;Vamos a echar un vistazo a algunas de estas herramientas.&lt;/p&gt;
+
+&lt;h3&gt;Sencha Animator&lt;/h3&gt;
+
+&lt;p&gt;Probablemente, Sencha Animator es el editor de animaciones en HTML5 y CSS3 &lt;strong&gt;más popular del momento&lt;/strong&gt;. Lleva bastante tiempo entre nosotros, es un &lt;strong&gt;software maduro y muy completo&lt;/strong&gt; disponible para Windows, Mac y Linux. Su precio es el más elevado de todos (199$ con 30 días de prueba gratuíta) y cuenta con la ventaja de estar totalmente integrado con el resto de herramientas de &lt;a href=&quot;http://www.sencha.com&quot;&gt;Sencha&lt;/a&gt;, una infraestructura y &lt;em&gt;framework&lt;/em&gt; muy completo para la creación de aplicaciones HTML5.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/sencha.jpg&quot; alt=&quot;Sencha Animator&quot; title=&quot;Sencha Animator&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En la página oficial ya nos destacan que el editor &lt;strong&gt;no sólo puede usarse para crear animaciones&lt;/strong&gt;, sino también para crear anuncios publicitarios interactivos, juegos para el navegador… y cualquier cosa que tu creatividad sea capaz de pensar, &lt;img src=&quot;http://www.hachemuda.com/img/icon_smile.gif&quot; alt=&quot;:)&quot; /&gt; &lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.sencha.com/products/animator/&quot;&gt;Página oficial de Sencha Animator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.sencha.com/products/animator/demos/&quot;&gt;Galería de ejemplos realizados con Sencha&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Tumult Hype&lt;/h3&gt;
+
+&lt;p&gt;En mi opinión, Tumult Hype es &lt;strong&gt;la mejor opción calidad-precio&lt;/strong&gt; actualmente para crear animaciones en HTML5 y CSS3. Disponible sólo para Mac, es una herramienta &lt;strong&gt;muy completa a un precio asequible&lt;/strong&gt; (39,99€) con la que no sólo pueden construirse animaciones. Tiene todas las facilidades para el usuario que no tiene ni idea de programación y muchísimos recursos para los usuarios más avanzados, todo ello en &lt;strong&gt;una interfaz muy lograda y fácil de usar&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/ejemplo-hype.jpg&quot; alt=&quot;Tumult Hype&quot; title=&quot;Tumult Hype&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En la &lt;strong&gt;línea de tiempo&lt;/strong&gt; aparecen listados los diferentes elementos de la animación y todas sus propiedades, pudiendo añadir &lt;em&gt;keyframes&lt;/em&gt; para establecer puntos clave o de cambio de las mismas en el tiempo. En la parte superior tenemos el &lt;strong&gt;navegador de escenas&lt;/strong&gt;, donde definir diferentes escenarios y crear una navegación entre ellos con transiciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;El inspector&lt;/strong&gt; de Hype es la parte más importante, desde ahí podemos definir todas las propiedades de nuestra animación o de cada elemento, además de definir las &lt;strong&gt;acciones y eventos&lt;/strong&gt; asociados: clicks, &lt;em&gt;rollovers&lt;/em&gt;, comienzos/finales de escenas, eventos de teclado…&lt;/p&gt;
+
+&lt;p&gt;También en el inspector se puede marcar la opción de avisarnos en todo momento de &lt;strong&gt;posibles problemas de compatibilidad&lt;/strong&gt; con cada navegador, incluyendo los móviles.&lt;/p&gt;
+
+&lt;p&gt;Hype permite exportar las animaciones al formato &lt;em&gt;widget&lt;/em&gt; de &lt;a href=&quot;http://itunes.apple.com/es/app/ibooks-author/id490152466?mt=12&quot;&gt;iBooks Author&lt;/a&gt; y está integrado con &lt;a href=&quot;http://www.dropbox.com&quot;&gt;Dropbox&lt;/a&gt; para subir automáticamente tus animaciones y probarlas/compartirlas online rápidamente.&lt;/p&gt;
+
+&lt;p&gt;Puedes probar una &lt;strong&gt;versión gratuita durante 30 día&lt;/strong&gt;s de Hype descargándola desde la web oficial.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://tumultco.com/hype/&quot;&gt;Página oficial de Tumult Hype&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tumultco.com/hype/gallery/&quot;&gt;Galería de ejemplos realizados con Hype&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://itunes.apple.com/app/hype/id436931759?mt=12&amp;amp;ign-mpt=uo=4&quot;&gt;Hype en la Mac App Store&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Purple Animator&lt;/h3&gt;
+
+&lt;p&gt;Una herramienta &lt;strong&gt;más sencilla y también más barata&lt;/strong&gt; (15,99€) es Purple Animator, también disponible sólo para Mac. Es un editor con las herramientas fundamentales para la creación de animaciones en HTML5 y CSS3. Aunque no permite todas las posibilidades de Hype, sí &lt;strong&gt;tiene las más importantes&lt;/strong&gt; y consigue que sea una herramienta &lt;strong&gt;sencillísima de utilizar&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/purple2.jpg&quot; alt=&quot;Purple Animator&quot; title=&quot;Purple Animator&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Todavía tiene mucho que mejorar en la gestión de eventos y acciones en las animaciones, pero sin embargo tiene algunas características muy interesantes como la &lt;strong&gt;importación de ficheros PSD&lt;/strong&gt; (Photoshop) con todas sus capas.&lt;/p&gt;
+
+&lt;p&gt;Las animaciones de Purple también están preparadas para exportarlas y añadirlas como &lt;em&gt;widgets&lt;/em&gt; animados en iBooks Author utilizando un plugin gratuito.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.purpleanimator.com/&quot;&gt;Página oficial de Purple Animator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.purpleanimator.com/portfolio/&quot;&gt;Galería de ejemplos realizados con Purple&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://itunes.apple.com/es/app/purple/id433132196?mt=12&quot;&gt;Purple en la Mac App Store&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Adobe Edge&lt;/h3&gt;
+
+&lt;p&gt;Sinceramente, tenía muchas ganas de probar la versión Preview 4 de Adobe Edge, porque todavía no han publicado una versión final de la aplicación. Sin embargo, me he encontrado con que la web de descarga no funciona desde hace un par de días y además, consiguiéndolo por otras vías, no he conseguido que funcione. Nada más arrancar el programa muestra una ventana de error de la que no se puede salir.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uploads/2012/02/adobe-edge.jpg&quot; alt=&quot;Adobe Edge Preview 4&quot; title=&quot;Adobe Edge Preview 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Estoy seguro de que Adobe está haciendo un esfuerzo muy grande en conseguir adaptarse a las nuevas tendencias y Edge va a ser un paso importantísimo.&lt;/p&gt;
+
+&lt;p&gt;No puedo comentar nada más. Estará disponible para Mac y Windows.&lt;/p&gt;
+
+&lt;p&gt;Enlaces:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://labs.adobe.com/technologies/edge/&quot;&gt;Página oficial de Adobe Edge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tv.adobe.com/watch/adc-presents/introducing-adobe-edge-preview-4/&quot;&gt;Video: introducing Adobe Edge Preview 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5&gt;Conclusión&lt;/h5&gt;
+
+&lt;p&gt;Ya existen varias herramientas de calidad muy alta para la creación de animaciones HTML5 y CSS3, sobre todo en el entorno Mac. Además de resultar herramientas cómodas para trabajar y que contengan todas las opciones que necesita cada tipo de usuario, es muy importante entender &lt;strong&gt;el estado actual de estas tecnologías web&lt;/strong&gt; y del soporte de los diferentes navegadores. En los sitios web de cada aplicación suelen detallar esta información y las posibles incompatibilidades que pueden surgir actualmente.&lt;/p&gt;
+
+&lt;p&gt;El desarrollo web está viviendo una revolución con la llegada de HTML5 que, por supuesto, afecta directamente al mundo de las animaciones visuales, que tienen que adaptarse a las últimas tecnologías y tendencias. Y estas herramientas serán unos aliados perfectos para conseguirlo.&lt;/p&gt;
+
+&lt;p&gt;¿Has probado o conoces alguna otra aplicación para crear animaciones HTML5 y CSS3?&lt;/p&gt;
+
+                        </description>
+        </item>
+                                <item>
+            <title>El último aragonés vivo 2</title>
+            <link>http://www.hachemuda.com/2012/02/el-ultimo-aragones-vivo-2</link>
+                        <author>Guillermo Latorre</author>
+            <dc:creator>Guillermo Latorre</dc:creator>
+                                                <category>humor</category>
+                        <category>video</category>
+                        <category>zaragoza</category>
+                        <pubDate>Sat, 11 Feb 2012 00:00:00 +0100</pubDate>
+            <guid>/2012/02/el-ultimo-aragones-vivo-2</guid>
+            <description>&lt;h1&gt; &lt;/h1&gt;
+
+&lt;p&gt;En el 2009 los aragoneses del mundo disfrutamos enormemente viendo el video de &lt;a href=&quot;https://hachemuda.com/2009/05/el-ultimo-aragones-vivo/&quot;&gt;El último aragonés vivo&lt;/a&gt;. El cortometraje de humor que cuenta la historia del último aragonés del planeta, que se encierra en su casa al descubrirse &lt;strong&gt;un virus letal que acaba con la vida de todos los aragoneses&lt;/strong&gt;. Se graba en video &lt;em&gt;repletico&lt;/em&gt; de productos de su tierra y recordando enormes momentos de la historia aragonesa, &lt;img src=&quot;http://localhost/pruebas/wp-includes/images/smilies/icon_smile.gif&quot; alt=&quot;:)&quot; /&gt; &lt;/p&gt;
+
+&lt;p&gt;El director &lt;a href=&quot;http://www.youtube.com/user/davidterrer/videos&quot;&gt;David Terrer&lt;/a&gt; lo ha vuelto a hacer. No se debió quedar contento con la bestial acogida del primero que hace un mes publicó la segunda parte de su idea: &lt;strong&gt;El Último Aragonés Vivo 2&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Guerra santa entre oscenses y zaragozanos, apariciones estelares, frases de pura cepa… mejor te dejo con el video, que no tiene desperdicio:&lt;/p&gt;
+
+&lt;p&gt;Enlace:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.elultimoaragonesvivo.com/&quot;&gt;Página Oficial: El último aragonés vivo 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+                        </description>
+        </item>
+            </channel>
+</rss>

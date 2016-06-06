@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            Migrando Hachemuda de WP a Piecrust (II): migración de contenidos y flujo de publicación | HacheMuda
+      </title>
+  
+      <meta name="description" content="Explicación de los pasos y recursos que he utilizado para exportar los contenidos de WordPress a Markdown para usarlos en PieCrust y del método que sigo para la publicación de nuevos contenidos en el blog." />
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Migrando Hachemuda de WP a Piecrust (II): migración de contenidos y flujo de publicación">
+  <meta property="og:description" content="Explicación de los pasos y recursos que he utilizado para exportar los contenidos de WordPress a Markdown para usarlos en PieCrust y del método que sigo para la publicación de nuevos contenidos en el blog.">
+  <meta property="og:url" content="http://www.hachemuda.com/2013/04/migrando-hachemuda-de-wp-a-piecrust-ii-migracion-de-contenidos-y-flujo-de-publicacion">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+      <meta property="og:image" content="http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-ii-logos.jpg">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="blog/post,post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title ">
+					<h1 class="title">
+						<a href="/2013/04/migrando-hachemuda-de-wp-a-piecrust-ii-migracion-de-contenidos-y-flujo-de-publicacion">
+							Migrando Hachemuda de WP a Piecrust (II): migración de contenidos y flujo de publicación
+						</a>
+					</h1>
+											<h2 class="subtitle">
+							Explicación de los pasos y recursos que he utilizado para exportar los contenidos de WordPress a Markdown para usarlos en PieCrust y del método que sigo para la publicación de nuevos contenidos en el blog.
+						</h2>
+						
+				</div>
+									<div class="featured_img">
+						<img src="http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-ii-logos.jpg" alt="Migrando Hachemuda de WP a Piecrust (II): migración de contenidos y flujo de publicación" />
+					</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 02 de Abril de 2013</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<p>Hace unos días publicaba la primerta parte de este artículo, explicando un poco <a href="http://www.hachemuda.com/2013/03/migrando-hachemuda-de-wp-a-piecrust-i-instalacion-del-framework-y-primeros-pasos/">qué es PieCrust y las razones por las que he escogido este <em>framework</em> para gestionar HacheMuda</a>, convirtiendo todo el sitio basado en WordPress en una página puramente estática.</p>
+
+<p>Llevaba bastante tiempo escribiendo los artículos de Hachemuda en Markdown, pero no de una forma muy &#8220;correcta&#8221;. Los escribía y después los copiaba en HTML en el editor de WordPress para publicarlos. </p>
+
+<h2>Pasando los contenidos de WordPress a ficheros en Markdown</h2>
+
+<p>Lo primero que quise hacer al plantear seriamente la migración de WordPress a un CMS estático fue comprobar que podía <strong>extraer bien todos los contenidos</strong> de Hachemuda y <strong>convertirlos a ficheros Markdown</strong> sintácticamente correctos. Si conseguía eso, ya podía usar cualquier CMS. Independientemente de que uses PieCrust, Jekyll, Statamic o <a href="http://www.hachemuda.com/2013/03/seleccion-de-5-6-gestores-de-contenidos-sin-base-de-datos">el que sea</a>, los contenidos siempre puedes tenerlos en Markdown y personalmente me parece una buena idea disponer de ellos en ficheros de texto para manejarlos más fácilmente y no depender de ningún software para poder consultarlos, copiarlos o lo que sea.</p>
+
+<p>PieCrust tiene implementado <a href="http://bolt80.com/piecrust/doc/import/">un importador automático</a> que se supone que hace precisamente eso, pero no he podido probarlo porque cuando empecé con el <em>framework</em> ya tenía todos los contenidos migrados.</p>
+
+<p>Lo que yo usé fue el plugin <a href="https://github.com/benbalter/wordpress-to-jekyll-exporter">WordPress to Jekyll Exporter</a>, un plugin para WordPress que genera un directorio con <strong>todos los contenidos de la base de datos convertidos a ficheros de texto Markdown</strong>, incluyendo también los archivos adjuntos, ficheros de configuración, etc. Como te habrás percatado por el nombre, está pensado para usar finalmente Jekyll como CMS, pero en realidad te da igual el CMS que vayas a usar, lo que quieres es convertir los contenidos a Markdown.</p>
+
+<p>Tuve que modificar el <em>script</em> para que no exportara las categorías (sólo quería mantener los <em>tags</em>) y después tuve que hacer algún <em>search &amp; replace</em> de caracteres que no se exportaban bien y hacían que el Markdown fuera sintácticamente incorrecto para Piecrust, pero nada que no se pudiera solucionar fácilmente con las herramientas avanzadas de <em>búsqueda y reemplazo</em> de cualquier editor decente, como <a href="http://panic.com/coda/">Coda</a> o <a href="http://www.sublimetext.com">SublimeText</a>. También tuve que reemplazar algunas <strong>cadenas de texto propias de WP</strong> que estaban incluídas en el contenido de los artículos, como por ejemplo <em>shortcodes</em> para algunos plugins.</p>
+
+<p>Lo bueno de usar ese plugin es que te genera la cabecera del fichero Markdown no sólo con el título, categorías y etiquetas, sino también con <strong>todos los metadatos que tengas en tu base de datos</strong>. Por ejemplo: la URL de la imagen destacada, el estado y tipo de cada post, la descripción y el título SEO si usas WordPress SEO o cualquier otro campo personalizado.</p>
+
+<div class="caption">
+<img src="http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-ii-cabecera-markdown.jpg" alt="Ejemplo de cabecera Markdown para los artículos de HacheMuda." /> Ejemplo de cabecera Markdown para los artículos de Hachemuda.
+</div>
+
+<p>Otra herramienta muy recomendada es <a href="https://github.com/thomasf/exitwp">ExitWP</a>, un <em>script</em> escrito en Python también para migrar un sitio web basado en WordPress a Jekyll, generando todos los ficheros Markdown. O también puedes revisar <a href="https://github.com/dreikanter/wp2md">WordPress to Markdown Exporter</a>, de nuevo un script Python con el mismo objetivo y que acabo de descubrir haciendo una búsqueda sobre este tema.</p>
+
+<h2>Flujo de publicación</h2>
+
+<p>Al tener el sitio web estático y no disponer de un panel de administración web para publicar nuevos contenidos, hay que <strong>pensar bien el método a seguir para actualizar la web</strong>. Cuando se publica un nuevo artículo, hay que tener en cuenta que no sólo hay que subir ese artículo, sino también una actualización de los directorios de etiquetas, categorías, la portada, la paginación, el archivo del blog, etc. Muchas cosas quedan modificadas al publicar un nuevo post.</p>
+
+<h3>Idea #1: hosting normal y FTP</h3>
+
+<p>La primera opción y la más sencilla es la más evidente: publicas el nuevo artículo en local, generas el sitio web estático con los nuevos cambios y <strong>lo subes todo manualmente al servidor mediante un cliente de FTP</strong>.</p>
+
+<p>Muchos clientes FTP tienen funciones avanzadas que pueden ayudarte. Por ejemplo, yo uso <a href="http://panic.com/transmit/">Transmit</a>, que tiene una <strong>función de sincronización de carpetas</strong>. De este modo, Transmit analiza los directorios y ficheros que han sido modificados y los actualiza en el servidor, dejando los demás intactos.</p>
+
+<div class="caption">
+<img src="http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-ii-transmit.jpg" alt="Pantalla de la función de sincronización por FTP de Transmit." /> Pantalla de la función de sincronización por FTP de Transmit.
+</div>
+
+<p>Sin duda es lo más sencillo, pero también bastante engorroso el tener que estar subiendo/sincronizando manualmente los archivos cada vez.</p>
+
+<h3>Idea #2: hosting normal, GIT y FTP Deploy</h3>
+
+<p>Una segunda opción que me gusta mucho es usar un <strong>sistema de control de versiones</strong>, como GIT, mantener un repositorio con todas ellas y poder hacer <em>deploy</em> fácilmente de la última versión de los archivos. Así no sólo es más sencillo el <em>deploy</em> del sitio al hacer cambios, sino que guardas <strong>una copia de seguridad continua y con versiones</strong> de todas las actualizaciones y cambios que publicas.</p>
+
+<p>Para el <em>deploy</em> automático de un repositorio de <code>GIT</code> a un servidor <code>FTP</code> existen varios servicios. Yo los que he probado son <a href="http://beanstalkapp.com">BeanstalkApp</a> y <a href="http://www.deployhq.com">DeployHQ</a>. Ambos funcionan realmente bien, pero añaden un coste mensual que quería evitar si era posible.</p>
+
+<p>El primero, BeanstalkApp, integra ya un repositorio cloud con <code>GIT</code> y permite hacer <strong>deploys automáticos a otros servidores</strong> FTP, SFTP, Amazon S3, etc. Es una pasada y la opción que más me gusta si no te importa pagar los 15$ mensuales que cuesta el plan básico. Es ideal si tienes más de un sitio, pero para sólo uno sale un poco caro.</p>
+
+<p>El segundo, DeployHQ, no tiene un repositorio GIT sino que <strong>sólo realiza el propio deploy a otro servidor</strong>. Por tanto, necesitas contratar por otro lado un repo privado, por ejemplo en GitHub, para que DeployHQ lo &#8220;lea&#8221; y haga un deploy cuando se envíe un nuevo <em>commit</em>. Al final saldría por el mismo precio que BeanstalkApp, aproximadamente.</p>
+
+<h3>Idea #3: Dropbox y Site44</h3>
+
+<p>Otra opción es usar <strong>un sistema de sincronización más simple</strong> entre tu entorno local y el servidor público, como <a href="http://www.dropbox.com">Dropbox</a>. Yo uso Dropbox a diario en mi trabajo, de hecho tengo prácticamente todo mi ordenador constantemente sincronizado con este servicio en la nube. Pero para alojar páginas públicas tiene muchas limitaciones y no es muy recomendable si es un proyecto medio serio. No es el objetivo de Dropbox.</p>
+
+<p>Existen algunos servicios, como <a href="https://www.site44.com">Site44</a> o <a href="http://www.kissr.com">Kissr</a>, que ofrecen un plan de hosting básico en el que todos los archivos están <strong>permanentemente sincronizados con directorios de tu cuenta de Dropbox</strong>.</p>
+
+<p>Esta es la idea con la que me he quedado de momento, y con la que estoy realmente contento hasta ahora. Con Dropbox como eje central de la sincronización y Site44 como hosting, que utiliza Amazon S3 internamente como servidor.</p>
+
+<p>Este es <strong>el proceso que sigo para publicar un nuevo artículo</strong>:</p>
+
+<ol>
+<li>Edito el fichero del post y las imágenes a las carpetas correspondientes de mi instalación local de PieCrust. Compruebo que todo está bien desde el navegador mediante la función <em>servidor</em> de PieCrust. </li>
+<li>Una vez confirmado que todo está como yo quiero, llega el momento de la publicación online. <strong>Genero el sitio web estático</strong> con PieCrust, especificando que el directorio donde debe poner los ficheros es mi carpeta de Dropbox sincronizada con mi hosting en Site44. El comando tiene esta pinta:</li>
+</ol>
+
+<pre class="php" style="font-family:monospace;">chef bake <span style="color: #339933;">-</span>o <span style="color: #339933;">/</span>Users<span style="color: #339933;">/</span>guillermo<span style="color: #339933;">/</span>Dropbox<span style="color: #339933;">/</span>Aplicaciones<span style="color: #339933;">/</span>site44<span style="color: #339933;">/</span>www<span style="color: #339933;">.</span>hachemuda<span style="color: #339933;">.</span>com<span style="color: #339933;">/</span></pre>
+
+<p>En cuestión de unos segundos o minutos (lo que tarde la sincronización de Dropbox con tu ancho de banda), ya está el nuevo post y el nuevo sitio online.</p>
+
+<h2>Puesta a punto y configuración de Site44</h2>
+
+<p><a href="https://www.site44.com/">Site44</a> es súper sencillo: haces <strong>login con tu cuenta de Dropbox</strong> y creas tu primer sitio web especificando si quieres que sea tu propio dominio o un subdominio de <code>site44.com</code>.</p>
+
+<p>Para usar tu propio dominio, tienes que modificar la <strong>configuración de los DNS</strong>. Lo malo es que Site44 no permite apuntar directamente el dominio raíz, solamente subdominios (<code>www</code> es un subdominio), de modo que tuve que redireccionar el raíz a <code>www</code>. El dominio y la tabla de registros DNS los gestiono directamente con <a href="http://www.cloudflare.com">CloudFlare</a> y actualmente tengo esta configuración:</p>
+
+<ul>
+<li>Un registro <code>CNAME</code> apuntando de <code>www</code> a <code>domains.site44.com</code>.</li>
+<li>Un registro <code>CNAME</code> apuntando de <code>@</code> a <code>www.hachemuda.com</code>.</li>
+<li>Un <em>PageRule</em> de tipo redirección: de <code>hachemuda.com</code> a <code>http://www.hachemuda.com</code></li>
+<li>Otro <em>PageRule</em> de tipo redirección: de <code>hachemuda.com/*</code> a <code>http://www.hachemuda.com/$1</code></li>
+</ul>
+
+<div class="caption">
+<img src="http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-ii-cloudflare.jpg" alt="Ejemplo de configuración de PageRules en Cloudflare." /> Ejemplo de configuración de PageRules en Cloudflare.
+</div>
+
+<p>Una vez creas tu cuenta en Site44, cambias los DNS y añades tu dominio, automáticamente se te crea un directorio en tu carpeta de Dropbox llamado <code>Aplicaciones/site44/www.midominio.com</code>. Ese es <strong>el directorio sincronizado por el hosting</strong> y el único al que Site44 tiene acceso. Por defecto pone un fichero HTML básico que puedes probar a modificar y sincronizar para comprobar el buen funcionamiento, :)</p>
+
+<h3>Plantilla personalizada para errores 404</h3>
+
+<p>Una opción avanzada que permite Site44 y que no he conseguido saber si la permiten otros servicios de este tipo es la personalización de una página de error 404. <a href="https://www.site44.com/advanced">Para publicarla</a>, simplemente tienes que colocar un fichero <code>404.html</code> en el directorio raíz de tu web. Ese fichero HTML será el que se muestre cuando haya un error.</p>
+
+<h3>Precios</h3>
+
+<p>Los precios de Site44 puedes consultarlos en <a href="https://www.site44.com">la web</a>:</p>
+
+<ul>
+<li><strong>Plan Gratuíto</strong>: límite de 5 sitios web y 100MB de transferencia al mes.</li>
+<li><strong>Plan Personal</strong>: 4.95$ mensuales por 10 sitios web y 10GB de transferencia.</li>
+<li><strong>Plan Profesional</strong>: 9.95$ mensuales por 50 sitios web y 50GB de transferencia.</li>
+</ul>
+
+<p>Así que ya sabes, puedes darte de alta en el plan gratuíto para probar el sistema y después pasarte a uno superior.</p>
+
+<h2>Conclusión</h2>
+
+<p>Me encanta cómo tengo configurado ahora mismo el entorno de trabajo en Hachemuda. Puedo <strong>escribir artículos con cualquier editor Markdown</strong>, sin depender de nada más. PieCrust me permite <strong>previsualizar mi web en local</strong> cuando quiero hacer cualquier cambio. Para publicar simplemente tengo que <strong>generar el sitio con un comando y Dropbox se encarga de la sincronización</strong> entre mi entorno local y el entorno de producción, poniendo automáticamente online la última versión de la web.</p>
+
+<p>¡Genial! ¿No crees? :)</p>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=Migrando Hachemuda de WP a Piecrust (II): migración de contenidos y flujo de publicación - http://www.hachemuda.com/2013/04/migrando-hachemuda-de-wp-a-piecrust-ii-migracion-de-contenidos-y-flujo-de-publicacion" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2013/04/migrando-hachemuda-de-wp-a-piecrust-ii-migracion-de-contenidos-y-flujo-de-publicacion - Migrando Hachemuda de WP a Piecrust (II): migración de contenidos y flujo de publicación" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2013/04/migrando-hachemuda-de-wp-a-piecrust-ii-migracion-de-contenidos-y-flujo-de-publicacion&t=Migrando Hachemuda de WP a Piecrust (II): migración de contenidos y flujo de publicación" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/hachemuda">hachemuda</a></li>
+                      <li><a href="/etiqueta/cms">cms</a></li>
+                      <li><a href="/etiqueta/tutorial">tutorial</a></li>
+                      <li><a href="/etiqueta/piecrust">piecrust</a></li>
+                      <li><a href="/etiqueta/markdown">markdown</a></li>
+                      <li><a href="/etiqueta/wordpress">wordpress</a></li>
+                      <li><a href="/etiqueta/site44">site44</a></li>
+                      <li><a href="/etiqueta/dropbox">dropbox</a></li>
+                      <li><a href="/etiqueta/sincronizacion">sincronización</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>

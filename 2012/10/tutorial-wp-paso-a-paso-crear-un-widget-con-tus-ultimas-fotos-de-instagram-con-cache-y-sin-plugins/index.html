@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            Tutorial WP paso a paso: crear un widget con tus últimas fotos de Instagram, con cache y sin plugins | HacheMuda
+      </title>
+  
+      <meta name="description" content="Tutorial que explica cómo integrar tus últimas fotos de Instagram en WordPress sin necesidad de plugins." />
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Tutorial WP paso a paso: crear un widget con tus últimas fotos de Instagram, con cache y sin plugins">
+  <meta property="og:description" content="Tutorial que explica cómo integrar tus últimas fotos de Instagram en WordPress sin necesidad de plugins.">
+  <meta property="og:url" content="http://www.hachemuda.com/2012/10/tutorial-wp-paso-a-paso-crear-un-widget-con-tus-ultimas-fotos-de-instagram-con-cache-y-sin-plugins">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+      <meta property="og:image" content="http://www.hachemuda.com/uploads/2012/10/mins-fotos-instagram.jpg">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title ">
+					<h1 class="title">
+						<a href="/2012/10/tutorial-wp-paso-a-paso-crear-un-widget-con-tus-ultimas-fotos-de-instagram-con-cache-y-sin-plugins">
+							Tutorial WP paso a paso: crear un widget con tus últimas fotos de Instagram, con cache y sin plugins
+						</a>
+					</h1>
+											<h2 class="subtitle">
+							Tutorial que explica cómo integrar tus últimas fotos de Instagram en WordPress sin necesidad de plugins.
+						</h2>
+						
+				</div>
+									<div class="featured_img">
+						<img src="http://www.hachemuda.com/uploads/2012/10/mins-fotos-instagram.jpg" alt="Tutorial WP paso a paso: crear un widget con tus últimas fotos de Instagram, con cache y sin plugins" />
+					</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 23 de Octubre de 2012</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<p>Hace unos días tuve que hacer un widget para la página de <a href="http://www.ladanena.com">Ladanena</a> en la que se muestran <strong>sus últimas fotos subidas a Instagram</strong>. Como me he peleado con la <a href="http://instagram.com/developer/">API de Instagram</a>, ayudado también por <a href="http://danilat.com">Danilat</a> y por este post de <a href="http://www.vissit.com/inserta-tus-fotos-de-instagram-en-tu-web">vissit</a>, explico en este tutorial <strong>todos los pasos que he seguido</strong> para conseguir hacerlo funcionar sin plugins externos.</p>
+
+<p>El ejemplo en producción puedes verlo en la portada de <a href="http://ladanena.com">Ladanena.com</a>, :) </p>
+
+<div class="caption">
+    <img src="/uploads/2012/10/mins-fotos-instagram.jpg" alt="Widget de Instagram en Ladanena.com" />
+    Ejemplo de este tutorial en producción en Ladanena.com.
+</div>
+
+<h5>El resumen de la movida es:</h5>
+
+<ol>
+<li>Conseguir un <strong>token de acceso a la API de Instagram</strong>, para poder hacer las peticiones de las últimas fotos.</li>
+<li>Conseguir el <strong>ID del usuario</strong> de Instagram.</li>
+<li>Crear la función del <strong>widget</strong>.</li>
+<li>Modificar esa función para que use la <a href="http://codex.wordpress.org/Transients_API">Transients API</a> de WordPress para <strong>cachear las llamadas</strong> a Instagram.</li>
+<li>Usar la función en las plantillas de WordPress.</li>
+</ol>
+
+<p>Así que… vamos darle cera que cuanto antes nos pongamos antes terminamos, :) </p>
+
+<h3>1. Conseguir el token de acceso a la API de Instagram</h3>
+
+<p>Lo primero que tenemos que hacer es <a href="http://instagram.com/developer/clients/manage/">registrar una aplicación nueva</a> en la página de desarrolladores de Instagram. En el formulario, especificaremos un nombre, una descripción, la URL del sitio web y la URL de la redirección OAuth (que puede ser la misma que el sitio web).</p>
+
+<p>Una vez registrada, tendremos una ficha con la información de la aplicación, incluyendo el dato que más nos interesa para generar nuestro token: <strong><code>client ID</code></strong>.</p>
+
+<div class="caption">
+    <img src="/uploads/2012/10/wordpress-instagram-widget-2.jpg" alt="WordPress Instagram widget: client ID" />
+Pantalla donde Instagram nos da el Client ID. Lógicamente, en este ejemplo las claves son falsas, :)
+</div>
+
+<p>Abrimos un navegador web y en la barra de direcciones tecleamos esta dirección:</p>
+
+<pre class="php" style="font-family:monospace;">https<span style="color: #339933;">:</span><span style="color: #666666; font-style: italic;">//instagram.com/oauth/authorize/?display=touch&amp;client_id=[clientid]&amp;redirect_uri=[callbackuri]&amp;response_type=token</span></pre>
+
+<p>En la que tendremos que sustituir:</p>
+
+<ul>
+<li><code>[clientid]</code> por el valor de nuestro Client ID de la aplicación de Instagram.</li>
+<li><code>[callbackuri]</code> por el valor de nuestra URL de redirección OAuth de la aplicación de Instagram.</li>
+</ul>
+
+<p>Al acceder a esa web, se nos abrirá una página de <strong>inicio de sesión mediante OAuth de Instagram</strong>. Iniciamos sesión, confirmamos que le damos permiso de la aplicación y nos redirigirá a la web que hayamos puesto en el campo URL de la redirección OAuth, pero <strong>habrá añadido al final de la URL el parámetro <code>access_token</code> seguido del valor que estamos buscando</strong>.</p>
+
+<p>Ese es <strong>el valor de nuestro token de acceso</strong>, así que lo copiamos y lo guardamos como sea.</p>
+
+<h3>2. Conseguir el ID del usuario de Instagram</h3>
+
+<p>Si lo que queremos es crear un widget con las últimas fotografías de un usuario, necesitaremos hacer <strong>una llamada a la API con el ID de ese usuario en Instagram</strong>. Hay varias formas de conseguir conocer el ID, pero una bastante sencilla es acceder a esta web:</p>
+
+<ul>
+<li><a href="http://yvesvanbroekhoven.github.com/get-your-instagram-user-id">http://yvesvanbroekhoven.github.com/get-your-instagram-user-id</a></li>
+</ul>
+
+<p>Nos pedirá un inicio de sesión en Instagram y nos mostrará una página con el ID del usuario, lo copiaremos y lo guardaremos para usarlo en el último paso.</p>
+
+<h3>3. Crear el widget</h3>
+
+<p>Ya tenemos <strong>todos los datos necesarios para crear el widget</strong>: el token de acceso a la API y el ID del usuario de Instagram, así que ya podemos programar la función que hace la consulta a y se trae las imágenes que queramos.</p>
+
+<p>En el fichero <code>functions.php</code> de nuestro theme:</p>
+
+<pre class="php" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666; font-style: italic;">/****** GET THE LAST INSTAGRAM PHOTOS *******/</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666; font-style: italic;">/*</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666; font-style: italic;">Replace &quot;XXXXX&quot; with the Instagram user ID and &quot;ZZZZZ&quot; with the Instagram Dev-App access token</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666; font-style: italic;">*/</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000; font-weight: bold;">function</span> get_user_instagram_photos<span style="color: #009900;">&#40;</span><span style="color: #000088;">$user_id</span><span style="color: #339933;">=</span>XXXXX<span style="color: #339933;">,</span> <span style="color: #000088;">$count</span><span style="color: #339933;">=</span><span style="color: #cc66cc;">6</span><span style="color: #339933;">,</span> <span style="color: #000088;">$width</span><span style="color: #339933;">=</span><span style="color: #cc66cc;">180</span><span style="color: #339933;">,</span> <span style="color: #000088;">$height</span><span style="color: #339933;">=</span><span style="color: #cc66cc;">180</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">   <span style="color: #000088;">$url</span> <span style="color: #339933;">=</span> <span style="color: #0000ff;">'https://api.instagram.com/v1/users/'</span><span style="color: #339933;">.</span><span style="color: #000088;">$user_id</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'/media/recent/?access_token=ZZZZZ&amp;count='</span><span style="color: #339933;">.</span><span style="color: #000088;">$count</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  <span style="color: #000088;">$jsonData</span> <span style="color: #339933;">=</span> <a href="http://www.php.net/json_decode"><span style="color: #990000;">json_decode</span></a><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#40;</span><a href="http://www.php.net/file_get_contents"><span style="color: #990000;">file_get_contents</span></a><span style="color: #009900;">&#40;</span><span style="color: #000088;">$url</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #000088;">$result</span> <span style="color: #339933;">=</span> <span style="color: #0000ff;">''</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">   <span style="color: #b1b100;">foreach</span> <span style="color: #009900;">&#40;</span><span style="color: #000088;">$jsonData</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">data</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$key</span><span style="color: #339933;">=&gt;</span><span style="color: #000088;">$value</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">       <span style="color: #000088;">$result</span> <span style="color: #339933;">.=</span> <span style="color: #0000ff;">'\t'</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&lt;a title=&quot;'</span><span style="color: #339933;">.</span><a href="http://www.php.net/htmlentities"><span style="color: #990000;">htmlentities</span></a><span style="color: #009900;">&#40;</span><span style="color: #000088;">$value</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">caption</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">text</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">.</span><span style="color: #0000ff;">' ('</span><span style="color: #339933;">.</span><a href="http://www.php.net/htmlentities"><span style="color: #990000;">htmlentities</span></a><span style="color: #009900;">&#40;</span><a href="http://www.php.net/date"><span style="color: #990000;">date</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;d/m/Y&quot;</span><span style="color: #339933;">,</span> <span style="color: #000088;">$value</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">caption</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">created_time</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">.</span><span style="color: #0000ff;">')&quot; href=&quot;'</span><span style="color: #339933;">.</span><span style="color: #000088;">$value</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">images</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">standard_resolution</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">url</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&quot;&gt;'</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">       <span style="color: #000088;">$result</span> <span style="color: #339933;">.=</span> <span style="color: #0000ff;">'&lt;img src=&quot;'</span><span style="color: #339933;">.</span><span style="color: #000088;">$value</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">images</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">low_resolution</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">url</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&quot; alt=&quot;'</span><span style="color: #339933;">.</span><span style="color: #000088;">$value</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">caption</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">text</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&quot; width=&quot;'</span><span style="color: #339933;">.</span><span style="color: #000088;">$width</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&quot; height=&quot;'</span><span style="color: #339933;">.</span><span style="color: #000088;">$height</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&quot; /&gt;'</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">      <span style="color: #000088;">$result</span> <span style="color: #339933;">.=</span> <span style="color: #0000ff;">'&lt;/a&gt;'</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #b1b100;">return</span> <span style="color: #000088;">$result</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li></ol></pre>
+
+<p>Reemplazando en el código la cadena <code>"XXXXX"</code> por el ID del usuario de Instagram y la cadena <code>"ZZZZZ"</code> por el <code>access_token</code> que hemos conseguido anteriormente.</p>
+
+<h3>4. Configurar la cache usando la Transients API de WordPress</h3>
+
+<p>Como estamos en WordPress, podemos usar <strong>su sistema de cache nativo</strong> para almacenar temporalmente las consultas a la API de Instagram. En nuestro caso, haremos que sólo las consulte una vez cada día, es decir, con la primera visita hace la descarga real y al resto, durante 24 horas, les muestra las que ya tiene descargadas de la primera visita. Esto es importante porque:</p>
+
+<ul>
+<li>La API de Instagram <strong>puede resultar lenta</strong>, por lo que si hacemos la petición de las fotos en cada visita tendremos un tiempo de espera para el usuario.</li>
+<li>La API de Instagram <strong>tiene restricciones de número de peticiones</strong>, como cualquier otra. No tiene mucho sentido pedir las fotos 1000 veces al día (suponiendo una web con 1000 visitas), si en realidad solemos subir una sola foto nueva cada día.</li>
+<li>El inconveniente es que cuando publiquemos una nueva foto, no aparecerá directamente en la web sino que le costará unas horas (hasta el siguiente chequeo real evitando la cache).</li>
+</ul>
+
+<p>Modificaremos la función anterior para que finalmente quede así:</p>
+
+<pre class="php" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666; font-style: italic;">/****** GET THE LAST INSTAGRAM PHOTOS WITH CACHE *******/</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666; font-style: italic;">/*</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666; font-style: italic;">Replace &quot;XXXXX&quot; with the Instagram user ID and &quot;ZZZZZ&quot; with the Instagram Dev-App access token</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666; font-style: italic;">*/</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000; font-weight: bold;">function</span> get_user_instagram_photos<span style="color: #009900;">&#40;</span><span style="color: #000088;">$user_id</span><span style="color: #339933;">=</span>XXXXX<span style="color: #339933;">,</span> <span style="color: #000088;">$count</span><span style="color: #339933;">=</span><span style="color: #cc66cc;">6</span><span style="color: #339933;">,</span> <span style="color: #000088;">$width</span><span style="color: #339933;">=</span><span style="color: #cc66cc;">180</span><span style="color: #339933;">,</span> <span style="color: #000088;">$height</span><span style="color: #339933;">=</span><span style="color: #cc66cc;">180</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #000088;">$result</span> <span style="color: #339933;">=</span> get_transient<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'last_instagrams'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">   <span style="color: #b1b100;">if</span> <span style="color: #009900;">&#40;</span><span style="color: #000088;">$result</span> <span style="color: #339933;">==</span> <span style="color: #009900; font-weight: bold;">false</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">       <span style="color: #000088;">$url</span> <span style="color: #339933;">=</span> <span style="color: #0000ff;">'https://api.instagram.com/v1/users/'</span><span style="color: #339933;">.</span><span style="color: #000088;">$user_id</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'/media/recent/?access_token=ZZZZZ&amp;count='</span><span style="color: #339933;">.</span><span style="color: #000088;">$count</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">      <span style="color: #000088;">$jsonData</span> <span style="color: #339933;">=</span> <a href="http://www.php.net/json_decode"><span style="color: #990000;">json_decode</span></a><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#40;</span><a href="http://www.php.net/file_get_contents"><span style="color: #990000;">file_get_contents</span></a><span style="color: #009900;">&#40;</span><span style="color: #000088;">$url</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">     <span style="color: #000088;">$result</span> <span style="color: #339933;">=</span> <span style="color: #0000ff;">''</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">       <span style="color: #b1b100;">foreach</span> <span style="color: #009900;">&#40;</span><span style="color: #000088;">$jsonData</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">data</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$key</span><span style="color: #339933;">=&gt;</span><span style="color: #000088;">$value</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">           <span style="color: #000088;">$result</span> <span style="color: #339933;">.=</span> <span style="color: #0000ff;">'\t'</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&lt;a title=&quot;'</span><span style="color: #339933;">.</span><a href="http://www.php.net/htmlentities"><span style="color: #990000;">htmlentities</span></a><span style="color: #009900;">&#40;</span><span style="color: #000088;">$value</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">caption</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">text</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">.</span><span style="color: #0000ff;">' ('</span><span style="color: #339933;">.</span><a href="http://www.php.net/htmlentities"><span style="color: #990000;">htmlentities</span></a><span style="color: #009900;">&#40;</span><a href="http://www.php.net/date"><span style="color: #990000;">date</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;d/m/Y&quot;</span><span style="color: #339933;">,</span> <span style="color: #000088;">$value</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">caption</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">created_time</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">.</span><span style="color: #0000ff;">')&quot; href=&quot;'</span><span style="color: #339933;">.</span><span style="color: #000088;">$value</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">images</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">standard_resolution</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">url</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&quot;&gt;'</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">           <span style="color: #000088;">$result</span> <span style="color: #339933;">.=</span> <span style="color: #0000ff;">'&lt;img src=&quot;'</span><span style="color: #339933;">.</span><span style="color: #000088;">$value</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">images</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">low_resolution</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">url</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&quot; alt=&quot;'</span><span style="color: #339933;">.</span><span style="color: #000088;">$value</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">caption</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">text</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&quot; width=&quot;'</span><span style="color: #339933;">.</span><span style="color: #000088;">$width</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&quot; height=&quot;'</span><span style="color: #339933;">.</span><span style="color: #000088;">$height</span><span style="color: #339933;">.</span><span style="color: #0000ff;">'&quot; /&gt;'</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">          <span style="color: #000088;">$result</span> <span style="color: #339933;">.=</span> <span style="color: #0000ff;">'&lt;/a&gt;'</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">        <span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">     set_transient<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'last_instagrams'</span><span style="color: #339933;">,</span> <span style="color: #000088;">$result</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">60</span><span style="color: #339933;">*</span><span style="color: #cc66cc;">60</span><span style="color: #339933;">*</span><span style="color: #cc66cc;">24</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">        update_option<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'last_instagrams'</span><span style="color: #339933;">,</span> <span style="color: #000088;">$result</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>    </div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #009900;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"> <span style="color: #b1b100;">return</span> <span style="color: #000088;">$result</span><span style="color: #339933;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li></ol></pre>
+
+<h3>5. Uso en las plantillas</h3>
+
+<p>Una vez tengamos la función, podremos <strong>usarla fácilmente en cualquier plantilla</strong> de nuestro <em>theme</em> o <em>plugin</em> con el código:</p>
+
+<pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">&lt;?php</span> <span style="color: #b1b100;">echo</span> get_instagram<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #000000; font-weight: bold;">?&gt;</span></pre>
+
+<p>Mola, ¿no? :)</p>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=Tutorial WP paso a paso: crear un widget con tus últimas fotos de Instagram, con cache y sin plugins - http://www.hachemuda.com/2012/10/tutorial-wp-paso-a-paso-crear-un-widget-con-tus-ultimas-fotos-de-instagram-con-cache-y-sin-plugins" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2012/10/tutorial-wp-paso-a-paso-crear-un-widget-con-tus-ultimas-fotos-de-instagram-con-cache-y-sin-plugins - Tutorial WP paso a paso: crear un widget con tus últimas fotos de Instagram, con cache y sin plugins" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2012/10/tutorial-wp-paso-a-paso-crear-un-widget-con-tus-ultimas-fotos-de-instagram-con-cache-y-sin-plugins&t=Tutorial WP paso a paso: crear un widget con tus últimas fotos de Instagram, con cache y sin plugins" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/api">API</a></li>
+                      <li><a href="/etiqueta/codigo">código</a></li>
+                      <li><a href="/etiqueta/foto">foto</a></li>
+                      <li><a href="/etiqueta/fotografia">fotografía</a></li>
+                      <li><a href="/etiqueta/functions-php">functions.php</a></li>
+                      <li><a href="/etiqueta/instagram">instagram</a></li>
+                      <li><a href="/etiqueta/tema">tema</a></li>
+                      <li><a href="/etiqueta/tutorial">tutorial</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>

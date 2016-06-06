@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            Migrando Hachemuda de WP a PieCrust (I): instalación del framework y primeros pasos | HacheMuda
+      </title>
+  
+      <meta name="description" content="Primera parte de la explicación de mi proceso de cambio de Hachemuda de un CMS como WordPress a un framework de creación de sitios web estáticos como PieCrust." />
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Migrando Hachemuda de WP a PieCrust (I): instalación del framework y primeros pasos">
+  <meta property="og:description" content="Primera parte de la explicación de mi proceso de cambio de Hachemuda de un CMS como WordPress a un framework de creación de sitios web estáticos como PieCrust.">
+  <meta property="og:url" content="http://www.hachemuda.com/2013/03/migrando-hachemuda-de-wp-a-piecrust-i-instalacion-del-framework-y-primeros-pasos">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+      <meta property="og:image" content="http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-i-thumbnail.jpg">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="blog/post,post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title ">
+					<h1 class="title">
+						<a href="/2013/03/migrando-hachemuda-de-wp-a-piecrust-i-instalacion-del-framework-y-primeros-pasos">
+							Migrando Hachemuda de WP a PieCrust (I): instalación del framework y primeros pasos
+						</a>
+					</h1>
+											<h2 class="subtitle">
+							Primera parte de la explicación de mi proceso de cambio de Hachemuda de un CMS como WordPress a un framework de creación de sitios web estáticos como PieCrust.
+						</h2>
+						
+				</div>
+									<div class="featured_img">
+						<img src="http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-i-thumbnail.jpg" alt="Migrando Hachemuda de WP a PieCrust (I): instalación del framework y primeros pasos" />
+					</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 25 de Marzo de 2013</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<p>Estaba pensando en cómo escribir un post explicando <strong>cómo ha sido mi experiencia migrando Hachemuda de WordPress al nuevo PieCrust</strong>, un <em>framework</em> para la creación de sitios web estáticos. No sabía si hacer un chorizaco de post o partirlo en varios diferentes… y he decidido hacerlo en tres partes:</p>
+
+<ol>
+<li><strong>Parte I</strong>: instalación del framework y primeros pasos con PieCrust.</li>
+<li><strong>Parte II</strong>: migración de contenidos de WP a PieCrust y flujo de publicación de contenidos.</li>
+<li><strong>Parte III</strong>: desarrollo de tu propio theme con PieCrust.</li>
+</ol>
+
+<h2>PieCrust, el <em>framework</em></h2>
+
+<p>PieCrust es un framework para el desarrollo de sitios web estáticos, creado por <a href="https://twitter.com/ludovicchabant">Ludovic Chabant</a>, que sigue <strong>trabajando activamente en él y actualizando las versiones</strong> <a href="https://github.com/ludovicchabant/PieCrust">en GitHub</a> para que cualquiera pueda usarlo.</p>
+
+<p>Como <em>framework</em>, soporta varias tecnologías que permiten crear páginas web pensándolas de una forma dinámica, para la posterior generación de los ficheros estáticos. Nativamente permite utilizar <a href="http://lesscss.org">Less</a> para las hojas de estilos, <a href="http://daringfireball.net/projects/markdown/">Markdown</a> o <a href="http://en.wikipedia.org/wiki/Textile_(markup_language)">Textile</a> para los contenidos, <a href="http://twig.sensiolabs.org">Twig</a> para el lenguaje de plantillas, <a href="http://qbnz.com/highlighter/">Geshi</a> para el resaltado de sintaxis, <a href="http://haml.info">Haml</a>, <a href="http://sass-lang.com">Sass</a>&#8230;</p>
+
+<p>Vamos, una <strong>selección de tecnologías, librerías y recursos</strong> que el autor ha considerado interesantes y útiles. Y se van incorporando nuevas conforme más usuarios van usando PieCrust y aportando sus ideas y sugerencias.</p>
+
+<h2>Instalación de PieCrust</h2>
+
+<p>PieCrust es un software que <strong>no tiene dependencias</strong> con ningún otro <em>framework</em>, simplemenente necesita que en tu servidor tengas instalado <code>PHP 5.3</code> o una versión posterior.</p>
+
+<p>Suponiendo una <strong>instalación en un entorno local</strong>, los pasos a seguir son:</p>
+
+<ul>
+<li>Descargar la versión <a href="https://github.com/ludovicchabant/PieCrust">Master</a> (inestable, más nueva) o <a href="https://github.com/ludovicchabant/piecrust/tree/git-stable">Stable</a> (más probada) de GitHub. Puedes hacerlo usando <code>GIT</code> o descargando el ZIP y descomprimiendo los archivos.</li>
+<li>Dentro de PieCrust, la carpeta <code>website</code> contiene todos los archivos del sitio web: plantillas, recursos, contenidos, etc. De hecho, encontrarás un <em>theme</em> y algunos contenidos de muestra. Accedemos a ella mediante la línea de comandos y ejecutamos el comando <code>chef</code> para iniciar el servidor de PieCrust:</li>
+</ul>
+
+<pre class="php" style="font-family:monospace;">cd piecrust<span style="color: #339933;">/</span>website
+<span style="color: #339933;">../</span>bin<span style="color: #339933;">/</span>chef serve</pre>
+
+<p>Automáticamente se abrirá una pestaña en el navegador web con la dirección <code>http://localhost:8080</code>, mostrando el sitio web que viene por defecto:</p>
+
+<p><img src="http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-i-thumbnail.jpg" alt="Captura del sitio web por defecto con PieCrust" /></p>
+
+<p>Una de las cosas geniales de PieCrust es que, con el servidor funcionando de fondo, puedes hacer cualquier cambio en el proyecto (contenidos, maquetación, programación, configuración, etc) y <strong>los cambios se aplican automáticamente</strong>. Sólo tienes que refrescar la página en el navegador.</p>
+
+<p>Pues nada, que ya lo tienes funcionando, así que puedes probar a modificar o añadir contenidos. Las páginas y posts los encontrarás escritos con sintaxis Markdown en las carpetas <code>website/_content/pages</code> y en <code>website/_content/posts</code>, respectivamente.</p>
+
+<h2>Generar el sitio web estático</h2>
+
+<p>El comando <code>chef</code> de PieCrust no sólo permite que el <em>framework</em> actúe como un servidor ligero, sino también <strong>realizar la generación del sitio web estático</strong>. Esto lo hace mediante la orden <code>bake</code>. Estando en el directorio <code>website</code> en la línea de comandos, puedes probarlo ejecutando:</p>
+
+<pre class="php" style="font-family:monospace;"><span style="color: #339933;">../</span>bin<span style="color: #339933;">/</span>chef bake</pre>
+
+<p><img src="http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-i-bake.jpg" alt="Captura del terminal ejecutando el comando &quot;bake&quot;" /></p>
+
+<p>Una vez terminado el proceso, puedes encontrar <strong>tu nuevo sitio web estático</strong> en el directorio <code>website/_counter</code>. Maravilloso, :)</p>
+
+<h2>Modo &#8220;servidor&#8221; VS Modo &#8220;generador&#8221;</h2>
+
+<p>Digamos que PieCrust tiene estos dos modos de trabajo. Puedes optar por usarlo en <strong>modo servidor</strong> en tu entorno local y después generar el sitio web completo con los últimos cambios para ponerlo en el hosting que sea. Otra opción es tener PHP instalado en ese hosting y que PieCrust esté funcionando también allí.</p>
+
+<p>Lo he estado comentando con <a href="http://guillermocarvajal.net">Guillermo Carvajal</a> en el hilo de comentarios <a href="http://hachemuda.com/2013/03/seleccion-de-5-6-gestores-de-contenidos-sin-base-de-datos/">de este post</a>, pero bajo mi punto de vista, las ventajas de tener PieCrust instalado y funcionando como servidor en el entorno de producción serían:</p>
+
+<ul>
+<li>La <strong>actualización de contenidos</strong> es mucho más rápida y sencilla: simplemente subes el fichero Markdown al directorio correcto y PieCrust ya lo detecta y regenera automáticamente el sitio.</li>
+<li>La actualización de otros cambios del sitio también los pilla automáticamente (imágenes, layout, CSS, Javascript, etc).</li>
+</ul>
+
+<p>Sin embargo, yo para Hachemuda <strong>prefiero tener el servidor de PieCrust sólo en local</strong>, hacer los cambios en mi ordenador y después generar el nuevo site y subirlo al servidor como un sitio únicamente estático. Las ventajas son:</p>
+
+<ul>
+<li>Es más rápido, sólo son ficheros estáticos.</li>
+<li>No requiere tener un hosting con PHP, me vale con el más básico (y barato).</li>
+<li>No tengo que preocuparme de si está funcionando bien o no. El HTML siempre funciona y mucho tráfico hay que tener para que se caiga un servidor por servir ficheros estáticos.</li>
+</ul>
+
+<h2>Configuración general</h2>
+
+<p>La configuración general para tu proyecto está disponible en el fichero <code>website/config.yml</code>, un fichero escrito en <code>YAML</code> con todas las opciones que quieras personalizar. Por ejemplo, en el caso de Hachemuda:</p>
+
+<pre class="html5" style="font-family:monospace;">site:
+    title: HacheMuda
+    url: http://wwww.hachemuda.com
+    description: Blog personal de Guillermo Latorre
+    author: Guillermo Latorre
+    pretty_urls: true
+    post_url: %year%/%month%/%slug%
+    tag_url: etiqueta/%tag%
+    category_url: categoria/%category%
+    enable_gzip: true
+    posts_per_page: 7
+    timezone: Europe/Madrid
+    auto_formats:
+        md: markdown
+smartypants:
+    enable: true
+baker:
+    skip_patterns:
+        - /^index.php/</pre>
+
+<p>Algunas de las opciones más importantes:</p>
+
+<ul>
+<li><code>pretty_urls</code>: para activar los permalinks.</li>
+<li><code>post_url</code>, <code>tag_url</code> y <code>category_url</code>: para personalizar los permalinks de cada tipo.</li>
+<li><code>auto_formats</code>: para añadir otros formatos de los ficheros de contenidos. Por defecto soporta contenidos escritos en ficheros <code>.html</code>, pero en mi caso también he añadido la extensión <code>.md</code> asociada con contenidos en Markdown.</li>
+<li><code>skip_patterns</code> (dentro de <code>baker</code>): para que no tenga en cuenta algunos archivos/directorios en la generación del sitio estático.</li>
+</ul>
+
+<p>En el fichero de configuración también puedes definir tus propias variables y datos generales para después usarlas en las plantillas. Esto está bastante bien explicado en <a href="http://bolt80.com/piecrust/doc/site-config/">la documentación oficial</a>.</p>
+
+<h2>El theme y las plantillas</h2>
+
+<p>El directorio <code>website</code>, que contine el propio sitio web público, por defecto tiene esta estructura:</p>
+
+<p><img src="http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-i-website.jpg" alt="Estructura de directorios y ficheros del sitio web público" /></p>
+
+<p>De forma nativa, PieCrust soporta el lenguaje de plantillas <a href="http://twig.sensiolabs.org">Twig</a> y <a href="http://mustache.github.com">Mustache</a>, aunque <a href="http://bolt80.com/piecrust/doc/template-engines/">pueden configurarse</a> otros como Dwoo, Haml. Viene con Twig activado por defecto, que es un lenguaje bastante flexible y permite realizar una programación básica en las propias plantillas, como trabajar con variables, bucles, condicionales…</p>
+
+<p>Hablaré más profundamente, y con ejemplos, en la parte III de este artículo.</p>
+
+<h2>Debugging con PieCrust</h2>
+
+<p>En otros generadores de sitios web estáticos que he probado, resulta bastante complicada la detección de muchos problemas derivados del formato de los propios contenidos o de programación de las plantillas del theme.</p>
+
+<p>PieCrust es bastante bueno en esto. Cuando detecta problemas muestra páginas de error con suficiente información para poder localizarlos fácilmente. Y, además de poder ejecutar el servidor para que muestre un completo log en la línea de comandos, en la URL del sitio web puedes añadir el parámetro <code>?!debug</code> para ver en el navegador una <strong>ventanita de <em>debugging</em></strong> con toda la información que tiene el CMS en ese momento. </p>
+
+<p><img src="http://www.hachemuda.com/uploads/2013/hachemuda-to-piecrust-i-debug.jpg" alt="Herramienta de Debugging con PieCrust" /></p>
+
+<p>De esta forma, puedes ver fácilmente los valores de la configuración general, las variables disponibles en esa página, todo el contenido detectado, toda la información de esa página, etc.</p>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=Migrando Hachemuda de WP a PieCrust (I): instalación del framework y primeros pasos - http://www.hachemuda.com/2013/03/migrando-hachemuda-de-wp-a-piecrust-i-instalacion-del-framework-y-primeros-pasos" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2013/03/migrando-hachemuda-de-wp-a-piecrust-i-instalacion-del-framework-y-primeros-pasos - Migrando Hachemuda de WP a PieCrust (I): instalación del framework y primeros pasos" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2013/03/migrando-hachemuda-de-wp-a-piecrust-i-instalacion-del-framework-y-primeros-pasos&t=Migrando Hachemuda de WP a PieCrust (I): instalación del framework y primeros pasos" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/piecrust">piecrust</a></li>
+                      <li><a href="/etiqueta/tutorial">tutorial</a></li>
+                      <li><a href="/etiqueta/codigo">código</a></li>
+                      <li><a href="/etiqueta/cms">cms</a></li>
+                      <li><a href="/etiqueta/hachemuda">hachemuda</a></li>
+                      <li><a href="/etiqueta/wordpress">wordpress</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            Cómo crear correctamente bucles o loops personalizados en WordPress | HacheMuda
+      </title>
+  
+      <meta name="description" content="Explicación práctica con ejemplos de las diferentes formas de crear bucles de contenidos en WordPress." />
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Cómo crear correctamente bucles o loops personalizados en WordPress">
+  <meta property="og:description" content="Explicación práctica con ejemplos de las diferentes formas de crear bucles de contenidos en WordPress.">
+  <meta property="og:url" content="http://www.hachemuda.com/2012/09/como-crear-correctamente-bucles-o-loops-personalizados-en-wordpress">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+      <meta property="og:image" content="http://www.hachemuda.com/uploads/wordpress_loop.jpg">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title ">
+					<h1 class="title">
+						<a href="/2012/09/como-crear-correctamente-bucles-o-loops-personalizados-en-wordpress">
+							Cómo crear correctamente bucles o loops personalizados en WordPress
+						</a>
+					</h1>
+											<h2 class="subtitle">
+							Explicación práctica con ejemplos de las diferentes formas de crear bucles de contenidos en WordPress.
+						</h2>
+						
+				</div>
+									<div class="featured_img">
+						<img src="http://www.hachemuda.com/uploads/wordpress_loop.jpg" alt="Cómo crear correctamente bucles o loops personalizados en WordPress" />
+					</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 03 de Septiembre de 2012</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<h1> </h1>
+
+<p>En WordPress existen varias formas de <strong>realizar consultas personalizadas a la base de datos</strong> para traer algunos contenidos específicos y mostrarlos en las plantillas de tu <em>theme</em> o plugin:</p>
+
+<ul>
+<li><code>pre_get_posts()</code>: es un filtro, no una función de consulta a la BD. Para alterar el bucle principal.</li>
+<li><code>query_posts()</code>: ¿¿??</li>
+<li><code>WP_Query()</code>: para crear bucles alternativos o secundarios.</li>
+<li><code>get_posts()</code>: para crear bucles alternativos o secundarios.</li>
+</ul>
+
+<p>Estos son los recursos principales que propone WordPress para <strong>modificar los bucles o crear bucles alternativos a los principales</strong>, para mostrar nuestros contenidos de diferentes formas en las plantillas. Y lógicamente, esto es algo que hay que hacer con cuidado y de la forma correcta para evitar errores y problemas de eficiencia.</p>
+
+<p>Y ahora los explico un poco, <img src="http://www.hachemuda.com/img/icon_smile.gif" alt=":)" /> </p>
+
+<h3>El bucle principal de WordPress</h3>
+
+<p>Antes de nada hay que explicar qué es el <strong><em>main loop</em></strong> o <strong>bucle principal</strong> de WordPress: es la forma que tiene el CMS para mostrar los posts que deben aparecer en esa página, procesarlos y disponerlos en la pantalla de la forma que se defina a través los diferentes <a href="http://codex.wordpress.org/Template_Tags">Template Tags</a>. La consulta principal a la base de datos y el procesado de la misma tiene lugar <strong>antes de la carga de la plantilla, basándose en la URL que se está visualizando</strong>.</p>
+
+<p>En un <em>theme</em> de WordPress, cada plantilla tendrá probablemente un bucle principal. En el código, comienza de esta forma:</p>
+
+<pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">&lt;?php</span> <span style="color: #b1b100;">if</span> <span style="color: #009900;">&#40;</span> have_posts<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#41;</span> <span style="color: #339933;">:</span> <span style="color: #b1b100;">while</span> <span style="color: #009900;">&#40;</span> have_posts<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#41;</span> <span style="color: #339933;">:</span> the_post<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #000000; font-weight: bold;">?&gt;</span></pre>
+
+<p>Y acaba normalmente así:  </p>
+
+<pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">&lt;?php</span> <span style="color: #b1b100;">endwhile</span><span style="color: #339933;">;</span> <span style="color: #b1b100;">else</span><span style="color: #339933;">:</span> <span style="color: #000000; font-weight: bold;">?&gt;</span>
+    &lt;p&gt;<span style="color: #000000; font-weight: bold;">&lt;?php</span> _e<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'Sorry, no posts matched your criteria.'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #000000; font-weight: bold;">?&gt;</span>&lt;/p&gt;
+<span style="color: #000000; font-weight: bold;">&lt;?php</span> <span style="color: #b1b100;">endif</span><span style="color: #339933;">;</span> <span style="color: #000000; font-weight: bold;">?&gt;</span></pre>
+
+<p>Los <em>template tags</em> que se incluyan en el código dentro de ese bucle, harán referencia a la consulta principal de WordPress.</p>
+
+<h3>pre&#95;get&#95;posts()</h3>
+
+<p>Si lo que se quiere es <strong>modificar directamente la consulta del bucle principal</strong>, pero no crear una nueva, entonces la recomendación es utilizar el filtro <code>pre_get_posts()</code>. Esta función nos permite <strong>alterar fácilmente los parámetros de la <em>main query</em></strong>.</p>
+
+<p><strong>Por ejemplo</strong>: queremos modificar el número de posts mostrados en la portada de la página a sólo 4 y, además, que no aparezcan los posts de la categoría “7″. Lo haríamos fácilmente con las siguientes líneas de código:</p>
+
+<pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">function</span> hmuda_modificar_main_query<span style="color: #009900;">&#40;</span><span style="color: #000088;">$query</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #666666; font-style: italic;">//Primero asegurar que es la consulta principal y que es la home</span>
+    <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span> is_home<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">&amp;&amp;</span> <span style="color: #000088;">$query</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">is_main_query</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+        <span style="color: #666666; font-style: italic;">//Hacer la modificación que sea</span>
+        <span style="color: #000088;">$query</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">set</span><span style="color: #009900;">&#40;</span> <span style="color: #0000ff;">'posts_per_page'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'4'</span> <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #000088;">$query</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">set</span><span style="color: #009900;">&#40;</span> <span style="color: #0000ff;">'cat'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'-7'</span> <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span>
+<span style="color: #009900;">&#125;</span>
+add_action<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'pre_get_posts'</span><span style="color: #339933;">,</span> <span style="color: #0000ff;">'hmuda_modificar_main_query'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+<p>Utilizando el método <code>set()</code> podemos pasarle todos <a href="http://codex.wordpress.org/Class_Reference/WP_Query#Parameters">los parámetros</a> que deseemos a la <em>main query</em> para modificarla a nuestro gusto.</p>
+
+<h3>query_posts()</h3>
+
+<p>La función <code>query_posts()</code>, como bien explican en la primera frase del <a href="http://codex.wordpress.org/Function_Reference/query_posts">Codex</a>, es la forma más sencilla de <strong>alterar la consulta principal de WordPress</strong>, pero no es la preferida ni la más eficiente. De hecho, algunos desarrolladores de renombre como <a href="http://kovshenin.com/">Konstantin Kovshenin</a> no dudan en afirmar que <a href="http://www.wpmayor.com/articles/when-use-wp_query-vs-query_posts-vs-get_posts/#comment-6414">debería declararse como obsoleta</a>.</p>
+
+<p>Esta función <strong>“destruye” la consulta principal de WordPress</strong> sobreescribiendo la variable global que la contiene. Sí, la consulta que ya tenía cargada, procesada, limpita y maquillada para salir a la calle.</p>
+
+<p>Se recomienda <a href="http://developer.wordpress.com/2012/05/14/querying-posts-without-query_posts/">no utilizar esta función</a>. Siempre que se quiera usar para modificar la consulta principal, probablemente sea una mejor idea utilizar <code>pre_get_posts()</code>.</p>
+
+<p>En cualquier caso, si por alguna extraña razón se usa, la forma recomendada para restaurar el bucle principal después de usar <code>query_posts()</code> es utilizar la función <code>wp_reset_query()</code>.</p>
+
+<h3>WP_Query()</h3>
+
+<p>En caso de querer crear bucles alternativos en una plantilla de WordPress, esta es <strong>la forma recomendada</strong>. Con este método <strong>se crea una nueva instancia del objeto <code>WP_Query</code></strong> sin alterar ni afectar a la consulta principal del gestor.</p>
+
+<p><strong>Ejemplo</strong>: un bucle alternativo para mostrar los títulos de los últimos 3 posts de la categoría “8″ pero saltándonos el primero:</p>
+
+<pre class="php" style="font-family:monospace;"><span style="color: #666666; font-style: italic;">//Definir los parámetros de la consulta a la base de datos</span>
+<span style="color: #000088;">$args</span> <span style="color: #339933;">=</span> <a href="http://www.php.net/array"><span style="color: #990000;">array</span></a><span style="color: #009900;">&#40;</span>
+    <span style="color: #0000ff;">'posts_per_page'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'cat'</span>  <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">8</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'offset'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">1</span>
+<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #000088;">$loop_alternativo</span> <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">new</span> WP_Query<span style="color: #009900;">&#40;</span><span style="color: #000088;">$args</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span> <span style="color: #000088;">$loop_alternativo</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">have_posts</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#41;</span><span style="color: #339933;">:</span>
+    <span style="color: #b1b100;">while</span><span style="color: #009900;">&#40;</span> <span style="color: #000088;">$loop_alternativo</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">have_posts</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#41;</span><span style="color: #339933;">:</span> <span style="color: #000088;">$loop_alternativo</span><span style="color: #339933;">-&gt;</span><span style="color: #004000;">the_post</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+       <span style="color: #666666; font-style: italic;">//Ya estamos en el bucle alternativo</span>
+       the_title<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #b1b100;">endwhile</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">endif</span><span style="color: #339933;">;</span>
+wp_reset_postdata<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+<p>Hay que acordarse de que este <em>loop</em> alternativo sobreescribirá la variable global <code>$post</code> (que es la que buscan las <em>template tags</em>), por lo que una vez terminado deberemos siempre <strong>restaurar su estado al de la consulta principal</strong>. En caso contrario, WP creerá que el post actual del bucle principal es el último post del bucle alternativo, lo que es incorrecto y dará lugar a errores. Puede <em>resetearse</em> fácilmente utilizando la función <code>wp_reset_postdata()</code>.</p>
+
+<h3>get_posts()</h3>
+
+<p>Es una especie de envoltorio para <code>WP_Query()</code>, para crear nuevas instancias del objeto <code>WP_Query</code>. No es en realidad un bucle, sino que la función <strong>acaba devolviendo un <em>array</em> de objetos de tipo <code>post</code></strong>. Por tanto, podemos guardar ese array en una variable e iterar sobre ella para crear nuestro propio bucle personalizado.</p>
+
+<p><strong>Ejemplo</strong> (el mismo de antes): un bucle alternativo para mostrar los títulos de los últimos 3 posts de la categoría “8″ pero saltándonos el primero:</p>
+
+<pre class="php" style="font-family:monospace;"><span style="color: #666666; font-style: italic;">//Definir los parámetros de la consulta a la base de datos</span>
+<span style="color: #000088;">$args</span> <span style="color: #339933;">=</span> <a href="http://www.php.net/array"><span style="color: #990000;">array</span></a><span style="color: #009900;">&#40;</span>
+    <span style="color: #0000ff;">'posts_per_page'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'cat'</span>  <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">8</span><span style="color: #339933;">,</span>
+    <span style="color: #0000ff;">'offset'</span> <span style="color: #339933;">=&gt;</span> <span style="color: #cc66cc;">1</span>
+<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #000000; font-weight: bold;">global</span> <span style="color: #000088;">$post</span><span style="color: #339933;">;</span>
+<span style="color: #000088;">$myposts</span> <span style="color: #339933;">=</span> get_posts<span style="color: #009900;">&#40;</span> <span style="color: #000088;">$args</span> <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">foreach</span><span style="color: #009900;">&#40;</span> <span style="color: #000088;">$myposts</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$post</span> <span style="color: #009900;">&#41;</span> <span style="color: #339933;">:</span> 
+    <span style="color: #666666; font-style: italic;">//Ya estamos en el bucle alternativo</span>
+    setup_postdata<span style="color: #009900;">&#40;</span><span style="color: #000088;">$post</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> 
+    the_title<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #b1b100;">endforeach</span><span style="color: #339933;">;</span>
+wp_reset_postdata<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre>
+
+<p>La función <code>setup_postdata()</code> es una función que prepara el objeto global <code>$post</code> para su utilización con los <em>template tags</em> dentro del bucle.</p>
+
+<p>La forma recomendada para reiniciar el bucle principal después de usar <code>get_posts()</code> es utilizar la función <code>wp_reset_postdata()</code>.</p>
+
+<h3>Más información</h3>
+
+<p>Para más información sobre este tema, recomiendo ver y tomar nota de esta conferencia de Andrew Nacin en la que explica el sistema de <em>queries</em> de WordPress:</p>
+
+<p><embed type="application/x-shockwave-flash" src="http://s0.videopress.com/player.swf?v=1.03" width="700" height="410" wmode="direct" seamlesstabbing="true" allowfullscreen="true" allowscriptaccess="always" overstretch="true" flashvars="guid=YghPUHHx&amp;isDynamicSeeking=true"></embed></p>
+
+<p>Enlaces de interés:</p>
+
+<ul>
+<li><a href="http://wordpress.tv/2012/06/15/andrew-nacin-wp_query/">WordPress.tv: WP_Query</a> (Andrew Nacin en directo en la WordCamp Portland 2011)</li>
+<li><a href="http://www.slideshare.net/andrewnacin/you-dont-know-query-wordcamp-portland-2011">Slideshare: You Don’t Know Query</a> (diapositivas de la presentación de Andrew Nacin en la WordCamp Portland 2011)</li>
+<li><a href="http://wordpress.stackexchange.com/questions/1753/when-should-you-use-wp-query-vs-query-posts-vs-get-posts">WordPress Answers StackExchange – When should you use WP&#95;Query VS query&#95;posts VS get_posts()?</a></li>
+<li><a href="http://developer.wordpress.com/2012/05/14/querying-posts-without-query_posts/">Developer WordPress.com: querying posts without query_posts()</a></li>
+<li>Codex de WordPress: definición de <a href="http://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts">pre&#95;get&#95;posts()</a>, <a href="http://codex.wordpress.org/Function_Reference/query_posts">query_posts()</a>, <a href="http://codex.wordpress.org/Function_Reference/WP_Query">WP_Query()</a> y <a href="http://codex.wordpress.org/Function_Reference/get_posts">get_posts()</a>.</li>
+</ul>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=Cómo crear correctamente bucles o loops personalizados en WordPress - http://www.hachemuda.com/2012/09/como-crear-correctamente-bucles-o-loops-personalizados-en-wordpress" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2012/09/como-crear-correctamente-bucles-o-loops-personalizados-en-wordpress - Cómo crear correctamente bucles o loops personalizados en WordPress" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2012/09/como-crear-correctamente-bucles-o-loops-personalizados-en-wordpress&t=Cómo crear correctamente bucles o loops personalizados en WordPress" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/codigo">código</a></li>
+                      <li><a href="/etiqueta/plantilla">plantilla</a></li>
+                      <li><a href="/etiqueta/tema">tema</a></li>
+                      <li><a href="/etiqueta/tutorial">tutorial</a></li>
+                      <li><a href="/etiqueta/video">video</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>

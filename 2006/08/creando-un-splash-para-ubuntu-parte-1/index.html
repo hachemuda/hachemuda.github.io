@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+<head>
+
+  <!-- Begin Inspectlet Embed Code -->
+  <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 3206381122]);
+    (function() {
+      function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://www.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent){
+        window.attachEvent('onload', __ldinsp);
+      }else{
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script>
+  <!-- End Inspectlet Embed Code -->
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+            Creando un splash para Ubuntu (Parte 1) | HacheMuda
+      </title>
+  
+  
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Creando un splash para Ubuntu (Parte 1)">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="http://www.hachemuda.com/2006/08/creando-un-splash-para-ubuntu-parte-1">
+  <meta property="og:site_name" content="Hachemuda">
+  <meta property="og:type" content="article">
+    
+  <!-- <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> -->
+
+  <link rel="alternate" type="application/rss+xml" title="HacheMuda" href="http://feeds.feedburner.com/hachemuda/DhdS" />
+  
+  <script type="text/javascript" src="/js/modernizr.js"></script>
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/normalize.min.css" />
+  <link rel="stylesheet" href="/css/default.min.css" />
+
+  <meta name="verify-v1" content="HCFEDewIUB1jy4R1Udb2imuC/hvbNOJRGVfAQSG2mv8=" />
+  
+        	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-227710-2']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+    
+  <script type="text/javascript" src="//use.typekit.net/irl4zog.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+  
+</head>
+<body class="post">
+  <div id="header_container" class="fadeIn fadeIn-Delay-0-4s">
+          <header class="wrapper clear">
+        <div class="header_top">
+          <nav class="header_top_nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+              <li><a href="/acerca-de">Acerca de</a></li>
+              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header_left">
+          <a href="/" title="Página de inicio">
+            <img class="logo" alt="Website logo" src="/img/logo.png" />
+          </a>
+          <div class="header_title">
+                          <h2 id="title"><a href="/">HacheMuda</a></h2>
+              <h3 id="description">Blog personal de Guillermo Latorre</h3>
+                      </div>
+        </div>
+        <div class="header_right">
+          <form method="get" id="searchform" action="/">
+            <input type="text" name="s" value="" placeholder="Introduce los términos de búsqueda" id="s" class="search_input" />
+            <input type="submit" id="s_submit" class="search_submit" value="" />
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+      </div><!-- #header_container -->
+  
+  <div class="wrapper" id="search_results_pane">
+    <div class="search_results_container">
+      <span class="close" id="search_close"></span>
+      <h2>Resultados de la búsqueda de "<span id="search_phrase"></span>":</h2>
+      <ul id="search_results"></ul>
+    </div>
+  </div>
+
+  <div id="main_container" class="">
+    <div id="main" class="wrapper clearfix">
+      	<div class="single">
+		<article id="post-<?php the_ID(); ?>">
+			<header class="post_header fadeIn fadeIn-Delay-1s">
+				<div class="post_title no_image">
+					<h1 class="title">
+						<a href="/2006/08/creando-un-splash-para-ubuntu-parte-1">
+							Creando un splash para Ubuntu (Parte 1)
+						</a>
+					</h1>
+						
+				</div>
+								<div class="clear"></div>
+			</header>
+			<section class="post_entry" class="fadeIn fadeIn-Delay-0-7s">
+				<div class="metadata">
+					<div class="metadata-text">
+																		
+												<span class="text">Publicado por Guillermo Latorre el 31 de Agosto de 2006</span>
+					</div>
+				</div><!-- .metadata -->
+				<div class="content">
+					<h1> </h1>
+
+<p>Entre este artículo y su segunda parte, que dejo para mañana, voy a explicar cómo hacer un <strong>splash screen</strong> (la imagen que sale durante la carga de una aplicación, o de <a href="http://www.es.gnome.org/" title="Gnome Hispano">Gnome</a> mismo). El nuevo <a href="http://www.ubuntu-es.org/" title="Ubuntu-Es">Ubuntu</a> se llamará <strong>The Edgy Eft</strong>, así que vamos a ponerle ese nombre en la imagen. Será una especie de **Cargando Gnome en Ubuntu Edgy Eft… **con una sola imagen.</p>
+
+<p>El **resultado final **es este:</p>
+
+<p><a href="http://hachemuda.com/tutorialSweetEdgyEft1/tutorialSweetEdgyEft1.jpg" title="Sweet Edgy Eft 1"><img src="http://hachemuda.com/tutorialSweetEdgyEft1/tutorialSweetEdgyEft1.jpg" alt="Sweet Edgy Eft Mini" title="Sweet Edgy Eft 1" /></a></p>
+
+<p>Las letras de <a href="http://www.ubuntu-es.org/" title="Ubuntu-Es">Ubuntu</a> con el logo y esos efectos de reflejos tan a la moda lo dejamos para la segunda parte del post. En esta primera parte nos vamos a encargar de crear el fondo, junto con ese texto que dice <strong><em>- Sweet Edgy Eft</em></strong> – y la barrita horizontal de abajo, que es donde van aparciendo los iconos mientras se carga Gnome.</p>
+
+<p>[]: http://hachemuda.com/tutorialSweetEdgyEft1/sweetEdgyEft.jpg &#8220;Ver imagen más grande&#8221;</p>
+
+<p>Estos son los <strong>pasos a seguir</strong>:</p>
+
+<ol>
+<li><p>Creamos una nueva imagen de las dimensiones que queramos (la mía es exactamente de 800x686px). Seleccionamos un marrón oscuro como <strong>color de fondo</strong>, y uno más claro como <strong>color de frente</strong>. Seleccionamos ahora la** herramienta de degradado** y cambiamos la forma a <strong>radial</strong>. Ya podemos lanzar el degradado haciendo click en el centro de nuestra imagen y llevando el otro extremo hasta uno de los lados. <img src="http://hachemuda.com/tutorialSweetEdgyEft1/tutorialSweetEdgyEft1.jpg" alt="Sweet Edgy Eft 1" title="Sweet Edgy Eft 1" /></p></li>
+<li><p>Creamos una <strong>nueva capa</strong> que llamamos <em>rejilla</em>. Ahora vamos a realizar un <strong>patrón nuevo **para rellenar esta capa con la rejilla. Creamos una **nueva imagen</strong> de 25x25px con la capa de <strong>fondo transparente</strong>. Con la herramienta de <strong>seleccionar rectángulos</strong> seleccionamos una línea vertical justo en el centro y arrastramos el color negro encima. Ahora hacemos una línea horizontal en el medio y también la rellenamos de negro. <img src="http://hachemuda.com/tutorialSweetEdgyEft1/tutorialSweetEdgyEft2.jpg" alt="Sweet Edgy Eft 2" title="Sweet Edgy Eft 2" /></p></li>
+<li><p>Hacemos click en <strong>Seleccionar-> Todos</strong> y vamos a <strong>Script-Fu -> Selección -> A Patrón</strong>. Nos pide un nombre para el patrón, le llamamos <em>Rejilla</em>. Ahora ya podemos seleccionarlo de <strong>Diálogos -> Patrones</strong> y arrastrarlo sobre la capa <em>rejilla.</em> <img src="http://hachemuda.com/tutorialSweetEdgyEft1/tutorialSweetEdgyEft3.jpg" alt="Sweet Edgy Eft 3" title="Sweet Edgy Eft 3" /></p></li>
+<li><p>Alejamos un poco la imagen con el <em>zoom out *(tecla [-]) y seleccionamos la herramienta de <strong>cambiar la perspectiva</strong>. Hacemos click sobre la capa *rejilla</em> y movemos el vértice inferior derecho más hacia la derecha, y el inferior izquierdo más hacia la izquierda. Así conseguimos el efecto de profundidad de la rejilla. Podemos jugar un poco con los vértices para conseguir el efecto que queramos. <img src="http://hachemuda.com/tutorialSweetEdgyEft1/tutorialSweetEdgyEft4.jpg" alt="Sweet Edgy Eft 4" title="Sweet Edgy Eft 4" /></p></li>
+<li><p>Una vez tenemos la rejilla con efecto de perspectiva, toca ir a <strong>Capa -> Máscara -> Añadir máscara de capa</strong> y crear una máscara iniciada a <strong>Blanco (Opacidad Total)</strong>. Seleccionamos el color negro y el blanco como <strong>colores de frente y fondo</strong>, respectivamente. En la** herramienta de degradado**, ponemos la forma a bilineal y marcamos la pestaña de <strong>invertido</strong>, para que vaya de blanco a negro. Sólo queremos que se vea una parte de la rejilla, por el centro-arriba de la imagen, así que lanzamos el degradado haciendo click en el medio de la zona en la que queremos que permanezca, y lo llevamos hacia abajo con la tecla [Ctrl] pulsada para asegurar que nos queda completamente vertical. Si no nos gusta cómo queda,** Editar -> Deshacer** y lo volvemos a intentar. <img src="http://hachemuda.com/tutorialSweetEdgyEft1/tutorialSweetEdgyEft5.jpg" alt="Sweet Edgy Eft 5" title="Sweet Edgy Eft 5" /></p></li>
+<li><p>Cuando ya tengamos visible la parte de la rejilla que queremos y el resto transparente, vamos a <strong>Capa -> Máscara -> Aplicar máscara de capa</strong>. Desenfocamos un poco la capa (<strong>Filtros -> Desenfoque -> Desenfoque Gaussiano (Blur)</strong> de 4px) y ajustamos la opcacidad de la capa para que no se vea demasiado. Tiene que verse lo justo, sólo queremos que nuestra imagen tenga una perspectiva de profundidad y para eso nos sirve la rejilla. <img src="http://hachemuda.com/tutorialSweetEdgyEft1/tutorialSweetEdgyEft6.jpg" alt="Sweet Edgy Eft 6" title="Sweet Edgy Eft 6" /></p></li>
+<li><p>Ya tenemos el <em>fondo</em> y la <em>rejilla</em>. Ahora vamos a por el texto de <em>Sweet Edgy Eft</em>. Seleccionamos la <strong>herramienta de textos</strong>, con color gris oscuro y la fuente deseada. Escribimos el texto <em>Sweet Edgy Eft</em> y lo movemos a donde queramos. Seleccionamos la capa de <em>fondo</em> y vamos a** Filtros -> Mapa -> Mapa de relieve (Bump Map)**. En la ventana que aparece, en la opción de <em>Mapa de relieve</em> seleccionamos la capa con el texto. Con los parámetros de* profundidad* y <em>elevación</em> jugamos para obtener un relieve más o menos vistoso del texto en la capa de <em>fondo</em>. Una vez aceptemos, ya podemos borrar la capa con el texto si queremos. <img src="http://hachemuda.com/tutorialSweetEdgyEft1/tutorialSweetEdgyEft7.jpg" alt="Sweet Edgy Eft 7" title="Sweet Edgy Eft 7" /></p></li>
+<li><p>Ya sólo queda la banda rectangular de abajo. Creamos una <strong>nueva capa</strong> que llamamos <em>banda</em> y seleccionamos el rectángulo que queremos que sea la banda con la herramienta de <strong>selecciones rectangulares</strong>. Una vez la tengamos, cogemos la <strong>herramienta de degradados</strong>, con forma <strong>bilineal</strong> y de blanco a transparente (pero con la pestaña de <strong>invertido</strong> activada). Lanzamos un degradado horizontal desde el centro hacia un lado, con la tecla [Ctrl] pulsada.</p></li>
+<li>Con la capa <em>banda</em> seleccionada, vamos a <strong>Seleccionar -> Ninguno **y</strong> Filtros ->Desenfoque -> Desenfoque gaussiano (blur)** de 2px. <img src="http://hachemuda.com/tutorialSweetEdgyEft1/tutorialSweetEdgyEft8.jpg" alt="Sweet Edgy Eft 8" title="Sweet Edgy Eft 8" /></li>
+</ol>
+
+<p>Ya tenemos el fondo de nuestro splash para <a href="http://www.ubuntu.com/testing" title="Ubuntu Testing">Ubuntu Edgy Eft</a>. Recuerda guardar la imagen en formato XCF para poder abrirla en otro momento con el Gimp y conservar todas las capas.<br />
+Mañana haremos lo demás, el logo del sistema operativo y el resto de detalles.</p>
+
+				</div>
+				<aside class="single_sidebar" id="single_sidebar">
+  <div class="widget widget_share">
+    <a href="http://twitter.com/home?status=Creando un splash para Ubuntu (Parte 1) - http://www.hachemuda.com/2006/08/creando-un-splash-para-ubuntu-parte-1" class="twitter" target="_blank">
+      <span class="icon">t</span><span class="text">Compartirlo en <strong>Twitter</strong></span>
+    </a>
+    <a href="https://m.google.com/app/plus/x/?v=compose&content=http://www.hachemuda.com/2006/08/creando-un-splash-para-ubuntu-parte-1 - Creando un splash para Ubuntu (Parte 1)" class="google" target="blank">
+      <span class="icon">g</span><span class="text">Publicarlo en <strong>Google+</strong></span>
+    </a>
+    <a href="http://www.facebook.com/sharer.php?u=http://www.hachemuda.com/2006/08/creando-un-splash-para-ubuntu-parte-1&t=Creando un splash para Ubuntu (Parte 1)" class="facebook" target="blank">
+      <span class="icon">f</span><span class="text">Compartirlo en <strong>Facebook</strong></span>
+    </a>
+  </div>
+  
+      <div class="widget">
+      <h3>Etiquetas:</h3>
+      <div class="widget_content widget_twitter"> 
+        <ul>
+                      <li><a href="/etiqueta/gimp">gimp</a></li>
+                      <li><a href="/etiqueta/tutorial">tutorial</a></li>
+                      <li><a href="/etiqueta/ubuntu-y-linux">Ubuntu y Linux</a></li>
+                  </ul>
+      </div><!-- .widget_content -->
+    </div><!-- .widget -->
+  </aside>				<div class="clear"></div>
+			</section>
+			<footer class="single_footer">
+			</footer>
+		</article>
+		<div id="disqus_thread"></div>
+		
+
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'hachemudablog'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+			    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+			    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+	</div><!-- .single -->
+    </div><!-- #main -->
+  </div><!-- #main_container -->
+
+  <div class="clear"></div>
+
+  <div id="footer_container">
+            <footer class="wrapper clear">
+          <p>
+            HacheMuda es el blog personal de Guillermo Latorre, construído sobre <a href="http://bolt80.com/piecrust">PieCrust</a>.
+          </p>
+          <div class="footer_map">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archivo-del-blog">Archivo del blog</a></li>
+                <li><a href="/acerca-de">Acerca de</a></li>
+                <li><a href="/video-tutoriales-gimp">Video tutoriales GIMP</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="http://feeds.feedburner.com/hachemuda/DhdS">Feed RSS</a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div><!-- #footer-container -->
+  
+
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <script type="text/javascript" src="/js/main-minified.js"></script>
+
+  
+
+</body>
+</html>
